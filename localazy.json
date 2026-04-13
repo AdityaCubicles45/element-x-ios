@@ -5,7 +5,7 @@
     "actions": [
       {
         "type": "ios-strings",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/Localizable.strings",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/Localizable.strings",
         "excludeKeys": ["REGEX:.*_android"],
         "conditions": [
           "equals: ${languageCode}, en | equals: ${file}, content.json"
@@ -21,7 +21,7 @@
       },
       {
         "type": "ios-stringsdict",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/Localizable.stringsdict",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/Localizable.stringsdict",
         "excludeKeys": ["REGEX:.*_android"],
         "conditions": [
           "equals: ${languageCode}, en | equals: ${file}, content.json"
@@ -38,18 +38,15 @@
       {
         "type": "ios-strings",
         "changeExtension": "strings",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/${file}",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/${file}",
         "conditions": [
           "equals: ${languageCode}, en | equals: ${file}, InfoPlist.json"
         ]
       },
-
-
-
       {
         "group": "all",
         "type": "ios-strings",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/Localizable.strings",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/Localizable.strings",
         "excludeKeys": ["REGEX:.*_android"],
         "conditions": [
           "equals: ${file}, content.json"
@@ -66,7 +63,7 @@
       {
         "group": "all",
         "type": "ios-stringsdict",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/Localizable.stringsdict",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/Localizable.stringsdict",
         "excludeKeys": ["REGEX:.*_android"],
         "conditions": [
           "equals: ${file}, content.json"
@@ -84,7 +81,7 @@
         "group": "all",
         "type": "ios-strings",
         "changeExtension": "strings",
-        "output": "ElementX/Resources/Localizations/${iosLprojFolder}/${file}",
+        "output": "Chatlio/Resources/Localizations/${iosLprojFolder}/${file}",
         "conditions": [
           "equals: ${file}, InfoPlist.json"
         ]

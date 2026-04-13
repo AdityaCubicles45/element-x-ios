@@ -1,7 +1,7 @@
 ---
-name: ElementX
+name: Chatlio
 attributes:
-  ORGANIZATIONNAME: Element
+  ORGANIZATIONNAME: Chatlio
   LastUpgradeCheck: "1620"
   
 fileGroups:
@@ -16,7 +16,7 @@ options:
     macOS: '14.5'
   groupOrdering:
   - order:
-    - ElementX
+    - Chatlio
     - NSE
     - ShareExtension
     - UnitTests
@@ -28,7 +28,7 @@ options:
     - SDKMocks
     - Secrets
     - Tools
-  - pattern: ElementX
+  - pattern: Chatlio
     order:
     - Sources
     - Resources
@@ -51,7 +51,7 @@ options:
 settings:
   CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: true
   ENABLE_BITCODE: false
-  APP_NAME: ElementX
+  APP_NAME: Chatlio
   KEYCHAIN_ACCESS_GROUP_IDENTIFIER: "$(DEVELOPMENT_TEAM).$(BASE_BUNDLE_IDENTIFIER)"
   MARKETING_VERSION: 26.03.5
   CURRENT_PROJECT_VERSION: 1
@@ -59,7 +59,7 @@ settings:
 
 include:
 - path: app.yml
-- path: ElementX/SupportingFiles/target.yml
+- path: Chatlio/SupportingFiles/target.yml
 - path: NSE/SupportingFiles/target.yml
 - path: ShareExtension/SupportingFiles/target.yml
 - path: SDKMocks/SupportingFiles/target.yml
@@ -73,8 +73,7 @@ include:
 packages:
   # Element/Matrix dependencies
   MatrixRustSDK:
-    url: https://github.com/element-hq/matrix-rust-components-swift
-    exactVersion: 26.03.24
+    path: ../matrix-rust-sdk-local
     # path: ../matrix-rust-sdk
   Compound:
     path: compound-ios

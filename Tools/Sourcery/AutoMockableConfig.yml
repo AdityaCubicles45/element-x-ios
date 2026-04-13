@@ -1,10 +1,10 @@
 sources:
   include:
-    - ../../ElementX
+    - ../../Chatlio
     - ../../NSE
   exclude:
-    - ../../ElementX/Sources/Mocks/SDK
+    - ../../Chatlio/Sources/Mocks/SDK
 templates:
   - AutoMockable.stencil
 output:
-  ../../ElementX/Sources/Mocks/Generated/GeneratedMocks.swift
+  ../../Chatlio/Sources/Mocks/Generated/GeneratedMocks.swift

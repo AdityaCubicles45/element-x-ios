@@ -1,5 +1,5 @@
-input_dir: ../../ElementX/
-output_dir: ../../ElementX/Sources/Generated/
+input_dir: ../../Chatlio/
+output_dir: ../../Chatlio/Sources/Generated/
 xcassets:
   inputs:
     - Resources/Assets.xcassets

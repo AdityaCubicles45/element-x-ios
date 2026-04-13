@@ -65,10 +65,10 @@ Initial setup: `swift run tools setup-project`
 | Tool | Command | Notes |
 |------|---------|-------|
 | **XcodeGen** | `xcodegen` | Generates Xcode project from `project.yml` (includes `app.yml` + `target.yml` files) |
-| **Sourcery** | `sourcery --config Tools/Sourcery/<config>` | Configs: `AutoMockableConfig.yml`, `PreviewTestsConfig.yml`, `TestablePreviewsDictionary.yml`, `AccessibilityTests.yml`. Auto-runs on ElementX build. |
-| **SwiftGen** | `swiftgen config run --config Tools/SwiftGen/swiftgen-config.yml` | Auto-runs on ElementX build. |
-| **SwiftLint** | `swiftlint` | Auto-runs on ElementX build |
-| **SwiftFormat** | `swiftformat .` | Run from project root only. Auto-runs in lint mode on ElementX build. |
+| **Sourcery** | `sourcery --config Tools/Sourcery/<config>` | Configs: `AutoMockableConfig.yml`, `PreviewTestsConfig.yml`, `TestablePreviewsDictionary.yml`, `AccessibilityTests.yml`. Auto-runs on Chatlio build. |
+| **SwiftGen** | `swiftgen config run --config Tools/SwiftGen/swiftgen-config.yml` | Auto-runs on Chatlio build. |
+| **SwiftLint** | `swiftlint` | Auto-runs on Chatlio build |
+| **SwiftFormat** | `swiftformat .` | Run from project root only. Auto-runs in lint mode on Chatlio build. |
 
 CI test commands:
 - Unit tests: `swift run tools ci unit-tests`
@@ -78,14 +78,14 @@ CI test commands:
 ### Targets & Layout
 
 Key targets (each has a `target.yml`):
-- **ElementX** — main app
+- **Chatlio** — main app
 - **NSE** — Notification Service Extension
 - **ShareExtension** — Share Extension
 
 Each target: `Sources/`, `Resources/`, `SupportingFiles/`.
 
 ```
-ElementX/Sources/
+Chatlio/Sources/
 ├── Application/         # App lifecycle, settings, windowing, root coordinators
 ├── FlowCoordinators/    # Flow coordinators + state machines
 ├── Services/<Feature>/  # SDK proxies, app services, non-view logic
@@ -134,7 +134,7 @@ View ──send(viewAction:)──► ViewModel ──actionsPublisher──► 
 
 ### StateStoreViewModelV2
 
-Located at `ElementX/Sources/Other/SwiftUI/ViewModel/StateStoreViewModelV2.swift` (uses Swift `Observation`):
+Located at `Chatlio/Sources/Other/SwiftUI/ViewModel/StateStoreViewModelV2.swift` (uses Swift `Observation`):
 
 - `state` — mutable state struct conforming to `BindableState`
 - `context` — `@Observable` class passed to the view:
@@ -226,7 +226,7 @@ Shared dependency bag for **flow coordinators only**. Never pass to screen coord
 | Layer | Example | Location |
 |-------|---------|---------|
 | Protocol | `ClientProxyProtocol` | defines interface |
-| Proxy | `ClientProxy` | wraps SDK type, in `Services/<Feature>/` |
+| Proxy | `ClientProxy` | wraps SDK type, in `Chatlio/Sources/Services/<Feature>/` |
 | Mock | `ClientProxyMock` | Sourcery-generated |
 
 Naming: SDK type name + `Proxy` suffix (e.g. `Client` → `ClientProxy`). Exceptions where specialisation is needed (e.g. `JoinedRoomProxy`, `InvitedRoomProxy`).
@@ -249,7 +249,7 @@ Map SDK types to app-owned Swift types (avoids importing `MatrixRustSDK` in view
 
 ## Services
 
-Located in `ElementX/Sources/Services/<Feature>/`.
+Located in `Chatlio/Sources/Services/<Feature>/`.
 
 1. **Pure app services** (e.g. `AppLockService`) — no SDK involvement.
 2. **SDK-wrapping services** — compose proxies with app logic; keep view models simple/testable.

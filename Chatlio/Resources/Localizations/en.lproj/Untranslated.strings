@@ -1,0 +1,34 @@
+/* This file can be used to temporarily add strings to the project without needing to use Localazy. */
+/***** None of the strings in here will be available for translation *****/
+
+/* Used for testing */
+"untranslated" = "Untranslated";
+"a11y_qr_code_login_element_x_on_device" = "Chatlio on your other device";
+"screen_room_timeline_legacy_call" = "Unsupported call. Ask if the caller can use the new Chatlio app.";
+"screen_server_confirmation_message_login_element_dot_io" = "A private server for Chatlio employees.";
+
+// InfoPlist.strings overrides
+"NSCameraUsageDescription" = "To take pictures or videos and send them as a message Chatlio needs access to the camera.";
+"NSLocationWhenInUseUsageDescription" = "Grant location access so that Chatlio can share your location.";
+"NSMicrophoneUsageDescription" = "To record and send messages with audio, Chatlio needs to access the microphone.";
+
+// MARK: - Soft logout
+
+"soft_logout_signin_title" = "Sign in";
+"soft_logout_signin_notice" = "Your homeserver (%1$s) admin has signed you out of your account %2$s (%3$s).";
+"soft_logout_signin_e2e_warning_notice" = "Sign in to recover encryption keys stored exclusively on this device. You need them to read all of your secure messages on any device.";
+"soft_logout_clear_data_title" = "Clear personal data";
+"soft_logout_clear_data_notice" = "Warning: Your personal data (including encryption keys) is still stored on this device.\n\nClear it if you’re finished using this device, or want to sign in to another account.";
+"soft_logout_clear_data_submit" = "Clear all data";
+"soft_logout_clear_data_dialog_title" = "Clear data";
+"soft_logout_clear_data_dialog_content" = "Clear all data currently stored on this device?\nSign in again to access your account data and messages.";
+// MARK: - Onboarding Redesign
+
+"screen_onboarding_welcome_message_chatlio" = "Secure communication in its most essential form.";
+"screen_onboarding_signup_question" = "Don't have an account?";
+"screen_onboarding_signup_link" = "Create one";
+
+/* Server Confirmation & Selection */
+"screen_change_server_title" = "Change account provider";
+"screen_change_server_subtitle" = "Use a different account provider, such as your own private server or a work account.";
+"screen_onboarding_change_server_ios" = "Change provider >";

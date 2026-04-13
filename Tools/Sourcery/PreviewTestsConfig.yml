@@ -1,6 +1,6 @@
 sources:
   include:
-    - ../../ElementX
+    - ../../Chatlio
 templates:
   - PreviewTests.stencil
 output:

@@ -19,7 +19,7 @@ schemes:
       disableMainThreadChecker: false
       gatherCoverageData: true
       coverageTargets:
-        - ElementX
+        - Chatlio
       testPlans:
         - path: UnitTests.xctestplan
           defaultPlan: true
@@ -30,7 +30,7 @@ targets:
     platform: iOS
 
     dependencies:
-    - target: ElementX
+    - target: Chatlio
     - package: MatrixRustSDK
     - package: AsyncAlgorithms
     - package: Clocks
@@ -52,8 +52,8 @@ targets:
     - path: ../../DevelopmentAssets/Media
     - path: ../../DevelopmentAssets/ClassicAppFixtures
       buildPhase: resources # Necessary to add binary files to the target.
-    - path: ../../ElementX/Sources/Other/Extensions/Publisher.swift
-    - path: ../../ElementX/Sources/Other/Extensions/XCTestCase.swift
-    - path: ../../ElementX/Sources/Other/InfoPlistReader.swift
+    - path: ../../Chatlio/Sources/Other/Extensions/Publisher.swift
+    - path: ../../Chatlio/Sources/Other/Extensions/XCTestCase.swift
+    - path: ../../Chatlio/Sources/Other/InfoPlistReader.swift
     - path: ../../Tools/Scripts/Templates/SimpleScreenExample/Tests/Unit
     

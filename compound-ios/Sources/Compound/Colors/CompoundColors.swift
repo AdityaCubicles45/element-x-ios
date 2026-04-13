@@ -58,6 +58,14 @@ public class CompoundColors {
             .init(background: tokens.bgDecorative5, text: tokens.textDecorative5),
             .init(background: tokens.bgDecorative6, text: tokens.textDecorative6)
         ]
+        
+        // Chatlio Rebranding Overrides
+        // bgActionPrimaryRest = #1B1D22
+        override(\.bgActionPrimaryRest, with: Color(red: 0x1B / 255.0, green: 0x1D / 255.0, blue: 0x22 / 255.0))
+        // bgActionPrimaryHovered
+        override(\.bgActionPrimaryHovered, with: Color(red: 0x2A / 255.0, green: 0x2D / 255.0, blue: 0x36 / 255.0))
+        // bgActionPrimaryPressed
+        override(\.bgActionPrimaryPressed, with: Color(red: 0x0E / 255.0, green: 0x0F / 255.0, blue: 0x12 / 255.0))
     }
     
     // MARK: - Decorative Colors

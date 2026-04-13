@@ -1,12 +1,12 @@
-project: ElementX.xcodeproj
+project: Chatlio.xcodeproj
 schemes:
-- ElementX
+- Chatlio
 - UnitTests
 - PreviewTests
 - UITests
 - IntegrationTests
 targets:
-- ElementX
+- Chatlio
 - NSE
 - ShareExtension
 - UnitTests
@@ -14,6 +14,6 @@ targets:
 - UITests
 - IntegrationTests
 report_exclude:
-  - ElementX/Sources/Mocks/Generated/GeneratedMocks.swift
-  - ElementX/Sources/Mocks/Generated/SDKGeneratedMocks.swift
+  - Chatlio/Sources/Mocks/Generated/GeneratedMocks.swift
+  - Chatlio/Sources/Mocks/Generated/SDKGeneratedMocks.swift
 retain_swift_ui_previews: true

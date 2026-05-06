@@ -42,10 +42,7 @@ final class PillAttachmentViewProvider: NSTextAttachmentViewProvider, NSSecureCo
         }
         
         let context: PillContext
-        if ProcessInfo.isXcodePreview || ProcessInfo.isRunningTests {
-            // The mock viewModel simulates the loading logic for testing purposes
-            context = PillContext.mock(viewState: .mention(isOwnMention: false, displayText: "Alice"), delay: .seconds(2))
-        } else if let timelineContext = delegate?.timelineContext {
+        if let timelineContext = delegate?.timelineContext {
             context = PillContext(timelineContext: timelineContext, data: pillData)
         } else {
             MXLog.failure("Missing room context")
@@ -87,10 +84,12 @@ final class ComposerMentionDisplayHelper: MentionDisplayHelper {
         self.timelineContext = timelineContext
     }
     
+/*
     @MainActor
     static var mock: Self {
         Self(timelineContext: TimelineViewModel.mock.context)
     }
+*/
 }
 
 extension WysiwygTextView: PillAttachmentViewProviderDelegate {

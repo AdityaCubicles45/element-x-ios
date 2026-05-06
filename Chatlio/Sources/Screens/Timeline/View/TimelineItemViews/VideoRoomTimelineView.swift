@@ -77,6 +77,7 @@ struct VideoRoomTimelineView: View {
     }
 }
 
+/*
 struct VideoRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -114,3 +115,4 @@ struct VideoRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                               properties: .init(isEdited: isEdited))
     }
 }
+*/

@@ -61,6 +61,7 @@ private extension FormatItem {
     }
 }
 
+/*
 struct FormattingToolbar_Previews: PreviewProvider, TestablePreview {
     static let items = FormatType.allCases.map { FormatItem(type: $0, state: .enabled) }
     static let reversedItems = FormatType.allCases.map { FormatItem(type: $0, state: .reversed) }
@@ -74,3 +75,4 @@ struct FormattingToolbar_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

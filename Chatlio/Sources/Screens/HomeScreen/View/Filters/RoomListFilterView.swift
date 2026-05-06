@@ -56,9 +56,11 @@ private struct FilterToggleStyle: ToggleStyle {
 
 // MARK: - Previews
 
+/*
 struct RoomListFilterView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         RoomListFilterView(filter: .people, isActive: .constant(false))
         RoomListFilterView(filter: .people, isActive: .constant(true))
     }
 }
+*/

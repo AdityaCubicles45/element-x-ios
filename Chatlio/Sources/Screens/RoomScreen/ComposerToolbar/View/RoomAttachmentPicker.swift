@@ -77,6 +77,7 @@ struct RoomAttachmentPicker: View {
     }
 }
 
+/*
 struct RoomAttachmentPicker_Previews: PreviewProvider, TestablePreview {
     static let viewModel = ComposerToolbarViewModel(roomProxy: JoinedRoomProxyMock(.init()),
                                                     wysiwygViewModel: WysiwygComposerViewModel(),
@@ -91,3 +92,4 @@ struct RoomAttachmentPicker_Previews: PreviewProvider, TestablePreview {
         RoomAttachmentPicker(context: viewModel.context)
     }
 }
+*/

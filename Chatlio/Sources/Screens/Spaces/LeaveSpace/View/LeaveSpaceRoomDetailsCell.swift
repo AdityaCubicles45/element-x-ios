@@ -87,6 +87,7 @@ struct LeaveSpaceRoomDetailsCell: View {
 
 // MARK: - Previews
 
+/*
 struct LeaveSpaceRoomDetailsCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 0) {
@@ -137,3 +138,4 @@ struct LeaveSpaceRoomDetailsCell_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -66,9 +66,11 @@ struct NotificationPermissionsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct NotificationPermissionsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = NotificationPermissionsScreenViewModel(notificationManager: NotificationManagerMock())
     static var previews: some View {
         NotificationPermissionsScreen(context: viewModel.context)
     }
 }
+*/

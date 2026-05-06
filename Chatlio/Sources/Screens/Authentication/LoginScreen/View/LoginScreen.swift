@@ -129,6 +129,7 @@ struct LoginScreen: View {
 
 // MARK: - Previews
 
+/*
 struct LoginScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let credentialsViewModel = makeViewModel(withCredentials: true)
@@ -172,3 +173,4 @@ struct LoginScreen_Previews: PreviewProvider, TestablePreview {
         return viewModel
     }
 }
+*/

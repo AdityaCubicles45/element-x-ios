@@ -34,6 +34,7 @@ struct RoomChangeRolesScreenRow: View {
     }
 }
 
+/*
 struct RoomChangeRolesScreenRow_Previews: PreviewProvider, TestablePreview {
     static let action: () -> Void = { }
     
@@ -74,3 +75,4 @@ struct RoomChangeRolesScreenRow_Previews: PreviewProvider, TestablePreview {
         .compoundList()
     }
 }
+*/

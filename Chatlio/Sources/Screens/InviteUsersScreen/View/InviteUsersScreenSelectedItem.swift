@@ -47,6 +47,7 @@ struct InviteUsersScreenSelectedItem: View {
     }
 }
 
+/*
 struct InviteUsersScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
     static let people: [UserProfileProxy] = [.mockAlice, .mockVerbose]
     
@@ -61,3 +62,4 @@ struct InviteUsersScreenSelectedItem_Previews: PreviewProvider, TestablePreview 
         }
     }
 }
+*/

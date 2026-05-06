@@ -110,6 +110,7 @@ private extension View {
 
 // MARK: - Previews
 
+/*
 struct RoomHeaderView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -144,3 +145,4 @@ struct RoomHeaderView_Previews: PreviewProvider, TestablePreview {
             .padding()
     }
 }
+*/

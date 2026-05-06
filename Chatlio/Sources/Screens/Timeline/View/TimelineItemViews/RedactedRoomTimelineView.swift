@@ -20,6 +20,7 @@ struct RedactedRoomTimelineView: View {
     }
 }
 
+/*
 struct RedactedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -42,3 +43,4 @@ struct RedactedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                  sender: .init(id: senderId))
     }
 }
+*/

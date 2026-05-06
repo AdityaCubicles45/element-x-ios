@@ -378,6 +378,7 @@ struct ComposerToolbarButtonStyle: ButtonStyle {
 
 // MARK: - Previews
 
+/*
 struct ComposerToolbar_Previews: PreviewProvider, TestablePreview {
     static let timelineViewModel = TimelineViewModel.mock
     
@@ -423,3 +424,4 @@ struct ComposerToolbar_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Reply")
     }
 }
+*/

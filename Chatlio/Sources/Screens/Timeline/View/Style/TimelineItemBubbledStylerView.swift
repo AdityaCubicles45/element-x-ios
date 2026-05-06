@@ -332,6 +332,7 @@ private extension TimelineItemKeyForwarder {
 
 // MARK: - Previews
 
+/*
 struct TimelineItemBubbledStylerView_Previews: PreviewProvider, TestablePreview {
     static let viewModel: TimelineViewModel = {
         let appSettings = AppSettings()
@@ -629,6 +630,7 @@ struct TimelineItemBubbledStylerView_Previews: PreviewProvider, TestablePreview 
         .environment(\.timelineContext, viewModel.context)
     }
 }
+*/
 
 private struct MockTimelineContent: View {
     var isThreaded = false

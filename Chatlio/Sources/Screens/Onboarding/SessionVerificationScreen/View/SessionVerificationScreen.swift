@@ -224,6 +224,8 @@ struct SessionVerificationScreen: View {
     }
 }
 
+/*
+/*
 struct SessionVerification_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         sessionVerificationScreen(state: .initial, flow: .deviceInitiator)
@@ -296,3 +298,5 @@ struct SessionVerification_Previews: PreviewProvider, TestablePreview {
         return SessionVerificationScreen(context: viewModel.context)
     }
 }
+*/
+*/

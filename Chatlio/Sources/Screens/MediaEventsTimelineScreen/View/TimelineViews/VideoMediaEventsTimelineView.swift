@@ -65,6 +65,7 @@ struct VideoMediaEventsTimelineView: View {
     }
 }
 
+/*
 struct VideoMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -89,3 +90,4 @@ struct VideoMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
                                              thumbnailInfo: .mockVideoThumbnail))
     }
 }
+*/

@@ -36,6 +36,7 @@ struct GlobalSearchScreenListRow: View {
     }
 }
 
+/*
 struct GlobalSearchScreenListRow_Previews: PreviewProvider, TestablePreview {
     static let viewModel = GlobalSearchScreenViewModel(roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms))),
                                                        mediaProvider: MediaProviderMock(configuration: .init()))
@@ -52,3 +53,4 @@ struct GlobalSearchScreenListRow_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

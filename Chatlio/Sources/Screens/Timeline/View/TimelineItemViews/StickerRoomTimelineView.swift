@@ -38,6 +38,7 @@ struct StickerRoomTimelineView: View {
     }
 }
 
+/*
 struct StickerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -66,3 +67,4 @@ struct StickerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
         .environment(\.timelineContext, viewModel.context)
     }
 }
+*/

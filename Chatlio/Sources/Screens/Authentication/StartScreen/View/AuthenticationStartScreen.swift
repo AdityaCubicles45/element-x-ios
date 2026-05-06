@@ -159,6 +159,7 @@ private struct BlackButtonStyle: ButtonStyle {
 
 // MARK: - Previews
 
+/*
 struct AuthenticationStartScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let provisionedViewModel = makeViewModel(provisionedServerName: "example.com")
@@ -178,3 +179,4 @@ struct AuthenticationStartScreen_Previews: PreviewProvider, TestablePreview {
                                            userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/

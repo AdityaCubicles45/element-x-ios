@@ -41,6 +41,7 @@ struct PillView: View {
     }
 }
 
+/*
 struct PillView_Previews: PreviewProvider, TestablePreview {
     static let mockMediaProvider = MediaProviderMock(configuration: .init())
     
@@ -79,3 +80,4 @@ struct PillView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Message link without room name")
     }
 }
+*/

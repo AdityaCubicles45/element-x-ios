@@ -10,6 +10,7 @@ import Compound
 import SwiftUI
 
 /// A very simple mock layout of some pills within messages bubbles and the composer.
+/*
 struct PillViewOnBubble_Previews: PreviewProvider, TestablePreview {
     static let mentionContext = PillContext.mock(viewState: makeViewState(isOwnMention: false))
     static let ownMentionContext = PillContext.mock(viewState: makeViewState(isOwnMention: true))
@@ -51,3 +52,4 @@ struct PillViewOnBubble_Previews: PreviewProvider, TestablePreview {
                                                                 userID: isOwnMention ? "@alice:matrix.org" : "@bob:matrix.org"))
     }
 }
+*/

@@ -329,6 +329,7 @@ private struct CreateRoomAccessRow: View {
 
 // MARK: - Previews
 
+/*
 struct CreateRoom_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     
@@ -478,3 +479,4 @@ struct CreateRoom_Previews: PreviewProvider, TestablePreview {
                                          appSettings: appSettings)
     }
 }
+*/

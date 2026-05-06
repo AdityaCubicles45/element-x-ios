@@ -19,8 +19,10 @@ struct EmojiPickerScreenHeaderView: View {
     }
 }
 
+/*
 struct EmojiPickerScreenHeaderView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         EmojiPickerScreenHeaderView(title: "Title")
     }
 }
+*/

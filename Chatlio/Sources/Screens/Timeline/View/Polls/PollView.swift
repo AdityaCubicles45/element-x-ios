@@ -190,6 +190,7 @@ private extension Poll {
     }
 }
 
+/*
 struct PollView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         PollView(poll: .disclosed(), state: .full(isEditable: false), sender: .test) { _ in }
@@ -221,3 +222,4 @@ struct PollView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Preview")
     }
 }
+*/

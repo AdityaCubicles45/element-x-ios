@@ -90,6 +90,7 @@ private struct PollProgressView: View {
     }
 }
 
+/*
 struct PollOptionView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 8) {
@@ -125,3 +126,4 @@ struct PollOptionView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

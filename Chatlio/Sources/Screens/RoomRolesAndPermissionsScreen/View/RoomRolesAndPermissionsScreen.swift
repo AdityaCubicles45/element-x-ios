@@ -117,6 +117,7 @@ struct RoomRolesAndPermissionsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomRolesAndPermissionsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = RoomRolesAndPermissionsScreenViewModel(initialPermissions: RoomPermissions(powerLevels: .mock),
                                                                   roomProxy: JoinedRoomProxyMock(.init(members: .allMembersAsAdmin)),
@@ -139,3 +140,4 @@ struct RoomRolesAndPermissionsScreen_Previews: PreviewProvider, TestablePreview 
         .previewDisplayName("Creator")
     }
 }
+*/

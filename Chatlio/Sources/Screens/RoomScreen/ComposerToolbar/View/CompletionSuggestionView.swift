@@ -101,6 +101,7 @@ private struct BackgroundView<Content: View>: View {
 
 // MARK: - Previews
 
+/*
 struct CompletionSuggestion_Previews: PreviewProvider, TestablePreview {
     static let multipleItems: [SuggestionItem] = (0...10).map { index in
         .init(suggestionType: .user(.init(id: "\(index)", displayName: "\(index)", avatarURL: nil)), range: .init(), rawSuggestionText: "")
@@ -120,3 +121,4 @@ struct CompletionSuggestion_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

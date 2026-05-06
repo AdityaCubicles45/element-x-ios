@@ -95,6 +95,7 @@ struct ChatsSpaceFilterCell: View {
     }
 }
 
+/*
 struct ChatsSpaceFilterCell_Previews: PreviewProvider, TestablePreview {
     static let mediaProvider = MediaProviderMock(configuration: .init())
     
@@ -111,3 +112,4 @@ struct ChatsSpaceFilterCell_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

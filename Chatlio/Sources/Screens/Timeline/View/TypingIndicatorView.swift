@@ -65,6 +65,7 @@ struct TypingIndicatorView: View {
     }
 }
 
+/*
 struct TypingIndicatorView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(alignment: .leading, spacing: 16.0) {
@@ -78,3 +79,4 @@ struct TypingIndicatorView_Previews: PreviewProvider, TestablePreview {
         .frame(width: 300)
     }
 }
+*/

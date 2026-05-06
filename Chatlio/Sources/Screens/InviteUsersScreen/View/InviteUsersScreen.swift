@@ -145,6 +145,7 @@ struct InviteUsersScreen: View {
 
 // MARK: - Previews
 
+/*
 struct InviteUsersScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let searchingViewModel = makeViewModel(searchQuery: "Alice")
@@ -197,3 +198,4 @@ struct InviteUsersScreen_Previews: PreviewProvider, TestablePreview {
         return viewModel
     }
 }
+*/

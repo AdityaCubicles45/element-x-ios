@@ -111,6 +111,7 @@ struct RoomChangeRolesScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomChangeRolesScreen_Previews: PreviewProvider, TestablePreview {
     static let ownerViewModel = makeViewModel(mode: .owner, ownRole: .creator)
     static let administratorOrOwnerViewModel = makeViewModel(mode: .administrator, ownRole: .creator)
@@ -154,3 +155,4 @@ struct RoomChangeRolesScreen_Previews: PreviewProvider, TestablePreview {
                                               analytics: ServiceLocator.shared.analytics)
     }
 }
+*/

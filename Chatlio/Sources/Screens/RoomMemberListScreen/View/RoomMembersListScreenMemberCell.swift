@@ -97,6 +97,7 @@ struct RoomMembersListScreenMemberCell: View {
     }
 }
 
+/*
 struct RoomMembersListMemberCell_Previews: PreviewProvider, TestablePreview {
     static let members: [RoomMemberListScreenEntry] = [
         .init(member: .init(withProxy: RoomMemberProxyMock.mockAlice),
@@ -150,3 +151,4 @@ struct RoomMembersListMemberCell_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

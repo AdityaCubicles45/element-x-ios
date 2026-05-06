@@ -59,6 +59,7 @@ struct TimelineStartRoomTimelineView: View {
     }
 }
 
+/*
 struct TimelineStartRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock(hasPredecessor: true)
     
@@ -72,3 +73,4 @@ struct TimelineStartRoomTimelineView_Previews: PreviewProvider, TestablePreview 
             .previewDisplayName("with predecessor")
     }
 }
+*/

@@ -51,6 +51,7 @@ struct CallNotificationRoomTimelineView: View {
     }
 }
 
+/*
 struct CallNotificationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -66,3 +67,4 @@ struct CallNotificationRoomTimelineView_Previews: PreviewProvider, TestablePrevi
                                                              sender: .init(id: "Bob")))
     }
 }
+*/

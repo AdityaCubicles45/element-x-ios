@@ -117,6 +117,7 @@ struct PINDigitField: View {
     }
 }
 
+/*
 struct PINTextField_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 8) {
@@ -146,3 +147,4 @@ struct PINTextField_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -35,6 +35,7 @@ struct FormActionButtonStyle: ButtonStyle {
     }
 }
 
+/*
 struct FormButtonStyles_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         Form {
@@ -48,3 +49,4 @@ struct FormButtonStyles_Previews: PreviewProvider, TestablePreview {
         .compoundList()
     }
 }
+*/

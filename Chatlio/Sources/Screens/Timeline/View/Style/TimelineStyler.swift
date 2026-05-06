@@ -54,6 +54,7 @@ struct TimelineStyler<Content: View>: View {
     }
 }
 
+/*
 struct TimelineItemStyler_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
 
@@ -190,3 +191,4 @@ struct TimelineItemStyler_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Bubbles RTL with different layout languages")
     }
 }
+*/

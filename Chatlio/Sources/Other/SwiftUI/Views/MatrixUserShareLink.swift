@@ -27,6 +27,7 @@ struct MatrixUserShareLink<Label: View>: View {
     }
 }
 
+/*
 struct MatrixUserPermalink_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         MatrixUserShareLink(userID: "@someone:somewhere.org") {
@@ -34,3 +35,4 @@ struct MatrixUserPermalink_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

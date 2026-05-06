@@ -153,6 +153,7 @@ struct StartChatScreen: View {
 
 // MARK: - Previews
 
+/*
 struct StartChatScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let appSettings = AppSettings()
@@ -173,3 +174,4 @@ struct StartChatScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

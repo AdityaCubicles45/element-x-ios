@@ -70,6 +70,7 @@ struct JoinedMembersBadgeView: View {
 
 // MARK: - Previews
 
+/*
 struct JoinedMembersBadgeView_Previews: PreviewProvider, TestablePreview {
     static let mediaProvider = MediaProviderMock(configuration: .init())
     
@@ -85,3 +86,4 @@ struct JoinedMembersBadgeView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

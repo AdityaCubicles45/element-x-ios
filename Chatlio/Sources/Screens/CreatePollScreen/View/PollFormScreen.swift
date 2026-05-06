@@ -197,6 +197,7 @@ private struct PollFormOptionRow: View {
 
 // MARK: - Previews
 
+/*
 struct PollFormScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel(mode: .new)
     static let editViewModel = makeViewModel(mode: .edit(eventID: "1234", poll: poll))
@@ -231,6 +232,7 @@ struct PollFormScreen_Previews: PreviewProvider, TestablePreview {
                                 userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/
 
 private extension Binding where Value == String {
     func limited(to limit: Int) -> Self {

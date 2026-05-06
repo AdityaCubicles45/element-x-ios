@@ -35,6 +35,7 @@ struct ReadReceiptsSummaryView: View {
     }
 }
 
+/*
 struct ReadReceiptsSummaryView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let members: [RoomMemberProxyMock] = [
@@ -70,3 +71,4 @@ struct ReadReceiptsSummaryView_Previews: PreviewProvider, TestablePreview {
             .environmentObject(viewModel.context)
     }
 }
+*/

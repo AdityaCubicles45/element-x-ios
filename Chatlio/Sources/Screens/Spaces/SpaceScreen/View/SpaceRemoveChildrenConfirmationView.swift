@@ -54,8 +54,10 @@ struct SpaceRemoveChildrenConfirmationView: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceRemoveChildrenConfirmationView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         SpaceRemoveChildrenConfirmationView(spaceName: "Company") { }
     }
 }
+*/

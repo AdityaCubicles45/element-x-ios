@@ -109,6 +109,7 @@ extension VoiceMessageButton.State {
     }
 }
 
+/*
 struct VoiceMessageButton_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 8) {
@@ -125,3 +126,4 @@ struct VoiceMessageButton_Previews: PreviewProvider, TestablePreview {
         .background(.compound.bgSubtleSecondary)
     }
 }
+*/

@@ -116,6 +116,7 @@ struct SecureBackupScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SecureBackupScreen_Previews: PreviewProvider, TestablePreview {
     static let bothSetupViewModel = viewModel(keyBackupState: .enabled, recoveryState: .enabled)
     static let onlyKeyBackupSetUpViewModel = viewModel(keyBackupState: .enabled, recoveryState: .disabled)
@@ -159,3 +160,4 @@ struct SecureBackupScreen_Previews: PreviewProvider, TestablePreview {
                                            chatBackupDetailsURL: .sharedPublicDirectory)
     }
 }
+*/

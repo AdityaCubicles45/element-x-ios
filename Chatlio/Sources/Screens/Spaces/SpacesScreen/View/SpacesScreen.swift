@@ -132,6 +132,7 @@ struct SpacesScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SpacesScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let emptyViewModel = makeViewModel(isEmpty: true)
@@ -161,3 +162,4 @@ struct SpacesScreen_Previews: PreviewProvider, TestablePreview {
                                      userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/

@@ -448,6 +448,7 @@ class RoomScreenViewModel: RoomScreenViewModelType, RoomScreenViewModelProtocol 
     }
 }
 
+/*
 extension RoomScreenViewModel {
     static func mock(roomProxyMock: JoinedRoomProxyMock,
                      clientProxyMock: ClientProxyMock = ClientProxyMock(.init()),
@@ -462,6 +463,7 @@ extension RoomScreenViewModel {
                             userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/
 
 private extension KnockRequestInfo {
     init(from proxy: KnockRequestProxyProtocol) {

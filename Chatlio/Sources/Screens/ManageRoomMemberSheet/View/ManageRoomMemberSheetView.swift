@@ -79,6 +79,7 @@ struct ManageRoomMemberSheetView: View {
     }
 }
 
+/*
 struct ManageRoomMemberSheetView_Previews: PreviewProvider, TestablePreview {
     static let allActionsViewModel = ManageRoomMemberSheetViewModel.mock()
     
@@ -103,7 +104,9 @@ struct ManageRoomMemberSheetView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Unban Only")
     }
 }
+*/
 
+/*
 private extension ManageRoomMemberSheetViewModel {
     static func mock(canKick: Bool = true,
                      canBan: Bool = true,
@@ -124,3 +127,4 @@ private extension ManageRoomMemberSheetViewModel {
                                               mediaProvider: MediaProviderMock(configuration: .init()))
     }
 }
+*/

@@ -37,6 +37,7 @@ struct AnalyticsSettingsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct AnalyticsSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         let appSettings = AppSettings()
@@ -45,3 +46,4 @@ struct AnalyticsSettingsScreen_Previews: PreviewProvider, TestablePreview {
         AnalyticsSettingsScreen(context: viewModel.context)
     }
 }
+*/

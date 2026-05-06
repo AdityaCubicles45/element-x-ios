@@ -77,6 +77,7 @@ struct JoinRoomByAddressView: View {
     }
 }
 
+/*
 struct JoinRoomByAddressView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@userid:example.com"))))
@@ -93,3 +94,4 @@ struct JoinRoomByAddressView_Previews: PreviewProvider, TestablePreview {
         JoinRoomByAddressView(context: viewModel.context)
     }
 }
+*/

@@ -45,6 +45,7 @@ struct MentionSuggestionItemView: View {
     }
 }
 
+/*
 struct MentionSuggestionItemView_Previews: PreviewProvider, TestablePreview {
     static let mockMediaProvider = MediaProviderMock(configuration: .init())
     
@@ -66,3 +67,4 @@ struct MentionSuggestionItemView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Room")
     }
 }
+*/

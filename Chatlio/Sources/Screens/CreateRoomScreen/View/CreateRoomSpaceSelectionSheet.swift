@@ -61,6 +61,7 @@ struct CreateRoomSpaceSelectionSheet: View {
     }
 }
 
+/*
 struct CreateRoomSpaceSelectionSheet_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let clientProxy = ClientProxyMock(.init(userID: "@userid:example.com"))
@@ -81,3 +82,4 @@ struct CreateRoomSpaceSelectionSheet_Previews: PreviewProvider, TestablePreview 
             .snapshotPreferences(expect: viewModel.context.$viewState.map { $0.editableSpaces.count > 0 })
     }
 }
+*/

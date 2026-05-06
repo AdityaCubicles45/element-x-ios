@@ -98,8 +98,10 @@ struct HomeScreenKnockedCell: View {
 
 // MARK: - Previews
 
-import MatrixRustSDKMocks
+//import MatrixRustSDKMocks
 
+/*
+/*
 struct HomeScreenKnockedCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ScrollView {
@@ -140,6 +142,7 @@ struct HomeScreenKnockedCell_Previews: PreviewProvider, TestablePreview {
                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/
 
 @MainActor
 private extension HomeScreenRoom {
@@ -206,3 +209,4 @@ private extension HomeScreenRoom {
         return .init(summary: summary, hideUnreadMessagesBadge: false)
     }
 }
+*/

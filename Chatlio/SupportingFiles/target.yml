@@ -97,7 +97,7 @@ targets:
           voip
         ]
         BGTaskSchedulerPermittedIdentifiers: [
-          io.element.chatlio.background.refresh
+          im.word.skin.chatlio.background.refresh
         ]
         UTExportedTypeDeclarations:
         - UTTypeConformsTo: [public.text]
@@ -115,16 +115,13 @@ targets:
       properties:
         aps-environment: development
         com.apple.developer.associated-domains:
-        - applinks:element.io
-        - applinks:app.element.io
-        - applinks:staging.element.io
-        - applinks:develop.element.io
-        - applinks:mobile.element.io
-        - applinks:call.element.io
-        - applinks:call.element.dev
+        - applinks:word.skin
+        - applinks:app.word.skin
+        - applinks:mobile.word.skin
+        - applinks:auth.word.skin
         - applinks:matrix.to
-        # - applinks:localhost?mode=developer # developer mode only works with https (but self-signed is fine).
-        - webcredentials:*.element.io
+        - webcredentials:auth.word.skin
+        - webcredentials:*.word.skin
         com.apple.developer.usernotifications.communication: true
         com.apple.security.app-sandbox: true
         com.apple.security.application-groups:
@@ -226,7 +223,6 @@ targets:
     dependencies:
     - target: NSE
     - target: ShareExtension
-    - target: MatrixRustSDKMocks
     - package: MatrixRustSDK
       embed: true
     - package: Compound
@@ -264,6 +260,15 @@ targets:
       excludes:
         - Other/Extensions/XCTestCase.swift
         - Other/Extensions/XCUIElement.swift
+        - Mocks
+        - UnitTests
+        - UITests
+        - AccessibilityTests
+        - PreviewTests
+        - Services/AppLock/LAContextMock.swift
+        - Services/Keychain/KeychainControllerMock.swift
+        - Services/Timeline/Fixtures
+        - Services/Timeline/TimelineController/MockTimelineController.swift
     - path: ../../Secrets/Secrets.swift
     - path: ../Resources
     - path: ../SupportingFiles

@@ -74,6 +74,7 @@ extension View {
     }
 }
 
+/*
 struct LongPressWithFeedback_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         Preview()
@@ -123,6 +124,7 @@ struct LongPressWithFeedback_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/
 
 /// Fixes the issue on iOS 18 where LongPress conflicts with the scroll view
 /// https://github.com/feedback-assistant/reports/issues/542#issuecomment-2581322968

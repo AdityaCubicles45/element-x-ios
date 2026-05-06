@@ -51,6 +51,7 @@ struct PollRoomTimelineView: View {
     }
 }
 
+/*
 struct PollRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     static let pinnedEventsTimelineViewModel = TimelineViewModel.mock(timelineKind: .pinned)
@@ -85,3 +86,4 @@ struct PollRoomTimelineView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Preview")
     }
 }
+*/

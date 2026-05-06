@@ -90,6 +90,7 @@ struct AnalyticsPromptScreen: View {
 
 // MARK: - Previews
 
+/*
 struct AnalyticsPromptScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let noTermsViewModel = makeViewModel(showTerms: false)
@@ -105,3 +106,4 @@ struct AnalyticsPromptScreen_Previews: PreviewProvider, TestablePreview {
         AnalyticsPromptScreenViewModel(termsURL: showTerms ? ServiceLocator.shared.settings.analyticsTermsURL : nil)
     }
 }
+*/

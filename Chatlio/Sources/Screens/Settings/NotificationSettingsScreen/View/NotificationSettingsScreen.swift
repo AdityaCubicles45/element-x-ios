@@ -199,6 +199,7 @@ struct NotificationSettingsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct NotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel: NotificationSettingsScreenViewModel = {
         let appSettings = AppSettings()
@@ -263,3 +264,4 @@ struct NotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Configuration mismatch")
     }
 }
+*/

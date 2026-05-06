@@ -23,6 +23,7 @@ struct UnsupportedRoomTimelineView: View {
     }
 }
 
+/*
 struct UnsupportedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -56,3 +57,4 @@ struct UnsupportedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                     sender: .init(id: senderId))
     }
 }
+*/

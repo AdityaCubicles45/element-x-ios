@@ -47,6 +47,7 @@ struct LocationRoomTimelineView: View {
     private let mapMaxHeight: Double = 300
 }
 
+/*
 struct LocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
 
@@ -94,3 +95,4 @@ struct LocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                                                                              eventContent: .message(.location(.init(body: "")))))))
     }
 }
+*/

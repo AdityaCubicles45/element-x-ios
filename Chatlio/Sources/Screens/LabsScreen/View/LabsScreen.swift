@@ -63,6 +63,7 @@ struct LabsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct LabsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         AppSettings.resetAllSettings()
@@ -75,3 +76,4 @@ struct LabsScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

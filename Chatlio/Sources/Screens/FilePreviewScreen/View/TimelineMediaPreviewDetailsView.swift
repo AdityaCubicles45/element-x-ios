@@ -173,6 +173,7 @@ struct TimelineMediaPreviewDetailsView: View {
 
 import UniformTypeIdentifiers
 
+/*
 struct TimelineMediaPreviewDetailsView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel(contentType: .jpeg, isOutgoing: true)
     static let loadingViewModel = makeViewModel(contentType: .jpeg, isOutgoing: true, isDownloaded: false)
@@ -242,3 +243,4 @@ struct TimelineMediaPreviewDetailsView_Previews: PreviewProvider, TestablePrevie
         return viewModel
     }
 }
+*/

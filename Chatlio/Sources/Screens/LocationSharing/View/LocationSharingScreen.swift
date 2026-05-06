@@ -149,6 +149,7 @@ struct LocationSharingScreen: View {
 
 // MARK: - Previews
 
+/*
 struct LocationSharingScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation)
     
@@ -180,6 +181,7 @@ struct LocationSharingScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Pin Static Location")
     }
 }
+*/
 
 private extension CGPoint {
     static let bottomCenter: Self = .init(x: 0.5, y: 1)

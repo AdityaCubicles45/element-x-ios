@@ -109,6 +109,8 @@ struct SessionVerificationRequestDetailsView: View {
     }
 }
 
+/*
+/*
 struct SessionVerificationRequestDetailsView_Previews: PreviewProvider, TestablePreview {
     static let details = SessionVerificationRequestDetails(senderProfile: UserProfileProxy(userID: "@bob:matrix.org",
                                                                                            displayName: "Billy bob",
@@ -132,3 +134,5 @@ struct SessionVerificationRequestDetailsView_Previews: PreviewProvider, Testable
             .previewDisplayName("Device")
     }
 }
+*/
+*/

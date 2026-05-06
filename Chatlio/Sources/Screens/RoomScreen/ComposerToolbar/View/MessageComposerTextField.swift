@@ -333,6 +333,7 @@ private class ElementTextView: UITextView, PillAttachmentViewProviderDelegate {
     }
 }
 
+/*
 struct MessageComposerTextField_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 16) {
@@ -361,3 +362,4 @@ struct MessageComposerTextField_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

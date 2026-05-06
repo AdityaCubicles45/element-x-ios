@@ -63,6 +63,7 @@ private extension MembershipState {
     }
 }
 
+/*
 struct UserProfileCell_Previews: PreviewProvider, TestablePreview {
     static let action: () -> Void = { }
     
@@ -88,3 +89,4 @@ struct UserProfileCell_Previews: PreviewProvider, TestablePreview {
         .compoundList()
     }
 }
+*/

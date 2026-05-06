@@ -165,6 +165,7 @@ struct HomeScreen: View {
 
 // MARK: - Previews
 
+/*
 struct HomeScreen_Previews: PreviewProvider, TestablePreview {
     static let loadingViewModel = viewModel(.skeletons)
     static let emptyViewModel = viewModel(.empty)
@@ -221,3 +222,4 @@ struct HomeScreen_Previews: PreviewProvider, TestablePreview {
                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/

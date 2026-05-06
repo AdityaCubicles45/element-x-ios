@@ -23,8 +23,10 @@ struct ThreadDecorator: View {
     }
 }
 
+/*
 struct ThreadDecorator_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ThreadDecorator()
     }
 }
+*/

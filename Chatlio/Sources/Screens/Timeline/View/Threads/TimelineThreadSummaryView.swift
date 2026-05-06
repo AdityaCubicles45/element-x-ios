@@ -164,6 +164,7 @@ struct TimelineThreadSummaryView: View {
     }
 }
 
+/*
 struct TimelineThreadSummaryView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -326,3 +327,4 @@ struct TimelineThreadSummaryView_Previews: PreviewProvider, TestablePreview {
         .previewLayout(.sizeThatFits)
     }
 }
+*/

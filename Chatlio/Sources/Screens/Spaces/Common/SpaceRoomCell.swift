@@ -167,6 +167,7 @@ struct SpaceRoomCellButtonStyle: ButtonStyle {
     }
 }
 
+/*
 struct SpaceRoomCell_Previews: PreviewProvider, TestablePreview {
     static let mediaProvider = MediaProviderMock(configuration: .init())
     
@@ -205,3 +206,4 @@ struct SpaceRoomCell_Previews: PreviewProvider, TestablePreview {
         .previewLayout(.fixed(width: 390, height: 850))
     }
 }
+*/

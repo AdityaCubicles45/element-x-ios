@@ -56,6 +56,7 @@ struct SFNumberedListView: View {
     }
 }
 
+/*
 struct SFNumberedListView_Previews: PreviewProvider, TestablePreview {
     static let items = {
         var results: [AttributedString] = []
@@ -71,3 +72,4 @@ struct SFNumberedListView_Previews: PreviewProvider, TestablePreview {
             .previewLayout(.sizeThatFits)
     }
 }
+*/

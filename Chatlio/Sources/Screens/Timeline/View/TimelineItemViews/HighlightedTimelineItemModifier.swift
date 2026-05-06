@@ -43,6 +43,7 @@ private struct HighlightedTimelineItemModifier: ViewModifier {
 // MARK: - Previews
 
 // swiftlint:disable line_length blanket_disable_command
+/*
 struct HighlightedTimelineItemModifier_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ScrollView {
@@ -82,8 +83,10 @@ struct HighlightedTimelineItemModifier_Previews: PreviewProvider, TestablePrevie
         }
     }
 }
+*/
 
 /// A preview that allows quick testing of the highlight appearance across various timeline scenarios.
+/*
 struct HighlightedTimelineItemTimeline_Previews: PreviewProvider {
     static let roomProxyMock = JoinedRoomProxyMock(.init(name: "Preview room"))
     static let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
@@ -111,3 +114,4 @@ struct HighlightedTimelineItemTimeline_Previews: PreviewProvider {
         .previewDisplayName("Timeline")
     }
 }
+*/

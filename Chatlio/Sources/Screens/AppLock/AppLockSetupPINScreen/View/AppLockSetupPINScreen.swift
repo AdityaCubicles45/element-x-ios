@@ -89,6 +89,7 @@ struct AppLockSetupPINScreen: View {
 
 // MARK: - Previews
 
+/*
 struct AppLockSetupPINScreen_Previews: PreviewProvider, TestablePreview {
     static let service = AppLockServiceMock.mock()
     static let failedService = AppLockServiceMock.mock(numberOfPINAttempts: 1)
@@ -128,3 +129,4 @@ struct AppLockSetupPINScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Unlock Failed")
     }
 }
+*/

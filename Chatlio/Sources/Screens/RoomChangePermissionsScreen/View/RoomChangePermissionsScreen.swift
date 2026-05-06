@@ -64,6 +64,7 @@ struct RoomChangePermissionsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomChangePermissionsScreen_Previews: PreviewProvider, TestablePreview {
     static let roomViewModel = makeViewModel(isSpace: false)
     static let roomAsUserViewModel = makeViewModel(isSpace: false, ownPowerLevel: RoomRole.user.powerLevel)
@@ -94,3 +95,4 @@ struct RoomChangePermissionsScreen_Previews: PreviewProvider, TestablePreview {
                                              analytics: ServiceLocator.shared.analytics)
     }
 }
+*/

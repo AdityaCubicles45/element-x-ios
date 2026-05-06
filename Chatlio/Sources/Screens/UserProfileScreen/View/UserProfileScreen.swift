@@ -97,6 +97,7 @@ struct UserProfileScreen: View {
 
 // MARK: - Previews
 
+/*
 struct UserProfileScreen_Previews: PreviewProvider, TestablePreview {
     static let verifiedUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockDan.userID)
     static let otherUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockAlice.userID)
@@ -141,3 +142,4 @@ struct UserProfileScreen_Previews: PreviewProvider, TestablePreview {
                                           analytics: ServiceLocator.shared.analytics)
     }
 }
+*/

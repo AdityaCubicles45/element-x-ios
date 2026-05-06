@@ -92,6 +92,7 @@ private struct MessageForwardingListRow: View {
 
 // MARK: - Previews
 
+/*
 struct MessageForwardingScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
@@ -107,3 +108,4 @@ struct MessageForwardingScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

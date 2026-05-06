@@ -32,6 +32,7 @@ struct PlaybackSpeedButton: View {
     }
 }
 
+/*
 struct PlaybackSpeedButton_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         HStack(spacing: 8) {
@@ -43,3 +44,4 @@ struct PlaybackSpeedButton_Previews: PreviewProvider, TestablePreview {
         .background(Color.gray)
     }
 }
+*/

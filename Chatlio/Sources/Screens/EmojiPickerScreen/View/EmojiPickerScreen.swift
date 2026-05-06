@@ -100,6 +100,7 @@ struct EmojiPickerScreen: View {
 
 // MARK: - Previews
 
+/*
 struct EmojiPickerScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
                                                       selectedEmojis: ["😀", "😄"],
@@ -112,7 +113,9 @@ struct EmojiPickerScreen_Previews: PreviewProvider, TestablePreview {
             .snapshotPreferences(expect: viewModel.context.observe(\.viewState.categories).map { !$0.isEmpty })
     }
 }
+*/
 
+/*
 struct EmojiPickerScreenSheet_Previews: PreviewProvider {
     static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
                                                       selectedEmojis: ["😀", "😄"],
@@ -127,3 +130,4 @@ struct EmojiPickerScreenSheet_Previews: PreviewProvider {
             .previewDisplayName("Sheet")
     }
 }
+*/

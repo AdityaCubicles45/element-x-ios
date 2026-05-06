@@ -184,6 +184,7 @@ struct FormattedBodyText: View {
 
 // MARK: - Previews
 
+/*
 struct FormattedBodyText_Previews: PreviewProvider, TestablePreview {
     static let attributedStringBuilder = AttributedStringBuilder(cacheKey: "FormattedBodyText", mentionBuilder: MentionBuilder())
     static var previews: some View {
@@ -258,3 +259,4 @@ struct FormattedBodyText_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

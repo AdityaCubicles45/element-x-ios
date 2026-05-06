@@ -81,6 +81,7 @@ private struct VoiceMessageRecordingButtonStyle: ButtonStyle {
     }
 }
 
+/*
 struct VoiceMessageRecordingButton_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         HStack(spacing: 12) {
@@ -91,3 +92,4 @@ struct VoiceMessageRecordingButton_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

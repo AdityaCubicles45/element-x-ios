@@ -22,6 +22,7 @@ struct StateRoomTimelineView: View {
     }
 }
 
+/*
 struct StateRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         body
@@ -39,3 +40,4 @@ struct StateRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                             canBeRepliedTo: true,
                                             sender: .init(id: ""))
 }
+*/

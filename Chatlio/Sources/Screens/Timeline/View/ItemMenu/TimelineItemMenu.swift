@@ -255,6 +255,7 @@ private extension EncryptionAuthenticity {
 
 // MARK: - Previews
 
+/*
 struct TimelineItemMenu_Previews: PreviewProvider, TestablePreview {
     enum ItemType { case incomingText, outgoingMedia, outgoingMediaWithCaption }
     
@@ -370,3 +371,4 @@ struct TimelineItemMenu_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

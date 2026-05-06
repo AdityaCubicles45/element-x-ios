@@ -101,6 +101,7 @@ private extension AppAppearance {
 
 // MARK: - Previews
 
+/*
 struct AdvancedSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = AdvancedSettingsScreenViewModel(advancedSettings: ServiceLocator.shared.settings,
                                                            analytics: ServiceLocator.shared.analytics,
@@ -112,6 +113,7 @@ struct AdvancedSettingsScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/
 
 private extension TimelineMediaVisibility {
     static var items: [(title: String, tag: TimelineMediaVisibility)] {

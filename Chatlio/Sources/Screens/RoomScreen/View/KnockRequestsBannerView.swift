@@ -182,6 +182,7 @@ private struct KnockRequestsBannerDismissButton: View {
     }
 }
 
+/*
 struct KnockRequestsBannerView_Previews: PreviewProvider, TestablePreview {
     static let singleRequest: [KnockRequestInfo] = [.init(displayName: "Alice", avatarURL: nil, userID: "@alice:matrix.org", reason: nil, eventID: "1")]
     
@@ -215,3 +216,4 @@ struct KnockRequestsBannerView_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Multiple Requests")
     }
 }
+*/

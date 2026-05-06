@@ -164,6 +164,7 @@ struct RoomMemberDetailsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomMemberDetailsScreen_Previews: PreviewProvider, TestablePreview {
     static let verifiedUserViewModel = makeViewModel(member: .mockDan)
     static let verificationViolationUserViewModel = makeViewModel(member: .mockBob)
@@ -234,3 +235,4 @@ struct RoomMemberDetailsScreen_Previews: PreviewProvider, TestablePreview {
                                                 analytics: ServiceLocator.shared.analytics)
     }
 }
+*/

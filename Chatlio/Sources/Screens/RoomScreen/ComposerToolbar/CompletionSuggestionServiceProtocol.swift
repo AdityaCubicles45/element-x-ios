@@ -101,6 +101,7 @@ extension WysiwygComposer.SuggestionPattern {
     }
 }
 
+/*
 extension CompletionSuggestionServiceMock {
     struct CompletionSuggestionServiceMockConfiguration {
         var suggestions: [SuggestionItem] = []
@@ -111,3 +112,4 @@ extension CompletionSuggestionServiceMock {
         underlyingSuggestionsPublisher = Just(configuration.suggestions).eraseToAnyPublisher()
     }
 }
+*/

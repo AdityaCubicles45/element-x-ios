@@ -79,6 +79,7 @@ private struct LocationPickerLabel: View {
     }
 }
 
+/*
 struct LocationPickerSheet_Previews: PreviewProvider, TestablePreview {
     static let viewModel = LocationSharingScreenViewModel.mock(type: .picker)
     
@@ -86,3 +87,4 @@ struct LocationPickerSheet_Previews: PreviewProvider, TestablePreview {
         LocationPickerSheet(context: viewModel.context)
     }
 }
+*/

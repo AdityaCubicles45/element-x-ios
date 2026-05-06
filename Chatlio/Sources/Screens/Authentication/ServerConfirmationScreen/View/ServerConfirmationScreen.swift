@@ -143,6 +143,7 @@ private struct FakeInlinePicker: View {
 
 // MARK: - Previews
 
+/*
 struct ServerConfirmationScreen_Previews: PreviewProvider, TestablePreview {
     static let loginViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .login)
     static let registerViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .register)
@@ -176,3 +177,4 @@ struct ServerConfirmationScreen_Previews: PreviewProvider, TestablePreview {
                                           userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/

@@ -168,6 +168,7 @@ struct QRCodeErrorView: View {
 
 // MARK: - Previews
 
+/*
 struct QRCodeErrorView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ForEach(QRCodeLoginState.ErrorState.allCases, id: \.self) { errorState in
@@ -185,6 +186,7 @@ struct QRCodeErrorView_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Linking unsupported restricted flow")
     }
 }
+*/
 
 private extension QRCodeLoginState.ErrorState {
     var previewDisplayName: String {

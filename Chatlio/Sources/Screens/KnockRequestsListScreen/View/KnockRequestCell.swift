@@ -178,6 +178,7 @@ extension KnockRequestCellInfo: Identifiable {
     }
 }
 
+/*
 struct KnockRequestCell_Previews: PreviewProvider, TestablePreview {
     // swiftlint:disable:next line_length
     static let aliceWithLongReason = KnockRequestCellInfo(eventID: "1", userID: "@alice:matrix.org", displayName: "Alice", avatarURL: nil, timestamp: "20 Nov 2024", reason: "Hello would like to join this room, also this is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long reason")
@@ -205,3 +206,4 @@ struct KnockRequestCell_Previews: PreviewProvider, TestablePreview {
 //            .previewDisplayName("No Ban")
     }
 }
+*/

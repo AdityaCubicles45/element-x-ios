@@ -93,6 +93,7 @@ struct HomeScreenEmptyStateLayout: Layout {
 
 // MARK: - Previews
 
+/*
 struct HomeScreenEmptyStateView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         HomeScreenEmptyStateView(context: viewModel.context)
@@ -152,3 +153,4 @@ struct HomeScreenEmptyStateView_Previews: PreviewProvider, TestablePreview {
                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }()
 }
+*/

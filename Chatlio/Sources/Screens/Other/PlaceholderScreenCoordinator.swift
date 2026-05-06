@@ -42,6 +42,7 @@ struct PlaceholderScreen: View {
     }
 }
 
+/*
 struct PlaceholderScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: false)
@@ -66,3 +67,4 @@ struct PlaceholderScreen_Previews: PreviewProvider, TestablePreview {
         .previewInterfaceOrientation(.landscapeLeft)
     }
 }
+*/

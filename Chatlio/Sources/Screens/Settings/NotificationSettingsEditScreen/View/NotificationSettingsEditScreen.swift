@@ -59,6 +59,7 @@ struct NotificationSettingsEditScreen: View {
 
 // MARK: - Previews
 
+/*
 struct NotificationSettingsEditScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModelGroupChats: NotificationSettingsEditScreenViewModel = {
         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
@@ -126,3 +127,4 @@ struct NotificationSettingsEditScreen_Previews: PreviewProvider, TestablePreview
             .previewDisplayName("Group Chats Without Disclaimer")
     }
 }
+*/

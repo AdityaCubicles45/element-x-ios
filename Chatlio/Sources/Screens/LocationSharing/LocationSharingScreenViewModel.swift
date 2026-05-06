@@ -125,6 +125,7 @@ class LocationSharingScreenViewModel: LocationSharingScreenViewModelType, Locati
     }
 }
 
+/*
 extension LocationSharingScreenViewModel {
     enum MockType {
         case picker
@@ -162,3 +163,4 @@ extension LocationSharingScreenViewModel {
                                               mediaProvider: MediaProviderMock(configuration: .init()))
     }
 }
+*/

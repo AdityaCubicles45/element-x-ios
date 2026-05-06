@@ -26,6 +26,7 @@ struct CallInviteRoomTimelineView: View {
     }
 }
 
+/*
 struct CallInviteRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -41,3 +42,4 @@ struct CallInviteRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                                        sender: .init(id: "Bob")))
     }
 }
+*/

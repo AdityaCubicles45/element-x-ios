@@ -44,6 +44,7 @@ struct UserIndicatorToastView: View {
     }
 }
 
+/*
 struct UserIndicatorToastView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 30) {
@@ -57,3 +58,4 @@ struct UserIndicatorToastView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

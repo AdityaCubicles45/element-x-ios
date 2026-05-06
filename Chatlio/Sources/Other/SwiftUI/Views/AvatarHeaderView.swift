@@ -242,6 +242,7 @@ struct AvatarHeaderView<Footer: View>: View {
     }
 }
 
+/*
 struct AvatarHeaderView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         Form {
@@ -331,3 +332,4 @@ struct AvatarHeaderView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

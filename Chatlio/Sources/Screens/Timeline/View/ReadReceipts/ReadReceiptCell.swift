@@ -58,6 +58,7 @@ struct ReadReceiptCell: View {
     }
 }
 
+/*
 struct ReadReceiptCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ReadReceiptCell(readReceipt: .init(userID: "@test:matrix.org",
@@ -79,3 +80,4 @@ struct ReadReceiptCell_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Loading Member")
     }
 }
+*/

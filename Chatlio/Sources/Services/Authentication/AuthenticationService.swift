@@ -289,6 +289,7 @@ private extension HumanQrLoginError {
     }
 }
 
+/*
 // MARK: - Mocks
 
 extension AuthenticationService {
@@ -301,3 +302,4 @@ extension AuthenticationService {
                               appHooks: AppHooks())
     }
 }
+*/

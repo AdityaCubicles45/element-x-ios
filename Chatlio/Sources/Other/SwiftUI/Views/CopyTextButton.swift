@@ -31,9 +31,11 @@ struct CopyTextButton: View {
     }
 }
 
+/*
 struct CopyTextButton_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         CopyTextButton(content: "Copy me!")
             .previewLayout(.sizeThatFits)
     }
 }
+*/

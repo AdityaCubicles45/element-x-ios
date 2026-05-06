@@ -44,10 +44,8 @@ struct LoginHomeserver: Equatable {
 // MARK: - Mocks
 
 extension LoginHomeserver {
-    /// A mock homeserver that is configured just like matrix.org.
-    static var mockMatrixDotOrg: LoginHomeserver {
-        LoginHomeserver(address: "matrix.org", loginMode: .oidc(supportsCreatePrompt: true))
-    }
+    /// A mock homeserver that is configured just like word.skin.
+    static let wordSkin = LoginHomeserver(address: "word.skin", loginMode: .oidc(supportsCreatePrompt: true))
     
     /// A mock homeserver that supports login and registration via a password but has no SSO providers.
     static var mockBasicServer: LoginHomeserver {

@@ -333,6 +333,7 @@ private struct CallView: UIViewRepresentable {
 
 // MARK: - Previews
 
+/*
 struct CallScreen_Previews: PreviewProvider {
     static let viewModel = {
         let clientProxy = ClientProxyMock()
@@ -364,3 +365,4 @@ struct CallScreen_Previews: PreviewProvider {
         CallScreen(context: viewModel.context)
     }
 }
+*/

@@ -1038,6 +1038,7 @@ class TimelineViewModel: TimelineViewModelType, TimelineViewModelProtocol {
 
 // MARK: - Mocks
 
+/*
 extension TimelineViewModel {
     static let mock = mock(timelineKind: .live)
     
@@ -1060,6 +1061,7 @@ extension TimelineViewModel {
                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
     }
 }
+*/
 
 extension EnvironmentValues {
     /// Used to access and inject the room context without observing it

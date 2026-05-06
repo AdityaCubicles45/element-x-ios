@@ -97,6 +97,7 @@ private extension DateFormatter {
 
 // MARK: - Previews
 
+/*
 struct VoiceMessagePreviewComposer_Previews: PreviewProvider, TestablePreview {
     static let playerState = AudioPlayerState(id: .recorderPreview,
                                               title: L10n.commonVoiceMessage,
@@ -111,3 +112,4 @@ struct VoiceMessagePreviewComposer_Previews: PreviewProvider, TestablePreview {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+*/

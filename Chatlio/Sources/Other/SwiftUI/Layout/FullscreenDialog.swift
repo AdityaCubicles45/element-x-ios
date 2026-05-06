@@ -173,6 +173,7 @@ enum FullscreenDialogBackground {
     }
 }
 
+/*
 struct FullscreenDialog_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         FullscreenDialog(topPadding: UIConstants.iconTopPaddingToNavigationBar) {
@@ -235,3 +236,4 @@ struct FullscreenDialog_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

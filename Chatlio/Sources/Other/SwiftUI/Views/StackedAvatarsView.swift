@@ -41,6 +41,7 @@ struct StackedAvatarsView: View {
     }
 }
 
+/*
 struct StackedAvatarsView_Previews: PreviewProvider, TestablePreview {
     static let avatars: [StackedAvatarInfo] = [
         .init(url: nil, name: "Alice", contentID: "@alice:matrix.org"),
@@ -65,3 +66,4 @@ struct StackedAvatarsView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

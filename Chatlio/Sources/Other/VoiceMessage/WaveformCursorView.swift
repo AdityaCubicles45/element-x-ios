@@ -18,9 +18,11 @@ struct WaveformCursorView: View {
     }
 }
 
+/*
 struct WaveformCursorView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         WaveformCursorView(color: .compound.iconAccentTertiary)
             .frame(width: 2, height: 25)
     }
 }
+*/

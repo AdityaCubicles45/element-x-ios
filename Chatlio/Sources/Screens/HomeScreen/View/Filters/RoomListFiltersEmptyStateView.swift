@@ -54,6 +54,7 @@ struct RoomListFiltersEmptyStateView: View {
     }
 }
 
+/*
 struct RoomListFiltersEmptyStateView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 24) {
@@ -68,3 +69,4 @@ struct RoomListFiltersEmptyStateView_Previews: PreviewProvider, TestablePreview 
         .previewLayout(.sizeThatFits)
     }
 }
+*/

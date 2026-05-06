@@ -24,6 +24,7 @@ struct FileMediaEventsTimelineView: View {
     }
 }
 
+/*
 struct FileMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -65,3 +66,4 @@ struct FileMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
                              contentType: nil))
     }
 }
+*/

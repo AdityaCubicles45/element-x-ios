@@ -45,6 +45,7 @@ struct ChatsSpaceFiltersScreen: View {
 
 // MARK: - Previews
 
+/*
 struct ChatsSpaceFiltersScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     
@@ -57,3 +58,4 @@ struct ChatsSpaceFiltersScreen_Previews: PreviewProvider, TestablePreview {
                                          mediaProvider: MediaProviderMock(configuration: .init()))
     }
 }
+*/

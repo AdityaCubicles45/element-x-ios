@@ -316,8 +316,10 @@ private struct QRScannerViewOverlay: View {
 
 // MARK: - Previews
 
-import MatrixRustSDKMocks
+//import MatrixRustSDKMocks
 
+/*
+/*
 struct QRCodeLoginScreen_Previews: PreviewProvider, TestablePreview {
     // Instructions
     static let loginInstructionsStateViewModel = QRCodeLoginScreenViewModel.mock(state: .loginInstructions)
@@ -386,3 +388,5 @@ struct QRCodeLoginScreen_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Error")
     }
 }
+*/
+*/

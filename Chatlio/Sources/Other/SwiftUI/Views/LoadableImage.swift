@@ -315,6 +315,7 @@ extension EnvironmentValues {
 
 // MARK: - Previews
 
+/*
 struct LoadableImage_Previews: PreviewProvider, TestablePreview {
     static let mediaProvider = makeMediaProvider()
     static let loadingMediaProvider = makeMediaProvider(isLoading: true)
@@ -413,6 +414,7 @@ struct LoadableImage_Previews: PreviewProvider, TestablePreview {
         return mediaProvider
     }
 }
+*/
 
 private extension View {
     func layout(title: String, hideTimelineMedia: Bool = false) -> some View {

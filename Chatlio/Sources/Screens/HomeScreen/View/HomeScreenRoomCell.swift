@@ -179,8 +179,10 @@ private extension View {
 
 // MARK: - Previews
 
-import MatrixRustSDKMocks
+//import MatrixRustSDKMocks
 
+/*
+/*
 struct HomeScreenRoomCell_Previews: PreviewProvider, TestablePreview {
     static let summaryProviderGeneric = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
     static let genericRooms = summaryProviderGeneric.roomListPublisher.value.compactMap(mockRoom)
@@ -260,3 +262,5 @@ struct HomeScreenRoomCell_Previews: PreviewProvider, TestablePreview {
         return .init(summary: summary, hideUnreadMessagesBadge: false)
     }
 }
+*/
+*/

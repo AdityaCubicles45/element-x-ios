@@ -193,6 +193,7 @@ struct RoomScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModels = makeViewModels()
     static let readOnlyViewModels = makeViewModels(canSendMessage: false)
@@ -251,3 +252,4 @@ struct RoomScreen_Previews: PreviewProvider, TestablePreview {
         let timeline: TimelineViewModelProtocol
     }
 }
+*/

@@ -66,6 +66,7 @@ struct ReportContentScreen: View {
 
 // MARK: - Previews
 
+/*
 struct ReportContentScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = ReportContentScreenViewModel(eventID: "",
                                                         senderID: "",
@@ -78,3 +79,4 @@ struct ReportContentScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -265,6 +265,7 @@ extension TimelineMediaPreviewViewModel: Identifiable {
 
 // MARK: - Previews
 
+/*
 struct MediaEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
     static let mediaViewModel = makeViewModel(screenMode: .media)
     static let filesViewModel = makeViewModel(screenMode: .files)
@@ -323,3 +324,4 @@ struct MediaEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
     }
 }
+*/

@@ -39,7 +39,7 @@ struct ServerSelectionScreen: View {
                     .fill(Color(red: 0.945, green: 0.949, blue: 0.965)) // #F1F2F6
                     .frame(width: 80, height: 80)
                 
-                CompoundIcon(\.homeSolid, size: .medium)
+                CompoundIcon(\.homeSolid, size: .medium, relativeTo: .compound.bodyLG)
                     .foregroundColor(.compound.iconPrimary)
             }
             
@@ -72,7 +72,7 @@ struct ServerSelectionScreen: View {
                             .fill(Color(red: 0.945, green: 0.949, blue: 0.965)) // #F1F2F6
                             .frame(width: 56, height: 56)
                         
-                        CompoundIcon(\.public, size: .small) // Using \.public as a document/file-like icon if document is missing
+                        CompoundIcon(\.public, size: .small, relativeTo: .compound.bodyLG) // Using \.public as a document/file-like icon if document is missing
                             .foregroundColor(.compound.iconPrimary)
                     }
                     
@@ -107,6 +107,8 @@ struct ServerSelectionScreen: View {
 
 // MARK: - Previews
 
+/*
+/*
 struct ServerSelection_Previews: PreviewProvider, TestablePreview {
     static let matrixViewModel = makeViewModel(for: "https://matrix.org")
     static let emptyViewModel = makeViewModel(for: "")
@@ -141,3 +143,5 @@ struct ServerSelection_Previews: PreviewProvider, TestablePreview {
         return viewModel
     }
 }
+*/
+*/

@@ -16,15 +16,7 @@ struct Application: App {
     private var appCoordinator: AppCoordinatorProtocol!
 
     init() {
-        if ProcessInfo.isRunningUITests {
-            appCoordinator = UITestsAppCoordinator(appDelegate: appDelegate)
-        } else if ProcessInfo.isRunningUnitTests {
-            appCoordinator = UnitTestsAppCoordinator(appDelegate: appDelegate)
-        } else if ProcessInfo.isRunningAccessibilityTests {
-            appCoordinator = AccessibilityTestsAppCoordinator(appDelegate: appDelegate)
-        } else {
-            appCoordinator = AppCoordinator(appDelegate: appDelegate)
-        }
+        appCoordinator = AppCoordinator(appDelegate: appDelegate)
         
         SceneDelegate.windowManager = appCoordinator.windowManager
     }

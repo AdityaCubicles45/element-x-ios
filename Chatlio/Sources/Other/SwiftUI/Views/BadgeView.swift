@@ -60,6 +60,7 @@ extension View {
     }
 }
 
+/*
 struct BadgeView_Previews: PreviewProvider {
     static let circleGradient = LinearGradient(colors: [.green, .orange],
                                                startPoint: .topLeading,
@@ -77,3 +78,4 @@ struct BadgeView_Previews: PreviewProvider {
             .background { screenGradient.opacity(0.3).ignoresSafeArea() }
     }
 }
+*/

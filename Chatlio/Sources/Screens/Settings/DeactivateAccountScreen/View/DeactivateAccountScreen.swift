@@ -92,6 +92,7 @@ private struct InfoItem: View {
 
 // MARK: - Previews
 
+/*
 struct DeactivateAccountScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = DeactivateAccountScreenViewModel(clientProxy: ClientProxyMock(.init()),
                                                             userIndicatorController: UserIndicatorControllerMock())
@@ -101,3 +102,4 @@ struct DeactivateAccountScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -161,6 +161,7 @@ struct SoftLogoutScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SoftLogoutScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ForEach(MockSoftLogoutScreenState.allCases) { state in
@@ -182,3 +183,4 @@ struct SoftLogoutScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

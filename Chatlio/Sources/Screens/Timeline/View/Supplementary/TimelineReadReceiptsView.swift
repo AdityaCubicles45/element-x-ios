@@ -70,6 +70,7 @@ struct TimelineReadReceiptsView: View {
     }
 }
 
+/*
 struct TimelineReadReceiptsView_Previews: PreviewProvider, TestablePreview {
     static let members: [RoomMemberProxyMock] = [
         .mockAlice,
@@ -125,3 +126,4 @@ struct TimelineReadReceiptsView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

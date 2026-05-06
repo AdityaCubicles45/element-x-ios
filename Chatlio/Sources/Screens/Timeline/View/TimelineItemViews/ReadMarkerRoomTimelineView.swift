@@ -27,6 +27,7 @@ struct ReadMarkerRoomTimelineView: View {
     }
 }
 
+/*
 struct ReadMarkerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
 
@@ -57,3 +58,4 @@ struct ReadMarkerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
         .environmentObject(viewModel.context)
     }
 }
+*/

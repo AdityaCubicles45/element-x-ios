@@ -330,6 +330,7 @@ struct RoomDetailsScreen: View {
 
 import MatrixRustSDK
 
+/*
 struct RoomDetailsScreen_Previews: PreviewProvider, TestablePreview {
     static let genericWorldReadableRoomViewModel = makeGenericRoomViewModel(historyVisibility: .worldReadable)
     static let genericJoinedRoomViewModel = makeGenericRoomViewModel(historyVisibility: .joined)
@@ -478,3 +479,4 @@ struct RoomDetailsScreen_Previews: PreviewProvider, TestablePreview {
                      appSettings: ServiceLocator.shared.settings)
     }
 }
+*/

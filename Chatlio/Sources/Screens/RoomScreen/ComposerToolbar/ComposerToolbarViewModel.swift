@@ -799,6 +799,7 @@ private final class ComposerMentionReplacer: MentionReplacer {
 
 // MARK: - Mocks
 
+/*
 extension ComposerToolbarViewModel {
     enum MockMode { case editing, recordVoiceMessage, previewVoiceMessage(isUploading: Bool), reply(isLoading: Bool) }
     
@@ -859,6 +860,7 @@ extension ComposerToolbarViewModel {
         return viewModel
     }
 }
+*/
 
 private struct PlainComposerContent {
     let text: String

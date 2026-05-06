@@ -48,6 +48,7 @@ extension ProcessInfo {
         isRunningUITests || isRunningUnitTests || isRunningIntegrationTests || isRunningAccessibilityTests
     }
     
+/*
     /// The identifier of the screen to be loaded when running UI tests.
     static var testScreenID: UITestsScreenIdentifier? {
         #if DEBUG
@@ -56,6 +57,7 @@ extension ProcessInfo {
         nil
         #endif
     }
+*/
     
     /// The identifier of the preview that will be accessibility tested
     static var accessibilityViewID: String? {

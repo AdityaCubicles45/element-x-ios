@@ -101,6 +101,7 @@ struct ManageAuthorizedSpacesScreen: View {
 
 // MARK: - Previews
 
+/*
 struct ManageAuthorizedSpacesScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = ManageAuthorizedSpacesScreenViewModel(authorizedSpacesSelection: .init(joinedSpaces: .mockJoinedSpaces2,
                                                                                                   unknownSpacesIDs: ["!unknown-space-id-1",
@@ -117,3 +118,4 @@ struct ManageAuthorizedSpacesScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

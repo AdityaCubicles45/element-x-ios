@@ -213,6 +213,7 @@ private extension Set<TraceLogPack> {
 
 // MARK: - Previews
 
+/*
 struct DeveloperOptionsScreen_Previews: PreviewProvider {
     static let viewModel = DeveloperOptionsScreenViewModel(developerOptions: ServiceLocator.shared.settings,
                                                            elementCallBaseURL: ServiceLocator.shared.settings.elementCallBaseURL,
@@ -224,3 +225,4 @@ struct DeveloperOptionsScreen_Previews: PreviewProvider {
         }
     }
 }
+*/

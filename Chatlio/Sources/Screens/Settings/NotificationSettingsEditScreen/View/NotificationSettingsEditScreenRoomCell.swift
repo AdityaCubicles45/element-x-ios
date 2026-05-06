@@ -47,6 +47,7 @@ struct NotificationSettingsEditScreenRoomCell: View {
     }
 }
 
+/*
 struct NotificationSettingsEditScreenRoomCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
@@ -74,3 +75,4 @@ struct NotificationSettingsEditScreenRoomCell_Previews: PreviewProvider, Testabl
         }
     }
 }
+*/

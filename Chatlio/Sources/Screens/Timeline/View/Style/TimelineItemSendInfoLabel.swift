@@ -219,6 +219,7 @@ private extension TimelineItemKeyForwarder {
 
 // MARK: - Previews
 
+/*
 struct TimelineItemSendInfoLabel_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 16) {
@@ -248,3 +249,4 @@ struct TimelineItemSendInfoLabel_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

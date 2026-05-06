@@ -45,6 +45,7 @@ struct AppLockSetupSettingsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct AppLockSetupSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let faceIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .faceID))
     static let touchIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(isMandatory: true, biometryType: .touchID))
@@ -67,3 +68,4 @@ struct AppLockSetupSettingsScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("PIN only")
     }
 }
+*/

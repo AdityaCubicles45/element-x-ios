@@ -154,8 +154,10 @@ struct HomeScreenInviteCell: View {
 
 // MARK: - Previews
 
-import MatrixRustSDKMocks
+//import MatrixRustSDKMocks
 
+/*
+/*
 struct HomeScreenInviteCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 0) {
@@ -207,6 +209,7 @@ struct HomeScreenInviteCell_Previews: PreviewProvider, TestablePreview {
                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/
 
 @MainActor
 private extension HomeScreenRoom {
@@ -276,3 +279,4 @@ private extension HomeScreenRoom {
         return .init(summary: summary, hideUnreadMessagesBadge: false)
     }
 }
+*/

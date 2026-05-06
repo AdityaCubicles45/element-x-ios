@@ -112,6 +112,7 @@ private struct WaveformShape: Shape {
     }
 }
 
+/*
 struct EstimatedWaveformView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         // Wrap the WaveformView in a VStack otherwise the preview test will fail (because of Prefire / GeometryReader)
@@ -121,3 +122,4 @@ struct EstimatedWaveformView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

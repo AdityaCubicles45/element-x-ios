@@ -104,6 +104,7 @@ struct SpacesAnnouncementSheetView: View {
 
 // MARK: - Previews
 
+/*
 struct SpacesAnnouncementSheetView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = SpacesScreenViewModel(userSession: UserSessionMock(.init()),
                                                  selectedSpacePublisher: .init(nil),
@@ -114,3 +115,4 @@ struct SpacesAnnouncementSheetView_Previews: PreviewProvider, TestablePreview {
         SpacesAnnouncementSheetView(context: viewModel.context)
     }
 }
+*/

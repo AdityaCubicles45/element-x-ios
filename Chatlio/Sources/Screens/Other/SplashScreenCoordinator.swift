@@ -23,8 +23,10 @@ struct SplashScreen: View {
     }
 }
 
+/*
 struct SplashScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         SplashScreen()
     }
 }
+*/

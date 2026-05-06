@@ -210,6 +210,7 @@ struct TimelineReactionAddMoreButtonLabel: View {
     }
 }
 
+/*
 struct TimelineReactionViewPreviewsContainer: View {
     var body: some View {
         VStack(spacing: 8) {
@@ -235,9 +236,12 @@ struct TimelineReactionViewPreviewsContainer: View {
         .frame(maxWidth: 250, alignment: .leading)
     }
 }
+*/
 
+/*
 struct TimelineReactionView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         TimelineReactionViewPreviewsContainer()
     }
 }
+*/

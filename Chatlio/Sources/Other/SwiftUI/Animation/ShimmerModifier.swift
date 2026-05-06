@@ -67,6 +67,8 @@ struct ShimmerModifier: ViewModifier {
     }
 }
 
+/*
+/*
 struct ShimmerOverlay_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 0) {
@@ -78,3 +80,5 @@ struct ShimmerOverlay_Previews: PreviewProvider, TestablePreview {
         .shimmer()
     }
 }
+*/
+*/

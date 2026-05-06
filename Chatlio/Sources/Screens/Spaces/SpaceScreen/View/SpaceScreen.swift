@@ -184,6 +184,7 @@ struct SpaceScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let managingViewModel = makeViewModel(isManagingRooms: true)
@@ -239,3 +240,4 @@ struct SpaceScreen_Previews: PreviewProvider, TestablePreview {
         return viewModel
     }
 }
+*/

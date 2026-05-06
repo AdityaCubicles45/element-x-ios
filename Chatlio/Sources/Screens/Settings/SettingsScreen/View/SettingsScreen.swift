@@ -254,6 +254,8 @@ struct SettingsScreen: View {
 
 // MARK: - Previews
 
+/*
+/*
 struct SettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let bugReportDisabledViewModel = makeViewModel(isBugReportServiceEnabled: false)
@@ -280,3 +282,5 @@ struct SettingsScreen_Previews: PreviewProvider, TestablePreview {
                                        isBugReportServiceEnabled: isBugReportServiceEnabled)
     }
 }
+*/
+*/

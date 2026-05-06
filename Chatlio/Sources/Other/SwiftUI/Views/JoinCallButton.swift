@@ -60,6 +60,7 @@ struct JoinCallButton: View {
 
 // MARK: - Previews
 
+/*
 struct JoinCallButton_Previews: PreviewProvider {
     static var previews: some View {
         ElementNavigationStack {
@@ -72,3 +73,4 @@ struct JoinCallButton_Previews: PreviewProvider {
         }
     }
 }
+*/

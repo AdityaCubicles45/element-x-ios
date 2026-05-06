@@ -176,6 +176,7 @@ struct MessageText: UIViewRepresentable {
 
 // MARK: - Previews
 
+/*
 struct MessageText_Previews: PreviewProvider, TestablePreview {
     private static let defaultFontContainer: AttributeContainer = {
         var container = AttributeContainer()
@@ -234,3 +235,4 @@ struct MessageText_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

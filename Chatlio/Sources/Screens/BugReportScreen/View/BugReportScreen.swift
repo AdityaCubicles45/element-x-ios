@@ -153,6 +153,7 @@ struct BugReportScreen: View {
 
 // MARK: - Previews
 
+/*
 struct BugReportScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ElementNavigationStack {
@@ -174,3 +175,4 @@ struct BugReportScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("With Screenshot")
     }
 }
+*/

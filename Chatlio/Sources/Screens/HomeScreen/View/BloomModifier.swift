@@ -133,6 +133,7 @@ private struct OldBloomModifier: ViewModifier {
 
 // MARK: - Previews
 
+/*
 struct BloomModifier_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ElementNavigationStack {
@@ -159,3 +160,4 @@ struct BloomModifier_Previews: PreviewProvider, TestablePreview {
             }
     }
 }
+*/

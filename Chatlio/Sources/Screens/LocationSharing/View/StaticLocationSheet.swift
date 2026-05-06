@@ -100,6 +100,8 @@ private struct UserLocationCell: View {
     }
 }
 
+/*
+/*
 struct StaticLocationSheet_Previews: PreviewProvider, TestablePreview {
     static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation, senderID: RoomMemberProxyMock.mockMe.userID)
     
@@ -112,3 +114,5 @@ struct StaticLocationSheet_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Static pin location")
     }
 }
+*/
+*/

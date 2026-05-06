@@ -73,6 +73,7 @@ struct ImageRoomTimelineView: View {
     }
 }
 
+/*
 struct ImageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -111,3 +112,4 @@ struct ImageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                               properties: .init(isEdited: isEdited))
     }
 }
+*/

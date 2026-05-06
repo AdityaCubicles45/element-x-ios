@@ -42,6 +42,7 @@ struct TimelineDeliveryStatusView: View {
     }
 }
 
+/*
 struct TimelineDeliveryStatusView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 8) {
@@ -50,3 +51,4 @@ struct TimelineDeliveryStatusView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

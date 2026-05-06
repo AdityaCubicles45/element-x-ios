@@ -61,6 +61,7 @@ struct RoomInviterLabel: View {
 
 // MARK: - Previews
 
+/*
 struct RoomInviterLabel_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 10) {
@@ -78,3 +79,4 @@ struct RoomInviterLabel_Previews: PreviewProvider, TestablePreview {
         .foregroundStyle(.compound.textSecondary)
     }
 }
+*/

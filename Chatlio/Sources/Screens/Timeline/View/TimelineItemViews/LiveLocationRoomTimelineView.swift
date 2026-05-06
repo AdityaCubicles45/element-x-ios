@@ -156,6 +156,7 @@ struct LiveLocationRoomTimelineView: View {
     private let mapMaxHeight: Double = 300
 }
 
+/*
 struct LiveLocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -234,3 +235,4 @@ struct LiveLocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                                                                                  eventContent: .liveLocation))))
     }
 }
+*/

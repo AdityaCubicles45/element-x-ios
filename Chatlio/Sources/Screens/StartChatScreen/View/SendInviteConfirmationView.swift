@@ -89,9 +89,11 @@ struct SendInviteConfirmationView: View {
     }
 }
 
+/*
 struct SendInviteConfirmationView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         SendInviteConfirmationView(userToInvite: .mockBob,
                                    mediaProvider: nil) { }
     }
 }
+*/

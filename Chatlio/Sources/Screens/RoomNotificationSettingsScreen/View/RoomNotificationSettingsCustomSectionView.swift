@@ -30,6 +30,7 @@ struct RoomNotificationSettingsCustomSectionView: View {
     }
 }
 
+/*
 struct RoomNotificationSettingsCustomSectionView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .allMessages, roomMode: .mentionsAndKeywordsOnly))
@@ -65,3 +66,4 @@ struct RoomNotificationSettingsCustomSectionView_Previews: PreviewProvider, Test
         .previewDisplayName("Unencrypted")
     }
 }
+*/

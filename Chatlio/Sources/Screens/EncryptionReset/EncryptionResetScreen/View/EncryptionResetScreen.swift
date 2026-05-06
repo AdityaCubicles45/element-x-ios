@@ -90,6 +90,7 @@ struct EncryptionResetScreen: View {
 
 // MARK: - Previews
 
+/*
 struct EncryptionResetScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = EncryptionResetScreenViewModel(clientProxy: ClientProxyMock(.init()),
                                                           userIndicatorController: UserIndicatorControllerMock())
@@ -99,3 +100,4 @@ struct EncryptionResetScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -24,6 +24,7 @@ struct VoiceMessageMediaEventsTimelineView: View {
 
 // MARK: - Content
 
+/*
 struct VoiceMessageMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     static let timelineItemIdentifier = TimelineItemIdentifier.randomEvent
@@ -56,3 +57,4 @@ struct VoiceMessageMediaEventsTimelineView_Previews: PreviewProvider, TestablePr
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+*/

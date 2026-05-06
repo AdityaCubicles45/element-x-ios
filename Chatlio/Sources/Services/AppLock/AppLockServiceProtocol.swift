@@ -80,6 +80,7 @@ protocol AppLockServiceProtocol: AnyObject {
 }
 
 // sourcery: AutoMockable
+/*
 extension AppLockServiceProtocol { }
 
 extension AppLockServiceMock {
@@ -94,3 +95,4 @@ extension AppLockServiceMock {
         return mock
     }
 }
+*/

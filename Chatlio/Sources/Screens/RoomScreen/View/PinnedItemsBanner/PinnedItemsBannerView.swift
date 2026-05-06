@@ -80,6 +80,7 @@ struct PinnedItemsBannerView: View {
     }
 }
 
+/*
 struct PinnedItemsBannerView_Previews: PreviewProvider, TestablePreview {
     static var attributedContent: AttributedString {
         var boldPart = AttributedString("Image:")
@@ -113,3 +114,4 @@ struct PinnedItemsBannerView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

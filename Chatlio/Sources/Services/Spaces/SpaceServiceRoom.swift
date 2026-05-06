@@ -84,6 +84,7 @@ extension SpaceServiceRoom {
         via = spaceRoom.via
     }
     
+/*
     // MARK: - Mocks
     
     static func mock(id: String = UUID().uuidString,
@@ -157,8 +158,10 @@ extension SpaceServiceRoom {
                                      joinRule: joinRule,
                                      state: state)
     }
+*/
 }
 
+/*
 extension [SpaceServiceRoom] {
     static var mockJoinedSpaces: [SpaceServiceRoom] {
         [
@@ -273,3 +276,4 @@ extension [SpaceServiceRoom] {
         ]
     }
 }
+*/

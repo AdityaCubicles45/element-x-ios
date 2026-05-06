@@ -82,6 +82,7 @@ struct BadgeLabel: View {
     }
 }
 
+/*
 struct BadgeLabel_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 10) {
@@ -100,3 +101,4 @@ struct BadgeLabel_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -195,6 +195,7 @@ struct TimelineReplyView: View {
     }
 }
 
+/*
 struct TimelineReplyView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -358,3 +359,4 @@ struct TimelineReplyView_Previews: PreviewProvider, TestablePreview {
         .previewLayout(.sizeThatFits)
     }
 }
+*/

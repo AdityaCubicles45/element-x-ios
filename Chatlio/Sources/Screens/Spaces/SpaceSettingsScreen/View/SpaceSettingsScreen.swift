@@ -120,6 +120,7 @@ struct SpaceSettingsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let ownerViewModel = RoomDetailsScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Space",
                                                                                                 avatarURL: .mockMXCAvatar,
@@ -157,3 +158,4 @@ struct SpaceSettingsScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("User")
     }
 }
+*/

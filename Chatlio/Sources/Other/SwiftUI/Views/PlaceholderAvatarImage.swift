@@ -52,6 +52,7 @@ struct PlaceholderAvatarImage: View {
     }
 }
 
+/*
 struct PlaceholderAvatarImage_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 75) {
@@ -73,3 +74,4 @@ struct PlaceholderAvatarImage_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

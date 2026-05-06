@@ -69,6 +69,7 @@ struct TextRoomTimelineView: View, TextBasedRoomTimelineViewProtocol {
     }
 }
 
+/*
 struct TextRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -153,3 +154,4 @@ struct TextRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                     content: .init(body: "", formattedBody: attributedString))
     }
 }
+*/

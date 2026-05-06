@@ -342,6 +342,7 @@ private struct InviterView: View {
 
 // MARK: - Previews
 
+/*
 struct JoinRoomScreen_Previews: PreviewProvider, TestablePreview {
     static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
         .init(mode: .unknown),
@@ -364,7 +365,9 @@ struct JoinRoomScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/
 
+/*
 struct JoinRoomScreenSpace_Previews: PreviewProvider, TestablePreview {
     static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
         .init(isSpace: true, mode: .joinable),
@@ -385,7 +388,9 @@ struct JoinRoomScreenSpace_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/
 
+/*
 @MainActor
 struct JoinRoomScreenPreviewWrapper: Identifiable {
     let id = UUID()
@@ -513,3 +518,4 @@ struct JoinRoomScreenPreviewWrapper: Identifiable {
         }
     }
 }
+*/

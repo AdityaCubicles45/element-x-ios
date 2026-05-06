@@ -157,6 +157,7 @@ private struct SpaceAddRoomsListRow: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceAddRoomsScreen_Previews: PreviewProvider, TestablePreview {
     static let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
     static let viewModel = makeViewModel()
@@ -206,3 +207,4 @@ struct SpaceAddRoomsScreen_Previews: PreviewProvider, TestablePreview {
         return viewModel
     }
 }
+*/

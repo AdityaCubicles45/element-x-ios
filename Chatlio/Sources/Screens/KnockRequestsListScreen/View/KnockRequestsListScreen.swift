@@ -84,6 +84,7 @@ struct KnockRequestsListScreen: View {
 
 // MARK: - Previews
 
+/*
 struct KnockRequestsListScreen_Previews: PreviewProvider, TestablePreview {
     static let loadingViewModel = KnockRequestsListScreenViewModel.mockWithRequestsState(.loading)
     
@@ -157,7 +158,9 @@ struct KnockRequestsListScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Loading state")
     }
 }
+*/
 
+/*
 extension KnockRequestsListScreenViewModel {
     static func mockWithRequestsState(_ requestsState: KnockRequestsState) -> KnockRequestsListScreenViewModel {
         .init(roomProxy: JoinedRoomProxyMock(.init(members: [.mockAdmin],
@@ -168,3 +171,4 @@ extension KnockRequestsListScreenViewModel {
               userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/

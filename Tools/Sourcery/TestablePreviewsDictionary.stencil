@@ -18,11 +18,13 @@ import {{ import }}
 {% endfor %}
 
 enum TestablePreviewsDictionary {
-    static let dictionary: [String: any PreviewProvider.Type] = [
+    static let dictionary: [String: any PreviewProvider.Type] = {
+        var dict: [String: any PreviewProvider.Type] = [:]
         {% for type in types.types where (type.implements.TestablePreview or type.based.TestablePreview or type|annotated:"TestablePreview") and type.name != "TestablePreview" %}
-        "{{ type.name }}" : {{ type.name }}.self,
+        dict["{{ type.name }}"] = {{ type.name }}.self
         {% endfor %}
-    ]
+        return dict
+    }()
  }
 
 // swiftlint:enable all

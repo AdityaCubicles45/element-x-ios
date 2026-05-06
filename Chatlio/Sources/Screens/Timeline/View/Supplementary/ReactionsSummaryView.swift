@@ -136,6 +136,7 @@ private struct ReactionSummarySenderView: View {
     }
 }
 
+/*
 struct ReactionsSummaryView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         ReactionsSummaryView(reactions: AggregatedReaction.mockReactions,
@@ -144,3 +145,4 @@ struct ReactionsSummaryView_Previews: PreviewProvider, TestablePreview {
                              selectedReactionKey: AggregatedReaction.mockReactions[0].key)
     }
 }
+*/

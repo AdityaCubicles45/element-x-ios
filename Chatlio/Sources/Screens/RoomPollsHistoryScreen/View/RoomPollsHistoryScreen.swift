@@ -113,6 +113,7 @@ private extension DateFormatter {
 
 // MARK: - Previews
 
+/*
 struct RoomPollsHistoryScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModelEmpty: RoomPollsHistoryScreenViewModel = {
         let timelineController = MockTimelineController()
@@ -156,3 +157,4 @@ struct RoomPollsHistoryScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("polls")
     }
 }
+*/

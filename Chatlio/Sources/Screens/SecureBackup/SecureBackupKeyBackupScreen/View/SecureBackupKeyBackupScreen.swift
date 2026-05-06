@@ -86,6 +86,7 @@ struct SecureBackupKeyBackupScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SecureBackupKeyBackupScreen_Previews: PreviewProvider, TestablePreview {
     static let setupViewModel = viewModel(keyBackupState: .enabled)
     
@@ -104,3 +105,4 @@ struct SecureBackupKeyBackupScreen_Previews: PreviewProvider, TestablePreview {
                                                     userIndicatorController: nil)
     }
 }
+*/

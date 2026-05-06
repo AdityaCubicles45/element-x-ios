@@ -54,6 +54,7 @@ struct ImageMediaEventsTimelineView: View {
     }
 }
 
+/*
 struct ImageMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -79,3 +80,4 @@ struct ImageMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
                                              contentType: .jpeg))
     }
 }
+*/

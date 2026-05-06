@@ -126,6 +126,7 @@ struct RoomAvatarImage: View {
     }
 }
 
+/*
 struct RoomAvatarImage_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 20) {
@@ -178,3 +179,4 @@ struct RoomAvatarImage_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

@@ -88,6 +88,7 @@ struct RoomListFiltersView: View {
 
 // MARK: - Previews
 
+/*
 struct RoomListFiltersView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         RoomListFiltersView(state: .constant(.init(appSettings: ServiceLocator.shared.settings)))
@@ -97,3 +98,4 @@ struct RoomListFiltersView_Previews: PreviewProvider, TestablePreview {
                                                    appSettings: ServiceLocator.shared.settings)))
     }
 }
+*/

@@ -19,6 +19,7 @@ struct SwipeToReplyView: View {
     }
 }
 
+/*
 struct SwipeToReplyView_Previews: PreviewProvider, TestablePreview {
     static let timelineItem = TextRoomTimelineItem(id: .randomEvent,
                                                    timestamp: .mock,
@@ -32,3 +33,4 @@ struct SwipeToReplyView_Previews: PreviewProvider, TestablePreview {
         SwipeToReplyView(timelineItem: timelineItem)
     }
 }
+*/

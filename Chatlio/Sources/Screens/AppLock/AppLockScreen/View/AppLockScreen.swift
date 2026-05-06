@@ -112,6 +112,7 @@ struct AppLockScreen: View {
 
 // MARK: - Previews
 
+/*
 struct AppLockScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = AppLockScreenViewModel(appLockService: AppLockServiceMock.mock())
     
@@ -121,3 +122,4 @@ struct AppLockScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

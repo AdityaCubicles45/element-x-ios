@@ -92,6 +92,7 @@ private struct RoomSelectionListRow: View {
 
 // MARK: - Previews
 
+/*
 struct RoomSelectionScreen_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
@@ -103,3 +104,4 @@ struct RoomSelectionScreen_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

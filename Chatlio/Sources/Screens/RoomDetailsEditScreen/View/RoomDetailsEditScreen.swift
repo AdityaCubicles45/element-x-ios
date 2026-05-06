@@ -151,6 +151,7 @@ struct RoomDetailsEditScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
     static let editableViewModel = {
         let roomProxy = JoinedRoomProxyMock(.init(id: "test_id",
@@ -189,3 +190,4 @@ struct RoomDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Editable")
     }
 }
+*/

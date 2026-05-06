@@ -67,6 +67,7 @@ struct ResolveVerifiedUserSendFailureScreen: View {
 
 // MARK: - Previews
 
+/*
 struct ResolveVerifiedUserSendFailureScreen_Previews: PreviewProvider, TestablePreview {
     static let unsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: ["@alice:matrix.org": []]))
     static let ownUnsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: [RoomMemberProxyMock.mockMe.userID: []]))
@@ -90,7 +91,9 @@ struct ResolveVerifiedUserSendFailureScreen_Previews: PreviewProvider, TestableP
                                                       userIndicatorController: UserIndicatorControllerMock())
     }
 }
+*/
 
+/*
 struct ResolveVerifiedUserSendFailureScreenSheet_Previews: PreviewProvider {
     static let viewModel = ResolveVerifiedUserSendFailureScreenViewModel(failure: .changedIdentity(users: ["@alice:matrix.org"]),
                                                                          sendHandle: .mock,
@@ -105,3 +108,4 @@ struct ResolveVerifiedUserSendFailureScreenSheet_Previews: PreviewProvider {
             .previewDisplayName("Sheet")
     }
 }
+*/

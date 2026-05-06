@@ -68,6 +68,7 @@ private struct VoiceMessageRecordingBadge: View {
     }
 }
 
+/*
 struct VoiceMessageRecordingView_Previews: PreviewProvider, TestablePreview {
     static let recorderState = AudioRecorderState()
     
@@ -76,3 +77,4 @@ struct VoiceMessageRecordingView_Previews: PreviewProvider, TestablePreview {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+*/

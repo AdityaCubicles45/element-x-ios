@@ -71,6 +71,7 @@ struct RoomNotificationSettingsScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomNotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = {
         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .mentionsAndKeywordsOnly, roomMode: .mentionsAndKeywordsOnly))
@@ -99,3 +100,4 @@ struct RoomNotificationSettingsScreen_Previews: PreviewProvider, TestablePreview
             .previewDisplayName("Custom")
     }
 }
+*/

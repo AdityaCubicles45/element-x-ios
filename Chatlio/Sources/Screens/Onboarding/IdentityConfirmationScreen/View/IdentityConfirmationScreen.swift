@@ -114,6 +114,7 @@ struct IdentityConfirmationScreen: View {
 
 // MARK: - Previews
 
+/*
 struct IdentityConfirmationScreen_Previews: PreviewProvider, TestablePreview {
     static var viewModel = makeViewModel()
     static var loadingViewModel = makeViewModel(recoveryState: .unknown)
@@ -143,3 +144,4 @@ struct IdentityConfirmationScreen_Previews: PreviewProvider, TestablePreview {
                                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/

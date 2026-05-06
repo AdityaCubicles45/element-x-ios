@@ -45,6 +45,7 @@ struct RoomDirectorySearchCell: View {
 
 // MARK: - Previews
 
+/*
 struct RoomDirectorySearchCell_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         List {
@@ -130,3 +131,4 @@ struct RoomDirectorySearchCell_Previews: PreviewProvider, TestablePreview {
         .compoundList()
     }
 }
+*/

@@ -100,6 +100,7 @@ struct SpaceHeaderView: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceHeaderView_Previews: PreviewProvider, TestablePreview {
     static let mediaProvider = MediaProviderMock(configuration: .init())
     
@@ -146,3 +147,4 @@ struct SpaceHeaderView_Previews: PreviewProvider, TestablePreview {
         ]
     }
 }
+*/

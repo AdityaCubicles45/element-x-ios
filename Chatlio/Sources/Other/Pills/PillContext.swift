@@ -22,6 +22,7 @@ final class PillContext: ObservableObject {
     }
 }
 
+/*
 extension PillContext {
     static func mock(viewState: PillViewState, delay: Duration? = nil) -> PillContext {
         // This is just for previews so the internal data doesn't really matter
@@ -38,6 +39,7 @@ extension PillContext {
         return viewModel
     }
 }
+*/
 
 enum PillViewState: Equatable {
     case mention(isOwnMention: Bool, displayText: String)

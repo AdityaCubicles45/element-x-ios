@@ -108,6 +108,7 @@ private extension AppLockScreenPINKeypad {
 
 // MARK: - Previews
 
+/*
 struct AppLockScreenPINKeypad_Previews: PreviewProvider {
     static var previews: some View {
         KeypadTestView()
@@ -132,3 +133,4 @@ struct AppLockScreenPINKeypad_Previews: PreviewProvider {
         }
     }
 }
+*/

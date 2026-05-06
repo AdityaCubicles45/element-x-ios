@@ -65,6 +65,7 @@ struct VoiceMessageRoomTimelineContent: View {
     }
 }
 
+/*
 struct VoiceMessageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     static let timelineItemIdentifier = TimelineItemIdentifier.randomEvent
@@ -96,3 +97,4 @@ struct VoiceMessageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+*/

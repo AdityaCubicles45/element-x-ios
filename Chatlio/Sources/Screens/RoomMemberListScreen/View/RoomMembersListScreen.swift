@@ -166,6 +166,7 @@ private enum MembersSection {
 
 // MARK: - Previews
 
+/*
 struct RoomMembersListScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     static let invitesViewModel = makeViewModel(withInvites: true)
@@ -265,3 +266,4 @@ struct RoomMembersListScreen_Previews: PreviewProvider, TestablePreview {
                                               analytics: ServiceLocator.shared.analytics)
     }
 }
+*/

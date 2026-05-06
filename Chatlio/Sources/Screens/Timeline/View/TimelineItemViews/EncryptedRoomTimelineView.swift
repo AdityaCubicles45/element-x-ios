@@ -54,6 +54,7 @@ struct RoomTimelineViewPlaceholderLabelStyle: LabelStyle {
     }
 }
 
+/*
 struct EncryptedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -106,3 +107,4 @@ struct EncryptedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                                   sender: .init(id: senderId))
     }
 }
+*/

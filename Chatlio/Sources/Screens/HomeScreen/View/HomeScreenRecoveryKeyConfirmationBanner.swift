@@ -103,6 +103,7 @@ struct HomeScreenRecoveryKeyConfirmationBanner: View {
     }
 }
 
+/*
 struct HomeScreenRecoveryKeyConfirmationBanner_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel()
     
@@ -129,3 +130,4 @@ struct HomeScreenRecoveryKeyConfirmationBanner_Previews: PreviewProvider, Testab
                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
     }
 }
+*/

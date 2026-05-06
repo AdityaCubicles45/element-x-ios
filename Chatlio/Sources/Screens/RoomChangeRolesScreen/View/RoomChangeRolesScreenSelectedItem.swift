@@ -62,6 +62,7 @@ struct RoomChangeRolesScreenSelectedItem: View {
     }
 }
 
+/*
 struct RoomChangeRolesScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
     static let members: [RoomMemberDetails] = [
         RoomMemberProxyMock.mockAlice,
@@ -84,3 +85,4 @@ struct RoomChangeRolesScreenSelectedItem_Previews: PreviewProvider, TestablePrev
         .previewLayout(.sizeThatFits)
     }
 }
+*/

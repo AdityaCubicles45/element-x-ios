@@ -308,6 +308,7 @@ class QRCodeLoginScreenViewModel: QRCodeLoginScreenViewModelType, QRCodeLoginScr
         }
     }
         
+/*
     /// Only for mocking initial states
     fileprivate init(state: QRCodeLoginState, mode: QRCodeLoginScreenMode, canSignInManually: Bool, checkCodeInput: String) {
         appMediator = AppMediatorMock.default
@@ -316,8 +317,10 @@ class QRCodeLoginScreenViewModel: QRCodeLoginScreenViewModelType, QRCodeLoginScr
                                            canSignInManually: canSignInManually,
                                            bindings: .init(checkCodeInput: checkCodeInput)))
     }
+*/
 }
 
+/*
 extension QRCodeLoginScreenViewModel {
     static func mock(state: QRCodeLoginState,
                      mode: QRCodeLoginScreenMode = .login(QRCodeLoginServiceMock()),
@@ -329,3 +332,4 @@ extension QRCodeLoginScreenViewModel {
                                    checkCodeInput: checkCodeInput)
     }
 }
+*/

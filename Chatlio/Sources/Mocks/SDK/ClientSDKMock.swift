@@ -14,10 +14,10 @@ extension ClientSDKMock {
     struct Configuration {
         // MARK: Authentication
         
-        var serverAddress = "matrix.org"
-        var homeserverURL = "https://matrix-client.matrix.org"
+        var serverAddress = "word.skin"
+        var homeserverURL = "https://matrix.word.skin"
         var slidingSyncVersion = SlidingSyncVersion.native
-        var oidcLoginURL: String? = "https://account.matrix.org/authorize"
+        var oidcLoginURL: String? = "https://auth.word.skin/authorize"
         var supportsOIDCCreatePrompt = true
         var supportsPasswordLogin = true
         var elementWellKnown: String?
@@ -28,9 +28,9 @@ extension ClientSDKMock {
         var userID: String?
         var session = Session(accessToken: UUID().uuidString,
                               refreshToken: nil,
-                              userId: "@alice:matrix.org",
+                              userId: "@alice:word.skin",
                               deviceId: UUID().uuidString,
-                              homeserverUrl: "https://matrix-client.matrix.org",
+                              homeserverUrl: "https://matrix.word.skin",
                               oidcData: nil,
                               slidingSyncVersion: .native)
     }

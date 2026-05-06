@@ -103,6 +103,7 @@ struct MediaFileRoomTimelineContent: View {
 
 // MARK: - Previews
 
+/*
 struct FileRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -147,3 +148,4 @@ struct FileRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                              contentType: nil))
     }
 }
+*/

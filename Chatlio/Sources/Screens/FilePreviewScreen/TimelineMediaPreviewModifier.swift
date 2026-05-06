@@ -135,6 +135,7 @@ private struct MediaPreviewViewController: UIViewControllerRepresentable {
 
 // MARK: - Previews
 
+/*
 struct TimelineMediaPreviewModifier_Previews: PreviewProvider {
     static let viewModel = makeViewModel()
     static let downloadingViewModel = makeViewModel(isDownloading: true)
@@ -186,3 +187,4 @@ struct TimelineMediaPreviewModifier_Previews: PreviewProvider {
                                              appMediator: AppMediatorMock())
     }
 }
+*/

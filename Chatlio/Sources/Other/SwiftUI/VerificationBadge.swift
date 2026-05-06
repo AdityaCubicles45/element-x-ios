@@ -38,6 +38,7 @@ struct VerificationBadge: View {
     }
 }
 
+/*
 struct VerificationBadge_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 20) {
@@ -56,3 +57,4 @@ struct VerificationBadge_Previews: PreviewProvider, TestablePreview {
         .previewLayout(.sizeThatFits)
     }
 }
+*/

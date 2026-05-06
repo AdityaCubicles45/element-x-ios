@@ -40,6 +40,7 @@ struct SpaceHeaderTopicSheetView: View {
 
 // MARK: - Previews
 
+/*
 struct SpaceHeaderTopicSheetView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         SpaceHeaderTopicSheetView(topic: ["Description of the space goes right here.",
@@ -50,3 +51,4 @@ struct SpaceHeaderTopicSheetView_Previews: PreviewProvider, TestablePreview {
                                           "Diam amet sit fermentum vulputate faucibus."].joined(separator: " "))
     }
 }
+*/

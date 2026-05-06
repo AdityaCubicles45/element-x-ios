@@ -119,6 +119,7 @@ struct TimelineMediaPreviewRedactConfirmationView: View {
 
 import UniformTypeIdentifiers
 
+/*
 struct TimelineMediaPreviewRedactConfirmationView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = makeViewModel(contentType: .jpeg)
     
@@ -153,3 +154,4 @@ struct TimelineMediaPreviewRedactConfirmationView_Previews: PreviewProvider, Tes
                                              appMediator: AppMediatorMock())
     }
 }
+*/

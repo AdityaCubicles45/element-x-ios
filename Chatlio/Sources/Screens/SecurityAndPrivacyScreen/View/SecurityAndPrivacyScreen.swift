@@ -228,6 +228,7 @@ struct SecurityAndPrivacyScreen: View {
 
 // MARK: - Previews
 
+/*
 struct SecurityAndPrivacyScreen_Previews: PreviewProvider, TestablePreview {
     static let inviteOnlyViewModel = {
         AppSettings.resetAllSettings()
@@ -426,3 +427,4 @@ struct SecurityAndPrivacyScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Public space")
     }
 }
+*/

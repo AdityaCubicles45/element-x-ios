@@ -23,6 +23,7 @@ struct EmoteRoomTimelineView: View, TextBasedRoomTimelineViewProtocol {
     }
 }
 
+/*
 struct EmoteRoomTimelineView_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -52,3 +53,4 @@ struct EmoteRoomTimelineView_Previews: PreviewProvider, TestablePreview {
                               content: .init(body: text))
     }
 }
+*/

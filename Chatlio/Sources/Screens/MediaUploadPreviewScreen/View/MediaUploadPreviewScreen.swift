@@ -267,6 +267,7 @@ private class PreviewViewController: QLPreviewController {
 
 // MARK: - Previews
 
+/*
 struct MediaUploadPreviewScreen_Previews: PreviewProvider, TestablePreview {
     static let snapshotURL = URL.picturesDirectory
     static let testURL = Bundle.main.url(forResource: "AppIcon60x60@2x", withExtension: "png")
@@ -289,3 +290,4 @@ struct MediaUploadPreviewScreen_Previews: PreviewProvider, TestablePreview {
             .previewDisplayName("Caption warning")
     }
 }
+*/

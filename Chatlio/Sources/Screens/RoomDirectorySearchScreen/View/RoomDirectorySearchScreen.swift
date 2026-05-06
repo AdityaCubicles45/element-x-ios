@@ -69,6 +69,7 @@ struct RoomDirectorySearchScreen: View {
 
 // MARK: - Previews
 
+/*
 struct RoomDirectorySearchScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel: RoomDirectorySearchScreenViewModel = {
         let results = [RoomDirectorySearchResult(id: "test_1",
@@ -100,3 +101,4 @@ struct RoomDirectorySearchScreen_Previews: PreviewProvider, TestablePreview {
         RoomDirectorySearchScreen(context: viewModel.context)
     }
 }
+*/

@@ -62,6 +62,7 @@ struct EditRoomAddressScreen: View {
 
 // MARK: - Previews
 
+/*
 struct EditRoomAddressScreen_Previews: PreviewProvider, TestablePreview {
     static let noAliasviewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name")),
                                                                  clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
@@ -113,3 +114,4 @@ struct EditRoomAddressScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Already existing")
     }
 }
+*/

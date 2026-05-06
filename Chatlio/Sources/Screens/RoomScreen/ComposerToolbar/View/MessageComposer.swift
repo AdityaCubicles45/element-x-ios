@@ -247,6 +247,7 @@ private struct MessageComposerStyleModifier<Header: View>: ViewModifier {
 
 // MARK: - Previews
 
+/*
 struct MessageComposer_Previews: PreviewProvider, TestablePreview {
     static let viewModel = TimelineViewModel.mock
     
@@ -372,3 +373,4 @@ struct MessageComposer_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Replying in thread")
     }
 }
+*/

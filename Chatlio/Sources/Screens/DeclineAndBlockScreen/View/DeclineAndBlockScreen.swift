@@ -75,6 +75,7 @@ struct DeclineAndBlockScreen: View {
 
 // MARK: - Previews
 
+/*
 struct DeclineAndBlockScreen_Previews: PreviewProvider, TestablePreview {
     static let viewModel = DeclineAndBlockScreenViewModel(userID: "@alice:matrix.org",
                                                           roomID: "!room:matrix.org",
@@ -95,3 +96,4 @@ struct DeclineAndBlockScreen_Previews: PreviewProvider, TestablePreview {
         .previewDisplayName("Report room selected")
     }
 }
+*/

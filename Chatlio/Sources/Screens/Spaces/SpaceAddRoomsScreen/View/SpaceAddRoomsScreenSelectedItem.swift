@@ -38,6 +38,7 @@ struct SpaceAddRoomsScreenSelectedItem: View {
     }
 }
 
+/*
 struct SpaceAddRoomsScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         SpaceAddRoomsScreenSelectedItem(room: .init(id: "",
@@ -50,3 +51,4 @@ struct SpaceAddRoomsScreenSelectedItem_Previews: PreviewProvider, TestablePrevie
             .frame(width: 80)
     }
 }
+*/

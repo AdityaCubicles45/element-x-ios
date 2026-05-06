@@ -40,6 +40,7 @@ struct PinnedItemsIndicatorView: View {
     }
 }
 
+/*
 struct PinnedItemsIndicatorView_Previews: PreviewProvider, TestablePreview {
     static func indicator(index: Int, count: Int) -> some View {
         VStack(spacing: 0) {
@@ -70,3 +71,4 @@ struct PinnedItemsIndicatorView_Previews: PreviewProvider, TestablePreview {
         .previewLayout(.sizeThatFits)
     }
 }
+*/

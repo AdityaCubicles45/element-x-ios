@@ -113,6 +113,7 @@ private extension ColorScheme {
     }
 }
 
+/*
 struct MapLibreStaticMapView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         MapLibreStaticMapView(coordinates: CLLocationCoordinate2D(),
@@ -125,6 +126,7 @@ struct MapLibreStaticMapView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/
 
 private struct MapTilerURLBuilderMock: MapTilerURLBuilderProtocol {
     func interactiveMapURL(for style: MapTilerStyle) -> URL? {

@@ -71,6 +71,7 @@ struct UserIndicatorModalView: View {
     }
 }
 
+/*
 struct UserIndicatorModalView_Previews: PreviewProvider, TestablePreview {
     static var previews: some View {
         VStack(spacing: 0) {
@@ -97,3 +98,4 @@ struct UserIndicatorModalView_Previews: PreviewProvider, TestablePreview {
         }
     }
 }
+*/

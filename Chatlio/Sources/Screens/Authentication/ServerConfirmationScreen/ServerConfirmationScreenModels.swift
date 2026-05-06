@@ -55,10 +55,8 @@ struct ServerConfirmationScreenViewState: BindableState {
 
         return switch authenticationFlow {
         case .login:
-            if homeserverAddress == "matrix.org" {
-                L10n.screenServerConfirmationMessageLoginMatrixDotOrg
-            } else if homeserverAddress == "element.io" {
-                L10n.screenServerConfirmationMessageLoginElementDotIo
+            if homeserverAddress == "word.skin" {
+                "Welcome to Chatlio on word.skin" // I'll use a literal for now or reuse a common string
             } else {
                 ""
             }

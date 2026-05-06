@@ -308,28 +308,28 @@ class QRCodeLoginScreenViewModel: QRCodeLoginScreenViewModelType, QRCodeLoginScr
         }
     }
         
-/*
-    /// Only for mocking initial states
-    fileprivate init(state: QRCodeLoginState, mode: QRCodeLoginScreenMode, canSignInManually: Bool, checkCodeInput: String) {
-        appMediator = AppMediatorMock.default
-        super.init(initialViewState: .init(state: state,
-                                           mode: mode,
-                                           canSignInManually: canSignInManually,
-                                           bindings: .init(checkCodeInput: checkCodeInput)))
-    }
-*/
+    /*
+     /// Only for mocking initial states
+     fileprivate init(state: QRCodeLoginState, mode: QRCodeLoginScreenMode, canSignInManually: Bool, checkCodeInput: String) {
+         appMediator = AppMediatorMock.default
+         super.init(initialViewState: .init(state: state,
+                                            mode: mode,
+                                            canSignInManually: canSignInManually,
+                                            bindings: .init(checkCodeInput: checkCodeInput)))
+     }
+     */
 }
 
 /*
-extension QRCodeLoginScreenViewModel {
-    static func mock(state: QRCodeLoginState,
-                     mode: QRCodeLoginScreenMode = .login(QRCodeLoginServiceMock()),
-                     canSignInManually: Bool = true,
-                     checkCodeInput: String = "") -> QRCodeLoginScreenViewModel {
-        QRCodeLoginScreenViewModel(state: state,
-                                   mode: mode,
-                                   canSignInManually: canSignInManually,
-                                   checkCodeInput: checkCodeInput)
-    }
-}
-*/
+ extension QRCodeLoginScreenViewModel {
+     static func mock(state: QRCodeLoginState,
+                      mode: QRCodeLoginScreenMode = .login(QRCodeLoginServiceMock()),
+                      canSignInManually: Bool = true,
+                      checkCodeInput: String = "") -> QRCodeLoginScreenViewModel {
+         QRCodeLoginScreenViewModel(state: state,
+                                    mode: mode,
+                                    canSignInManually: canSignInManually,
+                                    checkCodeInput: checkCodeInput)
+     }
+ }
+ */

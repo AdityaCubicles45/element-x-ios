@@ -1039,29 +1039,29 @@ class TimelineViewModel: TimelineViewModelType, TimelineViewModelProtocol {
 // MARK: - Mocks
 
 /*
-extension TimelineViewModel {
-    static let mock = mock(timelineKind: .live)
+ extension TimelineViewModel {
+     static let mock = mock(timelineKind: .live)
     
-    static func mock(timelineKind: TimelineKind = .live, timelineController: MockTimelineController? = nil, hasPredecessor: Bool = false) -> TimelineViewModel {
-        let clientProxyMock = ClientProxyMock(.init())
-        clientProxyMock.roomSummaryForAliasReturnValue = .mock(id: "!room:matrix.org", name: "Room")
-        clientProxyMock.roomSummaryForIdentifierReturnValue = .mock(id: "!room:matrix.org", name: "Room", canonicalAlias: "#room:matrix.org")
-        let roomProxy = JoinedRoomProxyMock(.init(name: "Preview room", predecessor: hasPredecessor ? .init(roomId: UUID().uuidString) : nil))
-        return TimelineViewModel(roomProxy: roomProxy,
-                                 focussedEventID: nil,
-                                 timelineController: timelineController ?? MockTimelineController(timelineKind: timelineKind),
-                                 userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                                 mediaPlayerProvider: MediaPlayerProviderMock(),
-                                 userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                 appMediator: AppMediatorMock.default,
-                                 appSettings: ServiceLocator.shared.settings,
-                                 analyticsService: ServiceLocator.shared.analytics,
-                                 emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                 linkMetadataProvider: LinkMetadataProvider(),
-                                 timelineControllerFactory: TimelineControllerFactoryMock(.init()))
-    }
-}
-*/
+     static func mock(timelineKind: TimelineKind = .live, timelineController: MockTimelineController? = nil, hasPredecessor: Bool = false) -> TimelineViewModel {
+         let clientProxyMock = ClientProxyMock(.init())
+         clientProxyMock.roomSummaryForAliasReturnValue = .mock(id: "!room:matrix.org", name: "Room")
+         clientProxyMock.roomSummaryForIdentifierReturnValue = .mock(id: "!room:matrix.org", name: "Room", canonicalAlias: "#room:matrix.org")
+         let roomProxy = JoinedRoomProxyMock(.init(name: "Preview room", predecessor: hasPredecessor ? .init(roomId: UUID().uuidString) : nil))
+         return TimelineViewModel(roomProxy: roomProxy,
+                                  focussedEventID: nil,
+                                  timelineController: timelineController ?? MockTimelineController(timelineKind: timelineKind),
+                                  userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                                  mediaPlayerProvider: MediaPlayerProviderMock(),
+                                  userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                  appMediator: AppMediatorMock.default,
+                                  appSettings: ServiceLocator.shared.settings,
+                                  analyticsService: ServiceLocator.shared.analytics,
+                                  emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                  linkMetadataProvider: LinkMetadataProvider(),
+                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     }
+ }
+ */
 
 extension EnvironmentValues {
     /// Used to access and inject the room context without observing it

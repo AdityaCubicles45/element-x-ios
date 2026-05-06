@@ -179,88 +179,88 @@ private extension View {
 
 // MARK: - Previews
 
-//import MatrixRustSDKMocks
+// import MatrixRustSDKMocks
 
 /*
-/*
-struct HomeScreenRoomCell_Previews: PreviewProvider, TestablePreview {
-    static let summaryProviderGeneric = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
-    static let genericRooms = summaryProviderGeneric.roomListPublisher.value.compactMap(mockRoom)
+ /*
+ struct HomeScreenRoomCell_Previews: PreviewProvider, TestablePreview {
+     static let summaryProviderGeneric = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
+     static let genericRooms = summaryProviderGeneric.roomListPublisher.value.compactMap(mockRoom)
     
-    static let summaryProviderForNotificationsState = RoomSummaryProviderMock(.init(state: .loaded(.mockRoomsWithNotificationsState)))
-    static let notificationsStateRooms = summaryProviderForNotificationsState.roomListPublisher.value.compactMap(mockRoom)
+     static let summaryProviderForNotificationsState = RoomSummaryProviderMock(.init(state: .loaded(.mockRoomsWithNotificationsState)))
+     static let notificationsStateRooms = summaryProviderForNotificationsState.roomListPublisher.value.compactMap(mockRoom)
     
-    static let lastMessageStateRooms = [makeRoom(lastMessageState: .sending), makeRoom(lastMessageState: .failed)]
+     static let lastMessageStateRooms = [makeRoom(lastMessageState: .sending), makeRoom(lastMessageState: .failed)]
     
-    static var previews: some View {
-        VStack(spacing: 0) {
-            ForEach(genericRooms) { room in
-                HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
-            }
+     static var previews: some View {
+         VStack(spacing: 0) {
+             ForEach(genericRooms) { room in
+                 HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
+             }
             
-            HomeScreenRoomCell(room: .placeholder(), isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
-                .redacted(reason: .placeholder)
-        }
-        .previewDisplayName("Generic")
+             HomeScreenRoomCell(room: .placeholder(), isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
+                 .redacted(reason: .placeholder)
+         }
+         .previewDisplayName("Generic")
         
-        VStack(spacing: 0) {
-            ForEach(notificationsStateRooms) { room in
-                HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
-            }
-        }
-        .previewLayout(.sizeThatFits)
-        .previewDisplayName("Notifications State")
+         VStack(spacing: 0) {
+             ForEach(notificationsStateRooms) { room in
+                 HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
+             }
+         }
+         .previewLayout(.sizeThatFits)
+         .previewDisplayName("Notifications State")
         
-        VStack(spacing: 0) {
-            ForEach(lastMessageStateRooms) { room in
-                HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
-            }
-        }
-        .previewLayout(.sizeThatFits)
-        .previewDisplayName("Last Message State")
-    }
+         VStack(spacing: 0) {
+             ForEach(lastMessageStateRooms) { room in
+                 HomeScreenRoomCell(room: room, isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
+             }
+         }
+         .previewLayout(.sizeThatFits)
+         .previewDisplayName("Last Message State")
+     }
     
-    static func mockRoom(summary: RoomSummary) -> HomeScreenRoom? {
-        HomeScreenRoom(summary: summary, hideUnreadMessagesBadge: false)
-    }
+     static func mockRoom(summary: RoomSummary) -> HomeScreenRoom? {
+         HomeScreenRoom(summary: summary, hideUnreadMessagesBadge: false)
+     }
     
-    static func makeViewModel(roomSummaryProvider: RoomSummaryProviderProtocol) -> HomeScreenViewModel {
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe", roomSummaryProvider: roomSummaryProvider))))
+     static func makeViewModel(roomSummaryProvider: RoomSummaryProviderProtocol) -> HomeScreenViewModel {
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe", roomSummaryProvider: roomSummaryProvider))))
 
-        return HomeScreenViewModel(userSession: userSession,
-                                   selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
-                                   appSettings: ServiceLocator.shared.settings,
-                                   analyticsService: ServiceLocator.shared.analytics,
-                                   notificationManager: NotificationManagerMock(),
-                                   userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
+         return HomeScreenViewModel(userSession: userSession,
+                                    selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
+                                    appSettings: ServiceLocator.shared.settings,
+                                    analyticsService: ServiceLocator.shared.analytics,
+                                    notificationManager: NotificationManagerMock(),
+                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
     
-    static func makeRoom(lastMessageState: RoomSummary.LastMessageState) -> HomeScreenRoom {
-        let summary = RoomSummary(room: RoomSDKMock(),
-                                  id: UUID().uuidString,
-                                  joinRequestType: nil,
-                                  name: "Foundation and Empire",
-                                  isDirect: false,
-                                  isSpace: false,
-                                  avatarURL: .mockMXCAvatar,
-                                  heroes: [],
-                                  activeMembersCount: 0,
-                                  lastMessage: AttributedString("How do you see the Emperor then? You think he keeps office hours?"),
-                                  lastMessageDate: .mock,
-                                  lastMessageState: lastMessageState,
-                                  unreadMessagesCount: 2,
-                                  unreadMentionsCount: 0,
-                                  unreadNotificationsCount: 2,
-                                  notificationMode: .mute,
-                                  canonicalAlias: "#foundation-and-empire:matrix.org",
-                                  alternativeAliases: [],
-                                  hasOngoingCall: false,
-                                  isMarkedUnread: false,
-                                  isFavourite: false,
-                                  isTombstoned: false)
+     static func makeRoom(lastMessageState: RoomSummary.LastMessageState) -> HomeScreenRoom {
+         let summary = RoomSummary(room: RoomSDKMock(),
+                                   id: UUID().uuidString,
+                                   joinRequestType: nil,
+                                   name: "Foundation and Empire",
+                                   isDirect: false,
+                                   isSpace: false,
+                                   avatarURL: .mockMXCAvatar,
+                                   heroes: [],
+                                   activeMembersCount: 0,
+                                   lastMessage: AttributedString("How do you see the Emperor then? You think he keeps office hours?"),
+                                   lastMessageDate: .mock,
+                                   lastMessageState: lastMessageState,
+                                   unreadMessagesCount: 2,
+                                   unreadMentionsCount: 0,
+                                   unreadNotificationsCount: 2,
+                                   notificationMode: .mute,
+                                   canonicalAlias: "#foundation-and-empire:matrix.org",
+                                   alternativeAliases: [],
+                                   hasOngoingCall: false,
+                                   isMarkedUnread: false,
+                                   isFavourite: false,
+                                   isTombstoned: false)
         
-        return .init(summary: summary, hideUnreadMessagesBadge: false)
-    }
-}
-*/
-*/
+         return .init(summary: summary, hideUnreadMessagesBadge: false)
+     }
+ }
+ */
+ */

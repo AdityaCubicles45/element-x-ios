@@ -46,26 +46,26 @@ struct AppLockSetupSettingsScreen: View {
 // MARK: - Previews
 
 /*
-struct AppLockSetupSettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static let faceIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .faceID))
-    static let touchIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(isMandatory: true, biometryType: .touchID))
-    static let biometricsUnavailableViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .none))
+ struct AppLockSetupSettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static let faceIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .faceID))
+     static let touchIDViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(isMandatory: true, biometryType: .touchID))
+     static let biometricsUnavailableViewModel = AppLockSetupSettingsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .none))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            AppLockSetupSettingsScreen(context: faceIDViewModel.context)
-        }
-        .previewDisplayName("Face ID")
+     static var previews: some View {
+         ElementNavigationStack {
+             AppLockSetupSettingsScreen(context: faceIDViewModel.context)
+         }
+         .previewDisplayName("Face ID")
         
-        ElementNavigationStack {
-            AppLockSetupSettingsScreen(context: touchIDViewModel.context)
-        }
-        .previewDisplayName("Touch ID (Mandatory)")
+         ElementNavigationStack {
+             AppLockSetupSettingsScreen(context: touchIDViewModel.context)
+         }
+         .previewDisplayName("Touch ID (Mandatory)")
         
-        ElementNavigationStack {
-            AppLockSetupSettingsScreen(context: biometricsUnavailableViewModel.context)
-        }
-        .previewDisplayName("PIN only")
-    }
-}
-*/
+         ElementNavigationStack {
+             AppLockSetupSettingsScreen(context: biometricsUnavailableViewModel.context)
+         }
+         .previewDisplayName("PIN only")
+     }
+ }
+ */

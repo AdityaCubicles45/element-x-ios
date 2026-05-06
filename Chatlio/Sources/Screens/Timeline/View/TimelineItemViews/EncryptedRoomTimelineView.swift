@@ -55,56 +55,56 @@ struct RoomTimelineViewPlaceholderLabelStyle: LabelStyle {
 }
 
 /*
-struct EncryptedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct EncryptedRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        body.environmentObject(viewModel.context)
-    }
+     static var previews: some View {
+         body.environmentObject(viewModel.context)
+     }
     
-    static var body: some View {
-        VStack(alignment: .leading, spacing: 20.0) {
-            EncryptedRoomTimelineView(timelineItem: itemWith(text: L10n.commonWaitingForDecryptionKey,
-                                                             timestamp: .mock,
-                                                             isOutgoing: false,
-                                                             senderId: "Bob"))
+     static var body: some View {
+         VStack(alignment: .leading, spacing: 20.0) {
+             EncryptedRoomTimelineView(timelineItem: itemWith(text: L10n.commonWaitingForDecryptionKey,
+                                                              timestamp: .mock,
+                                                              isOutgoing: false,
+                                                              senderId: "Bob"))
             
-            EncryptedRoomTimelineView(timelineItem: itemWith(text: L10n.commonWaitingForDecryptionKey,
-                                                             timestamp: .mock,
-                                                             isOutgoing: true,
-                                                             senderId: "Anne"))
+             EncryptedRoomTimelineView(timelineItem: itemWith(text: L10n.commonWaitingForDecryptionKey,
+                                                              timestamp: .mock,
+                                                              isOutgoing: true,
+                                                              senderId: "Anne"))
             
-            EncryptedRoomTimelineView(timelineItem: itemWith(text: "Some other text that is very long and will wrap onto multiple lines.",
-                                                             timestamp: .mock,
-                                                             isOutgoing: true,
-                                                             senderId: "Anne"))
+             EncryptedRoomTimelineView(timelineItem: itemWith(text: "Some other text that is very long and will wrap onto multiple lines.",
+                                                              timestamp: .mock,
+                                                              isOutgoing: true,
+                                                              senderId: "Anne"))
             
-            EncryptedRoomTimelineView(timelineItem: expectedItemWith(timestamp: .mock,
-                                                                     isOutgoing: false,
-                                                                     senderId: "Bob"))
-        }
-    }
+             EncryptedRoomTimelineView(timelineItem: expectedItemWith(timestamp: .mock,
+                                                                      isOutgoing: false,
+                                                                      senderId: "Bob"))
+         }
+     }
     
-    private static func itemWith(text: String, timestamp: Date, isOutgoing: Bool, senderId: String) -> EncryptedRoomTimelineItem {
-        EncryptedRoomTimelineItem(id: .randomEvent,
-                                  body: text,
-                                  encryptionType: .unknown,
-                                  timestamp: timestamp,
-                                  isOutgoing: isOutgoing,
-                                  isEditable: false,
-                                  canBeRepliedTo: false,
-                                  sender: .init(id: senderId))
-    }
+     private static func itemWith(text: String, timestamp: Date, isOutgoing: Bool, senderId: String) -> EncryptedRoomTimelineItem {
+         EncryptedRoomTimelineItem(id: .randomEvent,
+                                   body: text,
+                                   encryptionType: .unknown,
+                                   timestamp: timestamp,
+                                   isOutgoing: isOutgoing,
+                                   isEditable: false,
+                                   canBeRepliedTo: false,
+                                   sender: .init(id: senderId))
+     }
     
-    private static func expectedItemWith(timestamp: Date, isOutgoing: Bool, senderId: String) -> EncryptedRoomTimelineItem {
-        EncryptedRoomTimelineItem(id: .randomEvent,
-                                  body: L10n.commonUnableToDecryptNoAccess,
-                                  encryptionType: .megolmV1AesSha2(sessionID: "foo", cause: .sentBeforeWeJoined),
-                                  timestamp: timestamp,
-                                  isOutgoing: isOutgoing,
-                                  isEditable: false,
-                                  canBeRepliedTo: false,
-                                  sender: .init(id: senderId))
-    }
-}
-*/
+     private static func expectedItemWith(timestamp: Date, isOutgoing: Bool, senderId: String) -> EncryptedRoomTimelineItem {
+         EncryptedRoomTimelineItem(id: .randomEvent,
+                                   body: L10n.commonUnableToDecryptNoAccess,
+                                   encryptionType: .megolmV1AesSha2(sessionID: "foo", cause: .sentBeforeWeJoined),
+                                   timestamp: timestamp,
+                                   isOutgoing: isOutgoing,
+                                   isEditable: false,
+                                   canBeRepliedTo: false,
+                                   sender: .init(id: senderId))
+     }
+ }
+ */

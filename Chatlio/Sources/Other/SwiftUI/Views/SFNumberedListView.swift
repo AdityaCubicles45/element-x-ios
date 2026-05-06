@@ -57,19 +57,19 @@ struct SFNumberedListView: View {
 }
 
 /*
-struct SFNumberedListView_Previews: PreviewProvider, TestablePreview {
-    static let items = {
-        var results: [AttributedString] = []
-        for index in 1...9 {
-            results.append(AttributedString("Item \(index)"))
-        }
-        return results
-    }()
+ struct SFNumberedListView_Previews: PreviewProvider, TestablePreview {
+     static let items = {
+         var results: [AttributedString] = []
+         for index in 1...9 {
+             results.append(AttributedString("Item \(index)"))
+         }
+         return results
+     }()
     
-    static var previews: some View {
-        SFNumberedListView(items: items)
-            .padding()
-            .previewLayout(.sizeThatFits)
-    }
-}
-*/
+     static var previews: some View {
+         SFNumberedListView(items: items)
+             .padding()
+             .previewLayout(.sizeThatFits)
+     }
+ }
+ */

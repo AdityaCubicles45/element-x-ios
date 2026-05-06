@@ -82,14 +82,14 @@ private struct VoiceMessageRecordingButtonStyle: ButtonStyle {
 }
 
 /*
-struct VoiceMessageRecordingButton_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        HStack(spacing: 12) {
-            VoiceMessageRecordingButton(mode: .idle)
-                .disabled(true)
-            VoiceMessageRecordingButton(mode: .idle)
-            VoiceMessageRecordingButton(mode: .recording)
-        }
-    }
-}
-*/
+ struct VoiceMessageRecordingButton_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         HStack(spacing: 12) {
+             VoiceMessageRecordingButton(mode: .idle)
+                 .disabled(true)
+             VoiceMessageRecordingButton(mode: .idle)
+             VoiceMessageRecordingButton(mode: .recording)
+         }
+     }
+ }
+ */

@@ -71,14 +71,14 @@ struct CollapsibleRoomTimelineView: View {
 }
 
 /*
-struct CollapsibleRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let item = CollapsibleTimelineItem(items: [
-        SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("First separator")), timestamp: .mock),
-        SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("Second separator")), timestamp: .mock)
-    ])
+ struct CollapsibleRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let item = CollapsibleTimelineItem(items: [
+         SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("First separator")), timestamp: .mock),
+         SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("Second separator")), timestamp: .mock)
+     ])
     
-    static var previews: some View {
-        CollapsibleRoomTimelineView(timelineItem: item)
-    }
-}
-*/
+     static var previews: some View {
+         CollapsibleRoomTimelineView(timelineItem: item)
+     }
+ }
+ */

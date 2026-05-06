@@ -28,34 +28,34 @@ struct ReadMarkerRoomTimelineView: View {
 }
 
 /*
-struct ReadMarkerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct ReadMarkerRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
 
-    static let item = ReadMarkerRoomTimelineItem(id: .randomVirtual)
+     static let item = ReadMarkerRoomTimelineItem(id: .randomVirtual)
 
-    static var previews: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            RoomTimelineItemView(viewState: .init(type: .separator(.init(id: .virtual(uniqueID: .init("Separator")), timestamp: .mock)), groupStyle: .single))
-            RoomTimelineItemView(viewState: .init(type: .text(.init(id: .randomEvent,
-                                                                    timestamp: .mock,
-                                                                    isOutgoing: true,
-                                                                    isEditable: false,
-                                                                    canBeRepliedTo: true,
-                                                                    sender: .init(id: "1", displayName: "Bob"),
-                                                                    content: .init(body: "This is another message"))), groupStyle: .single))
+     static var previews: some View {
+         VStack(alignment: .leading, spacing: 0) {
+             RoomTimelineItemView(viewState: .init(type: .separator(.init(id: .virtual(uniqueID: .init("Separator")), timestamp: .mock)), groupStyle: .single))
+             RoomTimelineItemView(viewState: .init(type: .text(.init(id: .randomEvent,
+                                                                     timestamp: .mock,
+                                                                     isOutgoing: true,
+                                                                     isEditable: false,
+                                                                     canBeRepliedTo: true,
+                                                                     sender: .init(id: "1", displayName: "Bob"),
+                                                                     content: .init(body: "This is another message"))), groupStyle: .single))
 
-            ReadMarkerRoomTimelineView(timelineItem: item)
+             ReadMarkerRoomTimelineView(timelineItem: item)
 
-            RoomTimelineItemView(viewState: .init(type: .separator(.init(id: .virtual(uniqueID: .init("Separator")), timestamp: .mock)), groupStyle: .single))
-            RoomTimelineItemView(viewState: .init(type: .text(.init(id: .randomEvent,
-                                                                    timestamp: .mock,
-                                                                    isOutgoing: false,
-                                                                    isEditable: false,
-                                                                    canBeRepliedTo: true,
-                                                                    sender: .init(id: "", displayName: "Alice"),
-                                                                    content: .init(body: "This is a message"))), groupStyle: .single))
-        }
-        .environmentObject(viewModel.context)
-    }
-}
-*/
+             RoomTimelineItemView(viewState: .init(type: .separator(.init(id: .virtual(uniqueID: .init("Separator")), timestamp: .mock)), groupStyle: .single))
+             RoomTimelineItemView(viewState: .init(type: .text(.init(id: .randomEvent,
+                                                                     timestamp: .mock,
+                                                                     isOutgoing: false,
+                                                                     isEditable: false,
+                                                                     canBeRepliedTo: true,
+                                                                     sender: .init(id: "", displayName: "Alice"),
+                                                                     content: .init(body: "This is a message"))), groupStyle: .single))
+         }
+         .environmentObject(viewModel.context)
+     }
+ }
+ */

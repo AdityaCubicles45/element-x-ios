@@ -62,13 +62,13 @@ struct ReportRoomScreen: View {
 // MARK: - Previews
 
 /*
-struct ReportRoomScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = ReportRoomScreenViewModel(roomProxy: JoinedRoomProxyMock(.init()),
-                                                     userIndicatorController: UserIndicatorControllerMock())
-    static var previews: some View {
-        ElementNavigationStack {
-            ReportRoomScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct ReportRoomScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = ReportRoomScreenViewModel(roomProxy: JoinedRoomProxyMock(.init()),
+                                                      userIndicatorController: UserIndicatorControllerMock())
+     static var previews: some View {
+         ElementNavigationStack {
+             ReportRoomScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

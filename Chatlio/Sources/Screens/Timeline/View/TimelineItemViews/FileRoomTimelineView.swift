@@ -104,48 +104,48 @@ struct MediaFileRoomTimelineContent: View {
 // MARK: - Previews
 
 /*
-struct FileRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct FileRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        VStack(spacing: 20.0) {
-            FileRoomTimelineView(timelineItem: makeItem(filename: "document.pdf"))
+     static var previews: some View {
+         VStack(spacing: 20.0) {
+             FileRoomTimelineView(timelineItem: makeItem(filename: "document.pdf"))
             
-            FileRoomTimelineView(timelineItem: makeItem(filename: "document.pdf",
-                                                        fileSize: 3 * 1024 * 1024))
+             FileRoomTimelineView(timelineItem: makeItem(filename: "document.pdf",
+                                                         fileSize: 3 * 1024 * 1024))
             
-            FileRoomTimelineView(timelineItem: makeItem(filename: "very very very very long named document.pdf",
-                                                        fileSize: 3 * 1024 * 1024))
+             FileRoomTimelineView(timelineItem: makeItem(filename: "very very very very long named document.pdf",
+                                                         fileSize: 3 * 1024 * 1024))
             
-            FileRoomTimelineView(timelineItem: makeItem(filename: "spreadsheet.xlsx",
-                                                        fileSize: 17 * 1024,
-                                                        caption: "The important figures you asked me to send over."))
+             FileRoomTimelineView(timelineItem: makeItem(filename: "spreadsheet.xlsx",
+                                                         fileSize: 17 * 1024,
+                                                         caption: "The important figures you asked me to send over."))
             
-            FileRoomTimelineView(timelineItem: makeItem(filename: "document.txt",
-                                                        fileSize: 456,
-                                                        caption: "Plain caption",
-                                                        formattedCaption: "Formatted caption"))
-        }
-        .environmentObject(viewModel.context)
-    }
+             FileRoomTimelineView(timelineItem: makeItem(filename: "document.txt",
+                                                         fileSize: 456,
+                                                         caption: "Plain caption",
+                                                         formattedCaption: "Formatted caption"))
+         }
+         .environmentObject(viewModel.context)
+     }
     
-    static func makeItem(filename: String,
-                         fileSize: UInt? = nil,
-                         caption: String? = nil,
-                         formattedCaption: AttributedString? = nil) -> FileRoomTimelineItem {
-        .init(id: .randomEvent,
-              timestamp: .mock,
-              isOutgoing: false,
-              isEditable: false,
-              canBeRepliedTo: true,
-              sender: .init(id: "Bob"),
-              content: .init(filename: filename,
-                             caption: caption,
-                             formattedCaption: formattedCaption,
-                             source: nil,
-                             fileSize: fileSize,
-                             thumbnailSource: nil,
-                             contentType: nil))
-    }
-}
-*/
+     static func makeItem(filename: String,
+                          fileSize: UInt? = nil,
+                          caption: String? = nil,
+                          formattedCaption: AttributedString? = nil) -> FileRoomTimelineItem {
+         .init(id: .randomEvent,
+               timestamp: .mock,
+               isOutgoing: false,
+               isEditable: false,
+               canBeRepliedTo: true,
+               sender: .init(id: "Bob"),
+               content: .init(filename: filename,
+                              caption: caption,
+                              formattedCaption: formattedCaption,
+                              source: nil,
+                              fileSize: fileSize,
+                              thumbnailSource: nil,
+                              contentType: nil))
+     }
+ }
+ */

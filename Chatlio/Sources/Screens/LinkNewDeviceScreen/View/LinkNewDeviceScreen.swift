@@ -103,48 +103,48 @@ struct LinkNewDeviceScreen: View {
 // MARK: - Previews
 
 /*
-struct LinkNewDeviceScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel(mode: .readyToLink(isGeneratingCode: false))
-    static let generatingViewModel = makeViewModel(mode: .readyToLink(isGeneratingCode: true))
-    static let loadingViewModel = makeViewModel(mode: .loading)
-    static let unsupportedViewModel = makeViewModel(mode: .error(.notSupported))
-    static let unknownErrorViewModel = makeViewModel(mode: .error(.unknown))
+ struct LinkNewDeviceScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel(mode: .readyToLink(isGeneratingCode: false))
+     static let generatingViewModel = makeViewModel(mode: .readyToLink(isGeneratingCode: true))
+     static let loadingViewModel = makeViewModel(mode: .loading)
+     static let unsupportedViewModel = makeViewModel(mode: .error(.notSupported))
+     static let unknownErrorViewModel = makeViewModel(mode: .error(.unknown))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            LinkNewDeviceScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Ready")
-        .snapshotPreferences(expect: viewModel.context.observe(\.viewState.mode).map { $0 == .readyToLink(isGeneratingCode: false) })
+     static var previews: some View {
+         ElementNavigationStack {
+             LinkNewDeviceScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Ready")
+         .snapshotPreferences(expect: viewModel.context.observe(\.viewState.mode).map { $0 == .readyToLink(isGeneratingCode: false) })
         
-        ElementNavigationStack {
-            LinkNewDeviceScreen(context: generatingViewModel.context)
-        }
-        .previewDisplayName("Generating")
-        .snapshotPreferences(expect: generatingViewModel.context.observe(\.viewState.mode).map { $0 == .readyToLink(isGeneratingCode: true) })
+         ElementNavigationStack {
+             LinkNewDeviceScreen(context: generatingViewModel.context)
+         }
+         .previewDisplayName("Generating")
+         .snapshotPreferences(expect: generatingViewModel.context.observe(\.viewState.mode).map { $0 == .readyToLink(isGeneratingCode: true) })
         
-        ElementNavigationStack {
-            LinkNewDeviceScreen(context: loadingViewModel.context)
-        }
-        .previewDisplayName("Loading")
+         ElementNavigationStack {
+             LinkNewDeviceScreen(context: loadingViewModel.context)
+         }
+         .previewDisplayName("Loading")
         
-        ElementNavigationStack {
-            LinkNewDeviceScreen(context: unsupportedViewModel.context)
-        }
-        .previewDisplayName("Unsupported")
-        .snapshotPreferences(expect: unsupportedViewModel.context.observe(\.viewState.mode).map { $0 == .error(.notSupported) })
+         ElementNavigationStack {
+             LinkNewDeviceScreen(context: unsupportedViewModel.context)
+         }
+         .previewDisplayName("Unsupported")
+         .snapshotPreferences(expect: unsupportedViewModel.context.observe(\.viewState.mode).map { $0 == .error(.notSupported) })
         
-        ElementNavigationStack {
-            LinkNewDeviceScreen(context: unknownErrorViewModel.context)
-        }
-        .previewDisplayName("Unknown error")
-        .snapshotPreferences(expect: unknownErrorViewModel.context.observe(\.viewState.mode).map { $0 == .error(.unknown) })
-    }
+         ElementNavigationStack {
+             LinkNewDeviceScreen(context: unknownErrorViewModel.context)
+         }
+         .previewDisplayName("Unknown error")
+         .snapshotPreferences(expect: unknownErrorViewModel.context.observe(\.viewState.mode).map { $0 == .error(.unknown) })
+     }
     
-    static func makeViewModel(mode: LinkNewDeviceScreenViewState.Mode) -> LinkNewDeviceScreenViewModel {
-        LinkNewDeviceScreenViewModel(clientProxy: ClientProxyMock(.init()),
-                                     initialState: .init(mode: mode,
-                                                         showLinkDesktopComputerButton: true))
-    }
-}
-*/
+     static func makeViewModel(mode: LinkNewDeviceScreenViewState.Mode) -> LinkNewDeviceScreenViewModel {
+         LinkNewDeviceScreenViewModel(clientProxy: ClientProxyMock(.init()),
+                                      initialState: .init(mode: mode,
+                                                          showLinkDesktopComputerButton: true))
+     }
+ }
+ */

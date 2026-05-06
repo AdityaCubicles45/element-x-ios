@@ -379,49 +379,49 @@ struct ComposerToolbarButtonStyle: ButtonStyle {
 // MARK: - Previews
 
 /*
-struct ComposerToolbar_Previews: PreviewProvider, TestablePreview {
-    static let timelineViewModel = TimelineViewModel.mock
+ struct ComposerToolbar_Previews: PreviewProvider, TestablePreview {
+     static let timelineViewModel = TimelineViewModel.mock
     
-    static let viewModel = ComposerToolbarViewModel.mock()
-    static let focusedViewModel = ComposerToolbarViewModel.mock(focused: true, message: "Hello, World!")
-    static let editingViewModel = ComposerToolbarViewModel.mock(message: "Hello, Wrold!", mockMode: .editing)
-    static let multiLineViewModel = ComposerToolbarViewModel.mock(message: "Hello, World! This is a loooong message that wraps onto multiple lines.")
-    static let voiceMessageRecordingViewModel = ComposerToolbarViewModel.mock(mockMode: .recordVoiceMessage)
-    static let voiceMessagePreviewViewModel = ComposerToolbarViewModel.mock(mockMode: .previewVoiceMessage(isUploading: false))
-    static let voiceMessageUploadingViewModel = ComposerToolbarViewModel.mock(mockMode: .previewVoiceMessage(isUploading: true))
-    static let replyLoadingViewModel = ComposerToolbarViewModel.mock(mockMode: .reply(isLoading: true))
-    static let replyLoadedViewModel = ComposerToolbarViewModel.mock(mockMode: .reply(isLoading: false))
-    static let suggestionsViewModel = ComposerToolbarViewModel.mock(hasSuggestions: true)
-    static let disabledViewModel = ComposerToolbarViewModel.mock(canSend: false)
+     static let viewModel = ComposerToolbarViewModel.mock()
+     static let focusedViewModel = ComposerToolbarViewModel.mock(focused: true, message: "Hello, World!")
+     static let editingViewModel = ComposerToolbarViewModel.mock(message: "Hello, Wrold!", mockMode: .editing)
+     static let multiLineViewModel = ComposerToolbarViewModel.mock(message: "Hello, World! This is a loooong message that wraps onto multiple lines.")
+     static let voiceMessageRecordingViewModel = ComposerToolbarViewModel.mock(mockMode: .recordVoiceMessage)
+     static let voiceMessagePreviewViewModel = ComposerToolbarViewModel.mock(mockMode: .previewVoiceMessage(isUploading: false))
+     static let voiceMessageUploadingViewModel = ComposerToolbarViewModel.mock(mockMode: .previewVoiceMessage(isUploading: true))
+     static let replyLoadingViewModel = ComposerToolbarViewModel.mock(mockMode: .reply(isLoading: true))
+     static let replyLoadedViewModel = ComposerToolbarViewModel.mock(mockMode: .reply(isLoading: false))
+     static let suggestionsViewModel = ComposerToolbarViewModel.mock(hasSuggestions: true)
+     static let disabledViewModel = ComposerToolbarViewModel.mock(canSend: false)
     
-    static var previews: some View {
-        VStack(spacing: 8) {
-            ComposerToolbar(context: viewModel.context)
-            ComposerToolbar(context: focusedViewModel.context)
-            ComposerToolbar(context: editingViewModel.context)
-            ComposerToolbar(context: multiLineViewModel.context)
-                .padding(.bottom)
+     static var previews: some View {
+         VStack(spacing: 8) {
+             ComposerToolbar(context: viewModel.context)
+             ComposerToolbar(context: focusedViewModel.context)
+             ComposerToolbar(context: editingViewModel.context)
+             ComposerToolbar(context: multiLineViewModel.context)
+                 .padding(.bottom)
             
-            ComposerToolbar(context: voiceMessageRecordingViewModel.context)
-            ComposerToolbar(context: voiceMessagePreviewViewModel.context)
-            ComposerToolbar(context: voiceMessageUploadingViewModel.context)
-                .padding(.bottom)
+             ComposerToolbar(context: voiceMessageRecordingViewModel.context)
+             ComposerToolbar(context: voiceMessagePreviewViewModel.context)
+             ComposerToolbar(context: voiceMessageUploadingViewModel.context)
+                 .padding(.bottom)
             
-            ComposerToolbar(context: disabledViewModel.context)
-        }
+             ComposerToolbar(context: disabledViewModel.context)
+         }
         
-        // Putting them in a VStack allows the completion suggestion preview to work properly in tests
-        VStack(spacing: 8) {
-            ComposerToolbar(context: suggestionsViewModel.context)
-        }
-        .previewDisplayName("With Suggestions")
+         // Putting them in a VStack allows the completion suggestion preview to work properly in tests
+         VStack(spacing: 8) {
+             ComposerToolbar(context: suggestionsViewModel.context)
+         }
+         .previewDisplayName("With Suggestions")
         
-        VStack(spacing: 8) {
-            ComposerToolbar(context: replyLoadingViewModel.context)
-            ComposerToolbar(context: replyLoadedViewModel.context)
-        }
-        .environmentObject(timelineViewModel.context)
-        .previewDisplayName("Reply")
-    }
-}
-*/
+         VStack(spacing: 8) {
+             ComposerToolbar(context: replyLoadingViewModel.context)
+             ComposerToolbar(context: replyLoadedViewModel.context)
+         }
+         .environmentObject(timelineViewModel.context)
+         .previewDisplayName("Reply")
+     }
+ }
+ */

@@ -102,18 +102,18 @@ private extension AppAppearance {
 // MARK: - Previews
 
 /*
-struct AdvancedSettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = AdvancedSettingsScreenViewModel(advancedSettings: ServiceLocator.shared.settings,
-                                                           analytics: ServiceLocator.shared.analytics,
-                                                           clientProxy: ClientProxyMock(.init()),
-                                                           userIndicatorController: UserIndicatorControllerMock())
-    static var previews: some View {
-        ElementNavigationStack {
-            AdvancedSettingsScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct AdvancedSettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = AdvancedSettingsScreenViewModel(advancedSettings: ServiceLocator.shared.settings,
+                                                            analytics: ServiceLocator.shared.analytics,
+                                                            clientProxy: ClientProxyMock(.init()),
+                                                            userIndicatorController: UserIndicatorControllerMock())
+     static var previews: some View {
+         ElementNavigationStack {
+             AdvancedSettingsScreen(context: viewModel.context)
+         }
+     }
+ }
+ */
 
 private extension TimelineMediaVisibility {
     static var items: [(title: String, tag: TimelineMediaVisibility)] {

@@ -98,18 +98,18 @@ private extension DateFormatter {
 // MARK: - Previews
 
 /*
-struct VoiceMessagePreviewComposer_Previews: PreviewProvider, TestablePreview {
-    static let playerState = AudioPlayerState(id: .recorderPreview,
-                                              title: L10n.commonVoiceMessage,
-                                              duration: 10.0,
-                                              waveform: EstimatedWaveform.mockWaveform,
-                                              progress: 0.4)
+ struct VoiceMessagePreviewComposer_Previews: PreviewProvider, TestablePreview {
+     static let playerState = AudioPlayerState(id: .recorderPreview,
+                                               title: L10n.commonVoiceMessage,
+                                               duration: 10.0,
+                                               waveform: EstimatedWaveform.mockWaveform,
+                                               progress: 0.4)
     
-    static let waveformData: [Float] = Array(repeating: 1.0, count: 1000)
+     static let waveformData: [Float] = Array(repeating: 1.0, count: 1000)
     
-    static var previews: some View {
-        VoiceMessagePreviewComposer(playerState: playerState, waveform: .data(waveformData), onPlay: { }, onPause: { }, onSeek: { _ in }, onScrubbing: { _ in })
-            .fixedSize(horizontal: false, vertical: true)
-    }
-}
-*/
+     static var previews: some View {
+         VoiceMessagePreviewComposer(playerState: playerState, waveform: .data(waveformData), onPlay: { }, onPause: { }, onSeek: { _ in }, onScrubbing: { _ in })
+             .fixedSize(horizontal: false, vertical: true)
+     }
+ }
+ */

@@ -36,17 +36,8 @@ struct ServerConfirmationScreen: View {
     /// The main content of the view to be shown in a scroll view.
     var header: some View {
         VStack(spacing: 32) {
-            // Branded logo container
-            ZStack {
-                RoundedRectangle(cornerRadius: 32)
-                    .fill(Color(red: 0.945, green: 0.949, blue: 0.965)) // #F1F2F6
-                    .frame(width: 120, height: 120)
-                
-                Circle()
-                    .fill(Color.black)
-                    .frame(width: 60, height: 60)
-            }
-            .padding(.top, 40)
+            AuthenticationStartLogo(size: 120, hideBrandChrome: false, isOnGradient: false)
+                .padding(.top, 40)
             
             VStack(spacing: 16) {
                 Text(context.viewState.title)
@@ -144,37 +135,37 @@ private struct FakeInlinePicker: View {
 // MARK: - Previews
 
 /*
-struct ServerConfirmationScreen_Previews: PreviewProvider, TestablePreview {
-    static let loginViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .login)
-    static let registerViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .register)
-    static let pickerViewModel = makeViewModel(mode: .picker(["dept1.company.com", "dept2.company.com", "dept3.company.com"]), flow: .login)
+ struct ServerConfirmationScreen_Previews: PreviewProvider, TestablePreview {
+     static let loginViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .login)
+     static let registerViewModel = makeViewModel(mode: .confirmation("matrix.org"), flow: .register)
+     static let pickerViewModel = makeViewModel(mode: .picker(["dept1.company.com", "dept2.company.com", "dept3.company.com"]), flow: .login)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            ServerConfirmationScreen(context: loginViewModel.context)
-                .toolbar(.visible, for: .navigationBar)
-        }
-        .previewDisplayName("Login")
+     static var previews: some View {
+         ElementNavigationStack {
+             ServerConfirmationScreen(context: loginViewModel.context)
+                 .toolbar(.visible, for: .navigationBar)
+         }
+         .previewDisplayName("Login")
         
-        ElementNavigationStack {
-            ServerConfirmationScreen(context: registerViewModel.context)
-                .toolbar(.visible, for: .navigationBar)
-        }
-        .previewDisplayName("Register")
+         ElementNavigationStack {
+             ServerConfirmationScreen(context: registerViewModel.context)
+                 .toolbar(.visible, for: .navigationBar)
+         }
+         .previewDisplayName("Register")
         
-        ElementNavigationStack {
-            ServerConfirmationScreen(context: pickerViewModel.context)
-                .toolbar(.visible, for: .navigationBar)
-        }
-        .previewDisplayName("Picker")
-    }
+         ElementNavigationStack {
+             ServerConfirmationScreen(context: pickerViewModel.context)
+                 .toolbar(.visible, for: .navigationBar)
+         }
+         .previewDisplayName("Picker")
+     }
     
-    static func makeViewModel(mode: ServerConfirmationScreenMode, flow: AuthenticationFlow) -> ServerConfirmationScreenViewModel {
-        ServerConfirmationScreenViewModel(authenticationService: AuthenticationService.mock,
-                                          mode: mode,
-                                          authenticationFlow: flow,
-                                          appSettings: ServiceLocator.shared.settings,
-                                          userIndicatorController: UserIndicatorControllerMock())
-    }
-}
-*/
+     static func makeViewModel(mode: ServerConfirmationScreenMode, flow: AuthenticationFlow) -> ServerConfirmationScreenViewModel {
+         ServerConfirmationScreenViewModel(authenticationService: AuthenticationService.mock,
+                                           mode: mode,
+                                           authenticationFlow: flow,
+                                           appSettings: ServiceLocator.shared.settings,
+                                           userIndicatorController: UserIndicatorControllerMock())
+     }
+ }
+ */

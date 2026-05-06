@@ -55,29 +55,29 @@ struct ImageMediaEventsTimelineView: View {
 }
 
 /*
-struct ImageMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct ImageMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        ImageMediaEventsTimelineView(timelineItem: makeTimelineItem())
-            .frame(width: 100, height: 100)
-            .environmentObject(viewModel.context)
-            .environment(\.timelineContext, viewModel.context)
-            .previewLayout(.sizeThatFits)
-            .background(.black)
-    }
+     static var previews: some View {
+         ImageMediaEventsTimelineView(timelineItem: makeTimelineItem())
+             .frame(width: 100, height: 100)
+             .environmentObject(viewModel.context)
+             .environment(\.timelineContext, viewModel.context)
+             .previewLayout(.sizeThatFits)
+             .background(.black)
+     }
     
-    private static func makeTimelineItem() -> ImageRoomTimelineItem {
-        ImageRoomTimelineItem(id: .randomEvent,
-                              timestamp: .mock,
-                              isOutgoing: false,
-                              isEditable: false,
-                              canBeRepliedTo: true,
-                              sender: .init(id: "Bob"),
-                              content: .init(filename: "image.jpg",
-                                             imageInfo: .mockImage,
-                                             thumbnailInfo: .mockThumbnail,
-                                             contentType: .jpeg))
-    }
-}
-*/
+     private static func makeTimelineItem() -> ImageRoomTimelineItem {
+         ImageRoomTimelineItem(id: .randomEvent,
+                               timestamp: .mock,
+                               isOutgoing: false,
+                               isEditable: false,
+                               canBeRepliedTo: true,
+                               sender: .init(id: "Bob"),
+                               content: .init(filename: "image.jpg",
+                                              imageInfo: .mockImage,
+                                              thumbnailInfo: .mockThumbnail,
+                                              contentType: .jpeg))
+     }
+ }
+ */

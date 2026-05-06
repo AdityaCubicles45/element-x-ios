@@ -114,19 +114,19 @@ private extension ColorScheme {
 }
 
 /*
-struct MapLibreStaticMapView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        MapLibreStaticMapView(coordinates: CLLocationCoordinate2D(),
-                              zoomLevel: 15,
-                              attributionPlacement: .bottomLeft,
-                              mapURLBuilder: MapTilerURLBuilderMock(),
-                              mapSize: .init(width: 300, height: 200)) {
-            Image(systemName: "mappin.circle.fill")
-                .padding(.bottom, 35)
-        }
-    }
-}
-*/
+ struct MapLibreStaticMapView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         MapLibreStaticMapView(coordinates: CLLocationCoordinate2D(),
+                               zoomLevel: 15,
+                               attributionPlacement: .bottomLeft,
+                               mapURLBuilder: MapTilerURLBuilderMock(),
+                               mapSize: .init(width: 300, height: 200)) {
+             Image(systemName: "mappin.circle.fill")
+                 .padding(.bottom, 35)
+         }
+     }
+ }
+ */
 
 private struct MapTilerURLBuilderMock: MapTilerURLBuilderProtocol {
     func interactiveMapURL(for style: MapTilerStyle) -> URL? {

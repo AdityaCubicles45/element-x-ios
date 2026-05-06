@@ -48,51 +48,51 @@ struct LocationRoomTimelineView: View {
 }
 
 /*
-struct LocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct LocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
 
-    static var previews: some View {
-        PreviewScrollView {
-            VStack(spacing: 8) {
-                states
-            }
-        }
-        .environmentObject(viewModel.context)
-        .environment(\.timelineContext, viewModel.context)
-        .previewLayout(.sizeThatFits)
-        .previewDisplayName("Bubbles")
-    }
+     static var previews: some View {
+         PreviewScrollView {
+             VStack(spacing: 8) {
+                 states
+             }
+         }
+         .environmentObject(viewModel.context)
+         .environment(\.timelineContext, viewModel.context)
+         .previewLayout(.sizeThatFits)
+         .previewDisplayName("Bubbles")
+     }
 
-    @ViewBuilder
-    static var states: some View {
-        LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                     timestamp: .mock,
-                                                     isOutgoing: false,
-                                                     isEditable: false,
-                                                     canBeRepliedTo: true,
-                                                     sender: .init(id: "Bob"),
-                                                     content: .init(body: "Fallback geo uri description")))
+     @ViewBuilder
+     static var states: some View {
+         LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                      timestamp: .mock,
+                                                      isOutgoing: false,
+                                                      isEditable: false,
+                                                      canBeRepliedTo: true,
+                                                      sender: .init(id: "Bob"),
+                                                      content: .init(body: "Fallback geo uri description")))
 
-        LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                     timestamp: .mock,
-                                                     isOutgoing: false,
-                                                     isEditable: false,
-                                                     canBeRepliedTo: true,
-                                                     sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
-                                                     content: .init(body: "Fallback geo uri description",
-                                                                    geoURI: .init(latitude: 41.902782, longitude: 12.496366))))
-        LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                     timestamp: .mock,
-                                                     isOutgoing: false,
-                                                     isEditable: false,
-                                                     canBeRepliedTo: true,
-                                                     sender: .init(id: "Bob"),
-                                                     content: .init(body: "Fallback geo uri description",
-                                                                    geoURI: .init(latitude: 41.902782, longitude: 12.496366),
-                                                                    kind: .pin),
-                                                     properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
-                                                                                             eventID: "123",
-                                                                                             eventContent: .message(.location(.init(body: "")))))))
-    }
-}
-*/
+         LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                      timestamp: .mock,
+                                                      isOutgoing: false,
+                                                      isEditable: false,
+                                                      canBeRepliedTo: true,
+                                                      sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
+                                                      content: .init(body: "Fallback geo uri description",
+                                                                     geoURI: .init(latitude: 41.902782, longitude: 12.496366))))
+         LocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                      timestamp: .mock,
+                                                      isOutgoing: false,
+                                                      isEditable: false,
+                                                      canBeRepliedTo: true,
+                                                      sender: .init(id: "Bob"),
+                                                      content: .init(body: "Fallback geo uri description",
+                                                                     geoURI: .init(latitude: 41.902782, longitude: 12.496366),
+                                                                     kind: .pin),
+                                                      properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
+                                                                                              eventID: "123",
+                                                                                              eventContent: .message(.location(.init(body: "")))))))
+     }
+ }
+ */

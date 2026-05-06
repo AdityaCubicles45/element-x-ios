@@ -61,16 +61,16 @@ struct JoinCallButton: View {
 // MARK: - Previews
 
 /*
-struct JoinCallButton_Previews: PreviewProvider {
-    static var previews: some View {
-        ElementNavigationStack {
-            Color.clear
-                .toolbar {
-                    ToolbarItem(placement: .confirmationAction) {
-                        JoinCallButton { }
-                    }
-                }
-        }
-    }
-}
-*/
+ struct JoinCallButton_Previews: PreviewProvider {
+     static var previews: some View {
+         ElementNavigationStack {
+             Color.clear
+                 .toolbar {
+                     ToolbarItem(placement: .confirmationAction) {
+                         JoinCallButton { }
+                     }
+                 }
+         }
+     }
+ }
+ */

@@ -152,42 +152,42 @@ struct RoomDetailsEditScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
-    static let editableViewModel = {
-        let roomProxy = JoinedRoomProxyMock(.init(id: "test_id",
-                                                  name: "Room",
-                                                  members: [.mockMeAdmin]))
+ struct RoomDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
+     static let editableViewModel = {
+         let roomProxy = JoinedRoomProxyMock(.init(id: "test_id",
+                                                   name: "Room",
+                                                   members: [.mockMeAdmin]))
         
-        return RoomDetailsEditScreenViewModel(roomProxy: roomProxy,
-                                              userSession: UserSessionMock(.init()),
-                                              mediaUploadingPreprocessor: MediaUploadingPreprocessor(appSettings: ServiceLocator.shared.settings),
-                                              userIndicatorController: UserIndicatorControllerMock.default)
-    }()
+         return RoomDetailsEditScreenViewModel(roomProxy: roomProxy,
+                                               userSession: UserSessionMock(.init()),
+                                               mediaUploadingPreprocessor: MediaUploadingPreprocessor(appSettings: ServiceLocator.shared.settings),
+                                               userIndicatorController: UserIndicatorControllerMock.default)
+     }()
     
-    static let readOnlyViewModel = {
-        let roomProxy = JoinedRoomProxyMock(.init(id: "test_id",
-                                                  name: "Room",
-                                                  members: [.mockAlice]))
+     static let readOnlyViewModel = {
+         let roomProxy = JoinedRoomProxyMock(.init(id: "test_id",
+                                                   name: "Room",
+                                                   members: [.mockAlice]))
         
-        return RoomDetailsEditScreenViewModel(roomProxy: roomProxy,
-                                              userSession: UserSessionMock(.init()),
-                                              mediaUploadingPreprocessor: MediaUploadingPreprocessor(appSettings: ServiceLocator.shared.settings),
-                                              userIndicatorController: UserIndicatorControllerMock.default)
-    }()
+         return RoomDetailsEditScreenViewModel(roomProxy: roomProxy,
+                                               userSession: UserSessionMock(.init()),
+                                               mediaUploadingPreprocessor: MediaUploadingPreprocessor(appSettings: ServiceLocator.shared.settings),
+                                               userIndicatorController: UserIndicatorControllerMock.default)
+     }()
     
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomDetailsEditScreen(context: readOnlyViewModel.context)
-        }
-        .previewDisplayName("Read only")
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomDetailsEditScreen(context: readOnlyViewModel.context)
+         }
+         .previewDisplayName("Read only")
         
-        ElementNavigationStack {
-            RoomDetailsEditScreen(context: editableViewModel.context)
-        }
-        .snapshotPreferences(expect: editableViewModel.context.$viewState.map { state in
-            state.canEditTopic == true
-        })
-        .previewDisplayName("Editable")
-    }
-}
-*/
+         ElementNavigationStack {
+             RoomDetailsEditScreen(context: editableViewModel.context)
+         }
+         .snapshotPreferences(expect: editableViewModel.context.$viewState.map { state in
+             state.canEditTopic == true
+         })
+         .previewDisplayName("Editable")
+     }
+ }
+ */

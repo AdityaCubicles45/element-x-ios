@@ -104,30 +104,30 @@ struct HomeScreenRecoveryKeyConfirmationBanner: View {
 }
 
 /*
-struct HomeScreenRecoveryKeyConfirmationBanner_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
+ struct HomeScreenRecoveryKeyConfirmationBanner_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
     
-    static var previews: some View {
-        HomeScreenRecoveryKeyConfirmationBanner(state: .setUpRecovery,
-                                                context: viewModel.context)
-            .previewDisplayName("Set up recovery")
-        HomeScreenRecoveryKeyConfirmationBanner(state: .recoveryOutOfSync,
-                                                context: viewModel.context)
-            .previewDisplayName("Out of sync")
-    }
+     static var previews: some View {
+         HomeScreenRecoveryKeyConfirmationBanner(state: .setUpRecovery,
+                                                 context: viewModel.context)
+             .previewDisplayName("Set up recovery")
+         HomeScreenRecoveryKeyConfirmationBanner(state: .recoveryOutOfSync,
+                                                 context: viewModel.context)
+             .previewDisplayName("Out of sync")
+     }
     
-    static func makeViewModel() -> HomeScreenViewModel {
-        let clientProxy = ClientProxyMock(.init(userID: "@alice:example.com",
-                                                roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loading))))
+     static func makeViewModel() -> HomeScreenViewModel {
+         let clientProxy = ClientProxyMock(.init(userID: "@alice:example.com",
+                                                 roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loading))))
         
-        let userSession = UserSessionMock(.init(clientProxy: clientProxy))
+         let userSession = UserSessionMock(.init(clientProxy: clientProxy))
         
-        return HomeScreenViewModel(userSession: userSession,
-                                   selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
-                                   appSettings: ServiceLocator.shared.settings,
-                                   analyticsService: ServiceLocator.shared.analytics,
-                                   notificationManager: NotificationManagerMock(),
-                                   userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
-}
-*/
+         return HomeScreenViewModel(userSession: userSession,
+                                    selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
+                                    appSettings: ServiceLocator.shared.settings,
+                                    analyticsService: ServiceLocator.shared.analytics,
+                                    notificationManager: NotificationManagerMock(),
+                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
+ }
+ */

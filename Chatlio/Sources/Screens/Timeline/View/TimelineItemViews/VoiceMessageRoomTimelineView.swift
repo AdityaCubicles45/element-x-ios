@@ -66,35 +66,35 @@ struct VoiceMessageRoomTimelineContent: View {
 }
 
 /*
-struct VoiceMessageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
-    static let timelineItemIdentifier = TimelineItemIdentifier.randomEvent
-    static let voiceRoomTimelineItem = VoiceMessageRoomTimelineItem(id: timelineItemIdentifier,
-                                                                    timestamp: .mock,
-                                                                    isOutgoing: false,
-                                                                    isEditable: false,
-                                                                    canBeRepliedTo: true,
-                                                                    sender: .init(id: "Bob"),
-                                                                    content: .init(filename: "audio.ogg",
-                                                                                   duration: 300,
-                                                                                   waveform: EstimatedWaveform.mockWaveform,
-                                                                                   source: nil,
-                                                                                   fileSize: nil,
-                                                                                   contentType: nil))
+ struct VoiceMessageRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
+     static let timelineItemIdentifier = TimelineItemIdentifier.randomEvent
+     static let voiceRoomTimelineItem = VoiceMessageRoomTimelineItem(id: timelineItemIdentifier,
+                                                                     timestamp: .mock,
+                                                                     isOutgoing: false,
+                                                                     isEditable: false,
+                                                                     canBeRepliedTo: true,
+                                                                     sender: .init(id: "Bob"),
+                                                                     content: .init(filename: "audio.ogg",
+                                                                                    duration: 300,
+                                                                                    waveform: EstimatedWaveform.mockWaveform,
+                                                                                    source: nil,
+                                                                                    fileSize: nil,
+                                                                                    contentType: nil))
     
-    static let playerState = AudioPlayerState(id: .timelineItemIdentifier(timelineItemIdentifier),
-                                              title: L10n.commonVoiceMessage,
-                                              duration: 10.0,
-                                              waveform: EstimatedWaveform.mockWaveform,
-                                              progress: 0.4)
+     static let playerState = AudioPlayerState(id: .timelineItemIdentifier(timelineItemIdentifier),
+                                               title: L10n.commonVoiceMessage,
+                                               duration: 10.0,
+                                               waveform: EstimatedWaveform.mockWaveform,
+                                               progress: 0.4)
     
-    static var previews: some View {
-        body.environmentObject(viewModel.context)
-    }
+     static var previews: some View {
+         body.environmentObject(viewModel.context)
+     }
     
-    static var body: some View {
-        VoiceMessageRoomTimelineView(timelineItem: voiceRoomTimelineItem, playerState: playerState)
-            .fixedSize(horizontal: false, vertical: true)
-    }
-}
-*/
+     static var body: some View {
+         VoiceMessageRoomTimelineView(timelineItem: voiceRoomTimelineItem, playerState: playerState)
+             .fixedSize(horizontal: false, vertical: true)
+     }
+ }
+ */

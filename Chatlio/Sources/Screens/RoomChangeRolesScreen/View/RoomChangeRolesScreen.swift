@@ -112,47 +112,47 @@ struct RoomChangeRolesScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomChangeRolesScreen_Previews: PreviewProvider, TestablePreview {
-    static let ownerViewModel = makeViewModel(mode: .owner, ownRole: .creator)
-    static let administratorOrOwnerViewModel = makeViewModel(mode: .administrator, ownRole: .creator)
-    static let administratorViewModel = makeViewModel(mode: .administrator, ownRole: .administrator)
-    static let moderatorViewModel = makeViewModel(mode: .moderator, ownRole: .administrator)
+ struct RoomChangeRolesScreen_Previews: PreviewProvider, TestablePreview {
+     static let ownerViewModel = makeViewModel(mode: .owner, ownRole: .creator)
+     static let administratorOrOwnerViewModel = makeViewModel(mode: .administrator, ownRole: .creator)
+     static let administratorViewModel = makeViewModel(mode: .administrator, ownRole: .administrator)
+     static let moderatorViewModel = makeViewModel(mode: .moderator, ownRole: .administrator)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomChangeRolesScreen(context: ownerViewModel.context)
-        }
-        .previewDisplayName("Owners")
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomChangeRolesScreen(context: ownerViewModel.context)
+         }
+         .previewDisplayName("Owners")
         
-        ElementNavigationStack {
-            RoomChangeRolesScreen(context: administratorOrOwnerViewModel.context)
-        }
-        .previewDisplayName("Administrator or Owners")
+         ElementNavigationStack {
+             RoomChangeRolesScreen(context: administratorOrOwnerViewModel.context)
+         }
+         .previewDisplayName("Administrator or Owners")
         
-        ElementNavigationStack {
-            RoomChangeRolesScreen(context: administratorViewModel.context)
-        }
-        .previewDisplayName("Administrators")
+         ElementNavigationStack {
+             RoomChangeRolesScreen(context: administratorViewModel.context)
+         }
+         .previewDisplayName("Administrators")
         
-        ElementNavigationStack {
-            RoomChangeRolesScreen(context: moderatorViewModel.context)
-        }
-        .previewDisplayName("Moderators")
-    }
+         ElementNavigationStack {
+             RoomChangeRolesScreen(context: moderatorViewModel.context)
+         }
+         .previewDisplayName("Moderators")
+     }
     
-    static func makeViewModel(mode: RoomRole, ownRole: RoomRole) -> RoomChangeRolesScreenViewModel {
-        let members: [RoomMemberProxyMock] = switch ownRole {
-        case .creator:
-            .allMembersAsCreator
-        default:
-            .allMembersAsAdminV2
-        }
+     static func makeViewModel(mode: RoomRole, ownRole: RoomRole) -> RoomChangeRolesScreenViewModel {
+         let members: [RoomMemberProxyMock] = switch ownRole {
+         case .creator:
+             .allMembersAsCreator
+         default:
+             .allMembersAsAdminV2
+         }
         
-        return RoomChangeRolesScreenViewModel(mode: mode,
-                                              roomProxy: JoinedRoomProxyMock(.init(members: members)),
-                                              mediaProvider: MediaProviderMock(configuration: .init()),
-                                              userIndicatorController: UserIndicatorControllerMock(),
-                                              analytics: ServiceLocator.shared.analytics)
-    }
-}
-*/
+         return RoomChangeRolesScreenViewModel(mode: mode,
+                                               roomProxy: JoinedRoomProxyMock(.init(members: members)),
+                                               mediaProvider: MediaProviderMock(configuration: .init()),
+                                               userIndicatorController: UserIndicatorControllerMock(),
+                                               analytics: ServiceLocator.shared.analytics)
+     }
+ }
+ */

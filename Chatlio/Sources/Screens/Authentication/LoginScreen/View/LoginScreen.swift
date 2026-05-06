@@ -130,47 +130,47 @@ struct LoginScreen: View {
 // MARK: - Previews
 
 /*
-struct LoginScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let credentialsViewModel = makeViewModel(withCredentials: true)
-    static let unconfiguredViewModel = makeViewModel(homeserverAddress: "somethingtofailconfiguration")
+ struct LoginScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let credentialsViewModel = makeViewModel(withCredentials: true)
+     static let unconfiguredViewModel = makeViewModel(homeserverAddress: "somethingtofailconfiguration")
     
-    static var previews: some View {
-        ElementNavigationStack {
-            LoginScreen(context: viewModel.context)
-        }
-        .snapshotPreferences(expect: viewModel.context.observe(\.viewState.homeserver.loginMode).map { $0 == .password })
-        .previewDisplayName("Initial State")
+     static var previews: some View {
+         ElementNavigationStack {
+             LoginScreen(context: viewModel.context)
+         }
+         .snapshotPreferences(expect: viewModel.context.observe(\.viewState.homeserver.loginMode).map { $0 == .password })
+         .previewDisplayName("Initial State")
         
-        ElementNavigationStack {
-            LoginScreen(context: credentialsViewModel.context)
-        }
-        .snapshotPreferences(expect: credentialsViewModel.context.observe(\.viewState.homeserver.loginMode).map { $0 == .password })
-        .previewDisplayName("Credentials Entered")
+         ElementNavigationStack {
+             LoginScreen(context: credentialsViewModel.context)
+         }
+         .snapshotPreferences(expect: credentialsViewModel.context.observe(\.viewState.homeserver.loginMode).map { $0 == .password })
+         .previewDisplayName("Credentials Entered")
         
-        ElementNavigationStack {
-            LoginScreen(context: unconfiguredViewModel.context)
-        }
-        .previewDisplayName("Unsupported")
-    }
+         ElementNavigationStack {
+             LoginScreen(context: unconfiguredViewModel.context)
+         }
+         .previewDisplayName("Unsupported")
+     }
     
-    static func makeViewModel(homeserverAddress: String = "example.com", withCredentials: Bool = false) -> LoginScreenViewModel {
-        let authenticationService = AuthenticationService.mock
+     static func makeViewModel(homeserverAddress: String = "example.com", withCredentials: Bool = false) -> LoginScreenViewModel {
+         let authenticationService = AuthenticationService.mock
         
-        Task { await authenticationService.configure(for: homeserverAddress, flow: .login) }
+         Task { await authenticationService.configure(for: homeserverAddress, flow: .login) }
         
-        let viewModel = LoginScreenViewModel(authenticationService: authenticationService,
-                                             loginHint: nil,
-                                             userIndicatorController: UserIndicatorControllerMock(),
-                                             appSettings: ServiceLocator.shared.settings,
-                                             analytics: ServiceLocator.shared.analytics)
+         let viewModel = LoginScreenViewModel(authenticationService: authenticationService,
+                                              loginHint: nil,
+                                              userIndicatorController: UserIndicatorControllerMock(),
+                                              appSettings: ServiceLocator.shared.settings,
+                                              analytics: ServiceLocator.shared.analytics)
         
-        if withCredentials {
-            viewModel.context.username = "alice"
-            viewModel.context.password = "password"
-        }
+         if withCredentials {
+             viewModel.context.username = "alice"
+             viewModel.context.password = "password"
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

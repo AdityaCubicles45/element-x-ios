@@ -200,68 +200,68 @@ struct NotificationSettingsScreen: View {
 // MARK: - Previews
 
 /*
-struct NotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel: NotificationSettingsScreenViewModel = {
-        let appSettings = AppSettings()
-        let notificationCenter = UserNotificationCenterMock()
-        notificationCenter.authorizationStatusReturnValue = .notDetermined
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
-        notificationSettingsProxy.getDefaultRoomNotificationModeIsEncryptedIsOneToOneClosure = { isEncrypted, isOneToOne in
-            switch (isEncrypted, isOneToOne) {
-            case (_, true):
-                return .allMessages
-            default:
-                return .mentionsAndKeywordsOnly
-            }
-        }
-        notificationSettingsProxy.isRoomMentionEnabledReturnValue = true
-        notificationSettingsProxy.isCallEnabledReturnValue = false
+ struct NotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel: NotificationSettingsScreenViewModel = {
+         let appSettings = AppSettings()
+         let notificationCenter = UserNotificationCenterMock()
+         notificationCenter.authorizationStatusReturnValue = .notDetermined
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
+         notificationSettingsProxy.getDefaultRoomNotificationModeIsEncryptedIsOneToOneClosure = { isEncrypted, isOneToOne in
+             switch (isEncrypted, isOneToOne) {
+             case (_, true):
+                 return .allMessages
+             default:
+                 return .mentionsAndKeywordsOnly
+             }
+         }
+         notificationSettingsProxy.isRoomMentionEnabledReturnValue = true
+         notificationSettingsProxy.isCallEnabledReturnValue = false
 
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe"))))
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe"))))
 
-        var viewModel = NotificationSettingsScreenViewModel(appSettings: appSettings,
-                                                            userNotificationCenter: notificationCenter,
-                                                            notificationSettingsProxy: notificationSettingsProxy,
-                                                            isModallyPresented: true)
-        viewModel.fetchInitialContent()
-        return viewModel
-    }()
+         var viewModel = NotificationSettingsScreenViewModel(appSettings: appSettings,
+                                                             userNotificationCenter: notificationCenter,
+                                                             notificationSettingsProxy: notificationSettingsProxy,
+                                                             isModallyPresented: true)
+         viewModel.fetchInitialContent()
+         return viewModel
+     }()
     
-    static let viewModelConfigurationMismatch: NotificationSettingsScreenViewModel = {
-        let appSettings = AppSettings()
-        let notificationCenter = UserNotificationCenterMock()
-        notificationCenter.authorizationStatusReturnValue = .notDetermined
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
-        notificationSettingsProxy.getDefaultRoomNotificationModeIsEncryptedIsOneToOneClosure = { isEncrypted, isOneToOne in
-            switch (isEncrypted, isOneToOne) {
-            case (true, true):
-                return .allMessages
-            case (false, true):
-                return .mute
-            default:
-                return .mentionsAndKeywordsOnly
-            }
-        }
-        notificationSettingsProxy.isRoomMentionEnabledReturnValue = true
-        notificationSettingsProxy.isCallEnabledReturnValue = false
+     static let viewModelConfigurationMismatch: NotificationSettingsScreenViewModel = {
+         let appSettings = AppSettings()
+         let notificationCenter = UserNotificationCenterMock()
+         notificationCenter.authorizationStatusReturnValue = .notDetermined
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
+         notificationSettingsProxy.getDefaultRoomNotificationModeIsEncryptedIsOneToOneClosure = { isEncrypted, isOneToOne in
+             switch (isEncrypted, isOneToOne) {
+             case (true, true):
+                 return .allMessages
+             case (false, true):
+                 return .mute
+             default:
+                 return .mentionsAndKeywordsOnly
+             }
+         }
+         notificationSettingsProxy.isRoomMentionEnabledReturnValue = true
+         notificationSettingsProxy.isCallEnabledReturnValue = false
         
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe"))))
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe"))))
 
-        var viewModel = NotificationSettingsScreenViewModel(appSettings: appSettings,
-                                                            userNotificationCenter: notificationCenter,
-                                                            notificationSettingsProxy: notificationSettingsProxy,
-                                                            isModallyPresented: true)
-        viewModel.fetchInitialContent()
-        return viewModel
-    }()
+         var viewModel = NotificationSettingsScreenViewModel(appSettings: appSettings,
+                                                             userNotificationCenter: notificationCenter,
+                                                             notificationSettingsProxy: notificationSettingsProxy,
+                                                             isModallyPresented: true)
+         viewModel.fetchInitialContent()
+         return viewModel
+     }()
 
-    static var previews: some View {
-        NotificationSettingsScreen(context: viewModel.context)
-            .snapshotPreferences(expect: viewModel.context.observe(\.viewState.settings).map { $0 != nil })
+     static var previews: some View {
+         NotificationSettingsScreen(context: viewModel.context)
+             .snapshotPreferences(expect: viewModel.context.observe(\.viewState.settings).map { $0 != nil })
         
-        NotificationSettingsScreen(context: viewModelConfigurationMismatch.context)
-            .snapshotPreferences(expect: viewModelConfigurationMismatch.context.observe(\.viewState.settings).map { $0 != nil })
-            .previewDisplayName("Configuration mismatch")
-    }
-}
-*/
+         NotificationSettingsScreen(context: viewModelConfigurationMismatch.context)
+             .snapshotPreferences(expect: viewModelConfigurationMismatch.context.observe(\.viewState.settings).map { $0 != nil })
+             .previewDisplayName("Configuration mismatch")
+     }
+ }
+ */

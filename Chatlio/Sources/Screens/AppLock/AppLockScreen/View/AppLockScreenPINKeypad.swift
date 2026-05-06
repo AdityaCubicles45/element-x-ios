@@ -109,28 +109,28 @@ private extension AppLockScreenPINKeypad {
 // MARK: - Previews
 
 /*
-struct AppLockScreenPINKeypad_Previews: PreviewProvider {
-    static var previews: some View {
-        KeypadTestView()
-    }
+ struct AppLockScreenPINKeypad_Previews: PreviewProvider {
+     static var previews: some View {
+         KeypadTestView()
+     }
     
-    struct KeypadTestView: View {
-        @StateObject var model = PreviewModel()
-        class PreviewModel: ObservableObject {
-            @Published var pinCode = ""
-            var output: String {
-                pinCode.isEmpty ? "Enter code" : pinCode
-            }
-        }
+     struct KeypadTestView: View {
+         @StateObject var model = PreviewModel()
+         class PreviewModel: ObservableObject {
+             @Published var pinCode = ""
+             var output: String {
+                 pinCode.isEmpty ? "Enter code" : pinCode
+             }
+         }
         
-        var body: some View {
-            VStack(spacing: 32) {
-                Text(model.output)
-                    .font(.compound.headingMD)
-                    .animation(.noAnimation, value: model.pinCode)
-                AppLockScreenPINKeypad(pinCode: $model.pinCode)
-            }
-        }
-    }
-}
-*/
+         var body: some View {
+             VStack(spacing: 32) {
+                 Text(model.output)
+                     .font(.compound.headingMD)
+                     .animation(.noAnimation, value: model.pinCode)
+                 AppLockScreenPINKeypad(pinCode: $model.pinCode)
+             }
+         }
+     }
+ }
+ */

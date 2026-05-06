@@ -185,59 +185,59 @@ struct SpaceScreen: View {
 // MARK: - Previews
 
 /*
-struct SpaceScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let managingViewModel = makeViewModel(isManagingRooms: true)
-    static let newSpaceViewModel = makeViewModel(isNewSpace: true)
+ struct SpaceScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let managingViewModel = makeViewModel(isManagingRooms: true)
+     static let newSpaceViewModel = makeViewModel(isNewSpace: true)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SpaceScreen(context: viewModel.context)
-        }
+     static var previews: some View {
+         ElementNavigationStack {
+             SpaceScreen(context: viewModel.context)
+         }
         
-        ElementNavigationStack {
-            SpaceScreen(context: managingViewModel.context)
-        }
-        .previewDisplayName("Managing")
+         ElementNavigationStack {
+             SpaceScreen(context: managingViewModel.context)
+         }
+         .previewDisplayName("Managing")
         
-        ElementNavigationStack {
-            SpaceScreen(context: newSpaceViewModel.context)
-        }
-        .previewDisplayName("New Space")
-        .snapshotPreferences(expect: newSpaceViewModel.context.observe(\.viewState).map(\.canEditChildren))
-    }
+         ElementNavigationStack {
+             SpaceScreen(context: newSpaceViewModel.context)
+         }
+         .previewDisplayName("New Space")
+         .snapshotPreferences(expect: newSpaceViewModel.context.observe(\.viewState).map(\.canEditChildren))
+     }
     
-    static func makeViewModel(isManagingRooms: Bool = false, isNewSpace: Bool = false) -> SpaceScreenViewModel {
-        let spaceServiceRoom = SpaceServiceRoom.mock(id: "!eng-space:matrix.org",
-                                                     name: "Engineering Team",
-                                                     isSpace: true,
-                                                     childrenCount: 30,
-                                                     joinedMembersCount: 76,
-                                                     heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
-                                                     topic: "Description of the space goes right here. Lorem ipsum dolor sit amet consectetur. Leo viverra morbi habitant in.",
-                                                     canonicalAlias: "#engineering-team:element.io",
-                                                     joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
-        let spaceRoomListProxy = SpaceRoomListProxyMock(.init(spaceServiceRoom: spaceServiceRoom,
-                                                              initialSpaceRooms: isNewSpace ? [] : .mockSpaceList))
+     static func makeViewModel(isManagingRooms: Bool = false, isNewSpace: Bool = false) -> SpaceScreenViewModel {
+         let spaceServiceRoom = SpaceServiceRoom.mock(id: "!eng-space:matrix.org",
+                                                      name: "Engineering Team",
+                                                      isSpace: true,
+                                                      childrenCount: 30,
+                                                      joinedMembersCount: 76,
+                                                      heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
+                                                      topic: "Description of the space goes right here. Lorem ipsum dolor sit amet consectetur. Leo viverra morbi habitant in.",
+                                                      canonicalAlias: "#engineering-team:element.io",
+                                                      joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
+         let spaceRoomListProxy = SpaceRoomListProxyMock(.init(spaceServiceRoom: spaceServiceRoom,
+                                                               initialSpaceRooms: isNewSpace ? [] : .mockSpaceList))
         
-        let clientProxy = ClientProxyMock(.init())
-        clientProxy.roomForIdentifierClosure = { _ in
-            .joined(JoinedRoomProxyMock(.init(members: .allMembersAsAdmin)))
-        }
-        let userSession = UserSessionMock(.init(clientProxy: clientProxy))
+         let clientProxy = ClientProxyMock(.init())
+         clientProxy.roomForIdentifierClosure = { _ in
+             .joined(JoinedRoomProxyMock(.init(members: .allMembersAsAdmin)))
+         }
+         let userSession = UserSessionMock(.init(clientProxy: clientProxy))
         
-        let viewModel = SpaceScreenViewModel(spaceRoomListProxy: spaceRoomListProxy,
-                                             spaceServiceProxy: SpaceServiceProxyMock(.init()),
-                                             selectedSpaceRoomPublisher: .init(nil),
-                                             userSession: userSession,
-                                             userIndicatorController: UserIndicatorControllerMock())
+         let viewModel = SpaceScreenViewModel(spaceRoomListProxy: spaceRoomListProxy,
+                                              spaceServiceProxy: SpaceServiceProxyMock(.init()),
+                                              selectedSpaceRoomPublisher: .init(nil),
+                                              userSession: userSession,
+                                              userIndicatorController: UserIndicatorControllerMock())
         
-        if isManagingRooms {
-            viewModel.state.editMode = .transient
-            viewModel.state.editModeSelectedIDs = [viewModel.state.visibleRooms[0].id]
-        }
+         if isManagingRooms {
+             viewModel.state.editMode = .transient
+             viewModel.state.editModeSelectedIDs = [viewModel.state.visibleRooms[0].id]
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

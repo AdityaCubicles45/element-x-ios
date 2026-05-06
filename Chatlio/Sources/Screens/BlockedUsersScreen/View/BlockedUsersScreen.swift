@@ -56,15 +56,15 @@ struct BlockedUsersScreen: View {
 // MARK: - Previews
 
 /*
-struct BlockedUsersScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = BlockedUsersScreenViewModel(hideProfiles: true,
-                                                       userSession: UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: RoomMemberProxyMock.mockMe.userID)))),
-                                                       userIndicatorController: UserIndicatorControllerMock())
+ struct BlockedUsersScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = BlockedUsersScreenViewModel(hideProfiles: true,
+                                                        userSession: UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: RoomMemberProxyMock.mockMe.userID)))),
+                                                        userIndicatorController: UserIndicatorControllerMock())
     
-    static var previews: some View {
-        ElementNavigationStack {
-            BlockedUsersScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             BlockedUsersScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

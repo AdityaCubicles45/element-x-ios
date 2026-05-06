@@ -72,32 +72,32 @@ struct RoomNotificationSettingsScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomNotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = {
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .mentionsAndKeywordsOnly, roomMode: .mentionsAndKeywordsOnly))
+ struct RoomNotificationSettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = {
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .mentionsAndKeywordsOnly, roomMode: .mentionsAndKeywordsOnly))
 
-        let roomProxy = JoinedRoomProxyMock(.init(name: "Room", isEncrypted: true))
+         let roomProxy = JoinedRoomProxyMock(.init(name: "Room", isEncrypted: true))
         
-        return RoomNotificationSettingsScreenViewModel(notificationSettingsProxy: notificationSettingsProxy,
-                                                       roomProxy: roomProxy,
-                                                       displayAsUserDefinedRoomSettings: false)
-    }()
+         return RoomNotificationSettingsScreenViewModel(notificationSettingsProxy: notificationSettingsProxy,
+                                                        roomProxy: roomProxy,
+                                                        displayAsUserDefinedRoomSettings: false)
+     }()
 
-    static let viewModelCustom = {
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .allMessages, roomMode: .mentionsAndKeywordsOnly))
+     static let viewModelCustom = {
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init(defaultRoomMode: .allMessages, roomMode: .mentionsAndKeywordsOnly))
 
-        let roomProxy = JoinedRoomProxyMock(.init(name: "Room", isEncrypted: true))
+         let roomProxy = JoinedRoomProxyMock(.init(name: "Room", isEncrypted: true))
         
-        return RoomNotificationSettingsScreenViewModel(notificationSettingsProxy: notificationSettingsProxy,
-                                                       roomProxy: roomProxy,
-                                                       displayAsUserDefinedRoomSettings: false)
-    }()
+         return RoomNotificationSettingsScreenViewModel(notificationSettingsProxy: notificationSettingsProxy,
+                                                        roomProxy: roomProxy,
+                                                        displayAsUserDefinedRoomSettings: false)
+     }()
     
-    static var previews: some View {
-        RoomNotificationSettingsScreen(context: viewModel.context)
-            .previewDisplayName("Default")
-        RoomNotificationSettingsScreen(context: viewModelCustom.context)
-            .previewDisplayName("Custom")
-    }
-}
-*/
+     static var previews: some View {
+         RoomNotificationSettingsScreen(context: viewModel.context)
+             .previewDisplayName("Default")
+         RoomNotificationSettingsScreen(context: viewModelCustom.context)
+             .previewDisplayName("Custom")
+     }
+ }
+ */

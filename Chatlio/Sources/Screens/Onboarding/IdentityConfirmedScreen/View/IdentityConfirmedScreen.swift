@@ -56,12 +56,12 @@ struct IdentityConfirmedScreen: View {
 // MARK: - Previews
 
 /*
-struct IdentityConfirmedScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = IdentityConfirmedScreenViewModel()
-    static var previews: some View {
-        ElementNavigationStack {
-            IdentityConfirmedScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct IdentityConfirmedScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = IdentityConfirmedScreenViewModel()
+     static var previews: some View {
+         ElementNavigationStack {
+             IdentityConfirmedScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

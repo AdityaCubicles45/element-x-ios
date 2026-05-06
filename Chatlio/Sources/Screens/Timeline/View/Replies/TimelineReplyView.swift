@@ -196,167 +196,167 @@ struct TimelineReplyView: View {
 }
 
 /*
-struct TimelineReplyView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct TimelineReplyView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static let attributedStringWithMention = {
-        var attributedString = AttributedString("To be replaced")
-        attributedString.userID = "@alice:matrix.org"
-        return attributedString
-    }()
+     static let attributedStringWithMention = {
+         var attributedString = AttributedString("To be replaced")
+         attributedString.userID = "@alice:matrix.org"
+         return attributedString
+     }()
     
-    static let attributedStringWithAtRoomMention = {
-        var attributedString = AttributedString("to be replaced")
-        attributedString.allUsersMention = true
-        return attributedString
-    }()
+     static let attributedStringWithAtRoomMention = {
+         var attributedString = AttributedString("to be replaced")
+         attributedString.allUsersMention = true
+         return attributedString
+     }()
     
-    static let attributedStringWithRoomAliasMention = {
-        var attributedString = AttributedString("to be replaced")
-        attributedString.roomAlias = "#room:matrix.org"
-        return attributedString
-    }()
+     static let attributedStringWithRoomAliasMention = {
+         var attributedString = AttributedString("to be replaced")
+         attributedString.roomAlias = "#room:matrix.org"
+         return attributedString
+     }()
     
-    static let attributedStringWithRoomIDMention = {
-        var attributedString = AttributedString("to be replaced")
-        attributedString.roomID = "!room:matrix.org"
-        return attributedString
-    }()
+     static let attributedStringWithRoomIDMention = {
+         var attributedString = AttributedString("to be replaced")
+         attributedString.roomID = "!room:matrix.org"
+         return attributedString
+     }()
     
-    static let attributedStringWithEventOnRoomIDMention = {
-        var attributedString = AttributedString("to be replaced")
-        attributedString.eventOnRoomID = .init(roomID: "!room:matrix.org", eventID: "$event")
-        return attributedString
-    }()
+     static let attributedStringWithEventOnRoomIDMention = {
+         var attributedString = AttributedString("to be replaced")
+         attributedString.eventOnRoomID = .init(roomID: "!room:matrix.org", eventID: "$event")
+         return attributedString
+     }()
     
-    static let attributedStringWithEventOnRoomAliasMention = {
-        var attributedString = AttributedString("to be replaced")
-        attributedString.eventOnRoomAlias = .init(alias: "#room:matrix.org", eventID: "$event")
-        return attributedString
-    }()
+     static let attributedStringWithEventOnRoomAliasMention = {
+         var attributedString = AttributedString("to be replaced")
+         attributedString.eventOnRoomAlias = .init(alias: "#room:matrix.org", eventID: "$event")
+         return attributedString
+     }()
     
-    static var previewItems: [TimelineReplyView] {
-        [
-            TimelineReplyView(placement: .timeline, timelineItemReplyDetails: .notLoaded(eventID: "")),
+     static var previewItems: [TimelineReplyView] {
+         [
+             TimelineReplyView(placement: .timeline, timelineItemReplyDetails: .notLoaded(eventID: "")),
             
-            TimelineReplyView(placement: .timeline, timelineItemReplyDetails: .loading(eventID: "")),
+             TimelineReplyView(placement: .timeline, timelineItemReplyDetails: .loading(eventID: "")),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.text(.init(body: "This is a reply"))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.text(.init(body: "This is a reply"))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.emote(.init(body: "says hello"))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.emote(.init(body: "says hello"))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "Hello world"))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "Hello world"))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.audio(.init(filename: "audio.m4a",
-                                                                                                    caption: "Some audio",
-                                                                                                    duration: 0,
-                                                                                                    waveform: nil,
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.audio(.init(filename: "audio.m4a",
+                                                                                                     caption: "Some audio",
+                                                                                                     duration: 0,
+                                                                                                     waveform: nil,
+                                                                                                     source: nil,
+                                                                                                     fileSize: nil,
+                                                                                                     contentType: nil))))),
+            
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.file(.init(filename: "file.txt",
+                                                                                                    caption: "Some file",
                                                                                                     source: nil,
                                                                                                     fileSize: nil,
+                                                                                                    thumbnailSource: nil,
                                                                                                     contentType: nil))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.file(.init(filename: "file.txt",
-                                                                                                   caption: "Some file",
-                                                                                                   source: nil,
-                                                                                                   fileSize: nil,
-                                                                                                   thumbnailSource: nil,
-                                                                                                   contentType: nil))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.image(.init(filename: "image.jpg",
+                                                                                                     caption: "Some image",
+                                                                                                     imageInfo: .mockImage,
+                                                                                                     thumbnailInfo: .mockThumbnail))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.image(.init(filename: "image.jpg",
-                                                                                                    caption: "Some image",
-                                                                                                    imageInfo: .mockImage,
-                                                                                                    thumbnailInfo: .mockThumbnail))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.video(.init(filename: "video.mp4",
+                                                                                                     caption: "Some video",
+                                                                                                     videoInfo: .mockVideo,
+                                                                                                     thumbnailInfo: .mockVideoThumbnail))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.location(.init(body: ""))))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.video(.init(filename: "video.mp4",
-                                                                                                    caption: "Some video",
-                                                                                                    videoInfo: .mockVideo,
-                                                                                                    thumbnailInfo: .mockVideoThumbnail))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.location(.init(body: ""))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .liveLocation)),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .liveLocation)),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.voice(.init(filename: "voice-message.ogg",
+                                                                                                     caption: "Some voice message",
+                                                                                                     duration: 0,
+                                                                                                     waveform: nil,
+                                                                                                     source: nil,
+                                                                                                     fileSize: nil,
+                                                                                                     contentType: nil))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithAtRoomMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithRoomAliasMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithRoomIDMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithEventOnRoomIDMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithEventOnRoomAliasMention))))),
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .poll(question: "Do you like polls?"))),
             
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Alice"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.voice(.init(filename: "voice-message.ogg",
-                                                                                                    caption: "Some voice message",
-                                                                                                    duration: 0,
-                                                                                                    waveform: nil,
-                                                                                                    source: nil,
-                                                                                                    fileSize: nil,
-                                                                                                    contentType: nil))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithAtRoomMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithRoomAliasMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithRoomIDMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithEventOnRoomIDMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .message(.notice(.init(body: "", formattedBody: attributedStringWithEventOnRoomAliasMention))))),
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .poll(question: "Do you like polls?"))),
-            
-            TimelineReplyView(placement: .timeline,
-                              timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
-                                                                eventID: "123",
-                                                                eventContent: .redacted))
-        ]
-    }
+             TimelineReplyView(placement: .timeline,
+                               timelineItemReplyDetails: .loaded(sender: .init(id: "", displayName: "Bob"),
+                                                                 eventID: "123",
+                                                                 eventContent: .redacted))
+         ]
+     }
     
-    static var previews: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ForEach(0..<previewItems.count, id: \.self) { index in
-                previewItems[index]
-            }
-        }
-        .padding()
-        .environmentObject(viewModel.context)
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+     static var previews: some View {
+         VStack(alignment: .leading, spacing: 20) {
+             ForEach(0..<previewItems.count, id: \.self) { index in
+                 previewItems[index]
+             }
+         }
+         .padding()
+         .environmentObject(viewModel.context)
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

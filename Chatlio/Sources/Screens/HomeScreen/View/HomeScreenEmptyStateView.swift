@@ -94,63 +94,63 @@ struct HomeScreenEmptyStateLayout: Layout {
 // MARK: - Previews
 
 /*
-struct HomeScreenEmptyStateView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        HomeScreenEmptyStateView(context: viewModel.context)
-            .previewDisplayName("View")
+ struct HomeScreenEmptyStateView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         HomeScreenEmptyStateView(context: viewModel.context)
+             .previewDisplayName("View")
         
-        GeometryReader { geometry in
-            ScrollView {
-                HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
-                    banner
+         GeometryReader { geometry in
+             ScrollView {
+                 HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
+                     banner
                     
-                    HomeScreenEmptyStateView(context: viewModel.context)
-                        .layoutPriority(1)
-                }
-            }
-        }
-        .previewDisplayName("Normal Layout")
+                     HomeScreenEmptyStateView(context: viewModel.context)
+                         .layoutPriority(1)
+                 }
+             }
+         }
+         .previewDisplayName("Normal Layout")
         
-        GeometryReader { geometry in
-            ScrollView {
-                HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
-                    banner
-                    banner
-                    banner
+         GeometryReader { geometry in
+             ScrollView {
+                 HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
+                     banner
+                     banner
+                     banner
                     
-                    HomeScreenEmptyStateView(context: viewModel.context)
-                        .layoutPriority(1)
-                }
-            }
-        }
-        .previewDisplayName("Constrained layout")
-    }
+                     HomeScreenEmptyStateView(context: viewModel.context)
+                         .layoutPriority(1)
+                 }
+             }
+         }
+         .previewDisplayName("Constrained layout")
+     }
     
-    // MARK: -
+     // MARK: -
     
-    static var banner: some View {
-        Text("This is a title that is very long")
-            .font(.compound.headingXLBold)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.compound.bgSubtleSecondary)
-            }
-            .padding()
-    }
+     static var banner: some View {
+         Text("This is a title that is very long")
+             .font(.compound.headingXLBold)
+             .multilineTextAlignment(.center)
+             .frame(maxWidth: .infinity)
+             .padding()
+             .background {
+                 RoundedRectangle(cornerRadius: 20)
+                     .fill(Color.compound.bgSubtleSecondary)
+             }
+             .padding()
+     }
     
-    static let viewModel = {
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@user:example.com",
-                                                                                   roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded([])))))))
+     static let viewModel = {
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@user:example.com",
+                                                                                    roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded([])))))))
         
-        return HomeScreenViewModel(userSession: userSession,
-                                   selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
-                                   appSettings: ServiceLocator.shared.settings,
-                                   analyticsService: ServiceLocator.shared.analytics,
-                                   notificationManager: NotificationManagerMock(),
-                                   userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }()
-}
-*/
+         return HomeScreenViewModel(userSession: userSession,
+                                    selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
+                                    appSettings: ServiceLocator.shared.settings,
+                                    analyticsService: ServiceLocator.shared.analytics,
+                                    notificationManager: NotificationManagerMock(),
+                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }()
+ }
+ */

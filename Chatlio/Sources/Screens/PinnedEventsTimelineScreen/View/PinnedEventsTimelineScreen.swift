@@ -66,33 +66,33 @@ struct PinnedEventsTimelineScreen: View {
 // MARK: - Previews
 
 /*
-struct PinnedEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = PinnedEventsTimelineScreenViewModel(roomProxy: JoinedRoomProxyMock(.init()),
-                                                               userIndicatorController: UserIndicatorControllerMock(),
-                                                               appSettings: AppSettings(),
-                                                               analyticsService: ServiceLocator.shared.analytics)
+ struct PinnedEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = PinnedEventsTimelineScreenViewModel(roomProxy: JoinedRoomProxyMock(.init()),
+                                                                userIndicatorController: UserIndicatorControllerMock(),
+                                                                appSettings: AppSettings(),
+                                                                analyticsService: ServiceLocator.shared.analytics)
     
-    static let emptyTimelineViewModel: TimelineViewModel = {
-        let timelineController = MockTimelineController(timelineKind: .pinned)
-        timelineController.timelineItems = []
-        return TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Preview room")),
-                                 timelineController: timelineController,
-                                 userSession: UserSessionMock(.init()),
-                                 mediaPlayerProvider: MediaPlayerProviderMock(),
-                                 userIndicatorController: UserIndicatorControllerMock(),
-                                 appMediator: AppMediatorMock.default,
-                                 appSettings: ServiceLocator.shared.settings,
-                                 analyticsService: ServiceLocator.shared.analytics,
-                                 emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                 linkMetadataProvider: LinkMetadataProvider(),
-                                 timelineControllerFactory: TimelineControllerFactoryMock(.init()))
-    }()
+     static let emptyTimelineViewModel: TimelineViewModel = {
+         let timelineController = MockTimelineController(timelineKind: .pinned)
+         timelineController.timelineItems = []
+         return TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Preview room")),
+                                  timelineController: timelineController,
+                                  userSession: UserSessionMock(.init()),
+                                  mediaPlayerProvider: MediaPlayerProviderMock(),
+                                  userIndicatorController: UserIndicatorControllerMock(),
+                                  appMediator: AppMediatorMock.default,
+                                  appSettings: ServiceLocator.shared.settings,
+                                  analyticsService: ServiceLocator.shared.analytics,
+                                  emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                  linkMetadataProvider: LinkMetadataProvider(),
+                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     }()
         
-    static var previews: some View {
-        ElementNavigationStack {
-            PinnedEventsTimelineScreen(context: viewModel.context, timelineContext: emptyTimelineViewModel.context)
-        }
-        .previewDisplayName("Empty")
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             PinnedEventsTimelineScreen(context: viewModel.context, timelineContext: emptyTimelineViewModel.context)
+         }
+         .previewDisplayName("Empty")
+     }
+ }
+ */

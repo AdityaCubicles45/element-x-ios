@@ -131,34 +131,34 @@ struct LocationMarkerView: View {
 }
 
 /*
-struct LocationMarkerView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 30) {
-            // Placeholder
-            LocationMarkerView(kind: .placeholder)
+ struct LocationMarkerView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 30) {
+             // Placeholder
+             LocationMarkerView(kind: .placeholder)
             
-            // Pin (no user)
-            LocationMarkerView(kind: .pin)
+             // Pin (no user)
+             LocationMarkerView(kind: .pin)
             
-            // Static user with avatar
-            LocationMarkerView(kind: .staticUser(.mockDan),
-                               mediaProvider: MediaProviderMock(configuration: .init()))
+             // Static user with avatar
+             LocationMarkerView(kind: .staticUser(.mockDan),
+                                mediaProvider: MediaProviderMock(configuration: .init()))
             
-            // Static user without avatar
-            LocationMarkerView(kind: .staticUser(.init(userID: "@someone:matrix.org",
-                                                       displayName: "Someone")))
+             // Static user without avatar
+             LocationMarkerView(kind: .staticUser(.init(userID: "@someone:matrix.org",
+                                                        displayName: "Someone")))
             
-            // Live user with avatar
-            LocationMarkerView(kind: .liveUser(.mockDan),
-                               mediaProvider: MediaProviderMock(configuration: .init()))
+             // Live user with avatar
+             LocationMarkerView(kind: .liveUser(.mockDan),
+                                mediaProvider: MediaProviderMock(configuration: .init()))
             
-            // Live user without avatar
-            LocationMarkerView(kind: .liveUser(.init(userID: "@someone:matrix.org",
-                                                     displayName: "Someone")))
-        }
-        .padding(16)
-        .background(Color(red: 0.9, green: 0.85, blue: 0.8))
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+             // Live user without avatar
+             LocationMarkerView(kind: .liveUser(.init(userID: "@someone:matrix.org",
+                                                      displayName: "Someone")))
+         }
+         .padding(16)
+         .background(Color(red: 0.9, green: 0.85, blue: 0.8))
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

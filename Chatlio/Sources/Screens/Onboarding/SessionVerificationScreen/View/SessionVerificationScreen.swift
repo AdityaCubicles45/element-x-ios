@@ -225,78 +225,78 @@ struct SessionVerificationScreen: View {
 }
 
 /*
-/*
-struct SessionVerification_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        sessionVerificationScreen(state: .initial, flow: .deviceInitiator)
-            .previewDisplayName("Initial - Device Initiator")
+ /*
+ struct SessionVerification_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         sessionVerificationScreen(state: .initial, flow: .deviceInitiator)
+             .previewDisplayName("Initial - Device Initiator")
         
-        sessionVerificationScreen(state: .initial, flow: .userInitiator(userID: "@bob:matrix.org"))
-            .previewDisplayName("Initial - User Initiator")
+         sessionVerificationScreen(state: .initial, flow: .userInitiator(userID: "@bob:matrix.org"))
+             .previewDisplayName("Initial - User Initiator")
         
-        let details = SessionVerificationRequestDetails(senderProfile: UserProfileProxy(userID: "@bob:matrix.org",
-                                                                                        displayName: "Billy Bob",
-                                                                                        avatarURL: .mockMXCUserAvatar),
-                                                        flowID: "123",
-                                                        deviceID: "CODEMISTAKE",
-                                                        deviceDisplayName: "Bob's Element X iOS",
-                                                        firstSeenDate: .init(timeIntervalSince1970: 0))
+         let details = SessionVerificationRequestDetails(senderProfile: UserProfileProxy(userID: "@bob:matrix.org",
+                                                                                         displayName: "Billy Bob",
+                                                                                         avatarURL: .mockMXCUserAvatar),
+                                                         flowID: "123",
+                                                         deviceID: "CODEMISTAKE",
+                                                         deviceDisplayName: "Bob's Element X iOS",
+                                                         firstSeenDate: .init(timeIntervalSince1970: 0))
         
-        sessionVerificationScreen(state: .initial,
-                                  flow: .deviceResponder(requestDetails: details))
-            .previewDisplayName("Initial - Device Responder")
+         sessionVerificationScreen(state: .initial,
+                                   flow: .deviceResponder(requestDetails: details))
+             .previewDisplayName("Initial - Device Responder")
         
-        sessionVerificationScreen(state: .initial,
-                                  flow: .userResponder(requestDetails: details))
-            .previewDisplayName("Initial - User Responder")
+         sessionVerificationScreen(state: .initial,
+                                   flow: .userResponder(requestDetails: details))
+             .previewDisplayName("Initial - User Responder")
         
-        sessionVerificationScreen(state: .acceptingVerificationRequest,
-                                  flow: .deviceResponder(requestDetails: details))
-            .previewDisplayName("Accepting Verification Request - Device Responder")
+         sessionVerificationScreen(state: .acceptingVerificationRequest,
+                                   flow: .deviceResponder(requestDetails: details))
+             .previewDisplayName("Accepting Verification Request - Device Responder")
         
-        sessionVerificationScreen(state: .requestingVerification,
-                                  flow: .deviceInitiator)
-            .previewDisplayName("Requesting Verification - Device Initiator")
+         sessionVerificationScreen(state: .requestingVerification,
+                                   flow: .deviceInitiator)
+             .previewDisplayName("Requesting Verification - Device Initiator")
         
-        sessionVerificationScreen(state: .verificationRequestAccepted,
-                                  flow: .userInitiator(userID: "@bob:matrix.org"))
-            .previewDisplayName("Request Accepted - User Initiator")
+         sessionVerificationScreen(state: .verificationRequestAccepted,
+                                   flow: .userInitiator(userID: "@bob:matrix.org"))
+             .previewDisplayName("Request Accepted - User Initiator")
         
-        sessionVerificationScreen(state: .startingSasVerification,
-                                  flow: .userResponder(requestDetails: details))
-            .previewDisplayName("Starting SAS Verification - User Responder")
+         sessionVerificationScreen(state: .startingSasVerification,
+                                   flow: .userResponder(requestDetails: details))
+             .previewDisplayName("Starting SAS Verification - User Responder")
         
-        sessionVerificationScreen(state: .sasVerificationStarted,
-                                  flow: .deviceResponder(requestDetails: details))
-            .previewDisplayName("SAS Verification started - Device Responder")
+         sessionVerificationScreen(state: .sasVerificationStarted,
+                                   flow: .deviceResponder(requestDetails: details))
+             .previewDisplayName("SAS Verification started - Device Responder")
         
-        sessionVerificationScreen(state: .showingChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
-            .previewDisplayName("Showing Challenge")
-        sessionVerificationScreen(state: .acceptingChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
-            .previewDisplayName("Accepting Challenge")
-        sessionVerificationScreen(state: .decliningChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
-            .previewDisplayName("Declining Challenge")
+         sessionVerificationScreen(state: .showingChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
+             .previewDisplayName("Showing Challenge")
+         sessionVerificationScreen(state: .acceptingChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
+             .previewDisplayName("Accepting Challenge")
+         sessionVerificationScreen(state: .decliningChallenge(emojis: SessionVerificationControllerProxyMock.emojis))
+             .previewDisplayName("Declining Challenge")
         
-        sessionVerificationScreen(state: .verified)
-            .previewDisplayName("Verified")
+         sessionVerificationScreen(state: .verified)
+             .previewDisplayName("Verified")
         
-        sessionVerificationScreen(state: .cancelling, flow: .deviceInitiator)
-            .previewDisplayName("Cancelling - Device Initiator")
+         sessionVerificationScreen(state: .cancelling, flow: .deviceInitiator)
+             .previewDisplayName("Cancelling - Device Initiator")
         
-        sessionVerificationScreen(state: .cancelled)
-            .previewDisplayName("Cancelled")
-    }
+         sessionVerificationScreen(state: .cancelled)
+             .previewDisplayName("Cancelled")
+     }
     
-    static func sessionVerificationScreen(state: SessionVerificationScreenStateMachine.State,
-                                          flow: SessionVerificationScreenFlow = .deviceInitiator) -> some View {
-        let viewModel = SessionVerificationScreenViewModel(sessionVerificationControllerProxy: SessionVerificationControllerProxyMock.configureMock(),
-                                                           flow: flow,
-                                                           appSettings: AppSettings(),
-                                                           mediaProvider: MediaProviderMock(configuration: .init()),
-                                                           verificationState: state)
+     static func sessionVerificationScreen(state: SessionVerificationScreenStateMachine.State,
+                                           flow: SessionVerificationScreenFlow = .deviceInitiator) -> some View {
+         let viewModel = SessionVerificationScreenViewModel(sessionVerificationControllerProxy: SessionVerificationControllerProxyMock.configureMock(),
+                                                            flow: flow,
+                                                            appSettings: AppSettings(),
+                                                            mediaProvider: MediaProviderMock(configuration: .init()),
+                                                            verificationState: state)
         
-        return SessionVerificationScreen(context: viewModel.context)
-    }
-}
-*/
-*/
+         return SessionVerificationScreen(context: viewModel.context)
+     }
+ }
+ */
+ */

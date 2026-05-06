@@ -290,16 +290,16 @@ private extension HumanQrLoginError {
 }
 
 /*
-// MARK: - Mocks
+ // MARK: - Mocks
 
-extension AuthenticationService {
-    static var mock: AuthenticationService {
-        AuthenticationService(userSessionStore: UserSessionStoreMock(configuration: .init()),
-                              encryptionKeyProvider: EncryptionKeyProvider(),
-                              classicAppManager: nil,
-                              clientFactory: AuthenticationClientFactoryMock(configuration: .init()),
-                              appSettings: ServiceLocator.shared.settings,
-                              appHooks: AppHooks())
-    }
-}
-*/
+ extension AuthenticationService {
+     static var mock: AuthenticationService {
+         AuthenticationService(userSessionStore: UserSessionStoreMock(configuration: .init()),
+                               encryptionKeyProvider: EncryptionKeyProvider(),
+                               classicAppManager: nil,
+                               clientFactory: AuthenticationClientFactoryMock(configuration: .init()),
+                               appSettings: ServiceLocator.shared.settings,
+                               appHooks: AppHooks())
+     }
+ }
+ */

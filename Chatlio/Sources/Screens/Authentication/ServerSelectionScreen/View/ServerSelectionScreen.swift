@@ -33,15 +33,7 @@ struct ServerSelectionScreen: View {
     /// The title, message and icon at the top of the screen.
     var header: some View {
         VStack(spacing: 32) {
-            // Home icon container
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 0.945, green: 0.949, blue: 0.965)) // #F1F2F6
-                    .frame(width: 80, height: 80)
-                
-                CompoundIcon(\.homeSolid, size: .medium, relativeTo: .compound.bodyLG)
-                    .foregroundColor(.compound.iconPrimary)
-            }
+            AuthenticationStartLogo(size: 80, hideBrandChrome: false, isOnGradient: false)
             
             VStack(spacing: 16) {
                 Text(UntranslatedL10n.screenChangeServerTitle)
@@ -108,40 +100,40 @@ struct ServerSelectionScreen: View {
 // MARK: - Previews
 
 /*
-/*
-struct ServerSelection_Previews: PreviewProvider, TestablePreview {
-    static let matrixViewModel = makeViewModel(for: "https://matrix.org")
-    static let emptyViewModel = makeViewModel(for: "")
-    static let invalidViewModel = makeViewModel(for: "thisisbad")
+ /*
+ struct ServerSelection_Previews: PreviewProvider, TestablePreview {
+     static let matrixViewModel = makeViewModel(for: "https://matrix.org")
+     static let emptyViewModel = makeViewModel(for: "")
+     static let invalidViewModel = makeViewModel(for: "thisisbad")
     
-    static var previews: some View {
-        ElementNavigationStack {
-            ServerSelectionScreen(context: matrixViewModel.context)
-        }
+     static var previews: some View {
+         ElementNavigationStack {
+             ServerSelectionScreen(context: matrixViewModel.context)
+         }
         
-        ElementNavigationStack {
-            ServerSelectionScreen(context: emptyViewModel.context)
-        }
+         ElementNavigationStack {
+             ServerSelectionScreen(context: emptyViewModel.context)
+         }
         
-        ElementNavigationStack {
-            ServerSelectionScreen(context: invalidViewModel.context)
-        }
-        .snapshotPreferences(expect: invalidViewModel.context.observe(\.viewState.hasValidationError))
-    }
+         ElementNavigationStack {
+             ServerSelectionScreen(context: invalidViewModel.context)
+         }
+         .snapshotPreferences(expect: invalidViewModel.context.observe(\.viewState.hasValidationError))
+     }
     
-    static func makeViewModel(for homeserverAddress: String) -> ServerSelectionScreenViewModel {
-        let authenticationService = AuthenticationService.mock
+     static func makeViewModel(for homeserverAddress: String) -> ServerSelectionScreenViewModel {
+         let authenticationService = AuthenticationService.mock
         
-        let viewModel = ServerSelectionScreenViewModel(authenticationService: authenticationService,
-                                                       authenticationFlow: .login,
-                                                       appSettings: ServiceLocator.shared.settings,
-                                                       userIndicatorController: UserIndicatorControllerMock())
-        viewModel.context.homeserverAddress = homeserverAddress
-        if homeserverAddress == "thisisbad" {
-            viewModel.context.send(viewAction: .confirm)
-        }
-        return viewModel
-    }
-}
-*/
-*/
+         let viewModel = ServerSelectionScreenViewModel(authenticationService: authenticationService,
+                                                        authenticationFlow: .login,
+                                                        appSettings: ServiceLocator.shared.settings,
+                                                        userIndicatorController: UserIndicatorControllerMock())
+         viewModel.context.homeserverAddress = homeserverAddress
+         if homeserverAddress == "thisisbad" {
+             viewModel.context.send(viewAction: .confirm)
+         }
+         return viewModel
+     }
+ }
+ */
+ */

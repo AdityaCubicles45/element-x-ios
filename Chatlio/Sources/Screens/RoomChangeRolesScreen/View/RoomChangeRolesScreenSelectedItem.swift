@@ -63,26 +63,26 @@ struct RoomChangeRolesScreenSelectedItem: View {
 }
 
 /*
-struct RoomChangeRolesScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
-    static let members: [RoomMemberDetails] = [
-        RoomMemberProxyMock.mockAlice,
-        RoomMemberProxyMock.mockDan,
-        RoomMemberProxyMock.mockVerbose,
-        RoomMemberProxyMock(with: .init(userID: "@someone:server.org", membership: .join)),
-        RoomMemberProxyMock.mockAdmin
-    ]
-    .map { .init(withProxy: $0) }
+ struct RoomChangeRolesScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
+     static let members: [RoomMemberDetails] = [
+         RoomMemberProxyMock.mockAlice,
+         RoomMemberProxyMock.mockDan,
+         RoomMemberProxyMock.mockVerbose,
+         RoomMemberProxyMock(with: .init(userID: "@someone:server.org", membership: .join)),
+         RoomMemberProxyMock.mockAdmin
+     ]
+     .map { .init(withProxy: $0) }
     
-    static var previews: some View {
-        HStack(spacing: 12) {
-            ForEach(members, id: \.id) { member in
-                RoomChangeRolesScreenSelectedItem(member: member,
-                                                  mediaProvider: MediaProviderMock(configuration: .init())) { }
-                    .frame(width: 72)
-            }
-        }
-        .padding()
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+     static var previews: some View {
+         HStack(spacing: 12) {
+             ForEach(members, id: \.id) { member in
+                 RoomChangeRolesScreenSelectedItem(member: member,
+                                                   mediaProvider: MediaProviderMock(configuration: .init())) { }
+                     .frame(width: 72)
+             }
+         }
+         .padding()
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

@@ -66,17 +66,17 @@ struct TypingIndicatorView: View {
 }
 
 /*
-struct TypingIndicatorView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(alignment: .leading, spacing: 16.0) {
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice"]))
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob"]))
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie"]))
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie", "Dan"]))
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie", "Dan", "Frannie"]))
-            TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice with her very long display name", "Bob", "Charlie", "Dan", "Frannie"]))
-        }
-        .frame(width: 300)
-    }
-}
-*/
+ struct TypingIndicatorView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(alignment: .leading, spacing: 16.0) {
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice"]))
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob"]))
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie"]))
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie", "Dan"]))
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice", "Bob", "Charlie", "Dan", "Frannie"]))
+             TypingIndicatorView(typingMembers: TypingMembersObservableObject(members: ["Alice with her very long display name", "Bob", "Charlie", "Dan", "Frannie"]))
+         }
+         .frame(width: 300)
+     }
+ }
+ */

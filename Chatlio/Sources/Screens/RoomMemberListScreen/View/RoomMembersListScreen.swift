@@ -167,103 +167,103 @@ private enum MembersSection {
 // MARK: - Previews
 
 /*
-struct RoomMembersListScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let invitesViewModel = makeViewModel(withInvites: true)
-    static let adminViewModel = makeViewModel(isAdmin: true, initialMode: .members)
-    static let bannedViewModel = makeViewModel(isAdmin: true, initialMode: .banned)
-    static let emptyBannedViewModel = makeViewModel(withBanned: false, isAdmin: false, initialMode: .members)
+ struct RoomMembersListScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let invitesViewModel = makeViewModel(withInvites: true)
+     static let adminViewModel = makeViewModel(isAdmin: true, initialMode: .members)
+     static let bannedViewModel = makeViewModel(isAdmin: true, initialMode: .banned)
+     static let emptyBannedViewModel = makeViewModel(withBanned: false, isAdmin: false, initialMode: .members)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomMembersListScreen(context: viewModel.context)
-        }
-        .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
-            !state.visibleJoinedMembers.isEmpty
-        })
-        .previewDisplayName("Member")
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomMembersListScreen(context: viewModel.context)
+         }
+         .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
+             !state.visibleJoinedMembers.isEmpty
+         })
+         .previewDisplayName("Member")
         
-        ElementNavigationStack {
-            RoomMembersListScreen(context: invitesViewModel.context)
-        }
-        .snapshotPreferences(expect: invitesViewModel.context.$viewState.map { state in
-            !state.visibleJoinedMembers.isEmpty
-        })
-        .previewDisplayName("Invites")
+         ElementNavigationStack {
+             RoomMembersListScreen(context: invitesViewModel.context)
+         }
+         .snapshotPreferences(expect: invitesViewModel.context.$viewState.map { state in
+             !state.visibleJoinedMembers.isEmpty
+         })
+         .previewDisplayName("Invites")
         
-        ElementNavigationStack {
-            RoomMembersListScreen(context: adminViewModel.context)
-        }
-        .snapshotPreferences(expect: adminViewModel.context.$viewState.map { state in
-            state.canBanUsers == true
-        })
-        .previewDisplayName("Admin: Members")
+         ElementNavigationStack {
+             RoomMembersListScreen(context: adminViewModel.context)
+         }
+         .snapshotPreferences(expect: adminViewModel.context.$viewState.map { state in
+             state.canBanUsers == true
+         })
+         .previewDisplayName("Admin: Members")
         
-        ElementNavigationStack {
-            RoomMembersListScreen(context: bannedViewModel.context)
-        }
-        .snapshotPreferences(expect: bannedViewModel.context.$viewState.map { state in
-            state.canBanUsers == true
-        })
-        .previewDisplayName("Admin: Banned")
+         ElementNavigationStack {
+             RoomMembersListScreen(context: bannedViewModel.context)
+         }
+         .snapshotPreferences(expect: bannedViewModel.context.$viewState.map { state in
+             state.canBanUsers == true
+         })
+         .previewDisplayName("Admin: Banned")
         
-        ElementNavigationStack {
-            RoomMembersListScreen(context: emptyBannedViewModel.context)
-                .onAppear { emptyBannedViewModel.context.searchQuery = "Dan" }
-        }
-        .snapshotPreferences(expect: emptyBannedViewModel.context.$viewState.map(\.shouldShowEmptyState))
-        .previewDisplayName("Empty Search")
-    }
+         ElementNavigationStack {
+             RoomMembersListScreen(context: emptyBannedViewModel.context)
+                 .onAppear { emptyBannedViewModel.context.searchQuery = "Dan" }
+         }
+         .snapshotPreferences(expect: emptyBannedViewModel.context.$viewState.map(\.shouldShowEmptyState))
+         .previewDisplayName("Empty Search")
+     }
     
-    static func makeViewModel(withInvites: Bool = false,
-                              withBanned: Bool = true,
-                              isAdmin: Bool = false,
-                              initialMode: RoomMembersListScreenMode = .members,
-                              searchQuery: String = "") -> RoomMembersListScreenViewModel {
-        let mockAdmin = RoomMemberProxyMock.mockAdmin
+     static func makeViewModel(withInvites: Bool = false,
+                               withBanned: Bool = true,
+                               isAdmin: Bool = false,
+                               initialMode: RoomMembersListScreenMode = .members,
+                               searchQuery: String = "") -> RoomMembersListScreenViewModel {
+         let mockAdmin = RoomMemberProxyMock.mockAdmin
         
-        let ownUserID = isAdmin ? mockAdmin.userID : RoomMemberProxyMock.mockMe.userID
+         let ownUserID = isAdmin ? mockAdmin.userID : RoomMemberProxyMock.mockMe.userID
         
-        var members: [RoomMemberProxyMock] = [
-            .mockAlice,
-            .mockBob,
-            .mockCharlie,
-            mockAdmin,
-            .mockCreator,
-            .mockOwner,
-            .mockModerator
-        ]
+         var members: [RoomMemberProxyMock] = [
+             .mockAlice,
+             .mockBob,
+             .mockCharlie,
+             mockAdmin,
+             .mockCreator,
+             .mockOwner,
+             .mockModerator
+         ]
         
-        if withBanned {
-            members.append(contentsOf: RoomMemberProxyMock.mockBanned)
-        }
+         if withBanned {
+             members.append(contentsOf: RoomMemberProxyMock.mockBanned)
+         }
         
-        if withInvites {
-            members.append(.mockInvited)
-        }
+         if withInvites {
+             members.append(.mockInvited)
+         }
         
-        let clientProxyMock = ClientProxyMock(.init())
-        clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
-            let identity = switch userID {
-            case RoomMemberProxyMock.mockAlice.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: .verified))
-            case RoomMemberProxyMock.mockBob.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: .verificationViolation))
-            default:
-                UserIdentityProxyMock(configuration: .init())
-            }
+         let clientProxyMock = ClientProxyMock(.init())
+         clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
+             let identity = switch userID {
+             case RoomMemberProxyMock.mockAlice.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: .verified))
+             case RoomMemberProxyMock.mockBob.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: .verificationViolation))
+             default:
+                 UserIdentityProxyMock(configuration: .init())
+             }
             
-            return .success(identity)
-        }
+             return .success(identity)
+         }
         
-        return RoomMembersListScreenViewModel(initialMode: initialMode,
-                                              userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                                              roomProxy: JoinedRoomProxyMock(.init(name: "Some room",
-                                                                                   members: members,
-                                                                                   ownUserID: ownUserID,
-                                                                                   powerLevelsConfiguration: .init(canUserInvite: false))),
-                                              userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                              analytics: ServiceLocator.shared.analytics)
-    }
-}
-*/
+         return RoomMembersListScreenViewModel(initialMode: initialMode,
+                                               userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                                               roomProxy: JoinedRoomProxyMock(.init(name: "Some room",
+                                                                                    members: members,
+                                                                                    ownUserID: ownUserID,
+                                                                                    powerLevelsConfiguration: .init(canUserInvite: false))),
+                                               userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                               analytics: ServiceLocator.shared.analytics)
+     }
+ }
+ */

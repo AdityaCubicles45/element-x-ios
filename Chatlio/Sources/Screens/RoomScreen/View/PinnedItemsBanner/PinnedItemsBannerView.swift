@@ -81,37 +81,37 @@ struct PinnedItemsBannerView: View {
 }
 
 /*
-struct PinnedItemsBannerView_Previews: PreviewProvider, TestablePreview {
-    static var attributedContent: AttributedString {
-        var boldPart = AttributedString("Image:")
-        boldPart.bold()
-        var finalString = boldPart + " content.png"
-        // This should be ignored when presented
-        finalString.font = .headline
-        return finalString
-    }
+ struct PinnedItemsBannerView_Previews: PreviewProvider, TestablePreview {
+     static var attributedContent: AttributedString {
+         var boldPart = AttributedString("Image:")
+         boldPart.bold()
+         var finalString = boldPart + " content.png"
+         // This should be ignored when presented
+         finalString.font = .headline
+         return finalString
+     }
     
-    static var previews: some View {
-        VStack(spacing: 20) {
-            PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": "Content",
-                                                                                    "2": "2",
-                                                                                    "3": "3"],
-                selectedPinnedEventID: "1")),
-                                  onMainButtonTap: { },
-                                  onViewAllButtonTap: { })
-            PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": "Very very very very long content here",
-                                                                                    "2": "2"],
-                selectedPinnedEventID: "1")),
-                                  onMainButtonTap: { },
-                                  onViewAllButtonTap: { })
-            PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": attributedContent],
-                                                              selectedPinnedEventID: "1")),
-                                  onMainButtonTap: { },
-                                  onViewAllButtonTap: { })
-            PinnedItemsBannerView(state: .loading(numbersOfEvents: 5),
-                                  onMainButtonTap: { },
-                                  onViewAllButtonTap: { })
-        }
-    }
-}
-*/
+     static var previews: some View {
+         VStack(spacing: 20) {
+             PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": "Content",
+                                                                                     "2": "2",
+                                                                                     "3": "3"],
+                 selectedPinnedEventID: "1")),
+                                   onMainButtonTap: { },
+                                   onViewAllButtonTap: { })
+             PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": "Very very very very long content here",
+                                                                                     "2": "2"],
+                 selectedPinnedEventID: "1")),
+                                   onMainButtonTap: { },
+                                   onViewAllButtonTap: { })
+             PinnedItemsBannerView(state: .loaded(state: .init(pinnedEventContents: ["1": attributedContent],
+                                                               selectedPinnedEventID: "1")),
+                                   onMainButtonTap: { },
+                                   onViewAllButtonTap: { })
+             PinnedItemsBannerView(state: .loading(numbersOfEvents: 5),
+                                   onMainButtonTap: { },
+                                   onViewAllButtonTap: { })
+         }
+     }
+ }
+ */

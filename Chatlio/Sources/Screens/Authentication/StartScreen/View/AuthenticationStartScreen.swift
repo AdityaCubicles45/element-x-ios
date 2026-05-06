@@ -160,23 +160,23 @@ private struct BlackButtonStyle: ButtonStyle {
 // MARK: - Previews
 
 /*
-struct AuthenticationStartScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let provisionedViewModel = makeViewModel(provisionedServerName: "example.com")
+ struct AuthenticationStartScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let provisionedViewModel = makeViewModel(provisionedServerName: "example.com")
     
-    static var previews: some View {
-        AuthenticationStartScreen(context: viewModel.context)
-            .previewDisplayName("Default")
-        AuthenticationStartScreen(context: provisionedViewModel.context)
-            .previewDisplayName("Provisioned")
-    }
+     static var previews: some View {
+         AuthenticationStartScreen(context: viewModel.context)
+             .previewDisplayName("Default")
+         AuthenticationStartScreen(context: provisionedViewModel.context)
+             .previewDisplayName("Provisioned")
+     }
     
-    static func makeViewModel(provisionedServerName: String? = nil) -> AuthenticationStartScreenViewModel {
-        AuthenticationStartScreenViewModel(authenticationService: AuthenticationService.mock,
-                                           provisioningParameters: provisionedServerName.map { .init(accountProvider: $0, loginHint: nil) },
-                                           isBugReportServiceEnabled: true,
-                                           appSettings: ServiceLocator.shared.settings,
-                                           userIndicatorController: UserIndicatorControllerMock())
-    }
-}
-*/
+     static func makeViewModel(provisionedServerName: String? = nil) -> AuthenticationStartScreenViewModel {
+         AuthenticationStartScreenViewModel(authenticationService: AuthenticationService.mock,
+                                            provisioningParameters: provisionedServerName.map { .init(accountProvider: $0, loginHint: nil) },
+                                            isBugReportServiceEnabled: true,
+                                            appSettings: ServiceLocator.shared.settings,
+                                            userIndicatorController: UserIndicatorControllerMock())
+     }
+ }
+ */

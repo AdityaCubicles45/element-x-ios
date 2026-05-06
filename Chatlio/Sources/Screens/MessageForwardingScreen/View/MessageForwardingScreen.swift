@@ -93,19 +93,19 @@ private struct MessageForwardingListRow: View {
 // MARK: - Previews
 
 /*
-struct MessageForwardingScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
-        let viewModel = MessageForwardingScreenViewModel(forwardingItem: .init(id: .randomEvent,
-                                                                               roomID: "",
-                                                                               content: .init(noHandle: .init())),
-                                                         userSession: UserSessionMock(.init()),
-                                                         roomSummaryProvider: summaryProvider,
-                                                         userIndicatorController: UserIndicatorControllerMock())
+ struct MessageForwardingScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
+         let viewModel = MessageForwardingScreenViewModel(forwardingItem: .init(id: .randomEvent,
+                                                                                roomID: "",
+                                                                                content: .init(noHandle: .init())),
+                                                          userSession: UserSessionMock(.init()),
+                                                          roomSummaryProvider: summaryProvider,
+                                                          userIndicatorController: UserIndicatorControllerMock())
         
-        ElementNavigationStack {
-            MessageForwardingScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+         ElementNavigationStack {
+             MessageForwardingScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

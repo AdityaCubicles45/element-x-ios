@@ -140,29 +140,29 @@ struct TimelineViewRepresentable: UIViewControllerRepresentable {
 // MARK: - Previews
 
 /*
-struct TimelineView_Previews: PreviewProvider { // Not testable as this preview is built the same way as RoomScreen.
-    static let roomProxyMock = JoinedRoomProxyMock(.init(id: "stable_id",
-                                                         name: "Preview room"))
-    static let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
-    static let composerViewModel = ComposerToolbarViewModel.mock()
-    static let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
-                                                     timelineController: MockTimelineController(),
-                                                     userSession: UserSessionMock(.init()),
-                                                     mediaPlayerProvider: MediaPlayerProviderMock(),
-                                                     userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                                     appMediator: AppMediatorMock.default,
-                                                     appSettings: ServiceLocator.shared.settings,
-                                                     analyticsService: ServiceLocator.shared.analytics,
-                                                     emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                                     linkMetadataProvider: LinkMetadataProvider(),
-                                                     timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+ struct TimelineView_Previews: PreviewProvider { // Not testable as this preview is built the same way as RoomScreen.
+     static let roomProxyMock = JoinedRoomProxyMock(.init(id: "stable_id",
+                                                          name: "Preview room"))
+     static let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
+     static let composerViewModel = ComposerToolbarViewModel.mock()
+     static let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
+                                                      timelineController: MockTimelineController(),
+                                                      userSession: UserSessionMock(.init()),
+                                                      mediaPlayerProvider: MediaPlayerProviderMock(),
+                                                      userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                                      appMediator: AppMediatorMock.default,
+                                                      appSettings: ServiceLocator.shared.settings,
+                                                      analyticsService: ServiceLocator.shared.analytics,
+                                                      emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                                      linkMetadataProvider: LinkMetadataProvider(),
+                                                      timelineControllerFactory: TimelineControllerFactoryMock(.init()))
 
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomScreen(context: roomViewModel.context,
-                       timelineContext: timelineViewModel.context,
-                       composerToolbar: ComposerToolbar(context: composerViewModel.context))
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomScreen(context: roomViewModel.context,
+                        timelineContext: timelineViewModel.context,
+                        composerToolbar: ComposerToolbar(context: composerViewModel.context))
+         }
+     }
+ }
+ */

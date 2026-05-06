@@ -78,41 +78,41 @@ struct VideoRoomTimelineView: View {
 }
 
 /*
-struct VideoRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct VideoRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        ScrollView {
-            VStack(spacing: 20.0) {
-                VideoRoomTimelineView(timelineItem: makeTimelineItem())
-                VideoRoomTimelineView(timelineItem: makeTimelineItem(isEdited: true))
+     static var previews: some View {
+         ScrollView {
+             VStack(spacing: 20.0) {
+                 VideoRoomTimelineView(timelineItem: makeTimelineItem())
+                 VideoRoomTimelineView(timelineItem: makeTimelineItem(isEdited: true))
                 
-                // Blurhash item?
+                 // Blurhash item?
                 
-                VideoRoomTimelineView(timelineItem: makeTimelineItem(caption: "This is a great video 😎"))
-                VideoRoomTimelineView(timelineItem: makeTimelineItem(caption: "This is a great video with a really long multiline caption",
-                                                                     isEdited: true))
-            }
-        }
-        .environmentObject(viewModel.context)
-        .environment(\.timelineContext, viewModel.context)
-        .previewLayout(.fixed(width: 390, height: 975))
-        .padding(.bottom, 20)
-    }
+                 VideoRoomTimelineView(timelineItem: makeTimelineItem(caption: "This is a great video 😎"))
+                 VideoRoomTimelineView(timelineItem: makeTimelineItem(caption: "This is a great video with a really long multiline caption",
+                                                                      isEdited: true))
+             }
+         }
+         .environmentObject(viewModel.context)
+         .environment(\.timelineContext, viewModel.context)
+         .previewLayout(.fixed(width: 390, height: 975))
+         .padding(.bottom, 20)
+     }
     
-    private static func makeTimelineItem(caption: String? = nil, isEdited: Bool = false) -> VideoRoomTimelineItem {
-        VideoRoomTimelineItem(id: .randomEvent,
-                              timestamp: .mock,
-                              isOutgoing: false,
-                              isEditable: false,
-                              canBeRepliedTo: true,
-                              sender: .init(id: "Bob"),
-                              content: .init(filename: "video.mp4",
-                                             caption: caption,
-                                             videoInfo: .mockVideo,
-                                             thumbnailInfo: .mockVideoThumbnail,
-                                             blurhash: "L%KUc%kqS$RP?Ks,WEf8OlrqaekW"),
-                              properties: .init(isEdited: isEdited))
-    }
-}
-*/
+     private static func makeTimelineItem(caption: String? = nil, isEdited: Bool = false) -> VideoRoomTimelineItem {
+         VideoRoomTimelineItem(id: .randomEvent,
+                               timestamp: .mock,
+                               isOutgoing: false,
+                               isEditable: false,
+                               canBeRepliedTo: true,
+                               sender: .init(id: "Bob"),
+                               content: .init(filename: "video.mp4",
+                                              caption: caption,
+                                              videoInfo: .mockVideo,
+                                              thumbnailInfo: .mockVideoThumbnail,
+                                              blurhash: "L%KUc%kqS$RP?Ks,WEf8OlrqaekW"),
+                               properties: .init(isEdited: isEdited))
+     }
+ }
+ */

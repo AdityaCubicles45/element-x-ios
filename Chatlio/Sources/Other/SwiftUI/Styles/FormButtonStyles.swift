@@ -36,17 +36,17 @@ struct FormActionButtonStyle: ButtonStyle {
 }
 
 /*
-struct FormButtonStyles_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        Form {
-            Section { } header: {
-                Button { } label: {
-                    CompoundIcon(\.shareIos)
-                }
-                .buttonStyle(FormActionButtonStyle(title: "Share"))
-            }
-        }
-        .compoundList()
-    }
-}
-*/
+ struct FormButtonStyles_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         Form {
+             Section { } header: {
+                 Button { } label: {
+                     CompoundIcon(\.shareIos)
+                 }
+                 .buttonStyle(FormActionButtonStyle(title: "Share"))
+             }
+         }
+         .compoundList()
+     }
+ }
+ */

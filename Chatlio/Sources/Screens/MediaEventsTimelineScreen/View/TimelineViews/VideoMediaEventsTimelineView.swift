@@ -66,28 +66,28 @@ struct VideoMediaEventsTimelineView: View {
 }
 
 /*
-struct VideoMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct VideoMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        VideoMediaEventsTimelineView(timelineItem: makeTimelineItem())
-            .frame(width: 100, height: 100)
-            .environmentObject(viewModel.context)
-            .environment(\.timelineContext, viewModel.context)
-            .previewLayout(.sizeThatFits)
-            .background(.black)
-    }
+     static var previews: some View {
+         VideoMediaEventsTimelineView(timelineItem: makeTimelineItem())
+             .frame(width: 100, height: 100)
+             .environmentObject(viewModel.context)
+             .environment(\.timelineContext, viewModel.context)
+             .previewLayout(.sizeThatFits)
+             .background(.black)
+     }
     
-    private static func makeTimelineItem(caption: String? = nil, isEdited: Bool = false) -> VideoRoomTimelineItem {
-        VideoRoomTimelineItem(id: .randomEvent,
-                              timestamp: .mock,
-                              isOutgoing: false,
-                              isEditable: false,
-                              canBeRepliedTo: true,
-                              sender: .init(id: "Bob"),
-                              content: .init(filename: "video.mp4",
-                                             videoInfo: .mockVideo,
-                                             thumbnailInfo: .mockVideoThumbnail))
-    }
-}
-*/
+     private static func makeTimelineItem(caption: String? = nil, isEdited: Bool = false) -> VideoRoomTimelineItem {
+         VideoRoomTimelineItem(id: .randomEvent,
+                               timestamp: .mock,
+                               isOutgoing: false,
+                               isEditable: false,
+                               canBeRepliedTo: true,
+                               sender: .init(id: "Bob"),
+                               content: .init(filename: "video.mp4",
+                                              videoInfo: .mockVideo,
+                                              thumbnailInfo: .mockVideoThumbnail))
+     }
+ }
+ */

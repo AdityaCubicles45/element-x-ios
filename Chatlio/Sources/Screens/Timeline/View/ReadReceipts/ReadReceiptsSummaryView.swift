@@ -36,39 +36,39 @@ struct ReadReceiptsSummaryView: View {
 }
 
 /*
-struct ReadReceiptsSummaryView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = {
-        let members: [RoomMemberProxyMock] = [
-            .mockAlice,
-            .mockBob,
-            .mockCharlie,
-            .mockDan
-        ]
-        let roomProxyMock = JoinedRoomProxyMock(.init(name: "Room", members: members))
-        return TimelineViewModel(roomProxy: roomProxyMock,
-                                 timelineController: MockTimelineController(),
-                                 userSession: UserSessionMock(.init()),
-                                 mediaPlayerProvider: MediaPlayerProviderMock(),
-                                 userIndicatorController: UserIndicatorControllerMock(),
-                                 appMediator: AppMediatorMock.default,
-                                 appSettings: ServiceLocator.shared.settings,
-                                 analyticsService: ServiceLocator.shared.analytics,
-                                 emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                 linkMetadataProvider: LinkMetadataProvider(),
-                                 timelineControllerFactory: TimelineControllerFactoryMock(.init()))
-    }()
+ struct ReadReceiptsSummaryView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = {
+         let members: [RoomMemberProxyMock] = [
+             .mockAlice,
+             .mockBob,
+             .mockCharlie,
+             .mockDan
+         ]
+         let roomProxyMock = JoinedRoomProxyMock(.init(name: "Room", members: members))
+         return TimelineViewModel(roomProxy: roomProxyMock,
+                                  timelineController: MockTimelineController(),
+                                  userSession: UserSessionMock(.init()),
+                                  mediaPlayerProvider: MediaPlayerProviderMock(),
+                                  userIndicatorController: UserIndicatorControllerMock(),
+                                  appMediator: AppMediatorMock.default,
+                                  appSettings: ServiceLocator.shared.settings,
+                                  analyticsService: ServiceLocator.shared.analytics,
+                                  emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                  linkMetadataProvider: LinkMetadataProvider(),
+                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     }()
     
-    static let orderedReadReceipts: [ReadReceipt] = [
-        .init(userID: "@alice:matrix.org", formattedTimestamp: "10:00"),
-        .init(userID: "@bob:matrix.org", formattedTimestamp: "9:30"),
-        .init(userID: "@charlie:matrix.org", formattedTimestamp: "9:00"),
-        .init(userID: "@dan:matrix.org", formattedTimestamp: "8:30"),
-        .init(userID: "@loading:matrix.org", formattedTimestamp: "Long time ago")
-    ]
+     static let orderedReadReceipts: [ReadReceipt] = [
+         .init(userID: "@alice:matrix.org", formattedTimestamp: "10:00"),
+         .init(userID: "@bob:matrix.org", formattedTimestamp: "9:30"),
+         .init(userID: "@charlie:matrix.org", formattedTimestamp: "9:00"),
+         .init(userID: "@dan:matrix.org", formattedTimestamp: "8:30"),
+         .init(userID: "@loading:matrix.org", formattedTimestamp: "Long time ago")
+     ]
     
-    static var previews: some View {
-        ReadReceiptsSummaryView(orderedReadReceipts: orderedReadReceipts)
-            .environmentObject(viewModel.context)
-    }
-}
-*/
+     static var previews: some View {
+         ReadReceiptsSummaryView(orderedReadReceipts: orderedReadReceipts)
+             .environmentObject(viewModel.context)
+     }
+ }
+ */

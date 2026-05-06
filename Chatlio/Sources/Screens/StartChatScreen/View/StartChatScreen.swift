@@ -154,24 +154,24 @@ struct StartChatScreen: View {
 // MARK: - Previews
 
 /*
-struct StartChatScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = {
-        let appSettings = AppSettings()
-        appSettings.publicSearchEnabled = true
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@userid:example.com"))))
-        let userDiscoveryService = UserDiscoveryServiceMock()
-        userDiscoveryService.searchProfilesWithReturnValue = .success([.mockAlice])
-        return StartChatScreenViewModel(userSession: userSession,
-                                        analytics: ServiceLocator.shared.analytics,
-                                        userIndicatorController: UserIndicatorControllerMock(),
-                                        userDiscoveryService: userDiscoveryService,
-                                        appSettings: appSettings)
-    }()
+ struct StartChatScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = {
+         let appSettings = AppSettings()
+         appSettings.publicSearchEnabled = true
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@userid:example.com"))))
+         let userDiscoveryService = UserDiscoveryServiceMock()
+         userDiscoveryService.searchProfilesWithReturnValue = .success([.mockAlice])
+         return StartChatScreenViewModel(userSession: userSession,
+                                         analytics: ServiceLocator.shared.analytics,
+                                         userIndicatorController: UserIndicatorControllerMock(),
+                                         userDiscoveryService: userDiscoveryService,
+                                         appSettings: appSettings)
+     }()
     
-    static var previews: some View {
-        ElementNavigationStack {
-            StartChatScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             StartChatScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

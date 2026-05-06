@@ -56,34 +56,34 @@ private struct VisualListItemLabelStyle: LabelStyle {
 // MARK: - Previews
 
 /*
-struct VisualListItem_Previews: PreviewProvider, TestablePreview {
-    static let strings = AnalyticsPromptScreenStrings(termsURL: ServiceLocator.shared.settings.analyticsTermsURL)
+ struct VisualListItem_Previews: PreviewProvider, TestablePreview {
+     static let strings = AnalyticsPromptScreenStrings(termsURL: ServiceLocator.shared.settings.analyticsTermsURL)
 
-    static var testImage1: some View {
-        Image(systemName: "circle")
-    }
+     static var testImage1: some View {
+         Image(systemName: "circle")
+     }
 
-    static var testImage2: some View {
-        Image(systemName: "square")
-    }
+     static var testImage2: some View {
+         Image(systemName: "square")
+     }
     
-    static var previews: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            VisualListItem(title: strings.point1, position: .top) {
-                testImage1
-            }
-            VisualListItem(title: strings.point2, position: .middle) {
-                testImage2
-            }
-            VisualListItem(title: "This is a short string.", position: .middle) {
-                testImage1
-            }
-            VisualListItem(title: "This is a very long string that will be used to test the layout over multiple lines of text to ensure everything is correct.",
-                           position: .bottom) {
-                testImage2
-            }
-        }
-        .padding()
-    }
-}
-*/
+     static var previews: some View {
+         VStack(alignment: .leading, spacing: 4) {
+             VisualListItem(title: strings.point1, position: .top) {
+                 testImage1
+             }
+             VisualListItem(title: strings.point2, position: .middle) {
+                 testImage2
+             }
+             VisualListItem(title: "This is a short string.", position: .middle) {
+                 testImage1
+             }
+             VisualListItem(title: "This is a very long string that will be used to test the layout over multiple lines of text to ensure everything is correct.",
+                            position: .bottom) {
+                 testImage2
+             }
+         }
+         .padding()
+     }
+ }
+ */

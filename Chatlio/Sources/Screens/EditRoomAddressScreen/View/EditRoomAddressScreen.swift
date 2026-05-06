@@ -63,55 +63,55 @@ struct EditRoomAddressScreen: View {
 // MARK: - Previews
 
 /*
-struct EditRoomAddressScreen_Previews: PreviewProvider, TestablePreview {
-    static let noAliasviewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name")),
-                                                                 clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
-                                                                 userIndicatorController: UserIndicatorControllerMock())
+ struct EditRoomAddressScreen_Previews: PreviewProvider, TestablePreview {
+     static let noAliasviewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name")),
+                                                                  clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
+                                                                  userIndicatorController: UserIndicatorControllerMock())
     
-    static let aliasviewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name", canonicalAlias: "#room-alias:matrix.org")),
-                                                               clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
-                                                               userIndicatorController: UserIndicatorControllerMock())
+     static let aliasviewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name", canonicalAlias: "#room-alias:matrix.org")),
+                                                                clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
+                                                                userIndicatorController: UserIndicatorControllerMock())
     
-    static let invalidSymbolsViewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name", canonicalAlias: "#room#-alias:matrix.org")),
-                                                                        clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
-                                                                        userIndicatorController: UserIndicatorControllerMock())
+     static let invalidSymbolsViewModel = EditRoomAddressScreenViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Room Name", canonicalAlias: "#room#-alias:matrix.org")),
+                                                                         clientProxy: ClientProxyMock(.init(userIDServerName: "matrix.org")),
+                                                                         userIndicatorController: UserIndicatorControllerMock())
     
-    static let alreadyExistingViewModel = {
-        let clientProxy = ClientProxyMock(.init(userIDServerName: "matrix.org"))
-        clientProxy.isAliasAvailableReturnValue = .success(false)
-        return EditRoomAddressScreenViewModel(initialViewState: .init(serverName: "matrix.org",
-                                                                      bindings: .init(desiredAliasLocalPart: "whatever")),
-                                              roomProxy: JoinedRoomProxyMock(.init(name: "Room Name")),
-                                              clientProxy: clientProxy,
-                                              userIndicatorController: UserIndicatorControllerMock())
-    }()
+     static let alreadyExistingViewModel = {
+         let clientProxy = ClientProxyMock(.init(userIDServerName: "matrix.org"))
+         clientProxy.isAliasAvailableReturnValue = .success(false)
+         return EditRoomAddressScreenViewModel(initialViewState: .init(serverName: "matrix.org",
+                                                                       bindings: .init(desiredAliasLocalPart: "whatever")),
+                                               roomProxy: JoinedRoomProxyMock(.init(name: "Room Name")),
+                                               clientProxy: clientProxy,
+                                               userIndicatorController: UserIndicatorControllerMock())
+     }()
     
-    static var previews: some View {
-        ElementNavigationStack {
-            EditRoomAddressScreen(context: noAliasviewModel.context)
-        }
-        .previewDisplayName("No alias")
+     static var previews: some View {
+         ElementNavigationStack {
+             EditRoomAddressScreen(context: noAliasviewModel.context)
+         }
+         .previewDisplayName("No alias")
         
-        ElementNavigationStack {
-            EditRoomAddressScreen(context: aliasviewModel.context)
-        }
-        .previewDisplayName("With alias")
+         ElementNavigationStack {
+             EditRoomAddressScreen(context: aliasviewModel.context)
+         }
+         .previewDisplayName("With alias")
         
-        ElementNavigationStack {
-            EditRoomAddressScreen(context: invalidSymbolsViewModel.context)
-        }
-        .snapshotPreferences(expect: invalidSymbolsViewModel.context.$viewState.map { state in
-            !state.aliasErrors.isEmpty
-        })
-        .previewDisplayName("Invalid symbols")
+         ElementNavigationStack {
+             EditRoomAddressScreen(context: invalidSymbolsViewModel.context)
+         }
+         .snapshotPreferences(expect: invalidSymbolsViewModel.context.$viewState.map { state in
+             !state.aliasErrors.isEmpty
+         })
+         .previewDisplayName("Invalid symbols")
         
-        ElementNavigationStack {
-            EditRoomAddressScreen(context: alreadyExistingViewModel.context)
-        }
-        .snapshotPreferences(expect: alreadyExistingViewModel.context.$viewState.map { state in
-            !state.aliasErrors.isEmpty
-        })
-        .previewDisplayName("Already existing")
-    }
-}
-*/
+         ElementNavigationStack {
+             EditRoomAddressScreen(context: alreadyExistingViewModel.context)
+         }
+         .snapshotPreferences(expect: alreadyExistingViewModel.context.$viewState.map { state in
+             !state.aliasErrors.isEmpty
+         })
+         .previewDisplayName("Already existing")
+     }
+ }
+ */

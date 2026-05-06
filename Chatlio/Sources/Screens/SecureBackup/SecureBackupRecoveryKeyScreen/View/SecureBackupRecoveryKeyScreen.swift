@@ -238,64 +238,64 @@ private struct RecoveryKeyView: View {
 // MARK: - Previews
 
 /*
-struct SecureBackupRecoveryKeyScreen_Previews: PreviewProvider, TestablePreview {
-    static let key = "EsTM njec uHYA yHmh dQdW Nj4o bNRU 9jMN XGMc KUNM UFr5 R8GY"
-    static let notSetUpViewModel = viewModel(recoveryState: .disabled)
-    static let generatingViewModel = viewModel(recoveryState: .disabled, generateKey: true, key: key)
-    static let setupViewModel = viewModel(recoveryState: .enabled, generateKey: true, key: key)
-    static let incompleteViewModel = viewModel(recoveryState: .incomplete)
-    static let unknownViewModel = viewModel(recoveryState: .unknown)
+ struct SecureBackupRecoveryKeyScreen_Previews: PreviewProvider, TestablePreview {
+     static let key = "EsTM njec uHYA yHmh dQdW Nj4o bNRU 9jMN XGMc KUNM UFr5 R8GY"
+     static let notSetUpViewModel = viewModel(recoveryState: .disabled)
+     static let generatingViewModel = viewModel(recoveryState: .disabled, generateKey: true, key: key)
+     static let setupViewModel = viewModel(recoveryState: .enabled, generateKey: true, key: key)
+     static let incompleteViewModel = viewModel(recoveryState: .incomplete)
+     static let unknownViewModel = viewModel(recoveryState: .unknown)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SecureBackupRecoveryKeyScreen(context: notSetUpViewModel.context)
-        }
-        .previewDisplayName("Not set up")
+     static var previews: some View {
+         ElementNavigationStack {
+             SecureBackupRecoveryKeyScreen(context: notSetUpViewModel.context)
+         }
+         .previewDisplayName("Not set up")
         
-        ElementNavigationStack {
-            SecureBackupRecoveryKeyScreen(context: generatingViewModel.context)
-        }
-        .previewDisplayName("Generating")
+         ElementNavigationStack {
+             SecureBackupRecoveryKeyScreen(context: generatingViewModel.context)
+         }
+         .previewDisplayName("Generating")
         
-        ElementNavigationStack {
-            SecureBackupRecoveryKeyScreen(context: setupViewModel.context)
-        }
-        .snapshotPreferences(expect: setupViewModel.context.observe(\.viewState.recoveryKey).map { $0 != nil })
-        .previewDisplayName("Set up")
+         ElementNavigationStack {
+             SecureBackupRecoveryKeyScreen(context: setupViewModel.context)
+         }
+         .snapshotPreferences(expect: setupViewModel.context.observe(\.viewState.recoveryKey).map { $0 != nil })
+         .previewDisplayName("Set up")
         
-        ElementNavigationStack {
-            SecureBackupRecoveryKeyScreen(context: incompleteViewModel.context)
-        }
-        .previewDisplayName("Incomplete")
+         ElementNavigationStack {
+             SecureBackupRecoveryKeyScreen(context: incompleteViewModel.context)
+         }
+         .previewDisplayName("Incomplete")
         
-        ElementNavigationStack {
-            SecureBackupRecoveryKeyScreen(context: unknownViewModel.context)
-        }
-        .previewDisplayName("Unknown")
-    }
+         ElementNavigationStack {
+             SecureBackupRecoveryKeyScreen(context: unknownViewModel.context)
+         }
+         .previewDisplayName("Unknown")
+     }
     
-    static func viewModel(recoveryState: SecureBackupRecoveryState, generateKey: Bool = false, key: String? = nil) -> SecureBackupRecoveryKeyScreenViewModelType {
-        let backupController = SecureBackupControllerMock()
-        backupController.underlyingRecoveryState = CurrentValueSubject<SecureBackupRecoveryState, Never>(recoveryState).asCurrentValuePublisher()
+     static func viewModel(recoveryState: SecureBackupRecoveryState, generateKey: Bool = false, key: String? = nil) -> SecureBackupRecoveryKeyScreenViewModelType {
+         let backupController = SecureBackupControllerMock()
+         backupController.underlyingRecoveryState = CurrentValueSubject<SecureBackupRecoveryState, Never>(recoveryState).asCurrentValuePublisher()
         
-        if let key {
-            backupController.generateRecoveryKeyReturnValue = .success(key)
-        } else {
-            backupController.generateRecoveryKeyClosure = {
-                try? await Task.sleep(for: .seconds(1000))
-                return .success("youshouldntseeme")
-            }
-        }
+         if let key {
+             backupController.generateRecoveryKeyReturnValue = .success(key)
+         } else {
+             backupController.generateRecoveryKeyClosure = {
+                 try? await Task.sleep(for: .seconds(1000))
+                 return .success("youshouldntseeme")
+             }
+         }
         
-        let viewModel = SecureBackupRecoveryKeyScreenViewModel(secureBackupController: backupController,
-                                                               userIndicatorController: UserIndicatorControllerMock(),
-                                                               isModallyPresented: true)
+         let viewModel = SecureBackupRecoveryKeyScreenViewModel(secureBackupController: backupController,
+                                                                userIndicatorController: UserIndicatorControllerMock(),
+                                                                isModallyPresented: true)
         
-        if generateKey {
-            viewModel.context.send(viewAction: .generateKey)
-        }
+         if generateKey {
+             viewModel.context.send(viewAction: .generateKey)
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

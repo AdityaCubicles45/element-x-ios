@@ -83,26 +83,26 @@ struct TimelineItemDebugView: View {
 }
 
 /*
-struct TimelineItemDebugView_Previews: PreviewProvider, TestablePreview {
-    static let smallContent = """
-    {
-        SomeItem(
-            event_id: "$1234546634535",
-            sender: "@user:server.com",
-            timestamp: 42354534534
-            content: Message(
-                Message {
-                    …
-                }
-            )
-        )
-    }
-    """
+ struct TimelineItemDebugView_Previews: PreviewProvider, TestablePreview {
+     static let smallContent = """
+     {
+         SomeItem(
+             event_id: "$1234546634535",
+             sender: "@user:server.com",
+             timestamp: 42354534534
+             content: Message(
+                 Message {
+                     …
+                 }
+             )
+         )
+     }
+     """
     
-    static var previews: some View {
-        TimelineItemDebugView(info: .init(model: smallContent,
-                                          originalJSON: "{\"Hi\": \"Alice\"}",
-                                          latestEditJSON: "{\"Hi\": \"Bob\"}"))
-    }
-}
-*/
+     static var previews: some View {
+         TimelineItemDebugView(info: .init(model: smallContent,
+                                           originalJSON: "{\"Hi\": \"Alice\"}",
+                                           latestEditJSON: "{\"Hi\": \"Bob\"}"))
+     }
+ }
+ */

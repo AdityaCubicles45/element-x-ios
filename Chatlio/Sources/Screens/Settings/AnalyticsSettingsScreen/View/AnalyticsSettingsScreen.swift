@@ -38,12 +38,12 @@ struct AnalyticsSettingsScreen: View {
 // MARK: - Previews
 
 /*
-struct AnalyticsSettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        let appSettings = AppSettings()
-        let viewModel = AnalyticsSettingsScreenViewModel(appSettings: appSettings,
-                                                         analytics: ServiceLocator.shared.analytics)
-        AnalyticsSettingsScreen(context: viewModel.context)
-    }
-}
-*/
+ struct AnalyticsSettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         let appSettings = AppSettings()
+         let viewModel = AnalyticsSettingsScreenViewModel(appSettings: appSettings,
+                                                          analytics: ServiceLocator.shared.analytics)
+         AnalyticsSettingsScreen(context: viewModel.context)
+     }
+ }
+ */

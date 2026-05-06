@@ -214,15 +214,15 @@ private extension Set<TraceLogPack> {
 // MARK: - Previews
 
 /*
-struct DeveloperOptionsScreen_Previews: PreviewProvider {
-    static let viewModel = DeveloperOptionsScreenViewModel(developerOptions: ServiceLocator.shared.settings,
-                                                           elementCallBaseURL: ServiceLocator.shared.settings.elementCallBaseURL,
-                                                           appHooks: AppHooks(),
-                                                           clientProxy: ClientProxyMock(.init()))
-    static var previews: some View {
-        ElementNavigationStack {
-            DeveloperOptionsScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct DeveloperOptionsScreen_Previews: PreviewProvider {
+     static let viewModel = DeveloperOptionsScreenViewModel(developerOptions: ServiceLocator.shared.settings,
+                                                            elementCallBaseURL: ServiceLocator.shared.settings.elementCallBaseURL,
+                                                            appHooks: AppHooks(),
+                                                            clientProxy: ClientProxyMock(.init()))
+     static var previews: some View {
+         ElementNavigationStack {
+             DeveloperOptionsScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

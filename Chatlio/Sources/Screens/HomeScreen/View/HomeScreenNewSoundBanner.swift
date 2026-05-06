@@ -54,9 +54,9 @@ struct HomeScreenNewSoundBanner: View {
 }
 
 /*
-struct HomeScreenNewSoundBanner_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        HomeScreenNewSoundBanner { }
-    }
-}
-*/
+ struct HomeScreenNewSoundBanner_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         HomeScreenNewSoundBanner { }
+     }
+ }
+ */

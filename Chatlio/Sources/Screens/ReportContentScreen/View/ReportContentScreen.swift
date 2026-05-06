@@ -67,16 +67,16 @@ struct ReportContentScreen: View {
 // MARK: - Previews
 
 /*
-struct ReportContentScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = ReportContentScreenViewModel(eventID: "",
-                                                        senderID: "",
-                                                        roomProxy: JoinedRoomProxyMock(.init()),
-                                                        clientProxy: ClientProxyMock(.init()))
+ struct ReportContentScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = ReportContentScreenViewModel(eventID: "",
+                                                         senderID: "",
+                                                         roomProxy: JoinedRoomProxyMock(.init()),
+                                                         clientProxy: ClientProxyMock(.init()))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            ReportContentScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             ReportContentScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

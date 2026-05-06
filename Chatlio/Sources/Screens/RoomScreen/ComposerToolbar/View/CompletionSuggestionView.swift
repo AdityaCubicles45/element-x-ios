@@ -102,23 +102,23 @@ private struct BackgroundView<Content: View>: View {
 // MARK: - Previews
 
 /*
-struct CompletionSuggestion_Previews: PreviewProvider, TestablePreview {
-    static let multipleItems: [SuggestionItem] = (0...10).map { index in
-        .init(suggestionType: .user(.init(id: "\(index)", displayName: "\(index)", avatarURL: nil)), range: .init(), rawSuggestionText: "")
-    }
+ struct CompletionSuggestion_Previews: PreviewProvider, TestablePreview {
+     static let multipleItems: [SuggestionItem] = (0...10).map { index in
+         .init(suggestionType: .user(.init(id: "\(index)", displayName: "\(index)", avatarURL: nil)), range: .init(), rawSuggestionText: "")
+     }
     
-    static var previews: some View {
-        // Putting them is VStack allows the preview to work properly in tests
-        VStack(spacing: 8) {
-            CompletionSuggestionView(mediaProvider: MediaProviderMock(configuration: .init()),
-                                     items: [.init(suggestionType: .user(.init(id: "@user_mention_1:matrix.org", displayName: "User 1", avatarURL: nil)), range: .init(), rawSuggestionText: ""),
-                                             .init(suggestionType: .user(.init(id: "@user_mention_2:matrix.org", displayName: "User 2", avatarURL: .mockMXCUserAvatar)), range: .init(), rawSuggestionText: "")]) { _ in }
-        }
+     static var previews: some View {
+         // Putting them is VStack allows the preview to work properly in tests
+         VStack(spacing: 8) {
+             CompletionSuggestionView(mediaProvider: MediaProviderMock(configuration: .init()),
+                                      items: [.init(suggestionType: .user(.init(id: "@user_mention_1:matrix.org", displayName: "User 1", avatarURL: nil)), range: .init(), rawSuggestionText: ""),
+                                              .init(suggestionType: .user(.init(id: "@user_mention_2:matrix.org", displayName: "User 2", avatarURL: .mockMXCUserAvatar)), range: .init(), rawSuggestionText: "")]) { _ in }
+         }
         
-        VStack(spacing: 8) {
-            CompletionSuggestionView(mediaProvider: MediaProviderMock(configuration: .init()),
-                                     items: multipleItems) { _ in }
-        }
-    }
-}
-*/
+         VStack(spacing: 8) {
+             CompletionSuggestionView(mediaProvider: MediaProviderMock(configuration: .init()),
+                                      items: multipleItems) { _ in }
+         }
+     }
+ }
+ */

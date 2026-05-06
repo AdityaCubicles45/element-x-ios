@@ -64,16 +64,16 @@ struct LabsScreen: View {
 // MARK: - Previews
 
 /*
-struct LabsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = {
-        AppSettings.resetAllSettings()
-        return LabsScreenViewModel(labsOptions: AppSettings())
-    }()
+ struct LabsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = {
+         AppSettings.resetAllSettings()
+         return LabsScreenViewModel(labsOptions: AppSettings())
+     }()
     
-    static var previews: some View {
-        ElementNavigationStack {
-            LabsScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             LabsScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

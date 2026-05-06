@@ -68,17 +68,17 @@ struct ShimmerModifier: ViewModifier {
 }
 
 /*
-/*
-struct ShimmerOverlay_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 0) {
-            ForEach(0...8, id: \.self) { _ in
-                HomeScreenRoomCell(room: .placeholder(), isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
-            }
-        }
-        .redacted(reason: .placeholder)
-        .shimmer()
-    }
-}
-*/
-*/
+ /*
+ struct ShimmerOverlay_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 0) {
+             ForEach(0...8, id: \.self) { _ in
+                 HomeScreenRoomCell(room: .placeholder(), isSelected: false, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }
+             }
+         }
+         .redacted(reason: .placeholder)
+         .shimmer()
+     }
+ }
+ */
+ */

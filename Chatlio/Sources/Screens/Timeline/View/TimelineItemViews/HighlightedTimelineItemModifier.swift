@@ -44,74 +44,74 @@ private struct HighlightedTimelineItemModifier: ViewModifier {
 
 // swiftlint:disable line_length blanket_disable_command
 /*
-struct HighlightedTimelineItemModifier_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                Bubble(text: "Hello 👋")
-                    .highlightedTimelineItem(true)
+ struct HighlightedTimelineItemModifier_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ScrollView {
+             VStack(spacing: 16) {
+                 Bubble(text: "Hello 👋")
+                     .highlightedTimelineItem(true)
                 
-                Bubble(text: "Not highlighted")
-                    .highlightedTimelineItem(false)
+                 Bubble(text: "Not highlighted")
+                     .highlightedTimelineItem(false)
                 
-                // swiftlint:disable line_length
-                Bubble(text: """
-                       Bacon ipsum dolor amet brisket bacon hamburger filet mignon ham hock, capicola meatloaf corned beef tongue. Ribeye filet mignon shoulder drumstick doner shank. Landjaeger shankle chislic brisket short loin pig. Frankfurter sirloin jerky bresaola tri-tip cow buffalo. Beef tongue shankle venison, sirloin boudin biltong ham hock corned beef. Sirloin shankle pork belly, strip steak pancetta brisket flank ribeye cow chislic. Pork ham landjaeger, pastrami beef sausage capicola meatball.
+                 // swiftlint:disable line_length
+                 Bubble(text: """
+                        Bacon ipsum dolor amet brisket bacon hamburger filet mignon ham hock, capicola meatloaf corned beef tongue. Ribeye filet mignon shoulder drumstick doner shank. Landjaeger shankle chislic brisket short loin pig. Frankfurter sirloin jerky bresaola tri-tip cow buffalo. Beef tongue shankle venison, sirloin boudin biltong ham hock corned beef. Sirloin shankle pork belly, strip steak pancetta brisket flank ribeye cow chislic. Pork ham landjaeger, pastrami beef sausage capicola meatball.
                        
-                       Cow brisket bresaola, burgdoggen cupim turducken sirloin andouille shankle sausage jerky chicken pig. Tail capicola landjaeger frankfurter. Kevin pancetta brisket spare ribs, sausage chuck tail pork. Ground round boudin chuck tri-tip corned beef. Pork belly ham bresaola tail, pork chop meatloaf biltong filet mignon strip steak ribeye boudin shoulder frankfurter.
-                       """,
-                       isOutgoing: true)
-                    .highlightedTimelineItem(true)
-                // swiftlint:enable line_length
-            }
-        }
-        .previewDisplayName("Layout")
-    }
+                        Cow brisket bresaola, burgdoggen cupim turducken sirloin andouille shankle sausage jerky chicken pig. Tail capicola landjaeger frankfurter. Kevin pancetta brisket spare ribs, sausage chuck tail pork. Ground round boudin chuck tri-tip corned beef. Pork belly ham bresaola tail, pork chop meatloaf biltong filet mignon strip steak ribeye boudin shoulder frankfurter.
+                        """,
+                        isOutgoing: true)
+                     .highlightedTimelineItem(true)
+                 // swiftlint:enable line_length
+             }
+         }
+         .previewDisplayName("Layout")
+     }
     
-    struct Bubble: View {
-        let text: String
-        var isOutgoing = false
+     struct Bubble: View {
+         let text: String
+         var isOutgoing = false
         
-        var body: some View {
-            Text(text)
-                .padding(10)
-                .background(isOutgoing ? .compound._bgBubbleOutgoing : .compound._bgBubbleIncoming,
-                            in: RoundedRectangle(cornerRadius: 12))
-                .padding(isOutgoing ? .leading : .trailing, 40)
-                .frame(maxWidth: .infinity, alignment: isOutgoing ? .trailing : .leading)
-                .padding(12)
-        }
-    }
-}
-*/
+         var body: some View {
+             Text(text)
+                 .padding(10)
+                 .background(isOutgoing ? .compound._bgBubbleOutgoing : .compound._bgBubbleIncoming,
+                             in: RoundedRectangle(cornerRadius: 12))
+                 .padding(isOutgoing ? .leading : .trailing, 40)
+                 .frame(maxWidth: .infinity, alignment: isOutgoing ? .trailing : .leading)
+                 .padding(12)
+         }
+     }
+ }
+ */
 
-/// A preview that allows quick testing of the highlight appearance across various timeline scenarios.
+// A preview that allows quick testing of the highlight appearance across various timeline scenarios.
 /*
-struct HighlightedTimelineItemTimeline_Previews: PreviewProvider {
-    static let roomProxyMock = JoinedRoomProxyMock(.init(name: "Preview room"))
-    static let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
-    static let focussedEventID = "RoomTimelineItemFixtures.default.5"
-    static let composerViewModel = ComposerToolbarViewModel.mock()
-    static let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
-                                                     focussedEventID: focussedEventID,
-                                                     timelineController: MockTimelineController(),
-                                                     userSession: UserSessionMock(.init()),
-                                                     mediaPlayerProvider: MediaPlayerProviderMock(),
-                                                     userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                                     appMediator: AppMediatorMock.default,
-                                                     appSettings: ServiceLocator.shared.settings,
-                                                     analyticsService: ServiceLocator.shared.analytics,
-                                                     emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                                     linkMetadataProvider: LinkMetadataProvider(),
-                                                     timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+ struct HighlightedTimelineItemTimeline_Previews: PreviewProvider {
+     static let roomProxyMock = JoinedRoomProxyMock(.init(name: "Preview room"))
+     static let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
+     static let focussedEventID = "RoomTimelineItemFixtures.default.5"
+     static let composerViewModel = ComposerToolbarViewModel.mock()
+     static let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
+                                                      focussedEventID: focussedEventID,
+                                                      timelineController: MockTimelineController(),
+                                                      userSession: UserSessionMock(.init()),
+                                                      mediaPlayerProvider: MediaPlayerProviderMock(),
+                                                      userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                                      appMediator: AppMediatorMock.default,
+                                                      appSettings: ServiceLocator.shared.settings,
+                                                      analyticsService: ServiceLocator.shared.analytics,
+                                                      emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                                      linkMetadataProvider: LinkMetadataProvider(),
+                                                      timelineControllerFactory: TimelineControllerFactoryMock(.init()))
 
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomScreen(context: roomViewModel.context,
-                       timelineContext: timelineViewModel.context,
-                       composerToolbar: ComposerToolbar(context: composerViewModel.context))
-        }
-        .previewDisplayName("Timeline")
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomScreen(context: roomViewModel.context,
+                        timelineContext: timelineViewModel.context,
+                        composerToolbar: ComposerToolbar(context: composerViewModel.context))
+         }
+         .previewDisplayName("Timeline")
+     }
+ }
+ */

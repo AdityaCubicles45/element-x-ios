@@ -115,33 +115,33 @@ struct IdentityConfirmationScreen: View {
 // MARK: - Previews
 
 /*
-struct IdentityConfirmationScreen_Previews: PreviewProvider, TestablePreview {
-    static var viewModel = makeViewModel()
-    static var loadingViewModel = makeViewModel(recoveryState: .unknown)
+ struct IdentityConfirmationScreen_Previews: PreviewProvider, TestablePreview {
+     static var viewModel = makeViewModel()
+     static var loadingViewModel = makeViewModel(recoveryState: .unknown)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            IdentityConfirmationScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Actions")
-        .snapshotPreferences(expect: viewModel.context.observe(\.viewState.availableActions).map { actions in
-            actions?.contains([.interactiveVerification, .recovery]) == true
-        })
+     static var previews: some View {
+         ElementNavigationStack {
+             IdentityConfirmationScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Actions")
+         .snapshotPreferences(expect: viewModel.context.observe(\.viewState.availableActions).map { actions in
+             actions?.contains([.interactiveVerification, .recovery]) == true
+         })
         
-        ElementNavigationStack {
-            IdentityConfirmationScreen(context: loadingViewModel.context)
-        }
-        .previewDisplayName("Loading")
-    }
+         ElementNavigationStack {
+             IdentityConfirmationScreen(context: loadingViewModel.context)
+         }
+         .previewDisplayName("Loading")
+     }
     
-    static func makeViewModel(recoveryState: SecureBackupRecoveryState = .enabled) -> IdentityConfirmationScreenViewModel {
-        let clientProxy = ClientProxyMock(.init())
-        let userSession = UserSessionMock(.init(clientProxy: clientProxy))
-        userSession.sessionSecurityStatePublisher = CurrentValuePublisher<SessionSecurityState, Never>(.init(verificationState: .unverified, recoveryState: recoveryState))
+     static func makeViewModel(recoveryState: SecureBackupRecoveryState = .enabled) -> IdentityConfirmationScreenViewModel {
+         let clientProxy = ClientProxyMock(.init())
+         let userSession = UserSessionMock(.init(clientProxy: clientProxy))
+         userSession.sessionSecurityStatePublisher = CurrentValuePublisher<SessionSecurityState, Never>(.init(verificationState: .unverified, recoveryState: recoveryState))
         
-        return IdentityConfirmationScreenViewModel(userSession: userSession,
-                                                   appSettings: ServiceLocator.shared.settings,
-                                                   userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
-}
-*/
+         return IdentityConfirmationScreenViewModel(userSession: userSession,
+                                                    appSettings: ServiceLocator.shared.settings,
+                                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
+ }
+ */

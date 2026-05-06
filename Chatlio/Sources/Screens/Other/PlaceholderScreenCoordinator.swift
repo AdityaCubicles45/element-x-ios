@@ -43,28 +43,28 @@ struct PlaceholderScreen: View {
 }
 
 /*
-struct PlaceholderScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: false)
-            .previewDisplayName("With chrome and background")
+ struct PlaceholderScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: false)
+             .previewDisplayName("With chrome and background")
         
-        PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: true)
-            .previewDisplayName("With chrome and no background")
+         PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: true)
+             .previewDisplayName("With chrome and no background")
         
-        PlaceholderScreen(hideBrandChrome: true, hideGradientBackground: true)
-            .previewDisplayName("Without chrome")
+         PlaceholderScreen(hideBrandChrome: true, hideGradientBackground: true)
+             .previewDisplayName("Without chrome")
         
-        NavigationSplitView {
-            List {
-                ForEach("Nothing to see here".split(separator: " "), id: \.self) { word in
-                    Text(word)
-                }
-            }
-        } detail: {
-            PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: true)
-        }
-        .previewDisplayName("Split View")
-        .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
-*/
+         NavigationSplitView {
+             List {
+                 ForEach("Nothing to see here".split(separator: " "), id: \.self) { word in
+                     Text(word)
+                 }
+             }
+         } detail: {
+             PlaceholderScreen(hideBrandChrome: false, hideGradientBackground: true)
+         }
+         .previewDisplayName("Split View")
+         .previewInterfaceOrientation(.landscapeLeft)
+     }
+ }
+ */

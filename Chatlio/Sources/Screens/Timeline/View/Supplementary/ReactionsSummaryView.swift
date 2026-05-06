@@ -137,12 +137,12 @@ private struct ReactionSummarySenderView: View {
 }
 
 /*
-struct ReactionsSummaryView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ReactionsSummaryView(reactions: AggregatedReaction.mockReactions,
-                             members: [:],
-                             mediaProvider: MediaProviderMock(configuration: .init()),
-                             selectedReactionKey: AggregatedReaction.mockReactions[0].key)
-    }
-}
-*/
+ struct ReactionsSummaryView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ReactionsSummaryView(reactions: AggregatedReaction.mockReactions,
+                              members: [:],
+                              mediaProvider: MediaProviderMock(configuration: .init()),
+                              selectedReactionKey: AggregatedReaction.mockReactions[0].key)
+     }
+ }
+ */

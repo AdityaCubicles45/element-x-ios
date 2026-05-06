@@ -162,25 +162,25 @@ struct SoftLogoutScreen: View {
 // MARK: - Previews
 
 /*
-struct SoftLogoutScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ForEach(MockSoftLogoutScreenState.allCases) { state in
-            screen(for: state.viewModel)
-        }
-    }
+ struct SoftLogoutScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ForEach(MockSoftLogoutScreenState.allCases) { state in
+             screen(for: state.viewModel)
+         }
+     }
 
-    static func screen(for viewModel: SoftLogoutScreenViewModel) -> some View {
-        ElementNavigationStack {
-            SoftLogoutScreen(context: viewModel.context)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
-                        Button { } label: {
-                            Text("\(Image(systemName: "chevron.backward")) Back")
-                        }
-                    }
-                }
-        }
-    }
-}
-*/
+     static func screen(for viewModel: SoftLogoutScreenViewModel) -> some View {
+         ElementNavigationStack {
+             SoftLogoutScreen(context: viewModel.context)
+                 .navigationBarTitleDisplayMode(.inline)
+                 .toolbar {
+                     ToolbarItem(placement: .cancellationAction) {
+                         Button { } label: {
+                             Text("\(Image(systemName: "chevron.backward")) Back")
+                         }
+                     }
+                 }
+         }
+     }
+ }
+ */

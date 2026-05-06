@@ -449,21 +449,21 @@ class RoomScreenViewModel: RoomScreenViewModelType, RoomScreenViewModelProtocol 
 }
 
 /*
-extension RoomScreenViewModel {
-    static func mock(roomProxyMock: JoinedRoomProxyMock,
-                     clientProxyMock: ClientProxyMock = ClientProxyMock(.init()),
-                     appHooks: AppHooks = AppHooks()) -> RoomScreenViewModel {
-        RoomScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                            roomProxy: roomProxyMock,
-                            initialSelectedPinnedEventID: nil,
-                            ongoingCallRoomIDPublisher: .init(.init(nil)),
-                            appSettings: ServiceLocator.shared.settings,
-                            appHooks: appHooks,
-                            analyticsService: ServiceLocator.shared.analytics,
-                            userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
-}
-*/
+ extension RoomScreenViewModel {
+     static func mock(roomProxyMock: JoinedRoomProxyMock,
+                      clientProxyMock: ClientProxyMock = ClientProxyMock(.init()),
+                      appHooks: AppHooks = AppHooks()) -> RoomScreenViewModel {
+         RoomScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                             roomProxy: roomProxyMock,
+                             initialSelectedPinnedEventID: nil,
+                             ongoingCallRoomIDPublisher: .init(.init(nil)),
+                             appSettings: ServiceLocator.shared.settings,
+                             appHooks: appHooks,
+                             analyticsService: ServiceLocator.shared.analytics,
+                             userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
+ }
+ */
 
 private extension KnockRequestInfo {
     init(from proxy: KnockRequestProxyProtocol) {

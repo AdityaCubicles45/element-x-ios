@@ -158,53 +158,53 @@ private struct SpaceAddRoomsListRow: View {
 // MARK: - Previews
 
 /*
-struct SpaceAddRoomsScreen_Previews: PreviewProvider, TestablePreview {
-    static let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
-    static let viewModel = makeViewModel()
-    static let searchingViewModel = makeViewModel(searchQuery: "Foundation")
-    static let selectedViewModel = makeViewModel(searchQuery: "Foundation", hasSelection: true)
+ struct SpaceAddRoomsScreen_Previews: PreviewProvider, TestablePreview {
+     static let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
+     static let viewModel = makeViewModel()
+     static let searchingViewModel = makeViewModel(searchQuery: "Foundation")
+     static let selectedViewModel = makeViewModel(searchQuery: "Foundation", hasSelection: true)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SpaceAddRoomsScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Suggested")
-        .snapshotPreferences(expect: viewModel.context.observe(\.viewState.roomsSection).map {
-            $0.type == .suggestions && !$0.rooms.isEmpty
-        })
+     static var previews: some View {
+         ElementNavigationStack {
+             SpaceAddRoomsScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Suggested")
+         .snapshotPreferences(expect: viewModel.context.observe(\.viewState.roomsSection).map {
+             $0.type == .suggestions && !$0.rooms.isEmpty
+         })
         
-        ElementNavigationStack {
-            SpaceAddRoomsScreen(context: searchingViewModel.context)
-        }
-        .previewDisplayName("Searching")
+         ElementNavigationStack {
+             SpaceAddRoomsScreen(context: searchingViewModel.context)
+         }
+         .previewDisplayName("Searching")
         
-        ElementNavigationStack {
-            SpaceAddRoomsScreen(context: selectedViewModel.context)
-        }
-        .previewDisplayName("Selected")
-    }
+         ElementNavigationStack {
+             SpaceAddRoomsScreen(context: selectedViewModel.context)
+         }
+         .previewDisplayName("Selected")
+     }
     
-    static func makeViewModel(searchQuery: String? = nil, hasSelection: Bool = false) -> SpaceAddRoomsScreenViewModel {
-        let spaceRoomListProxy = SpaceRoomListProxyMock(.init(spaceServiceRoom: SpaceServiceRoom.mock(isSpace: true)))
+     static func makeViewModel(searchQuery: String? = nil, hasSelection: Bool = false) -> SpaceAddRoomsScreenViewModel {
+         let spaceRoomListProxy = SpaceRoomListProxyMock(.init(spaceServiceRoom: SpaceServiceRoom.mock(isSpace: true)))
         
-        let clientProxy = ClientProxyMock(.init())
-        clientProxy.recentlyVisitedRoomsFilterReturnValue = .mockRooms
+         let clientProxy = ClientProxyMock(.init())
+         clientProxy.recentlyVisitedRoomsFilterReturnValue = .mockRooms
         
-        let viewModel = SpaceAddRoomsScreenViewModel(spaceRoomListProxy: spaceRoomListProxy,
-                                                     userSession: UserSessionMock(.init(clientProxy: clientProxy)),
-                                                     roomSummaryProvider: summaryProvider,
-                                                     userIndicatorController: UserIndicatorControllerMock())
+         let viewModel = SpaceAddRoomsScreenViewModel(spaceRoomListProxy: spaceRoomListProxy,
+                                                      userSession: UserSessionMock(.init(clientProxy: clientProxy)),
+                                                      roomSummaryProvider: summaryProvider,
+                                                      userIndicatorController: UserIndicatorControllerMock())
         
-        if let searchQuery {
-            viewModel.context.searchQuery = searchQuery
-            viewModel.context.send(viewAction: .searchQueryChanged)
-        }
+         if let searchQuery {
+             viewModel.context.searchQuery = searchQuery
+             viewModel.context.send(viewAction: .searchQueryChanged)
+         }
         
-        if hasSelection {
-            viewModel.state.selectedRooms = Array(summaryProvider.roomListPublisher.value.prefix(2)).map(SpaceAddRoomsScreenRoom.init)
-        }
+         if hasSelection {
+             viewModel.state.selectedRooms = Array(summaryProvider.roomListPublisher.value.prefix(2)).map(SpaceAddRoomsScreenRoom.init)
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

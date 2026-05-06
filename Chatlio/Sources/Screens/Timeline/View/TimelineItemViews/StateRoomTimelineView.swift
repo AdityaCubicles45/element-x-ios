@@ -23,21 +23,21 @@ struct StateRoomTimelineView: View {
 }
 
 /*
-struct StateRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        body
-    }
+ struct StateRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         body
+     }
     
-    static var body: some View {
-        StateRoomTimelineView(timelineItem: item)
-    }
+     static var body: some View {
+         StateRoomTimelineView(timelineItem: item)
+     }
     
-    static let item = StateRoomTimelineItem(id: .randomVirtual,
-                                            body: "Alice joined",
-                                            timestamp: .mock,
-                                            isOutgoing: false,
-                                            isEditable: false,
-                                            canBeRepliedTo: true,
-                                            sender: .init(id: ""))
-}
-*/
+     static let item = StateRoomTimelineItem(id: .randomVirtual,
+                                             body: "Alice joined",
+                                             timestamp: .mock,
+                                             isOutgoing: false,
+                                             isEditable: false,
+                                             canBeRepliedTo: true,
+                                             sender: .init(id: ""))
+ }
+ */

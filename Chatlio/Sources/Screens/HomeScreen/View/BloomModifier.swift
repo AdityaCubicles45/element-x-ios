@@ -134,30 +134,30 @@ private struct OldBloomModifier: ViewModifier {
 // MARK: - Previews
 
 /*
-struct BloomModifier_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ElementNavigationStack {
-            mockScreen
-                .navigationTitle(L10n.screenRoomlistMainSpaceTitle)
-                .searchable(text: .constant(""), placement: .navigationBarDrawer(displayMode: .always))
-                .toolbarBloom(hasSearchBar: true)
-        }
-        .previewDisplayName("Chats")
+ struct BloomModifier_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ElementNavigationStack {
+             mockScreen
+                 .navigationTitle(L10n.screenRoomlistMainSpaceTitle)
+                 .searchable(text: .constant(""), placement: .navigationBarDrawer(displayMode: .always))
+                 .toolbarBloom(hasSearchBar: true)
+         }
+         .previewDisplayName("Chats")
         
-        ElementNavigationStack {
-            mockScreen
-                .navigationTitle(L10n.screenSpaceListTitle)
-                .toolbarBloom(hasSearchBar: false)
-        }
-        .previewDisplayName("Spaces")
-    }
+         ElementNavigationStack {
+             mockScreen
+                 .navigationTitle(L10n.screenSpaceListTitle)
+                 .toolbarBloom(hasSearchBar: false)
+         }
+         .previewDisplayName("Spaces")
+     }
     
-    static var mockScreen: some View {
-        List { }
-            .toolbar {
-                Button { } label: { CompoundIcon(\.check) }
-                    .accessibilityLabel(L10n.actionConfirm) // Keep the a11y tests happy 😄
-            }
-    }
-}
-*/
+     static var mockScreen: some View {
+         List { }
+             .toolbar {
+                 Button { } label: { CompoundIcon(\.check) }
+                     .accessibilityLabel(L10n.actionConfirm) // Keep the a11y tests happy 😄
+             }
+     }
+ }
+ */

@@ -133,33 +133,33 @@ struct SpacesScreen: View {
 // MARK: - Previews
 
 /*
-struct SpacesScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let emptyViewModel = makeViewModel(isEmpty: true)
+ struct SpacesScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let emptyViewModel = makeViewModel(isEmpty: true)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SpacesScreen(context: viewModel.context)
-        }
+     static var previews: some View {
+         ElementNavigationStack {
+             SpacesScreen(context: viewModel.context)
+         }
         
-        ElementNavigationStack {
-            SpacesScreen(context: emptyViewModel.context)
-        }
-        .previewDisplayName("Empty")
-    }
+         ElementNavigationStack {
+             SpacesScreen(context: emptyViewModel.context)
+         }
+         .previewDisplayName("Empty")
+     }
     
-    static func makeViewModel(isEmpty: Bool = false) -> SpacesScreenViewModel {
-        AppSettings.resetAllSettings()
-        let appSettings = AppSettings()
-        appSettings.hasSeenSpacesAnnouncement = true
+     static func makeViewModel(isEmpty: Bool = false) -> SpacesScreenViewModel {
+         AppSettings.resetAllSettings()
+         let appSettings = AppSettings()
+         appSettings.hasSeenSpacesAnnouncement = true
         
-        let clientProxy = ClientProxyMock(.init())
-        clientProxy.spaceService = SpaceServiceProxyMock(.init(topLevelSpaces: isEmpty ? [] : .mockJoinedSpaces))
+         let clientProxy = ClientProxyMock(.init())
+         clientProxy.spaceService = SpaceServiceProxyMock(.init(topLevelSpaces: isEmpty ? [] : .mockJoinedSpaces))
         
-        return SpacesScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxy)),
-                                     selectedSpacePublisher: .init(nil),
-                                     appSettings: appSettings,
-                                     userIndicatorController: UserIndicatorControllerMock())
-    }
-}
-*/
+         return SpacesScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxy)),
+                                      selectedSpacePublisher: .init(nil),
+                                      appSettings: appSettings,
+                                      userIndicatorController: UserIndicatorControllerMock())
+     }
+ }
+ */

@@ -80,11 +80,11 @@ private struct LocationPickerLabel: View {
 }
 
 /*
-struct LocationPickerSheet_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = LocationSharingScreenViewModel.mock(type: .picker)
+ struct LocationPickerSheet_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = LocationSharingScreenViewModel.mock(type: .picker)
     
-    static var previews: some View {
-        LocationPickerSheet(context: viewModel.context)
-    }
-}
-*/
+     static var previews: some View {
+         LocationPickerSheet(context: viewModel.context)
+     }
+ }
+ */

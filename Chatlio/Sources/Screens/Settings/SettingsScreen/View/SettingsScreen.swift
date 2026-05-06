@@ -255,32 +255,32 @@ struct SettingsScreen: View {
 // MARK: - Previews
 
 /*
-/*
-struct SettingsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let bugReportDisabledViewModel = makeViewModel(isBugReportServiceEnabled: false)
+ /*
+ struct SettingsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let bugReportDisabledViewModel = makeViewModel(isBugReportServiceEnabled: false)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SettingsScreen(context: viewModel.context)
-        }
-        .snapshotPreferences(expect: viewModel.context.observe(\.viewState.accountProfileURL).map { $0 != nil })
-        .previewDisplayName("Default")
+     static var previews: some View {
+         ElementNavigationStack {
+             SettingsScreen(context: viewModel.context)
+         }
+         .snapshotPreferences(expect: viewModel.context.observe(\.viewState.accountProfileURL).map { $0 != nil })
+         .previewDisplayName("Default")
         
-        ElementNavigationStack {
-            SettingsScreen(context: bugReportDisabledViewModel.context)
-        }
-        .snapshotPreferences(expect: bugReportDisabledViewModel.context.observe(\.viewState.accountProfileURL).map { $0 != nil })
-        .previewDisplayName("Bug report disabled")
-    }
+         ElementNavigationStack {
+             SettingsScreen(context: bugReportDisabledViewModel.context)
+         }
+         .snapshotPreferences(expect: bugReportDisabledViewModel.context.observe(\.viewState.accountProfileURL).map { $0 != nil })
+         .previewDisplayName("Bug report disabled")
+     }
     
-    static func makeViewModel(isBugReportServiceEnabled: Bool = true) -> SettingsScreenViewModel {
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@userid:example.com",
-                                                                                   deviceID: "AAAAAAAAAAA"))))
-        return SettingsScreenViewModel(userSession: userSession,
-                                       appSettings: ServiceLocator.shared.settings,
-                                       isBugReportServiceEnabled: isBugReportServiceEnabled)
-    }
-}
-*/
-*/
+     static func makeViewModel(isBugReportServiceEnabled: Bool = true) -> SettingsScreenViewModel {
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@userid:example.com",
+                                                                                    deviceID: "AAAAAAAAAAA"))))
+         return SettingsScreenViewModel(userSession: userSession,
+                                        appSettings: ServiceLocator.shared.settings,
+                                        isBugReportServiceEnabled: isBugReportServiceEnabled)
+     }
+ }
+ */
+ */

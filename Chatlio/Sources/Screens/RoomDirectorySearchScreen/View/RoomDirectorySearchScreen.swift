@@ -70,35 +70,35 @@ struct RoomDirectorySearchScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomDirectorySearchScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel: RoomDirectorySearchScreenViewModel = {
-        let results = [RoomDirectorySearchResult(id: "test_1",
-                                                 alias: "#test_1:example.com",
-                                                 name: "Test 1",
-                                                 topic: "Test description 1",
-                                                 avatar: .room(id: "test_1",
-                                                               name: "Test 1",
-                                                               avatarURL: nil),
-                                                 canBeJoined: true),
-                       RoomDirectorySearchResult(id: "test_2",
-                                                 alias: "#test_2:example.com",
-                                                 name: "Test 2",
-                                                 topic: nil,
-                                                 avatar: .room(id: "test_2",
-                                                               name: "Test 2",
-                                                               avatarURL: .mockMXCAvatar),
-                                                 canBeJoined: false)]
+ struct RoomDirectorySearchScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel: RoomDirectorySearchScreenViewModel = {
+         let results = [RoomDirectorySearchResult(id: "test_1",
+                                                  alias: "#test_1:example.com",
+                                                  name: "Test 1",
+                                                  topic: "Test description 1",
+                                                  avatar: .room(id: "test_1",
+                                                                name: "Test 1",
+                                                                avatarURL: nil),
+                                                  canBeJoined: true),
+                        RoomDirectorySearchResult(id: "test_2",
+                                                  alias: "#test_2:example.com",
+                                                  name: "Test 2",
+                                                  topic: nil,
+                                                  avatar: .room(id: "test_2",
+                                                                name: "Test 2",
+                                                                avatarURL: .mockMXCAvatar),
+                                                  canBeJoined: false)]
         
-        let roomDirectorySearchProxy = RoomDirectorySearchProxyMock(configuration: .init(results: results))
+         let roomDirectorySearchProxy = RoomDirectorySearchProxyMock(configuration: .init(results: results))
         
-        let clientProxy = ClientProxyMock(.init(roomDirectorySearchProxy: roomDirectorySearchProxy))
+         let clientProxy = ClientProxyMock(.init(roomDirectorySearchProxy: roomDirectorySearchProxy))
         
-        return RoomDirectorySearchScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxy)),
-                                                  userIndicatorController: UserIndicatorControllerMock())
-    }()
+         return RoomDirectorySearchScreenViewModel(userSession: UserSessionMock(.init(clientProxy: clientProxy)),
+                                                   userIndicatorController: UserIndicatorControllerMock())
+     }()
     
-    static var previews: some View {
-        RoomDirectorySearchScreen(context: viewModel.context)
-    }
-}
-*/
+     static var previews: some View {
+         RoomDirectorySearchScreen(context: viewModel.context)
+     }
+ }
+ */

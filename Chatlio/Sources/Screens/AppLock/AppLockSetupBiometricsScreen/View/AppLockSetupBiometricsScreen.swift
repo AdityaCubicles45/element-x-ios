@@ -73,20 +73,20 @@ struct AppLockSetupBiometricsScreen: View {
 // MARK: - Previews
 
 /*
-struct AppLockSetupBiometricsScreen_Previews: PreviewProvider, TestablePreview {
-    static let faceIDViewModel = AppLockSetupBiometricsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .faceID))
-    static let touchIDViewModel = AppLockSetupBiometricsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .touchID))
+ struct AppLockSetupBiometricsScreen_Previews: PreviewProvider, TestablePreview {
+     static let faceIDViewModel = AppLockSetupBiometricsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .faceID))
+     static let touchIDViewModel = AppLockSetupBiometricsScreenViewModel(appLockService: AppLockServiceMock.mock(biometryType: .touchID))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            AppLockSetupBiometricsScreen(context: faceIDViewModel.context)
-        }
-        .previewDisplayName("Face ID")
+     static var previews: some View {
+         ElementNavigationStack {
+             AppLockSetupBiometricsScreen(context: faceIDViewModel.context)
+         }
+         .previewDisplayName("Face ID")
         
-        ElementNavigationStack {
-            AppLockSetupBiometricsScreen(context: touchIDViewModel.context)
-        }
-        .previewDisplayName("Touch ID")
-    }
-}
-*/
+         ElementNavigationStack {
+             AppLockSetupBiometricsScreen(context: touchIDViewModel.context)
+         }
+         .previewDisplayName("Touch ID")
+     }
+ }
+ */

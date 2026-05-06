@@ -163,41 +163,41 @@ extension View {
 }
 
 /*
-struct SwipeRightAction_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        Preview()
-    }
+ struct SwipeRightAction_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         Preview()
+     }
     
-    struct Preview: View {
-        @State private var isPresentingSheet = false
+     struct Preview: View {
+         @State private var isPresentingSheet = false
         
-        var body: some View {
-            ElementNavigationStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("This is a message from somebody with a couple of lines of text.")
-                            .bubbleBackground()
-                            .swipeRightAction {
-                                Image(systemName: "flame")
-                            } shouldStartAction: {
-                                true
-                            } action: {
-                                isPresentingSheet = true
-                            }
-                    }
-                    .padding()
-                }
-                .navigationTitle("Work chat")
-                .navigationBarTitleDisplayMode(.inline)
-            }
-            .sheet(isPresented: $isPresentingSheet) {
-                Text("Action triggered!")
-                    .presentationDetents([.medium])
-            }
-        }
-    }
-}
-*/
+         var body: some View {
+             ElementNavigationStack {
+                 ScrollView {
+                     VStack(alignment: .leading, spacing: 2) {
+                         Text("This is a message from somebody with a couple of lines of text.")
+                             .bubbleBackground()
+                             .swipeRightAction {
+                                 Image(systemName: "flame")
+                             } shouldStartAction: {
+                                 true
+                             } action: {
+                                 isPresentingSheet = true
+                             }
+                     }
+                     .padding()
+                 }
+                 .navigationTitle("Work chat")
+                 .navigationBarTitleDisplayMode(.inline)
+             }
+             .sheet(isPresented: $isPresentingSheet) {
+                 Text("Action triggered!")
+                     .presentationDetents([.medium])
+             }
+         }
+     }
+ }
+ */
 
 /// Fixes the issue on iOS 18 where DragGesture conflicts with the scroll view
 /// https://github.com/feedback-assistant/reports/issues/542#issuecomment-2581322968

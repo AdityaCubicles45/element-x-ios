@@ -101,50 +101,50 @@ struct SpaceHeaderView: View {
 // MARK: - Previews
 
 /*
-struct SpaceHeaderView_Previews: PreviewProvider, TestablePreview {
-    static let mediaProvider = MediaProviderMock(configuration: .init())
+ struct SpaceHeaderView_Previews: PreviewProvider, TestablePreview {
+     static let mediaProvider = MediaProviderMock(configuration: .init())
     
-    static let spaces = makeSpaceRooms()
+     static let spaces = makeSpaceRooms()
     
-    static var previews: some View {
-        VStack(spacing: 0) {
-            ForEach(spaces, id: \.id) { space in
-                SpaceHeaderView(spaceServiceRoom: space, mediaProvider: mediaProvider)
-            }
-        }
-    }
+     static var previews: some View {
+         VStack(spacing: 0) {
+             ForEach(spaces, id: \.id) { space in
+                 SpaceHeaderView(spaceServiceRoom: space, mediaProvider: mediaProvider)
+             }
+         }
+     }
     
-    static func makeSpaceRooms() -> [SpaceServiceRoom] {
-        [
-            SpaceServiceRoom.mock(id: "!space1:matrix.org",
-                                  name: "Company Space",
-                                  isSpace: true,
-                                  childrenCount: 10,
-                                  joinedMembersCount: 50),
-            SpaceServiceRoom.mock(id: "!space2:matrix.org",
-                                  name: "Community Space",
-                                  avatarURL: .mockMXCAvatar,
-                                  isSpace: true,
-                                  childrenCount: 20,
-                                  joinedMembersCount: 78,
-                                  topic: "Description of the space goes right here.",
-                                  canonicalAlias: "#space:matrix.org",
-                                  joinRule: .public),
-            SpaceServiceRoom.mock(id: "!space3:matrix.org",
-                                  name: "Subspace",
-                                  isSpace: true,
-                                  childrenCount: 30,
-                                  joinedMembersCount: 123,
-                                  heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
-                                  topic: ["Description of the space goes right here.",
-                                          "Lorem ipsum dolor sit amet consectetur.",
-                                          "Leo viverra morbi habitant in.",
-                                          "Sem amet enim habitant nibh augue mauris.",
-                                          "Interdum mauris ultrices tincidunt proin morbi erat aenean risus nibh.",
-                                          "Diam amet sit fermentum vulputate faucibus."].joined(separator: " "),
-                                  canonicalAlias: "#subspace:matrix.org",
-                                  joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
-        ]
-    }
-}
-*/
+     static func makeSpaceRooms() -> [SpaceServiceRoom] {
+         [
+             SpaceServiceRoom.mock(id: "!space1:matrix.org",
+                                   name: "Company Space",
+                                   isSpace: true,
+                                   childrenCount: 10,
+                                   joinedMembersCount: 50),
+             SpaceServiceRoom.mock(id: "!space2:matrix.org",
+                                   name: "Community Space",
+                                   avatarURL: .mockMXCAvatar,
+                                   isSpace: true,
+                                   childrenCount: 20,
+                                   joinedMembersCount: 78,
+                                   topic: "Description of the space goes right here.",
+                                   canonicalAlias: "#space:matrix.org",
+                                   joinRule: .public),
+             SpaceServiceRoom.mock(id: "!space3:matrix.org",
+                                   name: "Subspace",
+                                   isSpace: true,
+                                   childrenCount: 30,
+                                   joinedMembersCount: 123,
+                                   heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
+                                   topic: ["Description of the space goes right here.",
+                                           "Lorem ipsum dolor sit amet consectetur.",
+                                           "Leo viverra morbi habitant in.",
+                                           "Sem amet enim habitant nibh augue mauris.",
+                                           "Interdum mauris ultrices tincidunt proin morbi erat aenean risus nibh.",
+                                           "Diam amet sit fermentum vulputate faucibus."].joined(separator: " "),
+                                   canonicalAlias: "#subspace:matrix.org",
+                                   joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
+         ]
+     }
+ }
+ */

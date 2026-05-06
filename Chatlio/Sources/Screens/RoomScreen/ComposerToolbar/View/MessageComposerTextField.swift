@@ -334,32 +334,32 @@ private class ElementTextView: UITextView, PillAttachmentViewProviderDelegate {
 }
 
 /*
-struct MessageComposerTextField_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 16) {
-            PreviewWrapper(text: "123")
-            PreviewWrapper(text: "")
-            PreviewWrapper(text: "A really long message that will wrap to multiple lines on a phone in portrait.")
-        }
-    }
+ struct MessageComposerTextField_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 16) {
+             PreviewWrapper(text: "123")
+             PreviewWrapper(text: "")
+             PreviewWrapper(text: "A really long message that will wrap to multiple lines on a phone in portrait.")
+         }
+     }
 
-    struct PreviewWrapper: View {
-        @State var text: NSAttributedString
+     struct PreviewWrapper: View {
+         @State var text: NSAttributedString
 
-        init(text: String) {
-            _text = .init(initialValue: .init(string: text, attributes: [.font: UIFont.preferredFont(forTextStyle: .body),
-                                                                         .foregroundColor: UIColor.compound.textPrimary]))
-        }
+         init(text: String) {
+             _text = .init(initialValue: .init(string: text, attributes: [.font: UIFont.preferredFont(forTextStyle: .body),
+                                                                          .foregroundColor: UIColor.compound.textPrimary]))
+         }
 
-        var body: some View {
-            MessageComposerTextField(placeholder: "Placeholder",
-                                     text: $text,
-                                     presendCallback: .constant(nil),
-                                     selectedRange: .constant(NSRange(location: 0, length: 0)),
-                                     maxHeight: 300,
-                                     keyHandler: { _ in },
-                                     pasteHandler: { _ in })
-        }
-    }
-}
-*/
+         var body: some View {
+             MessageComposerTextField(placeholder: "Placeholder",
+                                      text: $text,
+                                      presendCallback: .constant(nil),
+                                      selectedRange: .constant(NSRange(location: 0, length: 0)),
+                                      maxHeight: 300,
+                                      keyHandler: { _ in },
+                                      pasteHandler: { _ in })
+         }
+     }
+ }
+ */

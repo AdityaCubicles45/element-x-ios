@@ -91,39 +91,39 @@ private struct PollProgressView: View {
 }
 
 /*
-struct PollOptionView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 8) {
-            Group {
-                PollOptionView(pollOption: .init(id: "1",
-                                                 text: "Italian 🇮🇹",
-                                                 votes: 1,
-                                                 allVotes: 10,
-                                                 isSelected: true,
-                                                 isWinning: false),
-                               showVotes: false,
-                               isFinalResult: false)
+ struct PollOptionView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 8) {
+             Group {
+                 PollOptionView(pollOption: .init(id: "1",
+                                                  text: "Italian 🇮🇹",
+                                                  votes: 1,
+                                                  allVotes: 10,
+                                                  isSelected: true,
+                                                  isWinning: false),
+                                showVotes: false,
+                                isFinalResult: false)
 
-                PollOptionView(pollOption: .init(id: "2",
-                                                 text: "Chinese 🇨🇳",
-                                                 votes: 9,
-                                                 allVotes: 10,
-                                                 isSelected: false,
-                                                 isWinning: true),
-                               showVotes: true,
-                               isFinalResult: false)
+                 PollOptionView(pollOption: .init(id: "2",
+                                                  text: "Chinese 🇨🇳",
+                                                  votes: 9,
+                                                  allVotes: 10,
+                                                  isSelected: false,
+                                                  isWinning: true),
+                                showVotes: true,
+                                isFinalResult: false)
 
-                PollOptionView(pollOption: .init(id: "2",
-                                                 text: "Chinese 🇨🇳",
-                                                 votes: 9,
-                                                 allVotes: 10,
-                                                 isSelected: false,
-                                                 isWinning: true),
-                               showVotes: true,
-                               isFinalResult: true)
-            }
-            .padding()
-        }
-    }
-}
-*/
+                 PollOptionView(pollOption: .init(id: "2",
+                                                  text: "Chinese 🇨🇳",
+                                                  votes: 9,
+                                                  allVotes: 10,
+                                                  isSelected: false,
+                                                  isWinning: true),
+                                showVotes: true,
+                                isFinalResult: true)
+             }
+             .padding()
+         }
+     }
+ }
+ */

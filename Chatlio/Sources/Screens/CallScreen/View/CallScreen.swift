@@ -334,35 +334,35 @@ private struct CallView: UIViewRepresentable {
 // MARK: - Previews
 
 /*
-struct CallScreen_Previews: PreviewProvider {
-    static let viewModel = {
-        let clientProxy = ClientProxyMock()
-        clientProxy.deviceID = "call-device-id"
+ struct CallScreen_Previews: PreviewProvider {
+     static let viewModel = {
+         let clientProxy = ClientProxyMock()
+         clientProxy.deviceID = "call-device-id"
         
-        let roomProxy = JoinedRoomProxyMock()
+         let roomProxy = JoinedRoomProxyMock()
         
-        let widgetDriver = ElementCallWidgetDriverMock()
-        widgetDriver.underlyingMessagePublisher = .init()
-        widgetDriver.underlyingActions = PassthroughSubject<ElementCallWidgetDriverAction, Never>().eraseToAnyPublisher()
-        widgetDriver.startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReturnValue = .success(URL.userDirectory)
+         let widgetDriver = ElementCallWidgetDriverMock()
+         widgetDriver.underlyingMessagePublisher = .init()
+         widgetDriver.underlyingActions = PassthroughSubject<ElementCallWidgetDriverAction, Never>().eraseToAnyPublisher()
+         widgetDriver.startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReturnValue = .success(URL.userDirectory)
         
-        roomProxy.elementCallWidgetDriverDeviceIDReturnValue = widgetDriver
+         roomProxy.elementCallWidgetDriverDeviceIDReturnValue = widgetDriver
         
-        return CallScreenViewModel(elementCallService: ElementCallServiceMock(.init()),
-                                   configuration: .init(roomProxy: roomProxy,
-                                                        clientProxy: clientProxy,
-                                                        clientID: "io.element.elementx",
-                                                        elementCallBaseURL: "https://call.element.io",
-                                                        elementCallBaseURLOverride: nil,
-                                                        colorScheme: .light),
-                                   allowPictureInPicture: false,
-                                   appHooks: AppHooks(),
-                                   appSettings: ServiceLocator.shared.settings,
-                                   analyticsService: ServiceLocator.shared.analytics)
-    }()
+         return CallScreenViewModel(elementCallService: ElementCallServiceMock(.init()),
+                                    configuration: .init(roomProxy: roomProxy,
+                                                         clientProxy: clientProxy,
+                                                         clientID: "io.element.elementx",
+                                                         elementCallBaseURL: "https://call.element.io",
+                                                         elementCallBaseURLOverride: nil,
+                                                         colorScheme: .light),
+                                    allowPictureInPicture: false,
+                                    appHooks: AppHooks(),
+                                    appSettings: ServiceLocator.shared.settings,
+                                    analyticsService: ServiceLocator.shared.analytics)
+     }()
     
-    static var previews: some View {
-        CallScreen(context: viewModel.context)
-    }
-}
-*/
+     static var previews: some View {
+         CallScreen(context: viewModel.context)
+     }
+ }
+ */

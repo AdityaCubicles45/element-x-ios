@@ -90,43 +90,43 @@ struct AppLockSetupPINScreen: View {
 // MARK: - Previews
 
 /*
-struct AppLockSetupPINScreen_Previews: PreviewProvider, TestablePreview {
-    static let service = AppLockServiceMock.mock()
-    static let failedService = AppLockServiceMock.mock(numberOfPINAttempts: 1)
+ struct AppLockSetupPINScreen_Previews: PreviewProvider, TestablePreview {
+     static let service = AppLockServiceMock.mock()
+     static let failedService = AppLockServiceMock.mock(numberOfPINAttempts: 1)
     
-    static let createViewModel = AppLockSetupPINScreenViewModel(initialMode: .create,
-                                                                isMandatory: false,
-                                                                appLockService: service)
-    static let confirmViewModel = AppLockSetupPINScreenViewModel(initialMode: .confirm,
+     static let createViewModel = AppLockSetupPINScreenViewModel(initialMode: .create,
                                                                  isMandatory: false,
                                                                  appLockService: service)
-    static let unlockViewModel = AppLockSetupPINScreenViewModel(initialMode: .unlock,
-                                                                isMandatory: false,
-                                                                appLockService: service)
-    static let unlockFailedViewModel = AppLockSetupPINScreenViewModel(initialMode: .unlock,
-                                                                      isMandatory: false,
-                                                                      appLockService: failedService)
+     static let confirmViewModel = AppLockSetupPINScreenViewModel(initialMode: .confirm,
+                                                                  isMandatory: false,
+                                                                  appLockService: service)
+     static let unlockViewModel = AppLockSetupPINScreenViewModel(initialMode: .unlock,
+                                                                 isMandatory: false,
+                                                                 appLockService: service)
+     static let unlockFailedViewModel = AppLockSetupPINScreenViewModel(initialMode: .unlock,
+                                                                       isMandatory: false,
+                                                                       appLockService: failedService)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            AppLockSetupPINScreen(context: createViewModel.context)
-        }
-        .previewDisplayName("Create")
+     static var previews: some View {
+         ElementNavigationStack {
+             AppLockSetupPINScreen(context: createViewModel.context)
+         }
+         .previewDisplayName("Create")
         
-        ElementNavigationStack {
-            AppLockSetupPINScreen(context: confirmViewModel.context)
-        }
-        .previewDisplayName("Confirm")
+         ElementNavigationStack {
+             AppLockSetupPINScreen(context: confirmViewModel.context)
+         }
+         .previewDisplayName("Confirm")
         
-        ElementNavigationStack {
-            AppLockSetupPINScreen(context: unlockViewModel.context)
-        }
-        .previewDisplayName("Unlock")
+         ElementNavigationStack {
+             AppLockSetupPINScreen(context: unlockViewModel.context)
+         }
+         .previewDisplayName("Unlock")
         
-        ElementNavigationStack {
-            AppLockSetupPINScreen(context: unlockFailedViewModel.context)
-        }
-        .previewDisplayName("Unlock Failed")
-    }
-}
-*/
+         ElementNavigationStack {
+             AppLockSetupPINScreen(context: unlockFailedViewModel.context)
+         }
+         .previewDisplayName("Unlock Failed")
+     }
+ }
+ */

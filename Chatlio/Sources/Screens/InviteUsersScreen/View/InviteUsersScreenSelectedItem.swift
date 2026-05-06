@@ -48,18 +48,18 @@ struct InviteUsersScreenSelectedItem: View {
 }
 
 /*
-struct InviteUsersScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
-    static let people: [UserProfileProxy] = [.mockAlice, .mockVerbose]
+ struct InviteUsersScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
+     static let people: [UserProfileProxy] = [.mockAlice, .mockVerbose]
     
-    static var previews: some View {
-        ScrollView(.horizontal) {
-            HStack(spacing: 8) {
-                ForEach(people, id: \.userID) { user in
-                    InviteUsersScreenSelectedItem(user: user, mediaProvider: MediaProviderMock(configuration: .init())) { }
-                        .frame(width: 80)
-                }
-            }
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ScrollView(.horizontal) {
+             HStack(spacing: 8) {
+                 ForEach(people, id: \.userID) { user in
+                     InviteUsersScreenSelectedItem(user: user, mediaProvider: MediaProviderMock(configuration: .init())) { }
+                         .frame(width: 80)
+                 }
+             }
+         }
+     }
+ }
+ */

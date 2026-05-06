@@ -23,23 +23,23 @@ final class PillContext: ObservableObject {
 }
 
 /*
-extension PillContext {
-    static func mock(viewState: PillViewState, delay: Duration? = nil) -> PillContext {
-        // This is just for previews so the internal data doesn't really matter
-        let viewModel = PillContext(timelineContext: TimelineViewModel.mock.context, data: PillTextAttachmentData(type: .allUsers, font: .preferredFont(forTextStyle: .body)))
-        if let delay {
-            viewModel.viewState = .mention(isOwnMention: false, displayText: "placeholder")
-            Task {
-                try? await Task.sleep(for: delay)
-                viewModel.viewState = viewState
-            }
-        } else {
-            viewModel.viewState = viewState
-        }
-        return viewModel
-    }
-}
-*/
+ extension PillContext {
+     static func mock(viewState: PillViewState, delay: Duration? = nil) -> PillContext {
+         // This is just for previews so the internal data doesn't really matter
+         let viewModel = PillContext(timelineContext: TimelineViewModel.mock.context, data: PillTextAttachmentData(type: .allUsers, font: .preferredFont(forTextStyle: .body)))
+         if let delay {
+             viewModel.viewState = .mention(isOwnMention: false, displayText: "placeholder")
+             Task {
+                 try? await Task.sleep(for: delay)
+                 viewModel.viewState = viewState
+             }
+         } else {
+             viewModel.viewState = viewState
+         }
+         return viewModel
+     }
+ }
+ */
 
 enum PillViewState: Equatable {
     case mention(isOwnMention: Bool, displayText: String)

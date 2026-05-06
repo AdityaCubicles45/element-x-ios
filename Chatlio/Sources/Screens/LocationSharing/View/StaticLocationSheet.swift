@@ -101,18 +101,18 @@ private struct UserLocationCell: View {
 }
 
 /*
-/*
-struct StaticLocationSheet_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation, senderID: RoomMemberProxyMock.mockMe.userID)
+ /*
+ struct StaticLocationSheet_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation, senderID: RoomMemberProxyMock.mockMe.userID)
     
-    static let pinViewModel = LocationSharingScreenViewModel.mock(type: .staticPinLocation)
+     static let pinViewModel = LocationSharingScreenViewModel.mock(type: .staticPinLocation)
     
-    static var previews: some View {
-        StaticLocationSheet(context: viewModel.context)
-            .previewDisplayName("Static own location")
-        StaticLocationSheet(context: pinViewModel.context)
-            .previewDisplayName("Static pin location")
-    }
-}
-*/
-*/
+     static var previews: some View {
+         StaticLocationSheet(context: viewModel.context)
+             .previewDisplayName("Static own location")
+         StaticLocationSheet(context: pinViewModel.context)
+             .previewDisplayName("Static pin location")
+     }
+ }
+ */
+ */

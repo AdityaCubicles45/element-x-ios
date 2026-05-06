@@ -62,17 +62,17 @@ private extension FormatItem {
 }
 
 /*
-struct FormattingToolbar_Previews: PreviewProvider, TestablePreview {
-    static let items = FormatType.allCases.map { FormatItem(type: $0, state: .enabled) }
-    static let reversedItems = FormatType.allCases.map { FormatItem(type: $0, state: .reversed) }
-    static let disabledItems = FormatType.allCases.map { FormatItem(type: $0, state: .disabled) }
+ struct FormattingToolbar_Previews: PreviewProvider, TestablePreview {
+     static let items = FormatType.allCases.map { FormatItem(type: $0, state: .enabled) }
+     static let reversedItems = FormatType.allCases.map { FormatItem(type: $0, state: .reversed) }
+     static let disabledItems = FormatType.allCases.map { FormatItem(type: $0, state: .disabled) }
     
-    static var previews: some View {
-        VStack(spacing: 16.0) {
-            FormattingToolbar(formatItems: items) { _ in }
-            FormattingToolbar(formatItems: reversedItems) { _ in }
-            FormattingToolbar(formatItems: disabledItems) { _ in }
-        }
-    }
-}
-*/
+     static var previews: some View {
+         VStack(spacing: 16.0) {
+             FormattingToolbar(formatItems: items) { _ in }
+             FormattingToolbar(formatItems: reversedItems) { _ in }
+             FormattingToolbar(formatItems: disabledItems) { _ in }
+         }
+     }
+ }
+ */

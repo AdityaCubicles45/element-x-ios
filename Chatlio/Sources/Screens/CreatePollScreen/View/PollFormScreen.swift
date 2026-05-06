@@ -198,41 +198,41 @@ private struct PollFormOptionRow: View {
 // MARK: - Previews
 
 /*
-struct PollFormScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel(mode: .new)
-    static let editViewModel = makeViewModel(mode: .edit(eventID: "1234", poll: poll))
-    static let poll = Poll(question: "Cats or Dogs?",
-                           kind: .disclosed,
-                           maxSelections: 1,
-                           options: [
-                               .init(id: "0", text: "Cats", votes: 0, allVotes: 0, isSelected: false, isWinning: false),
-                               .init(id: "0", text: "Dogs", votes: 0, allVotes: 0, isSelected: false, isWinning: false),
-                               .init(id: "0", text: "Fish", votes: 0, allVotes: 0, isSelected: false, isWinning: false)
-                           ],
-                           votes: [:],
-                           endDate: nil,
-                           createdByAccountOwner: true)
+ struct PollFormScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel(mode: .new)
+     static let editViewModel = makeViewModel(mode: .edit(eventID: "1234", poll: poll))
+     static let poll = Poll(question: "Cats or Dogs?",
+                            kind: .disclosed,
+                            maxSelections: 1,
+                            options: [
+                                .init(id: "0", text: "Cats", votes: 0, allVotes: 0, isSelected: false, isWinning: false),
+                                .init(id: "0", text: "Dogs", votes: 0, allVotes: 0, isSelected: false, isWinning: false),
+                                .init(id: "0", text: "Fish", votes: 0, allVotes: 0, isSelected: false, isWinning: false)
+                            ],
+                            votes: [:],
+                            endDate: nil,
+                            createdByAccountOwner: true)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            PollFormScreen(context: viewModel.context)
-        }
-        .previewDisplayName("New")
+     static var previews: some View {
+         ElementNavigationStack {
+             PollFormScreen(context: viewModel.context)
+         }
+         .previewDisplayName("New")
         
-        ElementNavigationStack {
-            PollFormScreen(context: editViewModel.context)
-        }
-        .previewDisplayName("Edit")
-    }
+         ElementNavigationStack {
+             PollFormScreen(context: editViewModel.context)
+         }
+         .previewDisplayName("Edit")
+     }
     
-    static func makeViewModel(mode: PollFormMode) -> PollFormScreenViewModel {
-        PollFormScreenViewModel(mode: mode,
-                                timelineController: MockTimelineController(),
-                                analytics: ServiceLocator.shared.analytics,
-                                userIndicatorController: UserIndicatorControllerMock())
-    }
-}
-*/
+     static func makeViewModel(mode: PollFormMode) -> PollFormScreenViewModel {
+         PollFormScreenViewModel(mode: mode,
+                                 timelineController: MockTimelineController(),
+                                 analytics: ServiceLocator.shared.analytics,
+                                 userIndicatorController: UserIndicatorControllerMock())
+     }
+ }
+ */
 
 private extension Binding where Value == String {
     func limited(to limit: Int) -> Self {

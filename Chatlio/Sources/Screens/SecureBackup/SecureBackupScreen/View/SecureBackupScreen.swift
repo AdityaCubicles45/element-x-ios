@@ -117,47 +117,47 @@ struct SecureBackupScreen: View {
 // MARK: - Previews
 
 /*
-struct SecureBackupScreen_Previews: PreviewProvider, TestablePreview {
-    static let bothSetupViewModel = viewModel(keyBackupState: .enabled, recoveryState: .enabled)
-    static let onlyKeyBackupSetUpViewModel = viewModel(keyBackupState: .enabled, recoveryState: .disabled)
-    static let keyBackupDisabledViewModel = viewModel(keyBackupState: .unknown, recoveryState: .disabled)
-    static let recoveryIncompleteViewModel = viewModel(keyBackupState: .enabled, recoveryState: .incomplete)
+ struct SecureBackupScreen_Previews: PreviewProvider, TestablePreview {
+     static let bothSetupViewModel = viewModel(keyBackupState: .enabled, recoveryState: .enabled)
+     static let onlyKeyBackupSetUpViewModel = viewModel(keyBackupState: .enabled, recoveryState: .disabled)
+     static let keyBackupDisabledViewModel = viewModel(keyBackupState: .unknown, recoveryState: .disabled)
+     static let recoveryIncompleteViewModel = viewModel(keyBackupState: .enabled, recoveryState: .incomplete)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SecureBackupScreen(context: bothSetupViewModel.context)
-        }
-        .snapshotPreferences(expect: bothSetupViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .enabled })
-        .previewDisplayName("Both setup")
+     static var previews: some View {
+         ElementNavigationStack {
+             SecureBackupScreen(context: bothSetupViewModel.context)
+         }
+         .snapshotPreferences(expect: bothSetupViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .enabled })
+         .previewDisplayName("Both setup")
         
-        ElementNavigationStack {
-            SecureBackupScreen(context: onlyKeyBackupSetUpViewModel.context)
-        }
-        .snapshotPreferences(expect: onlyKeyBackupSetUpViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .enabled })
-        .previewDisplayName("Only key backup setup")
+         ElementNavigationStack {
+             SecureBackupScreen(context: onlyKeyBackupSetUpViewModel.context)
+         }
+         .snapshotPreferences(expect: onlyKeyBackupSetUpViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .enabled })
+         .previewDisplayName("Only key backup setup")
         
-        ElementNavigationStack {
-            SecureBackupScreen(context: keyBackupDisabledViewModel.context)
-        }
-        .snapshotPreferences(expect: keyBackupDisabledViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .unknown })
-        .previewDisplayName("Key backup disabled")
+         ElementNavigationStack {
+             SecureBackupScreen(context: keyBackupDisabledViewModel.context)
+         }
+         .snapshotPreferences(expect: keyBackupDisabledViewModel.context.observe(\.viewState.keyBackupState).map { $0 == .unknown })
+         .previewDisplayName("Key backup disabled")
         
-        ElementNavigationStack {
-            SecureBackupScreen(context: recoveryIncompleteViewModel.context)
-        }
-        .snapshotPreferences(expect: recoveryIncompleteViewModel.context.observe(\.viewState.recoveryState).map { $0 == .incomplete })
-        .previewDisplayName("Recovery incomplete")
-    }
+         ElementNavigationStack {
+             SecureBackupScreen(context: recoveryIncompleteViewModel.context)
+         }
+         .snapshotPreferences(expect: recoveryIncompleteViewModel.context.observe(\.viewState.recoveryState).map { $0 == .incomplete })
+         .previewDisplayName("Recovery incomplete")
+     }
     
-    static func viewModel(keyBackupState: SecureBackupKeyBackupState,
-                          recoveryState: SecureBackupRecoveryState) -> SecureBackupScreenViewModelType {
-        let backupController = SecureBackupControllerMock()
-        backupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(keyBackupState).asCurrentValuePublisher()
-        backupController.underlyingRecoveryState = CurrentValueSubject<SecureBackupRecoveryState, Never>(recoveryState).asCurrentValuePublisher()
+     static func viewModel(keyBackupState: SecureBackupKeyBackupState,
+                           recoveryState: SecureBackupRecoveryState) -> SecureBackupScreenViewModelType {
+         let backupController = SecureBackupControllerMock()
+         backupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(keyBackupState).asCurrentValuePublisher()
+         backupController.underlyingRecoveryState = CurrentValueSubject<SecureBackupRecoveryState, Never>(recoveryState).asCurrentValuePublisher()
         
-        return SecureBackupScreenViewModel(secureBackupController: backupController,
-                                           userIndicatorController: UserIndicatorControllerMock(),
-                                           chatBackupDetailsURL: .sharedPublicDirectory)
-    }
-}
-*/
+         return SecureBackupScreenViewModel(secureBackupController: backupController,
+                                            userIndicatorController: UserIndicatorControllerMock(),
+                                            chatBackupDetailsURL: .sharedPublicDirectory)
+     }
+ }
+ */

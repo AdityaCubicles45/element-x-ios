@@ -174,73 +174,73 @@ struct TimelineMediaPreviewDetailsView: View {
 import UniformTypeIdentifiers
 
 /*
-struct TimelineMediaPreviewDetailsView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel(contentType: .jpeg, isOutgoing: true)
-    static let loadingViewModel = makeViewModel(contentType: .jpeg, isOutgoing: true, isDownloaded: false)
-    static let unknownTypeViewModel = makeViewModel()
-    static let presentedOnRoomViewModel = makeViewModel(isPresentedOnRoomScreen: true)
+ struct TimelineMediaPreviewDetailsView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel(contentType: .jpeg, isOutgoing: true)
+     static let loadingViewModel = makeViewModel(contentType: .jpeg, isOutgoing: true, isDownloaded: false)
+     static let unknownTypeViewModel = makeViewModel()
+     static let presentedOnRoomViewModel = makeViewModel(isPresentedOnRoomScreen: true)
     
-    @State static var sheetHeight: CGFloat = .zero
+     @State static var sheetHeight: CGFloat = .zero
     
-    static var previews: some View {
-        if case let .media(mediaItem) = viewModel.state.currentItem {
-            TimelineMediaPreviewDetailsView(item: mediaItem, context: viewModel.context, sheetHeight: $sheetHeight)
-                .previewDisplayName("Image")
-                .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
-        }
+     static var previews: some View {
+         if case let .media(mediaItem) = viewModel.state.currentItem {
+             TimelineMediaPreviewDetailsView(item: mediaItem, context: viewModel.context, sheetHeight: $sheetHeight)
+                 .previewDisplayName("Image")
+                 .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
+         }
         
-        if case let .media(mediaItem) = loadingViewModel.state.currentItem {
-            TimelineMediaPreviewDetailsView(item: mediaItem, context: loadingViewModel.context, sheetHeight: $sheetHeight)
-                .previewDisplayName("Loading")
-        }
+         if case let .media(mediaItem) = loadingViewModel.state.currentItem {
+             TimelineMediaPreviewDetailsView(item: mediaItem, context: loadingViewModel.context, sheetHeight: $sheetHeight)
+                 .previewDisplayName("Loading")
+         }
         
-        if case let .media(mediaItem) = unknownTypeViewModel.state.currentItem {
-            TimelineMediaPreviewDetailsView(item: mediaItem, context: unknownTypeViewModel.context, sheetHeight: $sheetHeight)
-                .previewDisplayName("Unknown type")
-                .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
-        }
+         if case let .media(mediaItem) = unknownTypeViewModel.state.currentItem {
+             TimelineMediaPreviewDetailsView(item: mediaItem, context: unknownTypeViewModel.context, sheetHeight: $sheetHeight)
+                 .previewDisplayName("Unknown type")
+                 .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
+         }
         
-        if case let .media(mediaItem) = presentedOnRoomViewModel.state.currentItem {
-            TimelineMediaPreviewDetailsView(item: mediaItem, context: presentedOnRoomViewModel.context, sheetHeight: $sheetHeight)
-                .previewDisplayName("Incoming on Room")
-                .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
-        }
-    }
+         if case let .media(mediaItem) = presentedOnRoomViewModel.state.currentItem {
+             TimelineMediaPreviewDetailsView(item: mediaItem, context: presentedOnRoomViewModel.context, sheetHeight: $sheetHeight)
+                 .previewDisplayName("Incoming on Room")
+                 .snapshotPreferences(expect: mediaItem.observe(\.fileHandle).map { $0 != nil })
+         }
+     }
     
-    static func makeViewModel(contentType: UTType? = nil,
-                              isOutgoing: Bool = false,
-                              isDownloaded: Bool = true,
-                              isPresentedOnRoomScreen: Bool = false) -> TimelineMediaPreviewViewModel {
-        let item = ImageRoomTimelineItem(id: .randomEvent,
-                                         timestamp: .mock,
-                                         isOutgoing: isOutgoing,
-                                         isEditable: true,
-                                         canBeRepliedTo: true,
-                                         sender: .init(id: "@alice:matrix.org",
-                                                       displayName: "Alice",
-                                                       avatarURL: .mockMXCUserAvatar),
-                                         content: .init(filename: "Amazing Image.jpeg",
-                                                        imageInfo: .mockImage,
-                                                        thumbnailInfo: .mockThumbnail,
-                                                        contentType: contentType))
+     static func makeViewModel(contentType: UTType? = nil,
+                               isOutgoing: Bool = false,
+                               isDownloaded: Bool = true,
+                               isPresentedOnRoomScreen: Bool = false) -> TimelineMediaPreviewViewModel {
+         let item = ImageRoomTimelineItem(id: .randomEvent,
+                                          timestamp: .mock,
+                                          isOutgoing: isOutgoing,
+                                          isEditable: true,
+                                          canBeRepliedTo: true,
+                                          sender: .init(id: "@alice:matrix.org",
+                                                        displayName: "Alice",
+                                                        avatarURL: .mockMXCUserAvatar),
+                                          content: .init(filename: "Amazing Image.jpeg",
+                                                         imageInfo: .mockImage,
+                                                         thumbnailInfo: .mockThumbnail,
+                                                         contentType: contentType))
         
-        let timelineKind = TimelineKind.media(isPresentedOnRoomScreen ? .roomScreenLive : .mediaFilesScreen)
-        let timelineController = MockTimelineController(timelineKind: timelineKind)
-        timelineController.timelineItems = [item]
+         let timelineKind = TimelineKind.media(isPresentedOnRoomScreen ? .roomScreenLive : .mediaFilesScreen)
+         let timelineController = MockTimelineController(timelineKind: timelineKind)
+         timelineController.timelineItems = [item]
         
-        let viewModel = TimelineMediaPreviewViewModel(initialItem: item,
-                                                      timelineViewModel: TimelineViewModel.mock(timelineKind: timelineKind,
-                                                                                                timelineController: timelineController),
-                                                      mediaProvider: MediaProviderMock(configuration: .init()),
-                                                      photoLibraryManager: PhotoLibraryManagerMock(.init()),
-                                                      userIndicatorController: UserIndicatorControllerMock(),
-                                                      appMediator: AppMediatorMock())
+         let viewModel = TimelineMediaPreviewViewModel(initialItem: item,
+                                                       timelineViewModel: TimelineViewModel.mock(timelineKind: timelineKind,
+                                                                                                 timelineController: timelineController),
+                                                       mediaProvider: MediaProviderMock(configuration: .init()),
+                                                       photoLibraryManager: PhotoLibraryManagerMock(.init()),
+                                                       userIndicatorController: UserIndicatorControllerMock(),
+                                                       appMediator: AppMediatorMock())
         
-        if isDownloaded {
-            viewModel.context.send(viewAction: .updateCurrentItem(viewModel.state.currentItem))
-        }
+         if isDownloaded {
+             viewModel.context.send(viewAction: .updateCurrentItem(viewModel.state.currentItem))
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

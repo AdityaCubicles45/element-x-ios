@@ -126,41 +126,41 @@ class LocationSharingScreenViewModel: LocationSharingScreenViewModelType, Locati
 }
 
 /*
-extension LocationSharingScreenViewModel {
-    enum MockType {
-        case picker
-        case staticSenderLocation
-        case staticPinLocation
-    }
+ extension LocationSharingScreenViewModel {
+     enum MockType {
+         case picker
+         case staticSenderLocation
+         case staticPinLocation
+     }
     
-    static func mock(type: MockType,
-                     senderID: String = "@dan:matrix.org",
-                     liveLocationSharingEnabled: Bool = true) -> LocationSharingScreenViewModel {
-        let interactionMode: LocationSharingInteractionMode = switch type {
-        case .picker:
-            .picker
-        case .staticPinLocation:
-            .viewStatic(.init(sender: .init(id: senderID),
-                              geoURI: .init(latitude: 41.9027835,
-                                            longitude: 12.4963655),
-                              kind: .pin,
-                              timestamp: .mock))
-        case .staticSenderLocation:
-            .viewStatic(.init(sender: .init(id: senderID),
-                              geoURI: .init(latitude: 41.9027835,
-                                            longitude: 12.4963655),
-                              kind: .sender,
-                              timestamp: .mock))
-        }
+     static func mock(type: MockType,
+                      senderID: String = "@dan:matrix.org",
+                      liveLocationSharingEnabled: Bool = true) -> LocationSharingScreenViewModel {
+         let interactionMode: LocationSharingInteractionMode = switch type {
+         case .picker:
+             .picker
+         case .staticPinLocation:
+             .viewStatic(.init(sender: .init(id: senderID),
+                               geoURI: .init(latitude: 41.9027835,
+                                             longitude: 12.4963655),
+                               kind: .pin,
+                               timestamp: .mock))
+         case .staticSenderLocation:
+             .viewStatic(.init(sender: .init(id: senderID),
+                               geoURI: .init(latitude: 41.9027835,
+                                             longitude: 12.4963655),
+                               kind: .sender,
+                               timestamp: .mock))
+         }
         
-        return LocationSharingScreenViewModel(interactionMode: interactionMode,
-                                              mapURLBuilder: ServiceLocator.shared.settings.mapTilerConfiguration,
-                                              liveLocationSharingEnabled: liveLocationSharingEnabled,
-                                              roomProxy: JoinedRoomProxyMock(.init()),
-                                              timelineController: MockTimelineController(),
-                                              analytics: ServiceLocator.shared.analytics,
-                                              userIndicatorController: UserIndicatorControllerMock(),
-                                              mediaProvider: MediaProviderMock(configuration: .init()))
-    }
-}
-*/
+         return LocationSharingScreenViewModel(interactionMode: interactionMode,
+                                               mapURLBuilder: ServiceLocator.shared.settings.mapTilerConfiguration,
+                                               liveLocationSharingEnabled: liveLocationSharingEnabled,
+                                               roomProxy: JoinedRoomProxyMock(.init()),
+                                               timelineController: MockTimelineController(),
+                                               analytics: ServiceLocator.shared.analytics,
+                                               userIndicatorController: UserIndicatorControllerMock(),
+                                               mediaProvider: MediaProviderMock(configuration: .init()))
+     }
+ }
+ */

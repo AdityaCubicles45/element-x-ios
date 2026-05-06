@@ -168,15 +168,15 @@ class MediaPreviewItem: NSObject, QLPreviewItem {
 // MARK: - Previews
 
 /*
-struct PreviewView_Previews: PreviewProvider {
-    static let previewURL: URL = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-    static let previewItem = MediaPreviewItem(file: .unmanaged(url: previewURL),
-                                              title: "Important Document")
+ struct PreviewView_Previews: PreviewProvider {
+     static let previewURL: URL = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+     static let previewItem = MediaPreviewItem(file: .unmanaged(url: previewURL),
+                                               title: "Important Document")
     
-    static var previews: some View {
-        MediaPreviewViewController(previewItem: previewItem,
-                                   allowEditing: false,
-                                   dismissalPublisher: .init()) { }
-    }
-}
-*/
+     static var previews: some View {
+         MediaPreviewViewController(previewItem: previewItem,
+                                    allowEditing: false,
+                                    dismissalPublisher: .init()) { }
+     }
+ }
+ */

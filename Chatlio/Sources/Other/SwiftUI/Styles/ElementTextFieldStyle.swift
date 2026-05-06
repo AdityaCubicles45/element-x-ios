@@ -185,35 +185,35 @@ struct ElementTextFieldStyle: @MainActor TextFieldStyle {
 }
 
 /*
-struct ElementTextFieldStyle_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 20) {
-            // Plain text field.
-            TextField("Placeholder", text: .constant(""))
-                .textFieldStyle(.element())
-            TextField("Placeholder", text: .constant("Web"))
-                .textFieldStyle(.element())
-            TextField("Placeholder", text: .constant("Web"))
-                .textFieldStyle(.element())
-                .disabled(true)
-            TextField("Placeholder", text: .constant("Web"))
-                .textFieldStyle(.element(state: .error))
+ struct ElementTextFieldStyle_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 20) {
+             // Plain text field.
+             TextField("Placeholder", text: .constant(""))
+                 .textFieldStyle(.element())
+             TextField("Placeholder", text: .constant("Web"))
+                 .textFieldStyle(.element())
+             TextField("Placeholder", text: .constant("Web"))
+                 .textFieldStyle(.element())
+                 .disabled(true)
+             TextField("Placeholder", text: .constant("Web"))
+                 .textFieldStyle(.element(state: .error))
             
-            // Text field with labels
-            TextField("Placeholder", text: .constant(""))
-                .textFieldStyle(.element(labelText: "Label", footerText: "Footer"))
-            TextField("Placeholder", text: .constant("Input text"))
-                .textFieldStyle(.element(labelText: "Title", footerText: "Footer"))
-            TextField("Placeholder", text: .constant("Bad text"))
-                .textFieldStyle(.element(labelText: "Title", footerText: "Footer", state: .error))
-            TextField("Placeholder", text: .constant(""))
-                .textFieldStyle(.element(labelText: "Title", footerText: "Footer"))
-                .disabled(true)
-            TextField("Placeholder", text: .constant(""))
-                .textFieldStyle(.element(labelText: "Title", footerText: "Footer", state: .success))
-        }
-        .previewLayout(.sizeThatFits)
-        .padding()
-    }
-}
-*/
+             // Text field with labels
+             TextField("Placeholder", text: .constant(""))
+                 .textFieldStyle(.element(labelText: "Label", footerText: "Footer"))
+             TextField("Placeholder", text: .constant("Input text"))
+                 .textFieldStyle(.element(labelText: "Title", footerText: "Footer"))
+             TextField("Placeholder", text: .constant("Bad text"))
+                 .textFieldStyle(.element(labelText: "Title", footerText: "Footer", state: .error))
+             TextField("Placeholder", text: .constant(""))
+                 .textFieldStyle(.element(labelText: "Title", footerText: "Footer"))
+                 .disabled(true)
+             TextField("Placeholder", text: .constant(""))
+                 .textFieldStyle(.element(labelText: "Title", footerText: "Footer", state: .success))
+         }
+         .previewLayout(.sizeThatFits)
+         .padding()
+     }
+ }
+ */

@@ -110,20 +110,20 @@ extension VoiceMessageButton.State {
 }
 
 /*
-struct VoiceMessageButton_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 8) {
-            HStack(spacing: 8) {
-                VoiceMessageButton(state: .paused, size: .small) { }
-                VoiceMessageButton(state: .paused, size: .medium) { }
-            }
-            HStack(spacing: 8) {
-                VoiceMessageButton(state: .playing, size: .small) { }
-                VoiceMessageButton(state: .playing, size: .medium) { }
-            }
-        }
-        .padding()
-        .background(.compound.bgSubtleSecondary)
-    }
-}
-*/
+ struct VoiceMessageButton_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 8) {
+             HStack(spacing: 8) {
+                 VoiceMessageButton(state: .paused, size: .small) { }
+                 VoiceMessageButton(state: .paused, size: .medium) { }
+             }
+             HStack(spacing: 8) {
+                 VoiceMessageButton(state: .playing, size: .small) { }
+                 VoiceMessageButton(state: .playing, size: .medium) { }
+             }
+         }
+         .padding()
+         .background(.compound.bgSubtleSecondary)
+     }
+ }
+ */

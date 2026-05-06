@@ -55,18 +55,18 @@ struct RoomListFiltersEmptyStateView: View {
 }
 
 /*
-struct RoomListFiltersEmptyStateView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 24) {
-            ForEach(RoomListFilter.allCases) { filter in
-                RoomListFiltersEmptyStateView(state: .init(activeFilters: [filter],
-                                                           appSettings: ServiceLocator.shared.settings))
-            }
-            RoomListFiltersEmptyStateView(state: .init(activeFilters: [.people, .favourites],
-                                                       appSettings: ServiceLocator.shared.settings))
-        }
-        .padding(.bottom)
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+ struct RoomListFiltersEmptyStateView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 24) {
+             ForEach(RoomListFilter.allCases) { filter in
+                 RoomListFiltersEmptyStateView(state: .init(activeFilters: [filter],
+                                                            appSettings: ServiceLocator.shared.settings))
+             }
+             RoomListFiltersEmptyStateView(state: .init(activeFilters: [.people, .favourites],
+                                                        appSettings: ServiceLocator.shared.settings))
+         }
+         .padding(.bottom)
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

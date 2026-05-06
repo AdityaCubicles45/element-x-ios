@@ -52,19 +52,19 @@ struct CallNotificationRoomTimelineView: View {
 }
 
 /*
-struct CallNotificationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct CallNotificationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        body.environmentObject(viewModel.context)
-    }
+     static var previews: some View {
+         body.environmentObject(viewModel.context)
+     }
     
-    static var body: some View {
-        CallNotificationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                             timestamp: .mock,
-                                                             isEditable: false,
-                                                             canBeRepliedTo: false,
-                                                             sender: .init(id: "Bob")))
-    }
-}
-*/
+     static var body: some View {
+         CallNotificationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                              timestamp: .mock,
+                                                              isEditable: false,
+                                                              canBeRepliedTo: false,
+                                                              sender: .init(id: "Bob")))
+     }
+ }
+ */

@@ -154,25 +154,25 @@ struct BugReportScreen: View {
 // MARK: - Previews
 
 /*
-struct BugReportScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ElementNavigationStack {
-            let clientProxy = ClientProxyMock(.init(userID: "@mock:client.com", roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))))
-            BugReportScreen(context: BugReportScreenViewModel(bugReportService: BugReportServiceMock(.init()),
-                                                              clientProxy: clientProxy,
-                                                              screenshot: nil,
-                                                              isModallyPresented: false).context)
-        }
-        .previewDisplayName("Without Screenshot")
+ struct BugReportScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ElementNavigationStack {
+             let clientProxy = ClientProxyMock(.init(userID: "@mock:client.com", roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))))
+             BugReportScreen(context: BugReportScreenViewModel(bugReportService: BugReportServiceMock(.init()),
+                                                               clientProxy: clientProxy,
+                                                               screenshot: nil,
+                                                               isModallyPresented: false).context)
+         }
+         .previewDisplayName("Without Screenshot")
         
-        ElementNavigationStack {
-            let clientProxy = ClientProxyMock(.init(userID: "@mock:client.com", roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))))
-            BugReportScreen(context: BugReportScreenViewModel(bugReportService: BugReportServiceMock(.init()),
-                                                              clientProxy: clientProxy,
-                                                              screenshot: Asset.Images.appLogo.image,
-                                                              isModallyPresented: false).context)
-        }
-        .previewDisplayName("With Screenshot")
-    }
-}
-*/
+         ElementNavigationStack {
+             let clientProxy = ClientProxyMock(.init(userID: "@mock:client.com", roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))))
+             BugReportScreen(context: BugReportScreenViewModel(bugReportService: BugReportServiceMock(.init()),
+                                                               clientProxy: clientProxy,
+                                                               screenshot: Asset.Images.appLogo.image,
+                                                               isModallyPresented: false).context)
+         }
+         .previewDisplayName("With Screenshot")
+     }
+ }
+ */

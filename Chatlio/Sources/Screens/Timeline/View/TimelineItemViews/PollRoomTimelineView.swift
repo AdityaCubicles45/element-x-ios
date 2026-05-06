@@ -52,38 +52,38 @@ struct PollRoomTimelineView: View {
 }
 
 /*
-struct PollRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
-    static let pinnedEventsTimelineViewModel = TimelineViewModel.mock(timelineKind: .pinned)
+ struct PollRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
+     static let pinnedEventsTimelineViewModel = TimelineViewModel.mock(timelineKind: .pinned)
 
-    static var previews: some View {
-        PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(), isOutgoing: false))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Disclosed, Bubble")
+     static var previews: some View {
+         PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(), isOutgoing: false))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Disclosed, Bubble")
 
-        PollRoomTimelineView(timelineItem: .mock(poll: .undisclosed(), isOutgoing: false))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Undisclosed, Bubble")
+         PollRoomTimelineView(timelineItem: .mock(poll: .undisclosed(), isOutgoing: false))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Undisclosed, Bubble")
 
-        PollRoomTimelineView(timelineItem: .mock(poll: .endedDisclosed))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Ended, Disclosed, Bubble")
+         PollRoomTimelineView(timelineItem: .mock(poll: .endedDisclosed))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Ended, Disclosed, Bubble")
 
-        PollRoomTimelineView(timelineItem: .mock(poll: .endedUndisclosed))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Ended, Undisclosed, Bubble")
+         PollRoomTimelineView(timelineItem: .mock(poll: .endedUndisclosed))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Ended, Undisclosed, Bubble")
 
-        PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(createdByAccountOwner: true)))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Creator, disclosed, Bubble")
+         PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(createdByAccountOwner: true)))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Creator, disclosed, Bubble")
         
-        PollRoomTimelineView(timelineItem: .mock(poll: .emptyDisclosed, isEditable: true))
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Creator, no votes, Bubble")
+         PollRoomTimelineView(timelineItem: .mock(poll: .emptyDisclosed, isEditable: true))
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Creator, no votes, Bubble")
         
-        PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(), isEditable: true))
-            .environmentObject(pinnedEventsTimelineViewModel.context)
-            .previewDisplayName("Preview")
-    }
-}
-*/
+         PollRoomTimelineView(timelineItem: .mock(poll: .disclosed(), isEditable: true))
+             .environmentObject(pinnedEventsTimelineViewModel.context)
+             .previewDisplayName("Preview")
+     }
+ }
+ */

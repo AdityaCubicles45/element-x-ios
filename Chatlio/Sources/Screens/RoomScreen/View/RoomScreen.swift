@@ -194,62 +194,62 @@ struct RoomScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModels = makeViewModels()
-    static let readOnlyViewModels = makeViewModels(canSendMessage: false)
-    static let tombstonedViewModels = makeViewModels(hasSuccessor: true)
-    static let composerViewModel = ComposerToolbarViewModel.mock()
+ struct RoomScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModels = makeViewModels()
+     static let readOnlyViewModels = makeViewModels(canSendMessage: false)
+     static let tombstonedViewModels = makeViewModels(hasSuccessor: true)
+     static let composerViewModel = ComposerToolbarViewModel.mock()
 
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomScreen(context: viewModels.room.context,
-                       timelineContext: viewModels.timeline.context,
-                       composerToolbar: ComposerToolbar(context: composerViewModel.context))
-        }
-        .previewDisplayName("Normal")
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomScreen(context: viewModels.room.context,
+                        timelineContext: viewModels.timeline.context,
+                        composerToolbar: ComposerToolbar(context: composerViewModel.context))
+         }
+         .previewDisplayName("Normal")
         
-        ElementNavigationStack {
-            RoomScreen(context: readOnlyViewModels.room.context,
-                       timelineContext: readOnlyViewModels.timeline.context,
-                       composerToolbar: ComposerToolbar(context: composerViewModel.context))
-        }
-        .previewDisplayName("Read-only")
-        .snapshotPreferences(expect: readOnlyViewModels.room.context.$viewState.map { !$0.canSendMessage })
+         ElementNavigationStack {
+             RoomScreen(context: readOnlyViewModels.room.context,
+                        timelineContext: readOnlyViewModels.timeline.context,
+                        composerToolbar: ComposerToolbar(context: composerViewModel.context))
+         }
+         .previewDisplayName("Read-only")
+         .snapshotPreferences(expect: readOnlyViewModels.room.context.$viewState.map { !$0.canSendMessage })
         
-        ElementNavigationStack {
-            RoomScreen(context: tombstonedViewModels.room.context,
-                       timelineContext: tombstonedViewModels.timeline.context,
-                       composerToolbar: ComposerToolbar(context: composerViewModel.context))
-        }
-        .previewDisplayName("Tombstoned")
-        .snapshotPreferences(expect: tombstonedViewModels.room.context.$viewState.map(\.hasSuccessor))
-    }
+         ElementNavigationStack {
+             RoomScreen(context: tombstonedViewModels.room.context,
+                        timelineContext: tombstonedViewModels.timeline.context,
+                        composerToolbar: ComposerToolbar(context: composerViewModel.context))
+         }
+         .previewDisplayName("Tombstoned")
+         .snapshotPreferences(expect: tombstonedViewModels.room.context.$viewState.map(\.hasSuccessor))
+     }
     
-    static func makeViewModels(canSendMessage: Bool = true, hasSuccessor: Bool = false) -> ViewModels {
-        let roomProxyMock = JoinedRoomProxyMock(.init(id: "stable_id",
-                                                      name: "Preview room",
-                                                      hasOngoingCall: true,
-                                                      successor: hasSuccessor ? .init(roomId: UUID().uuidString, reason: nil) : nil,
-                                                      powerLevelsConfiguration: .init(canUserSendMessage: canSendMessage)))
-        let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
-        let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
-                                                  timelineController: MockTimelineController(),
-                                                  userSession: UserSessionMock(.init()),
-                                                  mediaPlayerProvider: MediaPlayerProviderMock(),
-                                                  userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                                  appMediator: AppMediatorMock.default,
-                                                  appSettings: ServiceLocator.shared.settings,
-                                                  analyticsService: ServiceLocator.shared.analytics,
-                                                  emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                                  linkMetadataProvider: LinkMetadataProvider(),
-                                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     static func makeViewModels(canSendMessage: Bool = true, hasSuccessor: Bool = false) -> ViewModels {
+         let roomProxyMock = JoinedRoomProxyMock(.init(id: "stable_id",
+                                                       name: "Preview room",
+                                                       hasOngoingCall: true,
+                                                       successor: hasSuccessor ? .init(roomId: UUID().uuidString, reason: nil) : nil,
+                                                       powerLevelsConfiguration: .init(canUserSendMessage: canSendMessage)))
+         let roomViewModel = RoomScreenViewModel.mock(roomProxyMock: roomProxyMock)
+         let timelineViewModel = TimelineViewModel(roomProxy: roomProxyMock,
+                                                   timelineController: MockTimelineController(),
+                                                   userSession: UserSessionMock(.init()),
+                                                   mediaPlayerProvider: MediaPlayerProviderMock(),
+                                                   userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                                   appMediator: AppMediatorMock.default,
+                                                   appSettings: ServiceLocator.shared.settings,
+                                                   analyticsService: ServiceLocator.shared.analytics,
+                                                   emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                                   linkMetadataProvider: LinkMetadataProvider(),
+                                                   timelineControllerFactory: TimelineControllerFactoryMock(.init()))
         
-        return .init(room: roomViewModel, timeline: timelineViewModel)
-    }
+         return .init(room: roomViewModel, timeline: timelineViewModel)
+     }
     
-    struct ViewModels {
-        let room: RoomScreenViewModelProtocol
-        let timeline: TimelineViewModelProtocol
-    }
-}
-*/
+     struct ViewModels {
+         let room: RoomScreenViewModelProtocol
+         let timeline: TimelineViewModelProtocol
+     }
+ }
+ */

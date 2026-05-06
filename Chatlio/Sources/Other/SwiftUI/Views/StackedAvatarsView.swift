@@ -42,28 +42,28 @@ struct StackedAvatarsView: View {
 }
 
 /*
-struct StackedAvatarsView_Previews: PreviewProvider, TestablePreview {
-    static let avatars: [StackedAvatarInfo] = [
-        .init(url: nil, name: "Alice", contentID: "@alice:matrix.org"),
-        .init(url: nil, name: "Bob", contentID: "@bob:matrix.org"),
-        .init(url: nil, name: "Charlie", contentID: "@charlie:matrix.org"),
-        .init(url: nil, name: "Dan", contentID: "@charlie:matrix.org")
-    ]
+ struct StackedAvatarsView_Previews: PreviewProvider, TestablePreview {
+     static let avatars: [StackedAvatarInfo] = [
+         .init(url: nil, name: "Alice", contentID: "@alice:matrix.org"),
+         .init(url: nil, name: "Bob", contentID: "@bob:matrix.org"),
+         .init(url: nil, name: "Charlie", contentID: "@charlie:matrix.org"),
+         .init(url: nil, name: "Dan", contentID: "@charlie:matrix.org")
+     ]
 
-    static var previews: some View {
-        VStack(spacing: 10) {
-            StackedAvatarsView(overlap: 16,
-                               lineWidth: 2,
-                               avatars: avatars,
-                               avatarSize: .user(on: .knockingUsersBannerStack),
-                               mediaProvider: MediaProviderMock())
-            StackedAvatarsView(overlap: 16,
-                               lineWidth: 2,
-                               shouldStackFromLast: true,
-                               avatars: avatars,
-                               avatarSize: .user(on: .knockingUsersBannerStack),
-                               mediaProvider: MediaProviderMock())
-        }
-    }
-}
-*/
+     static var previews: some View {
+         VStack(spacing: 10) {
+             StackedAvatarsView(overlap: 16,
+                                lineWidth: 2,
+                                avatars: avatars,
+                                avatarSize: .user(on: .knockingUsersBannerStack),
+                                mediaProvider: MediaProviderMock())
+             StackedAvatarsView(overlap: 16,
+                                lineWidth: 2,
+                                shouldStackFromLast: true,
+                                avatars: avatars,
+                                avatarSize: .user(on: .knockingUsersBannerStack),
+                                mediaProvider: MediaProviderMock())
+         }
+     }
+ }
+ */

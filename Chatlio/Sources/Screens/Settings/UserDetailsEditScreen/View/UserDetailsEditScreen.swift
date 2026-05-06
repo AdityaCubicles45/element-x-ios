@@ -126,15 +126,15 @@ struct UserDetailsEditScreen: View {
 // MARK: - Previews
 
 /*
-struct UserDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = UserDetailsEditScreenViewModel(userSession: UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@stefan:matrix.org")))),
-                                                          mediaUploadingPreprocessor: .init(appSettings: ServiceLocator.shared.settings),
-                                                          userIndicatorController: UserIndicatorControllerMock.default)
+ struct UserDetailsEditScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = UserDetailsEditScreenViewModel(userSession: UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "@stefan:matrix.org")))),
+                                                           mediaUploadingPreprocessor: .init(appSettings: ServiceLocator.shared.settings),
+                                                           userIndicatorController: UserIndicatorControllerMock.default)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            UserDetailsEditScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             UserDetailsEditScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

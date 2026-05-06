@@ -206,14 +206,14 @@ private class GlobalSearchTextField: UITextField {
 // MARK: - Previews
 
 /*
-struct GlobalSearchScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = GlobalSearchScreenViewModel(roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms))),
-                                                       mediaProvider: MediaProviderMock(configuration: .init()))
+ struct GlobalSearchScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = GlobalSearchScreenViewModel(roomSummaryProvider: RoomSummaryProviderMock(.init(state: .loaded(.mockRooms))),
+                                                        mediaProvider: MediaProviderMock(configuration: .init()))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            GlobalSearchScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             GlobalSearchScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

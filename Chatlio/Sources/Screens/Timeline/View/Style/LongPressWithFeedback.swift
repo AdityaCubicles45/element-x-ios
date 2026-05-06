@@ -75,56 +75,56 @@ extension View {
 }
 
 /*
-struct LongPressWithFeedback_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        Preview()
-    }
+ struct LongPressWithFeedback_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         Preview()
+     }
     
-    struct Preview: View {
-        private let viewModel = TimelineViewModel.mock
-        @State private var isPresentingSheet = false
+     struct Preview: View {
+         private let viewModel = TimelineViewModel.mock
+         @State private var isPresentingSheet = false
         
-        var body: some View {
-            ElementNavigationStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 8) {
-                        mockBubble("This is a message from somebody with a couple of lines of text.")
-                            .longPressWithFeedback { isPresentingSheet = true }
+         var body: some View {
+             ElementNavigationStack {
+                 ScrollView {
+                     VStack(alignment: .leading, spacing: 8) {
+                         mockBubble("This is a message from somebody with a couple of lines of text.")
+                             .longPressWithFeedback { isPresentingSheet = true }
                         
-                        mockBubble("Short message")
-                            .longPressWithFeedback { isPresentingSheet = true }
+                         mockBubble("Short message")
+                             .longPressWithFeedback { isPresentingSheet = true }
                         
-                        mockBubble("How are you today? The sun is shining here and its very hot ☀️☀️☀️")
-                            .longPressWithFeedback { isPresentingSheet = true }
+                         mockBubble("How are you today? The sun is shining here and its very hot ☀️☀️☀️")
+                             .longPressWithFeedback { isPresentingSheet = true }
                         
-                        mockBubble("I'm a fake!")
-                            .contextMenu {
-                                Button("Copy") { }
-                                Button("Reply") { }
-                                Button("Remove") { }
-                            }
-                    }
-                    .padding()
-                }
-                .navigationTitle("Work chat")
-                .navigationBarTitleDisplayMode(.inline)
-            }
-            .sheet(isPresented: $isPresentingSheet) {
-                Text("Long pressed!")
-                    .presentationDetents([.medium])
-            }
-            .environmentObject(viewModel.context)
-        }
+                         mockBubble("I'm a fake!")
+                             .contextMenu {
+                                 Button("Copy") { }
+                                 Button("Reply") { }
+                                 Button("Remove") { }
+                             }
+                     }
+                     .padding()
+                 }
+                 .navigationTitle("Work chat")
+                 .navigationBarTitleDisplayMode(.inline)
+             }
+             .sheet(isPresented: $isPresentingSheet) {
+                 Text("Long pressed!")
+                     .presentationDetents([.medium])
+             }
+             .environmentObject(viewModel.context)
+         }
         
-        func mockBubble(_ body: String) -> some View {
-            Text(body)
-                .bubbleBackground()
-                .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 12))
-                .onTapGesture { /* Fix long press gesture blocking the scroll view */ }
-        }
-    }
-}
-*/
+         func mockBubble(_ body: String) -> some View {
+             Text(body)
+                 .bubbleBackground()
+                 .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 12))
+                 .onTapGesture { /* Fix long press gesture blocking the scroll view */ }
+         }
+     }
+ }
+ */
 
 /// Fixes the issue on iOS 18 where LongPress conflicts with the scroll view
 /// https://github.com/feedback-assistant/reports/issues/542#issuecomment-2581322968

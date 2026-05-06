@@ -48,31 +48,31 @@ struct NotificationSettingsEditScreenRoomCell: View {
 }
 
 /*
-struct NotificationSettingsEditScreenRoomCell_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
+ struct NotificationSettingsEditScreenRoomCell_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
 
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
-        notificationSettingsProxy.getRoomsWithUserDefinedRulesReturnValue = []
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
+         notificationSettingsProxy.getRoomsWithUserDefinedRulesReturnValue = []
         
-        let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe",
-                                                                                   roomSummaryProvider: summaryProvider,
-                                                                                   notificationSettings: notificationSettingsProxy))))
-        let viewModel = NotificationSettingsEditScreenViewModel(chatType: .groupChat,
-                                                                userSession: userSession)
+         let userSession = UserSessionMock(.init(clientProxy: ClientProxyMock(.init(userID: "John Doe",
+                                                                                    roomSummaryProvider: summaryProvider,
+                                                                                    notificationSettings: notificationSettingsProxy))))
+         let viewModel = NotificationSettingsEditScreenViewModel(chatType: .groupChat,
+                                                                 userSession: userSession)
         
-        let rooms: [NotificationSettingsEditScreenRoom] = summaryProvider.roomListPublisher.value.compactMap { summary -> NotificationSettingsEditScreenRoom? in
-            NotificationSettingsEditScreenRoom(id: UUID().uuidString,
-                                               roomId: summary.id,
-                                               name: summary.name,
-                                               avatar: summary.avatar)
-        }
+         let rooms: [NotificationSettingsEditScreenRoom] = summaryProvider.roomListPublisher.value.compactMap { summary -> NotificationSettingsEditScreenRoom? in
+             NotificationSettingsEditScreenRoom(id: UUID().uuidString,
+                                                roomId: summary.id,
+                                                name: summary.name,
+                                                avatar: summary.avatar)
+         }
         
-        return VStack(spacing: 0) {
-            ForEach(rooms) { room in
-                NotificationSettingsEditScreenRoomCell(room: room, context: viewModel.context)
-            }
-        }
-    }
-}
-*/
+         return VStack(spacing: 0) {
+             ForEach(rooms) { room in
+                 NotificationSettingsEditScreenRoomCell(room: room, context: viewModel.context)
+             }
+         }
+     }
+ }
+ */

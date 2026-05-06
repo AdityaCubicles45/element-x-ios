@@ -102,20 +102,20 @@ struct ManageAuthorizedSpacesScreen: View {
 // MARK: - Previews
 
 /*
-struct ManageAuthorizedSpacesScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = ManageAuthorizedSpacesScreenViewModel(authorizedSpacesSelection: .init(joinedSpaces: .mockJoinedSpaces2,
-                                                                                                  unknownSpacesIDs: ["!unknown-space-id-1",
-                                                                                                                     "!unknown-space-id-2",
-                                                                                                                     "!unknown-space-id-3"],
-                                                                                                  initialSelectedIDs: ["space1",
-                                                                                                                       "space3",
-                                                                                                                       "!unknown-space-id-2"]),
-                                                                 mediaProvider: MediaProviderMock(configuration: .init()))
+ struct ManageAuthorizedSpacesScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = ManageAuthorizedSpacesScreenViewModel(authorizedSpacesSelection: .init(joinedSpaces: .mockJoinedSpaces2,
+                                                                                                   unknownSpacesIDs: ["!unknown-space-id-1",
+                                                                                                                      "!unknown-space-id-2",
+                                                                                                                      "!unknown-space-id-3"],
+                                                                                                   initialSelectedIDs: ["space1",
+                                                                                                                        "space3",
+                                                                                                                        "!unknown-space-id-2"]),
+                                                                  mediaProvider: MediaProviderMock(configuration: .init()))
     
-    static var previews: some View {
-        ElementNavigationStack {
-            ManageAuthorizedSpacesScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             ManageAuthorizedSpacesScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

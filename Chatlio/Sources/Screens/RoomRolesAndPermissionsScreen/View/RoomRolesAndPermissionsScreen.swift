@@ -118,26 +118,26 @@ struct RoomRolesAndPermissionsScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomRolesAndPermissionsScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = RoomRolesAndPermissionsScreenViewModel(initialPermissions: RoomPermissions(powerLevels: .mock),
-                                                                  roomProxy: JoinedRoomProxyMock(.init(members: .allMembersAsAdmin)),
-                                                                  userIndicatorController: UserIndicatorControllerMock(),
-                                                                  analytics: ServiceLocator.shared.analytics)
+ struct RoomRolesAndPermissionsScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = RoomRolesAndPermissionsScreenViewModel(initialPermissions: RoomPermissions(powerLevels: .mock),
+                                                                   roomProxy: JoinedRoomProxyMock(.init(members: .allMembersAsAdmin)),
+                                                                   userIndicatorController: UserIndicatorControllerMock(),
+                                                                   analytics: ServiceLocator.shared.analytics)
     
-    static let creatorViewModel = RoomRolesAndPermissionsScreenViewModel(initialPermissions: RoomPermissions(powerLevels: .mock),
-                                                                         roomProxy: JoinedRoomProxyMock(.init(members: .allMembersAsCreator)),
-                                                                         userIndicatorController: UserIndicatorControllerMock(),
-                                                                         analytics: ServiceLocator.shared.analytics)
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomRolesAndPermissionsScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Admin")
+     static let creatorViewModel = RoomRolesAndPermissionsScreenViewModel(initialPermissions: RoomPermissions(powerLevels: .mock),
+                                                                          roomProxy: JoinedRoomProxyMock(.init(members: .allMembersAsCreator)),
+                                                                          userIndicatorController: UserIndicatorControllerMock(),
+                                                                          analytics: ServiceLocator.shared.analytics)
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomRolesAndPermissionsScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Admin")
         
-        ElementNavigationStack {
-            RoomRolesAndPermissionsScreen(context: creatorViewModel.context)
-        }
-        .previewDisplayName("Creator")
-    }
-}
-*/
+         ElementNavigationStack {
+             RoomRolesAndPermissionsScreen(context: creatorViewModel.context)
+         }
+         .previewDisplayName("Creator")
+     }
+ }
+ */

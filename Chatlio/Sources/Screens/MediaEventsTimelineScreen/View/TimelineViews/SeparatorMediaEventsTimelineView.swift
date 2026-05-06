@@ -22,14 +22,14 @@ struct SeparatorMediaEventsTimelineView: View {
 }
 
 /*
-struct SeparatorMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        let item = SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("Separator")),
-                                             timestamp: .mock)
+ struct SeparatorMediaEventsTimelineView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         let item = SeparatorRoomTimelineItem(id: .virtual(uniqueID: .init("Separator")),
+                                              timestamp: .mock)
         
-        SeparatorMediaEventsTimelineView(group: .init(id: item.id.uniqueID.value,
-                                                      title: "Group",
-                                                      items: []))
-    }
-}
-*/
+         SeparatorMediaEventsTimelineView(group: .init(id: item.id.uniqueID.value,
+                                                       title: "Group",
+                                                       items: []))
+     }
+ }
+ */

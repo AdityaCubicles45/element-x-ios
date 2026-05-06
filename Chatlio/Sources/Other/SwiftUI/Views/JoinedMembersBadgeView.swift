@@ -71,19 +71,19 @@ struct JoinedMembersBadgeView: View {
 // MARK: - Previews
 
 /*
-struct JoinedMembersBadgeView_Previews: PreviewProvider, TestablePreview {
-    static let mediaProvider = MediaProviderMock(configuration: .init())
+ struct JoinedMembersBadgeView_Previews: PreviewProvider, TestablePreview {
+     static let mediaProvider = MediaProviderMock(configuration: .init())
     
-    static var previews: some View {
-        VStack(spacing: 16) {
-            JoinedMembersBadgeView(heroes: [],
-                                   joinedCount: 123,
-                                   mediaProvider: mediaProvider)
+     static var previews: some View {
+         VStack(spacing: 16) {
+             JoinedMembersBadgeView(heroes: [],
+                                    joinedCount: 123,
+                                    mediaProvider: mediaProvider)
             
-            JoinedMembersBadgeView(heroes: [.mockAlice, .mockBob, .mockCharlie, .mockDan],
-                                   joinedCount: 123,
-                                   mediaProvider: mediaProvider)
-        }
-    }
-}
-*/
+             JoinedMembersBadgeView(heroes: [.mockAlice, .mockBob, .mockCharlie, .mockDan],
+                                    joinedCount: 123,
+                                    mediaProvider: mediaProvider)
+         }
+     }
+ }
+ */

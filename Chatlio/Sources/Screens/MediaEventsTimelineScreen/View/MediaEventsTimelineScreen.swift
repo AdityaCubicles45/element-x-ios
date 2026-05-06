@@ -266,62 +266,62 @@ extension TimelineMediaPreviewViewModel: Identifiable {
 // MARK: - Previews
 
 /*
-struct MediaEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
-    static let mediaViewModel = makeViewModel(screenMode: .media)
-    static let filesViewModel = makeViewModel(screenMode: .files)
-    static let emptyMediaViewModel = makeViewModel(empty: true, screenMode: .media)
-    static let emptyFilesViewModel = makeViewModel(empty: true, screenMode: .files)
+ struct MediaEventsTimelineScreen_Previews: PreviewProvider, TestablePreview {
+     static let mediaViewModel = makeViewModel(screenMode: .media)
+     static let filesViewModel = makeViewModel(screenMode: .files)
+     static let emptyMediaViewModel = makeViewModel(empty: true, screenMode: .media)
+     static let emptyFilesViewModel = makeViewModel(empty: true, screenMode: .files)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            MediaEventsTimelineScreen(context: mediaViewModel.context)
-        }
-        .previewDisplayName("Media")
+     static var previews: some View {
+         ElementNavigationStack {
+             MediaEventsTimelineScreen(context: mediaViewModel.context)
+         }
+         .previewDisplayName("Media")
         
-        ElementNavigationStack {
-            MediaEventsTimelineScreen(context: filesViewModel.context)
-        }
-        .previewDisplayName("Files")
+         ElementNavigationStack {
+             MediaEventsTimelineScreen(context: filesViewModel.context)
+         }
+         .previewDisplayName("Files")
         
-        ElementNavigationStack {
-            MediaEventsTimelineScreen(context: emptyMediaViewModel.context)
-        }
-        .previewDisplayName("Empty Media")
+         ElementNavigationStack {
+             MediaEventsTimelineScreen(context: emptyMediaViewModel.context)
+         }
+         .previewDisplayName("Empty Media")
         
-        ElementNavigationStack {
-            MediaEventsTimelineScreen(context: emptyFilesViewModel.context)
-        }
-        .previewDisplayName("Empty Files")
-    }
+         ElementNavigationStack {
+             MediaEventsTimelineScreen(context: emptyFilesViewModel.context)
+         }
+         .previewDisplayName("Empty Files")
+     }
     
-    private static func makeViewModel(empty: Bool = false,
-                                      screenMode: MediaEventsTimelineScreenMode) -> MediaEventsTimelineScreenViewModel {
-        MediaEventsTimelineScreenViewModel(mediaTimelineViewModel: makeTimelineViewModel(empty: empty),
-                                           filesTimelineViewModel: makeTimelineViewModel(empty: empty),
-                                           initialScreenMode: screenMode,
-                                           mediaProvider: MediaProviderMock(configuration: .init()),
-                                           userIndicatorController: UserIndicatorControllerMock(),
-                                           appMediator: AppMediatorMock())
-    }
+     private static func makeViewModel(empty: Bool = false,
+                                       screenMode: MediaEventsTimelineScreenMode) -> MediaEventsTimelineScreenViewModel {
+         MediaEventsTimelineScreenViewModel(mediaTimelineViewModel: makeTimelineViewModel(empty: empty),
+                                            filesTimelineViewModel: makeTimelineViewModel(empty: empty),
+                                            initialScreenMode: screenMode,
+                                            mediaProvider: MediaProviderMock(configuration: .init()),
+                                            userIndicatorController: UserIndicatorControllerMock(),
+                                            appMediator: AppMediatorMock())
+     }
     
-    private static func makeTimelineViewModel(empty: Bool) -> TimelineViewModel {
-        let timelineController = if empty {
-            MockTimelineController.emptyMediaGallery
-        } else {
-            MockTimelineController.mediaGallery
-        }
+     private static func makeTimelineViewModel(empty: Bool) -> TimelineViewModel {
+         let timelineController = if empty {
+             MockTimelineController.emptyMediaGallery
+         } else {
+             MockTimelineController.mediaGallery
+         }
         
-        return TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Preview room")),
-                                 timelineController: timelineController,
-                                 userSession: UserSessionMock(.init()),
-                                 mediaPlayerProvider: MediaPlayerProviderMock(),
-                                 userIndicatorController: UserIndicatorControllerMock(),
-                                 appMediator: AppMediatorMock.default,
-                                 appSettings: ServiceLocator.shared.settings,
-                                 analyticsService: ServiceLocator.shared.analytics,
-                                 emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                 linkMetadataProvider: LinkMetadataProvider(),
-                                 timelineControllerFactory: TimelineControllerFactoryMock(.init()))
-    }
-}
-*/
+         return TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Preview room")),
+                                  timelineController: timelineController,
+                                  userSession: UserSessionMock(.init()),
+                                  mediaPlayerProvider: MediaPlayerProviderMock(),
+                                  userIndicatorController: UserIndicatorControllerMock(),
+                                  appMediator: AppMediatorMock.default,
+                                  appSettings: ServiceLocator.shared.settings,
+                                  analyticsService: ServiceLocator.shared.analytics,
+                                  emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                  linkMetadataProvider: LinkMetadataProvider(),
+                                  timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     }
+ }
+ */

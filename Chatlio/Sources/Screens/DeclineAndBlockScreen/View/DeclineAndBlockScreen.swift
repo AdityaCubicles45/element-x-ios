@@ -76,24 +76,24 @@ struct DeclineAndBlockScreen: View {
 // MARK: - Previews
 
 /*
-struct DeclineAndBlockScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = DeclineAndBlockScreenViewModel(userID: "@alice:matrix.org",
-                                                          roomID: "!room:matrix.org",
-                                                          clientProxy: ClientProxyMock(.init()),
-                                                          userIndicatorController: UserIndicatorControllerMock())
+ struct DeclineAndBlockScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = DeclineAndBlockScreenViewModel(userID: "@alice:matrix.org",
+                                                           roomID: "!room:matrix.org",
+                                                           clientProxy: ClientProxyMock(.init()),
+                                                           userIndicatorController: UserIndicatorControllerMock())
     
-    static var previews: some View {
-        ElementNavigationStack {
-            DeclineAndBlockScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Default")
-        ElementNavigationStack {
-            DeclineAndBlockScreen(context: viewModel.context)
-                .onAppear {
-                    viewModel.context.shouldReport = true
-                }
-        }
-        .previewDisplayName("Report room selected")
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             DeclineAndBlockScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Default")
+         ElementNavigationStack {
+             DeclineAndBlockScreen(context: viewModel.context)
+                 .onAppear {
+                     viewModel.context.shouldReport = true
+                 }
+         }
+         .previewDisplayName("Report room selected")
+     }
+ }
+ */

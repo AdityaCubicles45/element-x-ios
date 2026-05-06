@@ -38,24 +38,24 @@ struct LinkPreviewView: UIViewRepresentable {
 }
 
 /*
-struct LinkPreviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        if let url = URL(string: "https://www.lunch.club") {
-            LinkPreviewView(url: url, metadata: appleMetadata)
-                .previewLayout(.sizeThatFits)
-        }
-    }
+ struct LinkPreviewView_Previews: PreviewProvider {
+     static var previews: some View {
+         if let url = URL(string: "https://www.lunch.club") {
+             LinkPreviewView(url: url, metadata: appleMetadata)
+                 .previewLayout(.sizeThatFits)
+         }
+     }
     
-    private static var appleMetadata: LPLinkMetadata {
-        let metadata = LPLinkMetadata()
-        metadata.title = "Lunch club"
+     private static var appleMetadata: LPLinkMetadata {
+         let metadata = LPLinkMetadata()
+         metadata.title = "Lunch club"
         
-        if let url = Bundle.main.url(forResource: "preview_avatar_room", withExtension: "jpg") {
-            metadata.url = url
-            metadata.imageProvider = NSItemProvider(contentsOf: url)
-        }
+         if let url = Bundle.main.url(forResource: "preview_avatar_room", withExtension: "jpg") {
+             metadata.url = url
+             metadata.imageProvider = NSItemProvider(contentsOf: url)
+         }
         
-        return metadata
-    }
-}
-*/
+         return metadata
+     }
+ }
+ */

@@ -185,78 +185,78 @@ struct FormattedBodyText: View {
 // MARK: - Previews
 
 /*
-struct FormattedBodyText_Previews: PreviewProvider, TestablePreview {
-    static let attributedStringBuilder = AttributedStringBuilder(cacheKey: "FormattedBodyText", mentionBuilder: MentionBuilder())
-    static var previews: some View {
-        htmlFixtures
+ struct FormattedBodyText_Previews: PreviewProvider, TestablePreview {
+     static let attributedStringBuilder = AttributedStringBuilder(cacheKey: "FormattedBodyText", mentionBuilder: MentionBuilder())
+     static var previews: some View {
+         htmlFixtures
         
-        basicText
-            .previewLayout(.sizeThatFits)
-            .previewDisplayName("basicText")
+         basicText
+             .previewLayout(.sizeThatFits)
+             .previewDisplayName("basicText")
         
-        singleColumnComponents
-            .previewLayout(.sizeThatFits)
-            .previewDisplayName("singleColumnComponents")
-    }
+         singleColumnComponents
+             .previewLayout(.sizeThatFits)
+             .previewDisplayName("singleColumnComponents")
+     }
     
-    static var basicText: some View {
-        VStack(alignment: .leading, spacing: 4.0) {
-            FormattedBodyText(attributedString: AttributedString("Some plain text wrapped in an AttributedString."))
-                .bubbleBackground()
+     static var basicText: some View {
+         VStack(alignment: .leading, spacing: 4.0) {
+             FormattedBodyText(attributedString: AttributedString("Some plain text wrapped in an AttributedString."))
+                 .bubbleBackground()
             
-            FormattedBodyText(text: "Some plain text that's not an attributed component.")
-                .bubbleBackground()
+             FormattedBodyText(text: "Some plain text that's not an attributed component.")
+                 .bubbleBackground()
             
-            FormattedBodyText(text: "❤️", boostFontSize: true)
-                .bubbleBackground()
-        }
-        .padding()
-    }
+             FormattedBodyText(text: "❤️", boostFontSize: true)
+                 .bubbleBackground()
+         }
+         .padding()
+     }
     
-    /// A preview to help ensure that none of the component types we support result
-    /// in a bubble's width becoming wider than the natural width of its contents.
-    @ViewBuilder
-    static var singleColumnComponents: some View {
-        let html = """
-        <blockquote>A</blockquote>
-        <pre><code>B</code></pre>
-        <p>C</p>
-        """
+     /// A preview to help ensure that none of the component types we support result
+     /// in a bubble's width becoming wider than the natural width of its contents.
+     @ViewBuilder
+     static var singleColumnComponents: some View {
+         let html = """
+         <blockquote>A</blockquote>
+         <pre><code>B</code></pre>
+         <p>C</p>
+         """
         
-        if let attributedString = attributedStringBuilder.fromHTML(html) {
-            FormattedBodyText(attributedString: attributedString)
-                .bubbleBackground()
-                .padding(4.0)
-        }
-    }
+         if let attributedString = attributedStringBuilder.fromHTML(html) {
+             FormattedBodyText(attributedString: attributedString)
+                 .bubbleBackground()
+                 .padding(4.0)
+         }
+     }
     
-    @ViewBuilder
-    static var htmlFixtures: some View {
-        let htmlFixtures = HTMLFixtures.allCases
+     @ViewBuilder
+     static var htmlFixtures: some View {
+         let htmlFixtures = HTMLFixtures.allCases
         
-        ForEach(htmlFixtures, id: \.rawValue) { htmlFixture in
-            HStack(alignment: .top, spacing: 0) {
-                let htmlString = htmlFixture.rawValue
-                Text(htmlString)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(4.0)
+         ForEach(htmlFixtures, id: \.rawValue) { htmlFixture in
+             HStack(alignment: .top, spacing: 0) {
+                 let htmlString = htmlFixture.rawValue
+                 Text(htmlString)
+                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                     .padding(4.0)
                 
-                Divider()
-                    .background(.black)
+                 Divider()
+                     .background(.black)
                 
-                if let attributedString = attributedStringBuilder.fromHTML(htmlString) {
-                    FormattedBodyText(attributedString: attributedString)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .bubbleBackground()
-                        .padding(4.0)
-                }
-            }
-            .fixedSize(horizontal: false, vertical: true)
-            .border(.black)
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .previewDisplayName("\(htmlFixture)")
-        }
-    }
-}
-*/
+                 if let attributedString = attributedStringBuilder.fromHTML(htmlString) {
+                     FormattedBodyText(attributedString: attributedString)
+                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                         .bubbleBackground()
+                         .padding(4.0)
+                 }
+             }
+             .fixedSize(horizontal: false, vertical: true)
+             .border(.black)
+             .padding()
+             .previewLayout(.sizeThatFits)
+             .previewDisplayName("\(htmlFixture)")
+         }
+     }
+ }
+ */

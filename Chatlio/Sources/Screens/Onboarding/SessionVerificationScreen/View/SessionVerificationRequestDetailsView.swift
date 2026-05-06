@@ -110,29 +110,29 @@ struct SessionVerificationRequestDetailsView: View {
 }
 
 /*
-/*
-struct SessionVerificationRequestDetailsView_Previews: PreviewProvider, TestablePreview {
-    static let details = SessionVerificationRequestDetails(senderProfile: UserProfileProxy(userID: "@bob:matrix.org",
-                                                                                           displayName: "Billy bob",
-                                                                                           avatarURL: .mockMXCUserAvatar),
-                                                           flowID: "123",
-                                                           deviceID: "CODEMISTAKE",
-                                                           deviceDisplayName: "Bob's Element X iOS",
-                                                           firstSeenDate: .init(timeIntervalSince1970: 0))
+ /*
+ struct SessionVerificationRequestDetailsView_Previews: PreviewProvider, TestablePreview {
+     static let details = SessionVerificationRequestDetails(senderProfile: UserProfileProxy(userID: "@bob:matrix.org",
+                                                                                            displayName: "Billy bob",
+                                                                                            avatarURL: .mockMXCUserAvatar),
+                                                            flowID: "123",
+                                                            deviceID: "CODEMISTAKE",
+                                                            deviceDisplayName: "Bob's Element X iOS",
+                                                            firstSeenDate: .init(timeIntervalSince1970: 0))
     
-    static var previews: some View {
-        SessionVerificationRequestDetailsView(details: details,
-                                              isUserVerification: true,
-                                              mediaProvider: MediaProviderMock(configuration: .init()))
-            .padding()
-            .previewDisplayName("User")
+     static var previews: some View {
+         SessionVerificationRequestDetailsView(details: details,
+                                               isUserVerification: true,
+                                               mediaProvider: MediaProviderMock(configuration: .init()))
+             .padding()
+             .previewDisplayName("User")
         
-        SessionVerificationRequestDetailsView(details: details,
-                                              isUserVerification: false,
-                                              mediaProvider: MediaProviderMock(configuration: .init()))
-            .padding()
-            .previewDisplayName("Device")
-    }
-}
-*/
-*/
+         SessionVerificationRequestDetailsView(details: details,
+                                               isUserVerification: false,
+                                               mediaProvider: MediaProviderMock(configuration: .init()))
+             .padding()
+             .previewDisplayName("Device")
+     }
+ }
+ */
+ */

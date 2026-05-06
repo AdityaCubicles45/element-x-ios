@@ -27,12 +27,12 @@ struct VoiceMessageRecordingComposer: View {
 // MARK: - Previews
 
 /*
-struct VoiceMessageRecordingComposer_Previews: PreviewProvider, TestablePreview {
-    static let recorderState = AudioRecorderState()
+ struct VoiceMessageRecordingComposer_Previews: PreviewProvider, TestablePreview {
+     static let recorderState = AudioRecorderState()
     
-    static var previews: some View {
-        VoiceMessageRecordingComposer(recorderState: recorderState)
-            .fixedSize(horizontal: false, vertical: true)
-    }
-}
-*/
+     static var previews: some View {
+         VoiceMessageRecordingComposer(recorderState: recorderState)
+             .fixedSize(horizontal: false, vertical: true)
+     }
+ }
+ */

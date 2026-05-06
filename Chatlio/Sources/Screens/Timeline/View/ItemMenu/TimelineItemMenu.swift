@@ -256,119 +256,119 @@ private extension EncryptionAuthenticity {
 // MARK: - Previews
 
 /*
-struct TimelineItemMenu_Previews: PreviewProvider, TestablePreview {
-    enum ItemType { case incomingText, outgoingMedia, outgoingMediaWithCaption }
+ struct TimelineItemMenu_Previews: PreviewProvider, TestablePreview {
+     enum ItemType { case incomingText, outgoingMedia, outgoingMediaWithCaption }
     
-    static let viewModel = TimelineViewModel.mock
-    static let (item, actions) = makeActions()
-    static let (backupItem, _) = makeActions(authenticity: .notGuaranteed(color: .gray))
-    static let (unsignedItem, _) = makeActions(authenticity: .unsignedDevice(color: .red))
-    static let (unencryptedItem, _) = makeActions(authenticity: .sentInClear(color: .red))
-    static let (unknownFailureItem, _) = makeActions(deliveryStatus: .sendingFailed(.unknown))
-    static let (identityChangedItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.changedIdentity(users: [
-        "@alice:matrix.org"
-    ]))))
-    static let (unsignedDevicesItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.hasUnsignedDevice(devices: [
-        "@alice:matrix.org": ["DEVICE1", "DEVICE2"]
-    ]))))
-    static let (ownUnsignedDevicesItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.hasUnsignedDevice(devices: [
-        RoomMemberProxyMock.mockMe.userID: ["DEVICE1"]
-    ]))))
+     static let viewModel = TimelineViewModel.mock
+     static let (item, actions) = makeActions()
+     static let (backupItem, _) = makeActions(authenticity: .notGuaranteed(color: .gray))
+     static let (unsignedItem, _) = makeActions(authenticity: .unsignedDevice(color: .red))
+     static let (unencryptedItem, _) = makeActions(authenticity: .sentInClear(color: .red))
+     static let (unknownFailureItem, _) = makeActions(deliveryStatus: .sendingFailed(.unknown))
+     static let (identityChangedItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.changedIdentity(users: [
+         "@alice:matrix.org"
+     ]))))
+     static let (unsignedDevicesItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.hasUnsignedDevice(devices: [
+         "@alice:matrix.org": ["DEVICE1", "DEVICE2"]
+     ]))))
+     static let (ownUnsignedDevicesItem, _) = makeActions(deliveryStatus: .sendingFailed(.verifiedUser(.hasUnsignedDevice(devices: [
+         RoomMemberProxyMock.mockMe.userID: ["DEVICE1"]
+     ]))))
     
-    // Media
+     // Media
     
-    static let (mediaItem, mediaItemActions) = makeActions(itemType: .outgoingMedia)
-    static let (mediaItemWithCaption, mediaItemWithCaptionActions) = makeActions(itemType: .outgoingMediaWithCaption)
+     static let (mediaItem, mediaItemActions) = makeActions(itemType: .outgoingMedia)
+     static let (mediaItemWithCaption, mediaItemWithCaptionActions) = makeActions(itemType: .outgoingMediaWithCaption)
 
-    static var previews: some View {
-        TimelineItemMenu(item: item, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Normal")
+     static var previews: some View {
+         TimelineItemMenu(item: item, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Normal")
         
-        TimelineItemMenu(item: item, actions: actions)
-            .environmentObject(viewModel.context)
-            .environment(\._accessibilityShowButtonShapes, true)
-            .previewDisplayName("Button shapes")
+         TimelineItemMenu(item: item, actions: actions)
+             .environmentObject(viewModel.context)
+             .environment(\._accessibilityShowButtonShapes, true)
+             .previewDisplayName("Button shapes")
         
-        TimelineItemMenu(item: backupItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Authenticity")
+         TimelineItemMenu(item: backupItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Authenticity")
         
-        TimelineItemMenu(item: unsignedItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Unsigned")
+         TimelineItemMenu(item: unsignedItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Unsigned")
         
-        TimelineItemMenu(item: unencryptedItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Unencrypted")
+         TimelineItemMenu(item: unencryptedItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Unencrypted")
         
-        TimelineItemMenu(item: unknownFailureItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Unknown failure")
+         TimelineItemMenu(item: unknownFailureItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Unknown failure")
         
-        TimelineItemMenu(item: unsignedDevicesItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Unsigned Devices")
+         TimelineItemMenu(item: unsignedDevicesItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Unsigned Devices")
         
-        TimelineItemMenu(item: ownUnsignedDevicesItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Own Unsigned Devices")
+         TimelineItemMenu(item: ownUnsignedDevicesItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Own Unsigned Devices")
         
-        TimelineItemMenu(item: identityChangedItem, actions: actions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Identity Changed")
+         TimelineItemMenu(item: identityChangedItem, actions: actions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Identity Changed")
         
-        // Media
+         // Media
         
-        TimelineItemMenu(item: mediaItem, actions: mediaItemActions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Media")
+         TimelineItemMenu(item: mediaItem, actions: mediaItemActions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Media")
         
-        TimelineItemMenu(item: mediaItemWithCaption, actions: mediaItemWithCaptionActions)
-            .environmentObject(viewModel.context)
-            .previewDisplayName("Media with Caption")
-    }
+         TimelineItemMenu(item: mediaItemWithCaption, actions: mediaItemWithCaptionActions)
+             .environmentObject(viewModel.context)
+             .previewDisplayName("Media with Caption")
+     }
     
-    static func makeActions(itemType: ItemType = .incomingText,
-                            authenticity: EncryptionAuthenticity? = nil,
-                            deliveryStatus: TimelineItemDeliveryStatus? = nil) -> (EventBasedTimelineItemProtocol, TimelineItemMenuActions)! {
-        guard var item = makeItem(itemType: itemType) else { return nil }
-        let provider = TimelineItemMenuActionProvider(timelineItem: item,
-                                                      canCurrentUserSendMessage: true,
-                                                      canCurrentUserRedactSelf: true,
-                                                      canCurrentUserRedactOthers: false,
-                                                      canCurrentUserPin: true,
-                                                      pinnedEventIDs: [],
-                                                      isDM: true,
-                                                      isViewSourceEnabled: true,
-                                                      areThreadsEnabled: true,
-                                                      timelineKind: .live,
-                                                      emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings))
-        guard let actions = provider.makeActions() else { return nil }
+     static func makeActions(itemType: ItemType = .incomingText,
+                             authenticity: EncryptionAuthenticity? = nil,
+                             deliveryStatus: TimelineItemDeliveryStatus? = nil) -> (EventBasedTimelineItemProtocol, TimelineItemMenuActions)! {
+         guard var item = makeItem(itemType: itemType) else { return nil }
+         let provider = TimelineItemMenuActionProvider(timelineItem: item,
+                                                       canCurrentUserSendMessage: true,
+                                                       canCurrentUserRedactSelf: true,
+                                                       canCurrentUserRedactOthers: false,
+                                                       canCurrentUserPin: true,
+                                                       pinnedEventIDs: [],
+                                                       isDM: true,
+                                                       isViewSourceEnabled: true,
+                                                       areThreadsEnabled: true,
+                                                       timelineKind: .live,
+                                                       emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings))
+         guard let actions = provider.makeActions() else { return nil }
         
-        if var textItem = item as? TextRoomTimelineItem {
-            if let authenticity {
-                textItem.properties.encryptionAuthenticity = authenticity
-            }
+         if var textItem = item as? TextRoomTimelineItem {
+             if let authenticity {
+                 textItem.properties.encryptionAuthenticity = authenticity
+             }
             
-            if let deliveryStatus {
-                textItem.properties.deliveryStatus = deliveryStatus
-            }
-            item = textItem
-        }
+             if let deliveryStatus {
+                 textItem.properties.deliveryStatus = deliveryStatus
+             }
+             item = textItem
+         }
         
-        return (item, actions)
-    }
+         return (item, actions)
+     }
     
-    static func makeItem(itemType: ItemType) -> EventBasedTimelineItemProtocol? {
-        switch itemType {
-        case .incomingText:
-            RoomTimelineItemFixtures.singleMessageChunk.first as? EventBasedTimelineItemProtocol
-        case .outgoingMedia:
-            RoomTimelineItemFixtures.mediaChunk[1] as? EventBasedTimelineItemProtocol
-        case .outgoingMediaWithCaption:
-            RoomTimelineItemFixtures.mediaChunk[5] as? EventBasedTimelineItemProtocol
-        }
-    }
-}
-*/
+     static func makeItem(itemType: ItemType) -> EventBasedTimelineItemProtocol? {
+         switch itemType {
+         case .incomingText:
+             RoomTimelineItemFixtures.singleMessageChunk.first as? EventBasedTimelineItemProtocol
+         case .outgoingMedia:
+             RoomTimelineItemFixtures.mediaChunk[1] as? EventBasedTimelineItemProtocol
+         case .outgoingMediaWithCaption:
+             RoomTimelineItemFixtures.mediaChunk[5] as? EventBasedTimelineItemProtocol
+         }
+     }
+ }
+ */

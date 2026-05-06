@@ -41,34 +41,34 @@ struct PinnedItemsIndicatorView: View {
 }
 
 /*
-struct PinnedItemsIndicatorView_Previews: PreviewProvider, TestablePreview {
-    static func indicator(index: Int, count: Int) -> some View {
-        VStack(spacing: 0) {
-            Text("\(index + 1)/\(count)")
-                .font(.compound.bodyXS)
-            PinnedItemsIndicatorView(pinIndex: index, pinsCount: count)
-        }
-    }
+ struct PinnedItemsIndicatorView_Previews: PreviewProvider, TestablePreview {
+     static func indicator(index: Int, count: Int) -> some View {
+         VStack(spacing: 0) {
+             Text("\(index + 1)/\(count)")
+                 .font(.compound.bodyXS)
+             PinnedItemsIndicatorView(pinIndex: index, pinsCount: count)
+         }
+     }
     
-    static var previews: some View {
-        HStack(spacing: 5) {
-            indicator(index: 0, count: 1)
-            indicator(index: 0, count: 2)
-            indicator(index: 1, count: 2)
-            indicator(index: 0, count: 3)
-            indicator(index: 1, count: 3)
-            indicator(index: 2, count: 3)
-            indicator(index: 0, count: 4)
-            indicator(index: 1, count: 4)
-            indicator(index: 2, count: 4)
-            indicator(index: 3, count: 4)
-            indicator(index: 0, count: 5)
-            indicator(index: 1, count: 5)
-            indicator(index: 2, count: 5)
-            indicator(index: 3, count: 5)
-            indicator(index: 4, count: 5)
-        }
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+     static var previews: some View {
+         HStack(spacing: 5) {
+             indicator(index: 0, count: 1)
+             indicator(index: 0, count: 2)
+             indicator(index: 1, count: 2)
+             indicator(index: 0, count: 3)
+             indicator(index: 1, count: 3)
+             indicator(index: 2, count: 3)
+             indicator(index: 0, count: 4)
+             indicator(index: 1, count: 4)
+             indicator(index: 2, count: 4)
+             indicator(index: 3, count: 4)
+             indicator(index: 0, count: 5)
+             indicator(index: 1, count: 5)
+             indicator(index: 2, count: 5)
+             indicator(index: 3, count: 5)
+             indicator(index: 4, count: 5)
+         }
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

@@ -118,33 +118,33 @@ struct PINDigitField: View {
 }
 
 /*
-struct PINTextField_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 8) {
-            PreviewWrapper(pinCode: "", isSecure: false)
-            PreviewWrapper(pinCode: "12", isSecure: false)
-            PreviewWrapper(pinCode: "1234", isSecure: false)
-                .padding(.bottom)
+ struct PINTextField_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 8) {
+             PreviewWrapper(pinCode: "", isSecure: false)
+             PreviewWrapper(pinCode: "12", isSecure: false)
+             PreviewWrapper(pinCode: "1234", isSecure: false)
+                 .padding(.bottom)
             
-            PreviewWrapper(pinCode: "", isSecure: true)
-            PreviewWrapper(pinCode: "12", isSecure: true)
-            PreviewWrapper(pinCode: "1234", isSecure: true)
-                .padding(.bottom)
+             PreviewWrapper(pinCode: "", isSecure: true)
+             PreviewWrapper(pinCode: "12", isSecure: true)
+             PreviewWrapper(pinCode: "1234", isSecure: true)
+                 .padding(.bottom)
             
-            PreviewWrapper(pinCode: "123456", isSecure: false, maxLength: 6, size: .small)
-            PreviewWrapper(pinCode: "12", isSecure: false, maxLength: 2, size: .small)
-        }
-    }
+             PreviewWrapper(pinCode: "123456", isSecure: false, maxLength: 6, size: .small)
+             PreviewWrapper(pinCode: "12", isSecure: false, maxLength: 2, size: .small)
+         }
+     }
     
-    struct PreviewWrapper: View {
-        @State var pinCode = ""
-        let isSecure: Bool
-        var maxLength = 4
-        var size: PINDigitField.Size = .medium
+     struct PreviewWrapper: View {
+         @State var pinCode = ""
+         let isSecure: Bool
+         var maxLength = 4
+         var size: PINDigitField.Size = .medium
         
-        var body: some View {
-            PINTextField(pinCode: $pinCode, isSecure: isSecure, maxLength: maxLength, size: size)
-        }
-    }
-}
-*/
+         var body: some View {
+             PINTextField(pinCode: $pinCode, isSecure: isSecure, maxLength: maxLength, size: size)
+         }
+     }
+ }
+ */

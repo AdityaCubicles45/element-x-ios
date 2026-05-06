@@ -45,17 +45,17 @@ struct UserIndicatorToastView: View {
 }
 
 /*
-struct UserIndicatorToastView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 30) {
-            UserIndicatorToastView(indicator: UserIndicator(title: "Successfully logged in",
-                                                            iconName: "checkmark"))
+ struct UserIndicatorToastView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 30) {
+             UserIndicatorToastView(indicator: UserIndicator(title: "Successfully logged in",
+                                                             iconName: "checkmark"))
             
-            UserIndicatorToastView(indicator: UserIndicator(title: "Toast without icon"))
+             UserIndicatorToastView(indicator: UserIndicator(title: "Toast without icon"))
             
-            UserIndicatorToastView(indicator: UserIndicator(type: .toast(progress: .indeterminate),
-                                                            title: "Syncing"))
-        }
-    }
-}
-*/
+             UserIndicatorToastView(indicator: UserIndicator(type: .toast(progress: .indeterminate),
+                                                             title: "Syncing"))
+         }
+     }
+ }
+ */

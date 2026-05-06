@@ -72,30 +72,30 @@ struct UserIndicatorModalView: View {
 }
 
 /*
-struct UserIndicatorModalView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 0) {
-            UserIndicatorModalView(indicator: UserIndicator(type: .modal,
-                                                            title: "Successfully logged in",
-                                                            iconName: "checkmark"))
+ struct UserIndicatorModalView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 0) {
+             UserIndicatorModalView(indicator: UserIndicator(type: .modal,
+                                                             title: "Successfully logged in",
+                                                             iconName: "checkmark"))
             
-            UserIndicatorModalView(indicator: UserIndicator(type: .modal(progress: .published(CurrentValueSubject<Double, Never>(0.5).asCurrentValuePublisher()),
-                                                                         interactiveDismissDisabled: false,
-                                                                         allowsInteraction: false),
-                                                            title: "Successfully logged in",
-                                                            iconName: "checkmark"))
+             UserIndicatorModalView(indicator: UserIndicator(type: .modal(progress: .published(CurrentValueSubject<Double, Never>(0.5).asCurrentValuePublisher()),
+                                                                          interactiveDismissDisabled: false,
+                                                                          allowsInteraction: false),
+                                                             title: "Successfully logged in",
+                                                             iconName: "checkmark"))
             
-            UserIndicatorModalView(indicator: UserIndicator(type: .modal(progress: .none,
-                                                                         interactiveDismissDisabled: false,
-                                                                         allowsInteraction: false),
-                                                            title: "Successfully logged in",
-                                                            iconName: "checkmark"))
+             UserIndicatorModalView(indicator: UserIndicator(type: .modal(progress: .none,
+                                                                          interactiveDismissDisabled: false,
+                                                                          allowsInteraction: false),
+                                                             title: "Successfully logged in",
+                                                             iconName: "checkmark"))
             
-            UserIndicatorModalView(indicator: UserIndicator(type: .modal,
-                                                            title: "Successfully logged in",
-                                                            message: "You can now be happy.",
-                                                            iconName: "checkmark"))
-        }
-    }
-}
-*/
+             UserIndicatorModalView(indicator: UserIndicator(type: .modal,
+                                                             title: "Successfully logged in",
+                                                             message: "You can now be happy.",
+                                                             iconName: "checkmark"))
+         }
+     }
+ }
+ */

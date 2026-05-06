@@ -93,13 +93,13 @@ private struct InfoItem: View {
 // MARK: - Previews
 
 /*
-struct DeactivateAccountScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = DeactivateAccountScreenViewModel(clientProxy: ClientProxyMock(.init()),
-                                                            userIndicatorController: UserIndicatorControllerMock())
-    static var previews: some View {
-        ElementNavigationStack {
-            DeactivateAccountScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct DeactivateAccountScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = DeactivateAccountScreenViewModel(clientProxy: ClientProxyMock(.init()),
+                                                             userIndicatorController: UserIndicatorControllerMock())
+     static var previews: some View {
+         ElementNavigationStack {
+             DeactivateAccountScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

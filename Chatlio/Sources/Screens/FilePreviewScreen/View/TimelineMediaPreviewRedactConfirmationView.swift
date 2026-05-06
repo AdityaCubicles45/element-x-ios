@@ -120,38 +120,38 @@ struct TimelineMediaPreviewRedactConfirmationView: View {
 import UniformTypeIdentifiers
 
 /*
-struct TimelineMediaPreviewRedactConfirmationView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel(contentType: .jpeg)
+ struct TimelineMediaPreviewRedactConfirmationView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel(contentType: .jpeg)
     
-    static var previews: some View {
-        if case let .media(mediaItem) = viewModel.state.currentItem {
-            TimelineMediaPreviewRedactConfirmationView(item: mediaItem, context: viewModel.context)
-        }
-    }
+     static var previews: some View {
+         if case let .media(mediaItem) = viewModel.state.currentItem {
+             TimelineMediaPreviewRedactConfirmationView(item: mediaItem, context: viewModel.context)
+         }
+     }
     
-    static func makeViewModel(contentType: UTType? = nil) -> TimelineMediaPreviewViewModel {
-        let item = ImageRoomTimelineItem(id: .randomEvent,
-                                         timestamp: .mock,
-                                         isOutgoing: false,
-                                         isEditable: true,
-                                         canBeRepliedTo: true,
-                                         sender: .init(id: "@alice:matrix.org",
-                                                       displayName: "Alice",
-                                                       avatarURL: .mockMXCUserAvatar),
-                                         content: .init(filename: "Amazing Image.jpeg",
-                                                        imageInfo: .mockImage,
-                                                        thumbnailInfo: .mockThumbnail,
-                                                        contentType: contentType))
+     static func makeViewModel(contentType: UTType? = nil) -> TimelineMediaPreviewViewModel {
+         let item = ImageRoomTimelineItem(id: .randomEvent,
+                                          timestamp: .mock,
+                                          isOutgoing: false,
+                                          isEditable: true,
+                                          canBeRepliedTo: true,
+                                          sender: .init(id: "@alice:matrix.org",
+                                                        displayName: "Alice",
+                                                        avatarURL: .mockMXCUserAvatar),
+                                          content: .init(filename: "Amazing Image.jpeg",
+                                                         imageInfo: .mockImage,
+                                                         thumbnailInfo: .mockThumbnail,
+                                                         contentType: contentType))
         
-        let timelineController = MockTimelineController(timelineKind: .media(.mediaFilesScreen))
-        timelineController.timelineItems = [item]
-        return TimelineMediaPreviewViewModel(initialItem: item,
-                                             timelineViewModel: TimelineViewModel.mock(timelineKind: timelineController.timelineKind,
-                                                                                       timelineController: timelineController),
-                                             mediaProvider: MediaProviderMock(configuration: .init()),
-                                             photoLibraryManager: PhotoLibraryManagerMock(.init()),
-                                             userIndicatorController: UserIndicatorControllerMock(),
-                                             appMediator: AppMediatorMock())
-    }
-}
-*/
+         let timelineController = MockTimelineController(timelineKind: .media(.mediaFilesScreen))
+         timelineController.timelineItems = [item]
+         return TimelineMediaPreviewViewModel(initialItem: item,
+                                              timelineViewModel: TimelineViewModel.mock(timelineKind: timelineController.timelineKind,
+                                                                                        timelineController: timelineController),
+                                              mediaProvider: MediaProviderMock(configuration: .init()),
+                                              photoLibraryManager: PhotoLibraryManagerMock(.init()),
+                                              userIndicatorController: UserIndicatorControllerMock(),
+                                              appMediator: AppMediatorMock())
+     }
+ }
+ */

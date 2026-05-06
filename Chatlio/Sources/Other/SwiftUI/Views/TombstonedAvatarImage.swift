@@ -37,10 +37,10 @@ struct TombstonedAvatarImage: View {
 }
 
 /*
-struct TombstonedAvatarImage_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        TombstonedAvatarImage(avatarSize: .room(on: .chats))
-            .previewLayout(.sizeThatFits)
-    }
-}
-*/
+ struct TombstonedAvatarImage_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         TombstonedAvatarImage(avatarSize: .room(on: .chats))
+             .previewLayout(.sizeThatFits)
+     }
+ }
+ */

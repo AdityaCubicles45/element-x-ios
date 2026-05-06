@@ -83,22 +83,22 @@ struct BadgeLabel: View {
 }
 
 /*
-struct BadgeLabel_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 10) {
-            BadgeLabel(title: "Encrypted",
-                       icon: \.lockSolid,
-                       style: .accent)
-            BadgeLabel(title: "Not encrypted",
-                       icon: \.lockSolid,
-                       style: .info)
-            BadgeLabel(title: "1234",
-                       icon: \.userProfile,
-                       style: .default)
-            BadgeLabel(title: "Very long text that potentially will wrap around in constrained environments, maybe into two or three lines, depending on the exact length of the text",
-                       icon: \.userProfile,
-                       style: .default)
-        }
-    }
-}
-*/
+ struct BadgeLabel_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 10) {
+             BadgeLabel(title: "Encrypted",
+                        icon: \.lockSolid,
+                        style: .accent)
+             BadgeLabel(title: "Not encrypted",
+                        icon: \.lockSolid,
+                        style: .info)
+             BadgeLabel(title: "1234",
+                        icon: \.userProfile,
+                        style: .default)
+             BadgeLabel(title: "Very long text that potentially will wrap around in constrained environments, maybe into two or three lines, depending on the exact length of the text",
+                        icon: \.userProfile,
+                        style: .default)
+         }
+     }
+ }
+ */

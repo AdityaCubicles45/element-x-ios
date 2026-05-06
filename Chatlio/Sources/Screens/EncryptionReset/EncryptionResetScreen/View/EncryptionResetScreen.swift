@@ -91,13 +91,13 @@ struct EncryptionResetScreen: View {
 // MARK: - Previews
 
 /*
-struct EncryptionResetScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = EncryptionResetScreenViewModel(clientProxy: ClientProxyMock(.init()),
-                                                          userIndicatorController: UserIndicatorControllerMock())
-    static var previews: some View {
-        ElementNavigationStack {
-            EncryptionResetScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+ struct EncryptionResetScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = EncryptionResetScreenViewModel(clientProxy: ClientProxyMock(.init()),
+                                                           userIndicatorController: UserIndicatorControllerMock())
+     static var previews: some View {
+         ElementNavigationStack {
+             EncryptionResetScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

@@ -168,42 +168,42 @@ struct SpaceRoomCellButtonStyle: ButtonStyle {
 }
 
 /*
-struct SpaceRoomCell_Previews: PreviewProvider, TestablePreview {
-    static let mediaProvider = MediaProviderMock(configuration: .init())
+ struct SpaceRoomCell_Previews: PreviewProvider, TestablePreview {
+     static let mediaProvider = MediaProviderMock(configuration: .init())
     
-    static let spaces = [SpaceServiceRoom].mockSpaceList
+     static let spaces = [SpaceServiceRoom].mockSpaceList
     
-    static var previews: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                ForEach(spaces, id: \.id) { space in
-                    SpaceRoomCell(spaceServiceRoom: space,
-                                  isSelected: false,
-                                  mediaProvider: mediaProvider) { _ in }
-                }
+     static var previews: some View {
+         ScrollView {
+             VStack(spacing: 0) {
+                 ForEach(spaces, id: \.id) { space in
+                     SpaceRoomCell(spaceServiceRoom: space,
+                                   isSelected: false,
+                                   mediaProvider: mediaProvider) { _ in }
+                 }
                 
-                SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Space being joined", isSpace: true),
-                              isSelected: false,
-                              isJoining: true,
-                              mediaProvider: mediaProvider) { _ in }
-                SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Room being joined", isSpace: false),
-                              isSelected: false,
-                              isJoining: true,
-                              mediaProvider: mediaProvider) { _ in }
+                 SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Space being joined", isSpace: true),
+                               isSelected: false,
+                               isJoining: true,
+                               mediaProvider: mediaProvider) { _ in }
+                 SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Room being joined", isSpace: false),
+                               isSelected: false,
+                               isJoining: true,
+                               mediaProvider: mediaProvider) { _ in }
                 
-                SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Selected", isSpace: false, state: .joined),
-                              isSelected: true,
-                              isJoining: false,
-                              mediaProvider: mediaProvider) { _ in }
-                    .environment(\.editMode, .constant(.active))
-                SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Unselected", isSpace: false, state: .joined),
-                              isSelected: false,
-                              isJoining: false,
-                              mediaProvider: mediaProvider) { _ in }
-                    .environment(\.editMode, .constant(.active))
-            }
-        }
-        .previewLayout(.fixed(width: 390, height: 850))
-    }
-}
-*/
+                 SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Selected", isSpace: false, state: .joined),
+                               isSelected: true,
+                               isJoining: false,
+                               mediaProvider: mediaProvider) { _ in }
+                     .environment(\.editMode, .constant(.active))
+                 SpaceRoomCell(spaceServiceRoom: SpaceServiceRoom.mock(id: "Unselected", isSpace: false, state: .joined),
+                               isSelected: false,
+                               isJoining: false,
+                               mediaProvider: mediaProvider) { _ in }
+                     .environment(\.editMode, .constant(.active))
+             }
+         }
+         .previewLayout(.fixed(width: 390, height: 850))
+     }
+ }
+ */

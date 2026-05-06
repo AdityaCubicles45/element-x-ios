@@ -136,55 +136,55 @@ private struct MediaPreviewViewController: UIViewControllerRepresentable {
 // MARK: - Previews
 
 /*
-struct TimelineMediaPreviewModifier_Previews: PreviewProvider {
-    static let viewModel = makeViewModel()
-    static let downloadingViewModel = makeViewModel(isDownloading: true)
-    static let downloadErrorViewModel = makeViewModel(isDownloadError: true)
+ struct TimelineMediaPreviewModifier_Previews: PreviewProvider {
+     static let viewModel = makeViewModel()
+     static let downloadingViewModel = makeViewModel(isDownloading: true)
+     static let downloadErrorViewModel = makeViewModel(isDownloadError: true)
     
-    static var previews: some View {
-        MediaPreviewViewController(viewModel: viewModel, dismissalPublisher: .init()) { }
-            .previewDisplayName("Normal")
-        MediaPreviewViewController(viewModel: downloadingViewModel, dismissalPublisher: .init()) { }
-            .previewDisplayName("Downloading")
-        MediaPreviewViewController(viewModel: downloadErrorViewModel, dismissalPublisher: .init()) { }
-            .previewDisplayName("Download Error")
-    }
+     static var previews: some View {
+         MediaPreviewViewController(viewModel: viewModel, dismissalPublisher: .init()) { }
+             .previewDisplayName("Normal")
+         MediaPreviewViewController(viewModel: downloadingViewModel, dismissalPublisher: .init()) { }
+             .previewDisplayName("Downloading")
+         MediaPreviewViewController(viewModel: downloadErrorViewModel, dismissalPublisher: .init()) { }
+             .previewDisplayName("Download Error")
+     }
     
-    static func makeViewModel(isDownloading: Bool = false, isDownloadError: Bool = false) -> TimelineMediaPreviewViewModel {
-        let item = FileRoomTimelineItem(id: .randomEvent,
-                                        timestamp: .mock,
-                                        isOutgoing: false,
-                                        isEditable: false,
-                                        canBeRepliedTo: true,
-                                        sender: .init(id: "", displayName: "Sally Sanderson"),
-                                        content: .init(filename: "Important document.pdf",
-                                                       caption: "A caption goes right here.",
-                                                       source: try? .init(url: .mockMXCFile, mimeType: nil),
-                                                       fileSize: 3 * 1024 * 1024,
-                                                       thumbnailSource: nil,
-                                                       contentType: .pdf))
+     static func makeViewModel(isDownloading: Bool = false, isDownloadError: Bool = false) -> TimelineMediaPreviewViewModel {
+         let item = FileRoomTimelineItem(id: .randomEvent,
+                                         timestamp: .mock,
+                                         isOutgoing: false,
+                                         isEditable: false,
+                                         canBeRepliedTo: true,
+                                         sender: .init(id: "", displayName: "Sally Sanderson"),
+                                         content: .init(filename: "Important document.pdf",
+                                                        caption: "A caption goes right here.",
+                                                        source: try? .init(url: .mockMXCFile, mimeType: nil),
+                                                        fileSize: 3 * 1024 * 1024,
+                                                        thumbnailSource: nil,
+                                                        contentType: .pdf))
         
-        let timelineController = MockTimelineController(timelineKind: .media(.mediaFilesScreen))
-        timelineController.timelineItems = [item]
+         let timelineController = MockTimelineController(timelineKind: .media(.mediaFilesScreen))
+         timelineController.timelineItems = [item]
         
-        let mediaProvider = MediaProviderMock(configuration: .init())
+         let mediaProvider = MediaProviderMock(configuration: .init())
         
-        if isDownloading {
-            mediaProvider.loadFileFromSourceFilenameClosure = { _, _ in
-                try? await Task.sleep(for: .seconds(3600))
-                return .failure(.failedRetrievingFile)
-            }
-        } else if isDownloadError {
-            mediaProvider.loadFileFromSourceFilenameClosure = { _, _ in .failure(.failedRetrievingFile) }
-        }
+         if isDownloading {
+             mediaProvider.loadFileFromSourceFilenameClosure = { _, _ in
+                 try? await Task.sleep(for: .seconds(3600))
+                 return .failure(.failedRetrievingFile)
+             }
+         } else if isDownloadError {
+             mediaProvider.loadFileFromSourceFilenameClosure = { _, _ in .failure(.failedRetrievingFile) }
+         }
         
-        return TimelineMediaPreviewViewModel(initialItem: item,
-                                             timelineViewModel: TimelineViewModel.mock(timelineKind: timelineController.timelineKind,
-                                                                                       timelineController: timelineController),
-                                             mediaProvider: mediaProvider,
-                                             photoLibraryManager: PhotoLibraryManagerMock(.init()),
-                                             userIndicatorController: UserIndicatorControllerMock(),
-                                             appMediator: AppMediatorMock())
-    }
-}
-*/
+         return TimelineMediaPreviewViewModel(initialItem: item,
+                                              timelineViewModel: TimelineViewModel.mock(timelineKind: timelineController.timelineKind,
+                                                                                        timelineController: timelineController),
+                                              mediaProvider: mediaProvider,
+                                              photoLibraryManager: PhotoLibraryManagerMock(.init()),
+                                              userIndicatorController: UserIndicatorControllerMock(),
+                                              appMediator: AppMediatorMock())
+     }
+ }
+ */

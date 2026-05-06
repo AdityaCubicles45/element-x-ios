@@ -169,24 +169,24 @@ struct QRCodeErrorView: View {
 // MARK: - Previews
 
 /*
-struct QRCodeErrorView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        ForEach(QRCodeLoginState.ErrorState.allCases, id: \.self) { errorState in
-            ElementNavigationStack {
-                QRCodeErrorView(errorState: errorState, canSignInManually: true) { _ in }
-                    .toolbar(.visible, for: .navigationBar)
-            }
-            .previewDisplayName(errorState.previewDisplayName)
-        }
+ struct QRCodeErrorView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         ForEach(QRCodeLoginState.ErrorState.allCases, id: \.self) { errorState in
+             ElementNavigationStack {
+                 QRCodeErrorView(errorState: errorState, canSignInManually: true) { _ in }
+                     .toolbar(.visible, for: .navigationBar)
+             }
+             .previewDisplayName(errorState.previewDisplayName)
+         }
         
-        ElementNavigationStack {
-            QRCodeErrorView(errorState: .linkingNotSupported, canSignInManually: false) { _ in }
-                .toolbar(.visible, for: .navigationBar)
-        }
-        .previewDisplayName("Linking unsupported restricted flow")
-    }
-}
-*/
+         ElementNavigationStack {
+             QRCodeErrorView(errorState: .linkingNotSupported, canSignInManually: false) { _ in }
+                 .toolbar(.visible, for: .navigationBar)
+         }
+         .previewDisplayName("Linking unsupported restricted flow")
+     }
+ }
+ */
 
 private extension QRCodeLoginState.ErrorState {
     var previewDisplayName: String {

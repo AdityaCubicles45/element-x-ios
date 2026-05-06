@@ -331,152 +331,152 @@ struct RoomDetailsScreen: View {
 import MatrixRustSDK
 
 /*
-struct RoomDetailsScreen_Previews: PreviewProvider, TestablePreview {
-    static let genericWorldReadableRoomViewModel = makeGenericRoomViewModel(historyVisibility: .worldReadable)
-    static let genericJoinedRoomViewModel = makeGenericRoomViewModel(historyVisibility: .joined)
-    static let simpleRoomViewModel = makeSimpleRoomViewModel()
-    static let dmRoomViewModel = makeDMViewModel(verificationState: .notVerified)
-    static let dmRoomVerifiedViewModel = makeDMViewModel(verificationState: .verified)
-    static let dmRoomVerificationViolationViewModel = makeDMViewModel(verificationState: .verificationViolation)
+ struct RoomDetailsScreen_Previews: PreviewProvider, TestablePreview {
+     static let genericWorldReadableRoomViewModel = makeGenericRoomViewModel(historyVisibility: .worldReadable)
+     static let genericJoinedRoomViewModel = makeGenericRoomViewModel(historyVisibility: .joined)
+     static let simpleRoomViewModel = makeSimpleRoomViewModel()
+     static let dmRoomViewModel = makeDMViewModel(verificationState: .notVerified)
+     static let dmRoomVerifiedViewModel = makeDMViewModel(verificationState: .verified)
+     static let dmRoomVerificationViolationViewModel = makeDMViewModel(verificationState: .verificationViolation)
     
-    static var previews: some View {
-        RoomDetailsScreen(context: genericJoinedRoomViewModel.context)
-            .snapshotPreferences(expect: genericJoinedRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
-            .previewDisplayName("Generic Room - Joined History Visibility")
+     static var previews: some View {
+         RoomDetailsScreen(context: genericJoinedRoomViewModel.context)
+             .snapshotPreferences(expect: genericJoinedRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
+             .previewDisplayName("Generic Room - Joined History Visibility")
         
-        RoomDetailsScreen(context: genericWorldReadableRoomViewModel.context)
-            .snapshotPreferences(expect: genericWorldReadableRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
-            .previewDisplayName("Generic Room - World Readable History Visibility")
+         RoomDetailsScreen(context: genericWorldReadableRoomViewModel.context)
+             .snapshotPreferences(expect: genericWorldReadableRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
+             .previewDisplayName("Generic Room - World Readable History Visibility")
         
-        RoomDetailsScreen(context: simpleRoomViewModel.context)
-            .snapshotPreferences(expect: simpleRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
-            .previewDisplayName("Simple Room")
+         RoomDetailsScreen(context: simpleRoomViewModel.context)
+             .snapshotPreferences(expect: simpleRoomViewModel.context.observe(\.viewState.permalink).map { $0 != nil })
+             .previewDisplayName("Simple Room")
         
-        RoomDetailsScreen(context: dmRoomViewModel.context)
-            .snapshotPreferences(expect: dmRoomViewModel.context.observe(\.viewState.accountOwner).map { $0 != nil })
-            .previewDisplayName("DM Room")
+         RoomDetailsScreen(context: dmRoomViewModel.context)
+             .snapshotPreferences(expect: dmRoomViewModel.context.observe(\.viewState.accountOwner).map { $0 != nil })
+             .previewDisplayName("DM Room")
         
-        RoomDetailsScreen(context: dmRoomVerifiedViewModel.context)
-            .snapshotPreferences(expect: dmRoomVerifiedViewModel.context.observe(\.viewState.dmRecipientInfo?.verificationState).map { $0 == .verified })
-            .previewDisplayName("DM Room Verified")
+         RoomDetailsScreen(context: dmRoomVerifiedViewModel.context)
+             .snapshotPreferences(expect: dmRoomVerifiedViewModel.context.observe(\.viewState.dmRecipientInfo?.verificationState).map { $0 == .verified })
+             .previewDisplayName("DM Room Verified")
         
-        RoomDetailsScreen(context: dmRoomVerificationViolationViewModel.context)
-            .snapshotPreferences(expect: dmRoomVerificationViolationViewModel.context.observe(\.viewState.accountOwner).map { $0 != nil })
-            .previewDisplayName("DM Room Verification Violation")
-    }
+         RoomDetailsScreen(context: dmRoomVerificationViolationViewModel.context)
+             .snapshotPreferences(expect: dmRoomVerificationViolationViewModel.context.observe(\.viewState.accountOwner).map { $0 != nil })
+             .previewDisplayName("DM Room Verification Violation")
+     }
     
-    private static func makeGenericRoomViewModel(historyVisibility: RoomHistoryVisibility) -> RoomDetailsScreenViewModel {
-        ServiceLocator.shared.settings.enableKeyShareOnInvite = true
-        ServiceLocator.shared.settings.knockingEnabled = true
-        let knockRequests: [KnockRequestProxyMock] = [.init()]
+     private static func makeGenericRoomViewModel(historyVisibility: RoomHistoryVisibility) -> RoomDetailsScreenViewModel {
+         ServiceLocator.shared.settings.enableKeyShareOnInvite = true
+         ServiceLocator.shared.settings.knockingEnabled = true
+         let knockRequests: [KnockRequestProxyMock] = [.init()]
         
-        let members: [RoomMemberProxyMock] = [
-            .mockMeAdmin,
-            .mockAlice,
-            .mockBob,
-            .mockCharlie
-        ]
+         let members: [RoomMemberProxyMock] = [
+             .mockMeAdmin,
+             .mockAlice,
+             .mockBob,
+             .mockCharlie
+         ]
         
-        let roomProxy = JoinedRoomProxyMock(.init(id: "room_a_id",
-                                                  name: "Room A",
-                                                  topic: """
-                                                  Discussions about Element X iOS | https://github.com/vector-im/element-x-ios
+         let roomProxy = JoinedRoomProxyMock(.init(id: "room_a_id",
+                                                   name: "Room A",
+                                                   topic: """
+                                                   Discussions about Element X iOS | https://github.com/vector-im/element-x-ios
                                                   
-                                                  Feature Status: https://github.com/vector-im/element-x-ios/issues/1225
+                                                   Feature Status: https://github.com/vector-im/element-x-ios/issues/1225
                                                   
-                                                  App Store: https://apple.co/3r6LJHZ
-                                                  TestFlight: https://testflight.apple.com/join/uZbeZCOi
-                                                  """,
-                                                  isDirect: false,
-                                                  isEncrypted: true,
-                                                  canonicalAlias: "#alias:domain.com",
-                                                  historyVisibility: historyVisibility,
-                                                  members: members,
-                                                  knockRequestsState: .loaded(knockRequests),
-                                                  joinRule: .knock))
+                                                   App Store: https://apple.co/3r6LJHZ
+                                                   TestFlight: https://testflight.apple.com/join/uZbeZCOi
+                                                   """,
+                                                   isDirect: false,
+                                                   isEncrypted: true,
+                                                   canonicalAlias: "#alias:domain.com",
+                                                   historyVisibility: historyVisibility,
+                                                   members: members,
+                                                   knockRequestsState: .loaded(knockRequests),
+                                                   joinRule: .knock))
         
-        let notificationSettingsProxyMockConfiguration = NotificationSettingsProxyMockConfiguration()
-        notificationSettingsProxyMockConfiguration.roomMode.isDefault = false
+         let notificationSettingsProxyMockConfiguration = NotificationSettingsProxyMockConfiguration()
+         notificationSettingsProxyMockConfiguration.roomMode.isDefault = false
         
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: notificationSettingsProxyMockConfiguration)
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: notificationSettingsProxyMockConfiguration)
         
-        return .init(roomProxy: roomProxy,
-                     userSession: UserSessionMock(.init()),
-                     analyticsService: ServiceLocator.shared.analytics,
-                     userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                     notificationSettingsProxy: notificationSettingsProxy,
-                     attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
-                     appSettings: ServiceLocator.shared.settings)
-    }
+         return .init(roomProxy: roomProxy,
+                      userSession: UserSessionMock(.init()),
+                      analyticsService: ServiceLocator.shared.analytics,
+                      userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                      notificationSettingsProxy: notificationSettingsProxy,
+                      attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
+                      appSettings: ServiceLocator.shared.settings)
+     }
     
-    private static func makeSimpleRoomViewModel() -> RoomDetailsScreenViewModel {
-        ServiceLocator.shared.settings.enableKeyShareOnInvite = true
-        ServiceLocator.shared.settings.knockingEnabled = true
-        let knockRequests: [KnockRequestProxyMock] = [.init()]
+     private static func makeSimpleRoomViewModel() -> RoomDetailsScreenViewModel {
+         ServiceLocator.shared.settings.enableKeyShareOnInvite = true
+         ServiceLocator.shared.settings.knockingEnabled = true
+         let knockRequests: [KnockRequestProxyMock] = [.init()]
         
-        let members: [RoomMemberProxyMock] = [
-            .mockMeAdmin,
-            .mockAlice,
-            .mockBob,
-            .mockCharlie
-        ]
-        let roomProxy = JoinedRoomProxyMock(.init(id: "simple_room_id",
-                                                  name: "Room A",
-                                                  isDirect: false,
-                                                  isEncrypted: false,
-                                                  members: members,
-                                                  knockRequestsState: .loaded(knockRequests),
-                                                  joinRule: .knock))
+         let members: [RoomMemberProxyMock] = [
+             .mockMeAdmin,
+             .mockAlice,
+             .mockBob,
+             .mockCharlie
+         ]
+         let roomProxy = JoinedRoomProxyMock(.init(id: "simple_room_id",
+                                                   name: "Room A",
+                                                   isDirect: false,
+                                                   isEncrypted: false,
+                                                   members: members,
+                                                   knockRequestsState: .loaded(knockRequests),
+                                                   joinRule: .knock))
         
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
         
-        return .init(roomProxy: roomProxy,
-                     userSession: UserSessionMock(.init()),
-                     analyticsService: ServiceLocator.shared.analytics,
-                     userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                     notificationSettingsProxy: notificationSettingsProxy,
-                     attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
-                     appSettings: ServiceLocator.shared.settings)
-    }
+         return .init(roomProxy: roomProxy,
+                      userSession: UserSessionMock(.init()),
+                      analyticsService: ServiceLocator.shared.analytics,
+                      userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                      notificationSettingsProxy: notificationSettingsProxy,
+                      attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
+                      appSettings: ServiceLocator.shared.settings)
+     }
     
-    private static func makeDMViewModel(verificationState: UserIdentityVerificationState) -> RoomDetailsScreenViewModel {
-        ServiceLocator.shared.settings.enableKeyShareOnInvite = true
+     private static func makeDMViewModel(verificationState: UserIdentityVerificationState) -> RoomDetailsScreenViewModel {
+         ServiceLocator.shared.settings.enableKeyShareOnInvite = true
         
-        let members: [RoomMemberProxyMock] = [
-            .mockMe,
-            .mockDan
-        ]
+         let members: [RoomMemberProxyMock] = [
+             .mockMe,
+             .mockDan
+         ]
         
-        let roomProxy = JoinedRoomProxyMock(.init(id: "dm_room_id",
-                                                  name: "Dan",
-                                                  topic: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                                  isDirect: true,
-                                                  isEncrypted: true,
-                                                  members: members,
-                                                  heroes: [.mockDan]))
+         let roomProxy = JoinedRoomProxyMock(.init(id: "dm_room_id",
+                                                   name: "Dan",
+                                                   topic: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                                   isDirect: true,
+                                                   isEncrypted: true,
+                                                   members: members,
+                                                   heroes: [.mockDan]))
         
-        let clientProxyMock = ClientProxyMock(.init())
+         let clientProxyMock = ClientProxyMock(.init())
         
-        clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
-            let identity = switch userID {
-            case RoomMemberProxyMock.mockDan.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: verificationState))
-            default:
-                UserIdentityProxyMock(configuration: .init())
-            }
+         clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
+             let identity = switch userID {
+             case RoomMemberProxyMock.mockDan.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: verificationState))
+             default:
+                 UserIdentityProxyMock(configuration: .init())
+             }
             
-            return .success(identity)
-        }
+             return .success(identity)
+         }
         
-        let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
+         let notificationSettingsProxy = NotificationSettingsProxyMock(with: .init())
         
-        return .init(roomProxy: roomProxy,
-                     userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                     analyticsService: ServiceLocator.shared.analytics,
-                     userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                     notificationSettingsProxy: notificationSettingsProxy,
-                     attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
-                     appSettings: ServiceLocator.shared.settings)
-    }
-}
-*/
+         return .init(roomProxy: roomProxy,
+                      userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                      analyticsService: ServiceLocator.shared.analytics,
+                      userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                      notificationSettingsProxy: notificationSettingsProxy,
+                      attributedStringBuilder: AttributedStringBuilder(mentionBuilder: MentionBuilder()),
+                      appSettings: ServiceLocator.shared.settings)
+     }
+ }
+ */

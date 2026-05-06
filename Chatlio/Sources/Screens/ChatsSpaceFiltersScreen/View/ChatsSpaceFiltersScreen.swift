@@ -46,16 +46,16 @@ struct ChatsSpaceFiltersScreen: View {
 // MARK: - Previews
 
 /*
-struct ChatsSpaceFiltersScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
+ struct ChatsSpaceFiltersScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
     
-    static var previews: some View {
-        ChatsSpaceFiltersScreen(context: viewModel.context)
-    }
+     static var previews: some View {
+         ChatsSpaceFiltersScreen(context: viewModel.context)
+     }
     
-    static func makeViewModel() -> ChatsSpaceFiltersScreenViewModel {
-        ChatsSpaceFiltersScreenViewModel(spaceService: SpaceServiceProxyMock(.populated),
-                                         mediaProvider: MediaProviderMock(configuration: .init()))
-    }
-}
-*/
+     static func makeViewModel() -> ChatsSpaceFiltersScreenViewModel {
+         ChatsSpaceFiltersScreenViewModel(spaceService: SpaceServiceProxyMock(.populated),
+                                          mediaProvider: MediaProviderMock(configuration: .init()))
+     }
+ }
+ */

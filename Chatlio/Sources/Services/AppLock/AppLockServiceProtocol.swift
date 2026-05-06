@@ -81,18 +81,18 @@ protocol AppLockServiceProtocol: AnyObject {
 
 // sourcery: AutoMockable
 /*
-extension AppLockServiceProtocol { }
+ extension AppLockServiceProtocol { }
 
-extension AppLockServiceMock {
-    static func mock(pinCode: String? = "2023", isMandatory: Bool = false, biometryType: LABiometryType = .faceID, numberOfPINAttempts: Int = 0) -> AppLockServiceMock {
-        let mock = AppLockServiceMock()
-        mock.isEnabled = pinCode != nil
-        mock.isMandatory = isMandatory
-        mock.numberOfPINAttempts = CurrentValueSubject<Int, Never>(numberOfPINAttempts).eraseToAnyPublisher()
-        mock.underlyingBiometryType = biometryType
-        mock.underlyingBiometricUnlockEnabled = biometryType != .none
-        mock.unlockWithClosure = { $0 == pinCode }
-        return mock
-    }
-}
-*/
+ extension AppLockServiceMock {
+     static func mock(pinCode: String? = "2023", isMandatory: Bool = false, biometryType: LABiometryType = .faceID, numberOfPINAttempts: Int = 0) -> AppLockServiceMock {
+         let mock = AppLockServiceMock()
+         mock.isEnabled = pinCode != nil
+         mock.isMandatory = isMandatory
+         mock.numberOfPINAttempts = CurrentValueSubject<Int, Never>(numberOfPINAttempts).eraseToAnyPublisher()
+         mock.underlyingBiometryType = biometryType
+         mock.underlyingBiometricUnlockEnabled = biometryType != .none
+         mock.unlockWithClosure = { $0 == pinCode }
+         return mock
+     }
+ }
+ */

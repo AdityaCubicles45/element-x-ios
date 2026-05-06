@@ -111,38 +111,38 @@ private extension View {
 // MARK: - Previews
 
 /*
-struct RoomHeaderView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            makeHeader(avatarURL: nil, verificationState: .notVerified)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verified)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verificationViolation)
-            makeHeader(avatarURL: .mockMXCAvatar,
-                       roomSubtitle: "Subtitle",
-                       verificationState: .verified)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified, historySharingState: .shared)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified, historySharingState: .worldReadable)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verified, historySharingState: .shared)
-            makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verificationViolation, historySharingState: .worldReadable)
-        }
-        .previewLayout(.sizeThatFits)
-    }
+ struct RoomHeaderView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(alignment: .leading, spacing: 8) {
+             makeHeader(avatarURL: nil, verificationState: .notVerified)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verified)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verificationViolation)
+             makeHeader(avatarURL: .mockMXCAvatar,
+                        roomSubtitle: "Subtitle",
+                        verificationState: .verified)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified, historySharingState: .shared)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .notVerified, historySharingState: .worldReadable)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verified, historySharingState: .shared)
+             makeHeader(avatarURL: .mockMXCAvatar, verificationState: .verificationViolation, historySharingState: .worldReadable)
+         }
+         .previewLayout(.sizeThatFits)
+     }
     
-    static func makeHeader(avatarURL: URL?,
-                           roomSubtitle: String? = nil,
-                           verificationState: UserIdentityVerificationState,
-                           historySharingState: RoomHistorySharingState? = nil) -> some View {
-        RoomHeaderView(roomName: "Some Room name",
-                       roomSubtitle: roomSubtitle,
-                       roomAvatar: .room(id: "1",
-                                         name: "Some Room Name",
-                                         avatarURL: avatarURL),
-                       dmRecipientVerificationState: verificationState,
-                       roomHistorySharingState: historySharingState,
+     static func makeHeader(avatarURL: URL?,
+                            roomSubtitle: String? = nil,
+                            verificationState: UserIdentityVerificationState,
+                            historySharingState: RoomHistorySharingState? = nil) -> some View {
+         RoomHeaderView(roomName: "Some Room name",
+                        roomSubtitle: roomSubtitle,
+                        roomAvatar: .room(id: "1",
+                                          name: "Some Room Name",
+                                          avatarURL: avatarURL),
+                        dmRecipientVerificationState: verificationState,
+                        roomHistorySharingState: historySharingState,
                        
-                       mediaProvider: MediaProviderMock(configuration: .init())) { }
-            .padding()
-    }
-}
-*/
+                        mediaProvider: MediaProviderMock(configuration: .init())) { }
+             .padding()
+     }
+ }
+ */

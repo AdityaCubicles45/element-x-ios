@@ -61,21 +61,21 @@ extension View {
 }
 
 /*
-struct BadgeView_Previews: PreviewProvider {
-    static let circleGradient = LinearGradient(colors: [.green, .orange],
-                                               startPoint: .topLeading,
-                                               endPoint: .bottomTrailing)
-    static let screenGradient = LinearGradient(colors: [.pink, .blue],
-                                               startPoint: .top,
-                                               endPoint: .bottom)
-    static var previews: some View {
-        Circle()
-            .fill(circleGradient)
-            .saturation(2.0)
-            .frame(width: 100, height: 100)
-            .overlayBadge(40)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background { screenGradient.opacity(0.3).ignoresSafeArea() }
-    }
-}
-*/
+ struct BadgeView_Previews: PreviewProvider {
+     static let circleGradient = LinearGradient(colors: [.green, .orange],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing)
+     static let screenGradient = LinearGradient(colors: [.pink, .blue],
+                                                startPoint: .top,
+                                                endPoint: .bottom)
+     static var previews: some View {
+         Circle()
+             .fill(circleGradient)
+             .saturation(2.0)
+             .frame(width: 100, height: 100)
+             .overlayBadge(40)
+             .frame(maxWidth: .infinity, maxHeight: .infinity)
+             .background { screenGradient.opacity(0.3).ignoresSafeArea() }
+     }
+ }
+ */

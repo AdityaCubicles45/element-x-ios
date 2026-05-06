@@ -71,59 +71,59 @@ struct TimelineReadReceiptsView: View {
 }
 
 /*
-struct TimelineReadReceiptsView_Previews: PreviewProvider, TestablePreview {
-    static let members: [RoomMemberProxyMock] = [
-        .mockAlice,
-        .mockBob,
-        .mockCharlie,
-        .mockDan,
-        .mockMe
-    ]
+ struct TimelineReadReceiptsView_Previews: PreviewProvider, TestablePreview {
+     static let members: [RoomMemberProxyMock] = [
+         .mockAlice,
+         .mockBob,
+         .mockCharlie,
+         .mockDan,
+         .mockMe
+     ]
 
-    static let viewModel = TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Test", members: members)),
-                                             timelineController: MockTimelineController(),
-                                             userSession: UserSessionMock(.init()),
-                                             mediaPlayerProvider: MediaPlayerProviderMock(),
-                                             userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                             appMediator: AppMediatorMock.default,
-                                             appSettings: ServiceLocator.shared.settings,
-                                             analyticsService: ServiceLocator.shared.analytics,
-                                             emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                             linkMetadataProvider: LinkMetadataProvider(),
-                                             timelineControllerFactory: TimelineControllerFactoryMock(.init()))
+     static let viewModel = TimelineViewModel(roomProxy: JoinedRoomProxyMock(.init(name: "Test", members: members)),
+                                              timelineController: MockTimelineController(),
+                                              userSession: UserSessionMock(.init()),
+                                              mediaPlayerProvider: MediaPlayerProviderMock(),
+                                              userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                              appMediator: AppMediatorMock.default,
+                                              appSettings: ServiceLocator.shared.settings,
+                                              analyticsService: ServiceLocator.shared.analytics,
+                                              emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                              linkMetadataProvider: LinkMetadataProvider(),
+                                              timelineControllerFactory: TimelineControllerFactoryMock(.init()))
     
-    static let singleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now")]
-    static let doubleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
-                                ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before")]
-    static let tripleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
-                                ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before"),
-                                ReadReceipt(userID: RoomMemberProxyMock.mockCharlie.userID, formattedTimestamp: "Way before")]
-    static let quadrupleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
-                                   ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before"),
-                                   ReadReceipt(userID: RoomMemberProxyMock.mockCharlie.userID, formattedTimestamp: "Way before"),
-                                   ReadReceipt(userID: RoomMemberProxyMock.mockDan.userID, formattedTimestamp: "Way, way before")]
+     static let singleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now")]
+     static let doubleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
+                                 ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before")]
+     static let tripleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
+                                 ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before"),
+                                 ReadReceipt(userID: RoomMemberProxyMock.mockCharlie.userID, formattedTimestamp: "Way before")]
+     static let quadrupleReceipt = [ReadReceipt(userID: RoomMemberProxyMock.mockAlice.userID, formattedTimestamp: "Now"),
+                                    ReadReceipt(userID: RoomMemberProxyMock.mockBob.userID, formattedTimestamp: "Before"),
+                                    ReadReceipt(userID: RoomMemberProxyMock.mockCharlie.userID, formattedTimestamp: "Way before"),
+                                    ReadReceipt(userID: RoomMemberProxyMock.mockDan.userID, formattedTimestamp: "Way, way before")]
 
-    static func mockTimelineItem(with receipts: [ReadReceipt]) -> TextRoomTimelineItem {
-        TextRoomTimelineItem(id: .randomEvent,
-                             timestamp: .mock,
-                             isOutgoing: true,
-                             isEditable: false,
-                             canBeRepliedTo: true,
-                             sender: .init(id: UUID().uuidString), content: .init(body: "Test"),
-                             properties: .init(orderedReadReceipts: receipts))
-    }
+     static func mockTimelineItem(with receipts: [ReadReceipt]) -> TextRoomTimelineItem {
+         TextRoomTimelineItem(id: .randomEvent,
+                              timestamp: .mock,
+                              isOutgoing: true,
+                              isEditable: false,
+                              canBeRepliedTo: true,
+                              sender: .init(id: UUID().uuidString), content: .init(body: "Test"),
+                              properties: .init(orderedReadReceipts: receipts))
+     }
 
-    static var previews: some View {
-        VStack(spacing: 8) {
-            TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: singleReceipt))
-                .environmentObject(viewModel.context)
-            TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: doubleReceipt))
-                .environmentObject(viewModel.context)
-            TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: tripleReceipt))
-                .environmentObject(viewModel.context)
-            TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: quadrupleReceipt))
-                .environmentObject(viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         VStack(spacing: 8) {
+             TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: singleReceipt))
+                 .environmentObject(viewModel.context)
+             TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: doubleReceipt))
+                 .environmentObject(viewModel.context)
+             TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: tripleReceipt))
+                 .environmentObject(viewModel.context)
+             TimelineReadReceiptsView(timelineItem: mockTimelineItem(with: quadrupleReceipt))
+                 .environmentObject(viewModel.context)
+         }
+     }
+ }
+ */

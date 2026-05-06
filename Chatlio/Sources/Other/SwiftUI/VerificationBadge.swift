@@ -39,22 +39,22 @@ struct VerificationBadge: View {
 }
 
 /*
-struct VerificationBadge_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        VStack(spacing: 20) {
-            HStack(spacing: 16) {
-                VerificationBadge(verificationState: .notVerified)
-                VerificationBadge(verificationState: .verificationViolation)
-                VerificationBadge(verificationState: .verified)
-            }
+ struct VerificationBadge_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         VStack(spacing: 20) {
+             HStack(spacing: 16) {
+                 VerificationBadge(verificationState: .notVerified)
+                 VerificationBadge(verificationState: .verificationViolation)
+                 VerificationBadge(verificationState: .verified)
+             }
             
-            HStack(spacing: 16) {
-                VerificationBadge(verificationState: .notVerified, size: .xSmall, relativeTo: .compound.bodyMD)
-                VerificationBadge(verificationState: .verificationViolation, size: .xSmall, relativeTo: .compound.bodyMD)
-                VerificationBadge(verificationState: .verified, size: .xSmall, relativeTo: .compound.bodyMD)
-            }
-        }
-        .previewLayout(.sizeThatFits)
-    }
-}
-*/
+             HStack(spacing: 16) {
+                 VerificationBadge(verificationState: .notVerified, size: .xSmall, relativeTo: .compound.bodyMD)
+                 VerificationBadge(verificationState: .verificationViolation, size: .xSmall, relativeTo: .compound.bodyMD)
+                 VerificationBadge(verificationState: .verified, size: .xSmall, relativeTo: .compound.bodyMD)
+             }
+         }
+         .previewLayout(.sizeThatFits)
+     }
+ }
+ */

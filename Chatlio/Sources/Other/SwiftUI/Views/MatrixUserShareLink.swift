@@ -28,11 +28,11 @@ struct MatrixUserShareLink<Label: View>: View {
 }
 
 /*
-struct MatrixUserPermalink_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        MatrixUserShareLink(userID: "@someone:somewhere.org") {
-            Label("Share", icon: \.shareIos)
-        }
-    }
-}
-*/
+ struct MatrixUserPermalink_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         MatrixUserShareLink(userID: "@someone:somewhere.org") {
+             Label("Share", icon: \.shareIos)
+         }
+     }
+ }
+ */

@@ -39,16 +39,16 @@ struct SpaceAddRoomsScreenSelectedItem: View {
 }
 
 /*
-struct SpaceAddRoomsScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        SpaceAddRoomsScreenSelectedItem(room: .init(id: "",
-                                                    title: "Selected Room",
-                                                    description: "#selected:matrix.org",
-                                                    avatar: .room(id: "",
-                                                                  name: "Selected Room",
-                                                                  avatarURL: .mockMXCAvatar)),
-                                        mediaProvider: MediaProviderMock(configuration: .init())) { }
-            .frame(width: 80)
-    }
-}
-*/
+ struct SpaceAddRoomsScreenSelectedItem_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         SpaceAddRoomsScreenSelectedItem(room: .init(id: "",
+                                                     title: "Selected Room",
+                                                     description: "#selected:matrix.org",
+                                                     avatar: .room(id: "",
+                                                                   name: "Selected Room",
+                                                                   avatarURL: .mockMXCAvatar)),
+                                         mediaProvider: MediaProviderMock(configuration: .init())) { }
+             .frame(width: 80)
+     }
+ }
+ */

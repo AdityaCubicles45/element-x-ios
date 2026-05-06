@@ -41,14 +41,14 @@ struct SpaceHeaderTopicSheetView: View {
 // MARK: - Previews
 
 /*
-struct SpaceHeaderTopicSheetView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        SpaceHeaderTopicSheetView(topic: ["Description of the space goes right here.",
-                                          "Lorem ipsum dolor sit amet consectetur.",
-                                          "Leo viverra morbi habitant in.",
-                                          "Sem amet enim habitant nibh augue mauris.",
-                                          "Interdum mauris ultrices tincidunt proin morbi erat aenean risus nibh.",
-                                          "Diam amet sit fermentum vulputate faucibus."].joined(separator: " "))
-    }
-}
-*/
+ struct SpaceHeaderTopicSheetView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         SpaceHeaderTopicSheetView(topic: ["Description of the space goes right here.",
+                                           "Lorem ipsum dolor sit amet consectetur.",
+                                           "Leo viverra morbi habitant in.",
+                                           "Sem amet enim habitant nibh augue mauris.",
+                                           "Interdum mauris ultrices tincidunt proin morbi erat aenean risus nibh.",
+                                           "Diam amet sit fermentum vulputate faucibus."].joined(separator: " "))
+     }
+ }
+ */

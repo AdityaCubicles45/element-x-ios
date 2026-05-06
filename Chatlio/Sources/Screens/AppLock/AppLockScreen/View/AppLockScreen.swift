@@ -113,13 +113,13 @@ struct AppLockScreen: View {
 // MARK: - Previews
 
 /*
-struct AppLockScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = AppLockScreenViewModel(appLockService: AppLockServiceMock.mock())
+ struct AppLockScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = AppLockScreenViewModel(appLockService: AppLockServiceMock.mock())
     
-    static var previews: some View {
-        ElementNavigationStack {
-            AppLockScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ElementNavigationStack {
+             AppLockScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

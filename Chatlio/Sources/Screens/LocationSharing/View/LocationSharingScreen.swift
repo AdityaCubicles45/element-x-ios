@@ -150,38 +150,38 @@ struct LocationSharingScreen: View {
 // MARK: - Previews
 
 /*
-struct LocationSharingScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation)
+ struct LocationSharingScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = LocationSharingScreenViewModel.mock(type: .staticSenderLocation)
     
-    static let withoutLiveSharingViewModel = LocationSharingScreenViewModel.mock(type: .picker, liveLocationSharingEnabled: false)
+     static let withoutLiveSharingViewModel = LocationSharingScreenViewModel.mock(type: .picker, liveLocationSharingEnabled: false)
     
-    static let pinViewModel = LocationSharingScreenViewModel.mock(type: .staticPinLocation)
+     static let pinViewModel = LocationSharingScreenViewModel.mock(type: .staticPinLocation)
     
-    static let pickerViewModel = LocationSharingScreenViewModel.mock(type: .picker)
+     static let pickerViewModel = LocationSharingScreenViewModel.mock(type: .picker)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            LocationSharingScreen(context: pickerViewModel.context)
-        }
-        .previewDisplayName("Picker")
+     static var previews: some View {
+         ElementNavigationStack {
+             LocationSharingScreen(context: pickerViewModel.context)
+         }
+         .previewDisplayName("Picker")
         
-        ElementNavigationStack {
-            LocationSharingScreen(context: withoutLiveSharingViewModel.context)
-        }
-        .previewDisplayName("Picker without live location sharing")
+         ElementNavigationStack {
+             LocationSharingScreen(context: withoutLiveSharingViewModel.context)
+         }
+         .previewDisplayName("Picker without live location sharing")
         
-        ElementNavigationStack {
-            LocationSharingScreen(context: viewModel.context)
-        }
-        .previewDisplayName("User Static Location")
+         ElementNavigationStack {
+             LocationSharingScreen(context: viewModel.context)
+         }
+         .previewDisplayName("User Static Location")
         
-        ElementNavigationStack {
-            LocationSharingScreen(context: pinViewModel.context)
-        }
-        .previewDisplayName("Pin Static Location")
-    }
-}
-*/
+         ElementNavigationStack {
+             LocationSharingScreen(context: pinViewModel.context)
+         }
+         .previewDisplayName("Pin Static Location")
+     }
+ }
+ */
 
 private extension CGPoint {
     static let bottomCenter: Self = .init(x: 0.5, y: 1)

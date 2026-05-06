@@ -65,34 +65,34 @@ struct RoomChangePermissionsScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomChangePermissionsScreen_Previews: PreviewProvider, TestablePreview {
-    static let roomViewModel = makeViewModel(isSpace: false)
-    static let roomAsUserViewModel = makeViewModel(isSpace: false, ownPowerLevel: RoomRole.user.powerLevel)
-    static let spaceViewModel = makeViewModel(isSpace: true)
+ struct RoomChangePermissionsScreen_Previews: PreviewProvider, TestablePreview {
+     static let roomViewModel = makeViewModel(isSpace: false)
+     static let roomAsUserViewModel = makeViewModel(isSpace: false, ownPowerLevel: RoomRole.user.powerLevel)
+     static let spaceViewModel = makeViewModel(isSpace: true)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            RoomChangePermissionsScreen(context: roomViewModel.context)
-        }
-        .previewDisplayName("Room")
+     static var previews: some View {
+         ElementNavigationStack {
+             RoomChangePermissionsScreen(context: roomViewModel.context)
+         }
+         .previewDisplayName("Room")
         
-        ElementNavigationStack {
-            RoomChangePermissionsScreen(context: roomAsUserViewModel.context)
-        }
-        .previewDisplayName("Room as User")
+         ElementNavigationStack {
+             RoomChangePermissionsScreen(context: roomAsUserViewModel.context)
+         }
+         .previewDisplayName("Room as User")
         
-        ElementNavigationStack {
-            RoomChangePermissionsScreen(context: spaceViewModel.context)
-        }
-        .previewDisplayName("Space")
-    }
+         ElementNavigationStack {
+             RoomChangePermissionsScreen(context: spaceViewModel.context)
+         }
+         .previewDisplayName("Space")
+     }
     
-    static func makeViewModel(isSpace: Bool, ownPowerLevel: RoomPowerLevel = RoomRole.creator.powerLevel) -> RoomChangePermissionsScreenViewModel {
-        RoomChangePermissionsScreenViewModel(currentPermissions: .init(powerLevels: .mock),
-                                             ownPowerLevel: ownPowerLevel,
-                                             roomProxy: JoinedRoomProxyMock(.init(isSpace: isSpace)),
-                                             userIndicatorController: UserIndicatorControllerMock(),
-                                             analytics: ServiceLocator.shared.analytics)
-    }
-}
-*/
+     static func makeViewModel(isSpace: Bool, ownPowerLevel: RoomPowerLevel = RoomRole.creator.powerLevel) -> RoomChangePermissionsScreenViewModel {
+         RoomChangePermissionsScreenViewModel(currentPermissions: .init(powerLevels: .mock),
+                                              ownPowerLevel: ownPowerLevel,
+                                              roomProxy: JoinedRoomProxyMock(.init(isSpace: isSpace)),
+                                              userIndicatorController: UserIndicatorControllerMock(),
+                                              analytics: ServiceLocator.shared.analytics)
+     }
+ }
+ */

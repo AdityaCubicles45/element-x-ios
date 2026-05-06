@@ -211,37 +211,37 @@ struct TimelineReactionAddMoreButtonLabel: View {
 }
 
 /*
-struct TimelineReactionViewPreviewsContainer: View {
-    var body: some View {
-        VStack(spacing: 8) {
-            TimelineReactionsView(context: TimelineViewModel.mock.context,
-                                  itemID: .randomEvent,
-                                  reactions: [AggregatedReaction.mockReactionWithLongText,
-                                              AggregatedReaction.mockReactionWithLongTextRTL])
-            Divider()
-            TimelineReactionsView(context: TimelineViewModel.mock.context,
-                                  itemID: .randomEvent,
-                                  reactions: Array(AggregatedReaction.mockReactions.prefix(3)))
-            Divider()
-            TimelineReactionsView(context: TimelineViewModel.mock.context,
-                                  itemID: .randomEvent,
-                                  reactions: AggregatedReaction.mockReactions)
-            Divider()
-            TimelineReactionsView(context: TimelineViewModel.mock.context,
-                                  itemID: .randomEvent,
-                                  reactions: AggregatedReaction.mockReactions,
-                                  isLayoutRTL: true)
-        }
-        .background(Color.red)
-        .frame(maxWidth: 250, alignment: .leading)
-    }
-}
-*/
+ struct TimelineReactionViewPreviewsContainer: View {
+     var body: some View {
+         VStack(spacing: 8) {
+             TimelineReactionsView(context: TimelineViewModel.mock.context,
+                                   itemID: .randomEvent,
+                                   reactions: [AggregatedReaction.mockReactionWithLongText,
+                                               AggregatedReaction.mockReactionWithLongTextRTL])
+             Divider()
+             TimelineReactionsView(context: TimelineViewModel.mock.context,
+                                   itemID: .randomEvent,
+                                   reactions: Array(AggregatedReaction.mockReactions.prefix(3)))
+             Divider()
+             TimelineReactionsView(context: TimelineViewModel.mock.context,
+                                   itemID: .randomEvent,
+                                   reactions: AggregatedReaction.mockReactions)
+             Divider()
+             TimelineReactionsView(context: TimelineViewModel.mock.context,
+                                   itemID: .randomEvent,
+                                   reactions: AggregatedReaction.mockReactions,
+                                   isLayoutRTL: true)
+         }
+         .background(Color.red)
+         .frame(maxWidth: 250, alignment: .leading)
+     }
+ }
+ */
 
 /*
-struct TimelineReactionView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        TimelineReactionViewPreviewsContainer()
-    }
-}
-*/
+ struct TimelineReactionView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         TimelineReactionViewPreviewsContainer()
+     }
+ }
+ */

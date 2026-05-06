@@ -165,74 +165,74 @@ struct RoomMemberDetailsScreen: View {
 // MARK: - Previews
 
 /*
-struct RoomMemberDetailsScreen_Previews: PreviewProvider, TestablePreview {
-    static let verifiedUserViewModel = makeViewModel(member: .mockDan)
-    static let verificationViolationUserViewModel = makeViewModel(member: .mockBob)
-    static let otherUserViewModel = makeViewModel(member: .mockAlice)
-    static let accountOwnerViewModel = makeViewModel(member: .mockMe)
-    static let ignoredUserViewModel = makeViewModel(member: .mockIgnored)
+ struct RoomMemberDetailsScreen_Previews: PreviewProvider, TestablePreview {
+     static let verifiedUserViewModel = makeViewModel(member: .mockDan)
+     static let verificationViolationUserViewModel = makeViewModel(member: .mockBob)
+     static let otherUserViewModel = makeViewModel(member: .mockAlice)
+     static let accountOwnerViewModel = makeViewModel(member: .mockMe)
+     static let ignoredUserViewModel = makeViewModel(member: .mockIgnored)
     
-    static var previews: some View {
-        RoomMemberDetailsScreen(context: verifiedUserViewModel.context)
-            .snapshotPreferences(expect: verifiedUserViewModel.context.$viewState.map { state in
-                state.verificationState == .verified
-            })
-            .previewDisplayName("Verified User")
+     static var previews: some View {
+         RoomMemberDetailsScreen(context: verifiedUserViewModel.context)
+             .snapshotPreferences(expect: verifiedUserViewModel.context.$viewState.map { state in
+                 state.verificationState == .verified
+             })
+             .previewDisplayName("Verified User")
         
-        RoomMemberDetailsScreen(context: verificationViolationUserViewModel.context)
-            .snapshotPreferences(expect: verificationViolationUserViewModel.context.$viewState.map { state in
-                state.verificationState == .verificationViolation
-            })
-            .previewDisplayName("Verification Violation User")
+         RoomMemberDetailsScreen(context: verificationViolationUserViewModel.context)
+             .snapshotPreferences(expect: verificationViolationUserViewModel.context.$viewState.map { state in
+                 state.verificationState == .verificationViolation
+             })
+             .previewDisplayName("Verification Violation User")
             
-        RoomMemberDetailsScreen(context: otherUserViewModel.context)
-            .snapshotPreferences(expect: otherUserViewModel.context.$viewState.map { state in
-                state.memberDetails?.role == .user && state.dmRoomID != nil
-            })
-            .previewDisplayName("Other User")
+         RoomMemberDetailsScreen(context: otherUserViewModel.context)
+             .snapshotPreferences(expect: otherUserViewModel.context.$viewState.map { state in
+                 state.memberDetails?.role == .user && state.dmRoomID != nil
+             })
+             .previewDisplayName("Other User")
             
-        RoomMemberDetailsScreen(context: accountOwnerViewModel.context)
-            .snapshotPreferences(expect: accountOwnerViewModel.context.$viewState.map { state in
-                state.isOwnMemberDetails == true
-            })
-            .previewDisplayName("Account Owner")
+         RoomMemberDetailsScreen(context: accountOwnerViewModel.context)
+             .snapshotPreferences(expect: accountOwnerViewModel.context.$viewState.map { state in
+                 state.isOwnMemberDetails == true
+             })
+             .previewDisplayName("Account Owner")
             
-        RoomMemberDetailsScreen(context: ignoredUserViewModel.context)
-            .snapshotPreferences(expect: ignoredUserViewModel.context.$viewState.map { state in
-                state.memberDetails?.isIgnored ?? false && state.dmRoomID != nil
-            })
-            .previewDisplayName("Ignored User")
-    }
+         RoomMemberDetailsScreen(context: ignoredUserViewModel.context)
+             .snapshotPreferences(expect: ignoredUserViewModel.context.$viewState.map { state in
+                 state.memberDetails?.isIgnored ?? false && state.dmRoomID != nil
+             })
+             .previewDisplayName("Ignored User")
+     }
     
-    static func makeViewModel(member: RoomMemberProxyMock) -> RoomMemberDetailsScreenViewModel {
-        let roomProxyMock = JoinedRoomProxyMock(.init(name: ""))
-        roomProxyMock.getMemberUserIDReturnValue = .success(member)
+     static func makeViewModel(member: RoomMemberProxyMock) -> RoomMemberDetailsScreenViewModel {
+         let roomProxyMock = JoinedRoomProxyMock(.init(name: ""))
+         roomProxyMock.getMemberUserIDReturnValue = .success(member)
         
-        let clientProxyMock = ClientProxyMock(.init())
+         let clientProxyMock = ClientProxyMock(.init())
         
-        clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
-            let identity = switch userID {
-            case RoomMemberProxyMock.mockDan.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: .verified))
-            case RoomMemberProxyMock.mockBob.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: .verificationViolation))
-            default:
-                UserIdentityProxyMock(configuration: .init())
-            }
+         clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
+             let identity = switch userID {
+             case RoomMemberProxyMock.mockDan.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: .verified))
+             case RoomMemberProxyMock.mockBob.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: .verificationViolation))
+             default:
+                 UserIdentityProxyMock(configuration: .init())
+             }
             
-            return .success(identity)
-        }
+             return .success(identity)
+         }
         
-        // to avoid mock the call state for the account owner test case
-        if member.userID != RoomMemberProxyMock.mockMe.userID {
-            clientProxyMock.directRoomForUserIDReturnValue = .success("roomID")
-        }
+         // to avoid mock the call state for the account owner test case
+         if member.userID != RoomMemberProxyMock.mockMe.userID {
+             clientProxyMock.directRoomForUserIDReturnValue = .success("roomID")
+         }
         
-        return RoomMemberDetailsScreenViewModel(userID: member.userID,
-                                                roomProxy: roomProxyMock,
-                                                userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                                                userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                                analytics: ServiceLocator.shared.analytics)
-    }
-}
-*/
+         return RoomMemberDetailsScreenViewModel(userID: member.userID,
+                                                 roomProxy: roomProxyMock,
+                                                 userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                                                 userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                                 analytics: ServiceLocator.shared.analytics)
+     }
+ }
+ */

@@ -87,22 +87,22 @@ struct SecureBackupKeyBackupScreen: View {
 // MARK: - Previews
 
 /*
-struct SecureBackupKeyBackupScreen_Previews: PreviewProvider, TestablePreview {
-    static let setupViewModel = viewModel(keyBackupState: .enabled)
+ struct SecureBackupKeyBackupScreen_Previews: PreviewProvider, TestablePreview {
+     static let setupViewModel = viewModel(keyBackupState: .enabled)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SecureBackupKeyBackupScreen(context: setupViewModel.context)
-        }
-        .previewDisplayName("Set up")
-    }
+     static var previews: some View {
+         ElementNavigationStack {
+             SecureBackupKeyBackupScreen(context: setupViewModel.context)
+         }
+         .previewDisplayName("Set up")
+     }
     
-    static func viewModel(keyBackupState: SecureBackupKeyBackupState) -> SecureBackupKeyBackupScreenViewModelType {
-        let backupController = SecureBackupControllerMock()
-        backupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(keyBackupState).asCurrentValuePublisher()
+     static func viewModel(keyBackupState: SecureBackupKeyBackupState) -> SecureBackupKeyBackupScreenViewModelType {
+         let backupController = SecureBackupControllerMock()
+         backupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(keyBackupState).asCurrentValuePublisher()
         
-        return SecureBackupKeyBackupScreenViewModel(secureBackupController: backupController,
-                                                    userIndicatorController: nil)
-    }
-}
-*/
+         return SecureBackupKeyBackupScreenViewModel(secureBackupController: backupController,
+                                                     userIndicatorController: nil)
+     }
+ }
+ */

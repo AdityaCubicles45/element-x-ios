@@ -101,33 +101,33 @@ struct EmojiPickerScreen: View {
 // MARK: - Previews
 
 /*
-struct EmojiPickerScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
-                                                      selectedEmojis: ["😀", "😄"],
-                                                      emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                                      timelineController: MockTimelineController())
+ struct EmojiPickerScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
+                                                       selectedEmojis: ["😀", "😄"],
+                                                       emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                                       timelineController: MockTimelineController())
     
-    static var previews: some View {
-        EmojiPickerScreen(context: viewModel.context)
-            .previewDisplayName("Screen")
-            .snapshotPreferences(expect: viewModel.context.observe(\.viewState.categories).map { !$0.isEmpty })
-    }
-}
-*/
+     static var previews: some View {
+         EmojiPickerScreen(context: viewModel.context)
+             .previewDisplayName("Screen")
+             .snapshotPreferences(expect: viewModel.context.observe(\.viewState.categories).map { !$0.isEmpty })
+     }
+ }
+ */
 
 /*
-struct EmojiPickerScreenSheet_Previews: PreviewProvider {
-    static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
-                                                      selectedEmojis: ["😀", "😄"],
-                                                      emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
-                                                      timelineController: MockTimelineController())
+ struct EmojiPickerScreenSheet_Previews: PreviewProvider {
+     static let viewModel = EmojiPickerScreenViewModel(itemID: .randomEvent,
+                                                       selectedEmojis: ["😀", "😄"],
+                                                       emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
+                                                       timelineController: MockTimelineController())
     
-    static var previews: some View {
-        Text("Timeline view")
-            .sheet(isPresented: .constant(true)) {
-                EmojiPickerScreen(context: viewModel.context)
-            }
-            .previewDisplayName("Sheet")
-    }
-}
-*/
+     static var previews: some View {
+         Text("Timeline view")
+             .sheet(isPresented: .constant(true)) {
+                 EmojiPickerScreen(context: viewModel.context)
+             }
+             .previewDisplayName("Sheet")
+     }
+ }
+ */

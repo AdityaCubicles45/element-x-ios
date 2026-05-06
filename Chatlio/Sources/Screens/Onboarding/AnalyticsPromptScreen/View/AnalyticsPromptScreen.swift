@@ -91,19 +91,19 @@ struct AnalyticsPromptScreen: View {
 // MARK: - Previews
 
 /*
-struct AnalyticsPromptScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel()
-    static let noTermsViewModel = makeViewModel(showTerms: false)
+ struct AnalyticsPromptScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel()
+     static let noTermsViewModel = makeViewModel(showTerms: false)
     
-    static var previews: some View {
-        AnalyticsPromptScreen(context: viewModel.context)
-            .previewDisplayName("Default")
-        AnalyticsPromptScreen(context: noTermsViewModel.context)
-            .previewDisplayName("No terms")
-    }
+     static var previews: some View {
+         AnalyticsPromptScreen(context: viewModel.context)
+             .previewDisplayName("Default")
+         AnalyticsPromptScreen(context: noTermsViewModel.context)
+             .previewDisplayName("No terms")
+     }
     
-    static func makeViewModel(showTerms: Bool = true) -> AnalyticsPromptScreenViewModel {
-        AnalyticsPromptScreenViewModel(termsURL: showTerms ? ServiceLocator.shared.settings.analyticsTermsURL : nil)
-    }
-}
-*/
+     static func makeViewModel(showTerms: Bool = true) -> AnalyticsPromptScreenViewModel {
+         AnalyticsPromptScreenViewModel(termsURL: showTerms ? ServiceLocator.shared.settings.analyticsTermsURL : nil)
+     }
+ }
+ */

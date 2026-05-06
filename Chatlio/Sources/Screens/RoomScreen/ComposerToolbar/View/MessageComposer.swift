@@ -248,129 +248,129 @@ private struct MessageComposerStyleModifier<Header: View>: ViewModifier {
 // MARK: - Previews
 
 /*
-struct MessageComposer_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct MessageComposer_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static let replyTypes: [TimelineItemReplyDetails] = [
-        .loaded(sender: .init(id: "Dave"),
-                eventID: "123",
-                eventContent: .message(.audio(.init(filename: "lightning.mp3",
-                                                    caption: "Audio: Ride the lightning",
-                                                    duration: 100,
-                                                    waveform: nil,
+     static let replyTypes: [TimelineItemReplyDetails] = [
+         .loaded(sender: .init(id: "Dave"),
+                 eventID: "123",
+                 eventContent: .message(.audio(.init(filename: "lightning.mp3",
+                                                     caption: "Audio: Ride the lightning",
+                                                     duration: 100,
+                                                     waveform: nil,
+                                                     source: nil,
+                                                     fileSize: nil,
+                                                     contentType: nil)))),
+         .loaded(sender: .init(id: "James"),
+                 eventID: "123",
+                 eventContent: .message(.emote(.init(body: "Emote: James thinks he's the phantom lord")))),
+         .loaded(sender: .init(id: "Robert"),
+                 eventID: "123",
+                 eventContent: .message(.file(.init(filename: "brain-surgery.pdf",
+                                                    caption: "File: Crash course in brain surgery",
                                                     source: nil,
                                                     fileSize: nil,
+                                                    thumbnailSource: nil,
                                                     contentType: nil)))),
-        .loaded(sender: .init(id: "James"),
-                eventID: "123",
-                eventContent: .message(.emote(.init(body: "Emote: James thinks he's the phantom lord")))),
-        .loaded(sender: .init(id: "Robert"),
-                eventID: "123",
-                eventContent: .message(.file(.init(filename: "brain-surgery.pdf",
-                                                   caption: "File: Crash course in brain surgery",
-                                                   source: nil,
-                                                   fileSize: nil,
-                                                   thumbnailSource: nil,
-                                                   contentType: nil)))),
-        .loaded(sender: .init(id: "Cliff"),
-                eventID: "123",
-                eventContent: .message(.image(.init(filename: "head.png",
-                                                    caption: "Image: Pushead",
-                                                    imageInfo: .mockImage,
-                                                    thumbnailInfo: .mockThumbnail)))),
-        .loaded(sender: .init(id: "Jason"),
-                eventID: "123",
-                eventContent: .message(.notice(.init(body: "Notice: Too far gone?")))),
-        .loaded(sender: .init(id: "Kirk"),
-                eventID: "123",
-                eventContent: .message(.text(.init(body: "Text: Where the wild things are")))),
-        .loaded(sender: .init(id: "Lars"),
-                eventID: "123",
-                eventContent: .message(.video(.init(filename: "never.mov",
-                                                    caption: "Video: Through the never",
-                                                    videoInfo: .mockVideo,
-                                                    thumbnailInfo: .mockVideoThumbnail)))),
-        .loading(eventID: "")
-    ]
+         .loaded(sender: .init(id: "Cliff"),
+                 eventID: "123",
+                 eventContent: .message(.image(.init(filename: "head.png",
+                                                     caption: "Image: Pushead",
+                                                     imageInfo: .mockImage,
+                                                     thumbnailInfo: .mockThumbnail)))),
+         .loaded(sender: .init(id: "Jason"),
+                 eventID: "123",
+                 eventContent: .message(.notice(.init(body: "Notice: Too far gone?")))),
+         .loaded(sender: .init(id: "Kirk"),
+                 eventID: "123",
+                 eventContent: .message(.text(.init(body: "Text: Where the wild things are")))),
+         .loaded(sender: .init(id: "Lars"),
+                 eventID: "123",
+                 eventContent: .message(.video(.init(filename: "never.mov",
+                                                     caption: "Video: Through the never",
+                                                     videoInfo: .mockVideo,
+                                                     thumbnailInfo: .mockVideoThumbnail)))),
+         .loading(eventID: "")
+     ]
     
-    static func messageComposer(_ content: NSAttributedString = .init(string: ""),
-                                mode: ComposerMode = .default,
-                                placeholder: String = L10n.richTextEditorComposerPlaceholder) -> MessageComposer {
-        let viewModel = WysiwygComposerViewModel(minHeight: 22,
-                                                 maxExpandedHeight: 250)
-        viewModel.setMarkdownContent(content.string)
+     static func messageComposer(_ content: NSAttributedString = .init(string: ""),
+                                 mode: ComposerMode = .default,
+                                 placeholder: String = L10n.richTextEditorComposerPlaceholder) -> MessageComposer {
+         let viewModel = WysiwygComposerViewModel(minHeight: 22,
+                                                  maxExpandedHeight: 250)
+         viewModel.setMarkdownContent(content.string)
         
-        let composerView = WysiwygComposerView(placeholder: L10n.richTextEditorComposerPlaceholder,
-                                               viewModel: viewModel,
-                                               itemProviderHelper: nil,
-                                               keyCommands: nil,
-                                               pasteHandler: nil)
+         let composerView = WysiwygComposerView(placeholder: L10n.richTextEditorComposerPlaceholder,
+                                                viewModel: viewModel,
+                                                itemProviderHelper: nil,
+                                                keyCommands: nil,
+                                                pasteHandler: nil)
         
-        return MessageComposer(plainComposerText: .constant(content),
-                               presendCallback: .constant(nil),
-                               selectedRange: .constant(NSRange(location: 0, length: 0)),
-                               composerView: composerView,
-                               mode: mode,
-                               placeholder: placeholder,
-                               composerFormattingEnabled: false,
-                               showResizeGrabber: false,
-                               isExpanded: .constant(false),
-                               sendAction: { },
-                               editAction: { },
-                               pasteAction: { _ in },
-                               cancellationAction: { },
-                               onAppearAction: { viewModel.setup() })
-    }
+         return MessageComposer(plainComposerText: .constant(content),
+                                presendCallback: .constant(nil),
+                                selectedRange: .constant(NSRange(location: 0, length: 0)),
+                                composerView: composerView,
+                                mode: mode,
+                                placeholder: placeholder,
+                                composerFormattingEnabled: false,
+                                showResizeGrabber: false,
+                                isExpanded: .constant(false),
+                                sendAction: { },
+                                editAction: { },
+                                pasteAction: { _ in },
+                                cancellationAction: { },
+                                onAppearAction: { viewModel.setup() })
+     }
     
-    static var previews: some View {
-        VStack(spacing: 8) {
-            messageComposer()
+     static var previews: some View {
+         VStack(spacing: 8) {
+             messageComposer()
             
-            messageComposer(.init(string: "Some message"),
-                            mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .default))
+             messageComposer(.init(string: "Some message"),
+                             mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .default))
             
-            let longMessage = "Short loin ground round tongue hamburger, fatback salami shoulder. Beef turkey sausage kielbasa strip steak. Alcatra capicola pig tail pancetta chislic."
-            messageComposer(.init(string: longMessage),
-                            mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .default))
+             let longMessage = "Short loin ground round tongue hamburger, fatback salami shoulder. Beef turkey sausage kielbasa strip steak. Alcatra capicola pig tail pancetta chislic."
+             messageComposer(.init(string: longMessage),
+                             mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .default))
             
-            messageComposer(mode: .reply(eventID: UUID().uuidString,
-                                         replyDetails: .loaded(sender: .init(id: "Kirk"),
-                                                               eventID: "123",
-                                                               eventContent: .message(.text(.init(body: "Text: Where the wild things are")))),
-                                         isThread: false))
+             messageComposer(mode: .reply(eventID: UUID().uuidString,
+                                          replyDetails: .loaded(sender: .init(id: "Kirk"),
+                                                                eventID: "123",
+                                                                eventContent: .message(.text(.init(body: "Text: Where the wild things are")))),
+                                          isThread: false))
             
-            messageComposer(.init(string: "Some new caption"),
-                            mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .addCaption))
-            messageComposer(.init(string: "Some updated caption"),
-                            mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .editCaption))
-        }
-        .padding(.horizontal)
-        .environmentObject(viewModel.context)
+             messageComposer(.init(string: "Some new caption"),
+                             mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .addCaption))
+             messageComposer(.init(string: "Some updated caption"),
+                             mode: .edit(originalEventOrTransactionID: .eventID(UUID().uuidString), type: .editCaption))
+         }
+         .padding(.horizontal)
+         .environmentObject(viewModel.context)
         
-        ScrollView {
-            VStack(spacing: 8) {
-                ForEach(replyTypes, id: \.self) { replyDetails in
-                    messageComposer(mode: .reply(eventID: UUID().uuidString,
-                                                 replyDetails: replyDetails, isThread: false))
-                }
-            }
-        }
-        .padding(.horizontal)
-        .environmentObject(viewModel.context)
-        .previewDisplayName("Replying")
+         ScrollView {
+             VStack(spacing: 8) {
+                 ForEach(replyTypes, id: \.self) { replyDetails in
+                     messageComposer(mode: .reply(eventID: UUID().uuidString,
+                                                  replyDetails: replyDetails, isThread: false))
+                 }
+             }
+         }
+         .padding(.horizontal)
+         .environmentObject(viewModel.context)
+         .previewDisplayName("Replying")
         
-        ScrollView {
-            VStack(spacing: 8) {
-                ForEach(replyTypes, id: \.self) { replyDetails in
-                    messageComposer(mode: .reply(eventID: UUID().uuidString,
-                                                 replyDetails: replyDetails, isThread: true),
-                                    placeholder: L10n.actionReplyInThread)
-                }
-            }
-        }
-        .padding(.horizontal)
-        .environmentObject(viewModel.context)
-        .previewDisplayName("Replying in thread")
-    }
-}
-*/
+         ScrollView {
+             VStack(spacing: 8) {
+                 ForEach(replyTypes, id: \.self) { replyDetails in
+                     messageComposer(mode: .reply(eventID: UUID().uuidString,
+                                                  replyDetails: replyDetails, isThread: true),
+                                     placeholder: L10n.actionReplyInThread)
+                 }
+             }
+         }
+         .padding(.horizontal)
+         .environmentObject(viewModel.context)
+         .previewDisplayName("Replying in thread")
+     }
+ }
+ */

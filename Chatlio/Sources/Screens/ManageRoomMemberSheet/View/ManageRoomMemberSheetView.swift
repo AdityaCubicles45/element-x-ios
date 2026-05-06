@@ -80,51 +80,51 @@ struct ManageRoomMemberSheetView: View {
 }
 
 /*
-struct ManageRoomMemberSheetView_Previews: PreviewProvider, TestablePreview {
-    static let allActionsViewModel = ManageRoomMemberSheetViewModel.mock()
+ struct ManageRoomMemberSheetView_Previews: PreviewProvider, TestablePreview {
+     static let allActionsViewModel = ManageRoomMemberSheetViewModel.mock()
     
-    static let allActionsDisabledViewModel = ManageRoomMemberSheetViewModel.mock(powerLevel: .init(value: 0))
+     static let allActionsDisabledViewModel = ManageRoomMemberSheetViewModel.mock(powerLevel: .init(value: 0))
     
-    static let kickOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canBan: false)
+     static let kickOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canBan: false)
     
-    static let banOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canKick: false)
+     static let banOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canKick: false)
     
-    static let unbanOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canKick: true, memberIsBanned: true)
+     static let unbanOnlyViewModel = ManageRoomMemberSheetViewModel.mock(canKick: true, memberIsBanned: true)
     
-    static var previews: some View {
-        ManageRoomMemberSheetView(context: allActionsViewModel.context)
-            .previewDisplayName("All Actions")
-        ManageRoomMemberSheetView(context: allActionsDisabledViewModel.context)
-            .previewDisplayName("All Actions Disabled")
-        ManageRoomMemberSheetView(context: kickOnlyViewModel.context)
-            .previewDisplayName("Kick Only")
-        ManageRoomMemberSheetView(context: banOnlyViewModel.context)
-            .previewDisplayName("Ban Only")
-        ManageRoomMemberSheetView(context: unbanOnlyViewModel.context)
-            .previewDisplayName("Unban Only")
-    }
-}
-*/
+     static var previews: some View {
+         ManageRoomMemberSheetView(context: allActionsViewModel.context)
+             .previewDisplayName("All Actions")
+         ManageRoomMemberSheetView(context: allActionsDisabledViewModel.context)
+             .previewDisplayName("All Actions Disabled")
+         ManageRoomMemberSheetView(context: kickOnlyViewModel.context)
+             .previewDisplayName("Kick Only")
+         ManageRoomMemberSheetView(context: banOnlyViewModel.context)
+             .previewDisplayName("Ban Only")
+         ManageRoomMemberSheetView(context: unbanOnlyViewModel.context)
+             .previewDisplayName("Unban Only")
+     }
+ }
+ */
 
 /*
-private extension ManageRoomMemberSheetViewModel {
-    static func mock(canKick: Bool = true,
-                     canBan: Bool = true,
-                     memberIsBanned: Bool = false,
-                     powerLevel: RoomPowerLevel = .init(value: 100)) -> ManageRoomMemberSheetViewModel {
-        let member = if memberIsBanned {
-            RoomMemberDetails(withProxy: RoomMemberProxyMock.mockBanned[0])
-        } else {
-            RoomMemberDetails(withProxy: RoomMemberProxyMock.mockDan)
-        }
-        return ManageRoomMemberSheetViewModel(memberDetails: .memberDetails(roomMember: member),
-                                              permissions: .init(canKick: canKick,
-                                                                 canBan: canBan,
-                                                                 ownPowerLevel: powerLevel),
-                                              roomProxy: JoinedRoomProxyMock(.init()),
-                                              userIndicatorController: UserIndicatorControllerMock(),
-                                              analyticsService: ServiceLocator.shared.analytics,
-                                              mediaProvider: MediaProviderMock(configuration: .init()))
-    }
-}
-*/
+ private extension ManageRoomMemberSheetViewModel {
+     static func mock(canKick: Bool = true,
+                      canBan: Bool = true,
+                      memberIsBanned: Bool = false,
+                      powerLevel: RoomPowerLevel = .init(value: 100)) -> ManageRoomMemberSheetViewModel {
+         let member = if memberIsBanned {
+             RoomMemberDetails(withProxy: RoomMemberProxyMock.mockBanned[0])
+         } else {
+             RoomMemberDetails(withProxy: RoomMemberProxyMock.mockDan)
+         }
+         return ManageRoomMemberSheetViewModel(memberDetails: .memberDetails(roomMember: member),
+                                               permissions: .init(canKick: canKick,
+                                                                  canBan: canBan,
+                                                                  ownPowerLevel: powerLevel),
+                                               roomProxy: JoinedRoomProxyMock(.init()),
+                                               userIndicatorController: UserIndicatorControllerMock(),
+                                               analyticsService: ServiceLocator.shared.analytics,
+                                               mediaProvider: MediaProviderMock(configuration: .init()))
+     }
+ }
+ */

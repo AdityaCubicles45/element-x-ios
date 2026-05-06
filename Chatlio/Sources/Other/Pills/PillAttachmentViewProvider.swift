@@ -84,12 +84,12 @@ final class ComposerMentionDisplayHelper: MentionDisplayHelper {
         self.timelineContext = timelineContext
     }
     
-/*
-    @MainActor
-    static var mock: Self {
-        Self(timelineContext: TimelineViewModel.mock.context)
-    }
-*/
+    /*
+     @MainActor
+     static var mock: Self {
+         Self(timelineContext: TimelineViewModel.mock.context)
+     }
+     */
 }
 
 extension WysiwygTextView: PillAttachmentViewProviderDelegate {

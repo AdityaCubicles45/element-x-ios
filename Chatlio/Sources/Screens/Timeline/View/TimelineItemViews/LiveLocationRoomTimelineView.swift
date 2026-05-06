@@ -157,82 +157,82 @@ struct LiveLocationRoomTimelineView: View {
 }
 
 /*
-struct LiveLocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = TimelineViewModel.mock
+ struct LiveLocationRoomTimelineView_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = TimelineViewModel.mock
     
-    static var previews: some View {
-        PreviewScrollView {
-            VStack(spacing: 8) {
-                states
-            }
-        }
-        .environmentObject(viewModel.context)
-        .environment(\.timelineContext, viewModel.context)
-        .previewLayout(.sizeThatFits)
-        .previewDisplayName("Bubbles")
-    }
+     static var previews: some View {
+         PreviewScrollView {
+             VStack(spacing: 8) {
+                 states
+             }
+         }
+         .environmentObject(viewModel.context)
+         .environment(\.timelineContext, viewModel.context)
+         .previewLayout(.sizeThatFits)
+         .previewDisplayName("Bubbles")
+     }
     
-    @ViewBuilder
-    static var states: some View {
-        // No location yet (beacon not yet received)
-        LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                         timestamp: .mock,
-                                                         isOutgoing: false,
-                                                         isEditable: false,
-                                                         canBeRepliedTo: true,
-                                                         sender: .init(id: "@bob:matrix.org", displayName: "Bob"),
-                                                         content: .init(isLive: true,
-                                                                        timeoutDate: .mockToday420,
-                                                                        lastGeoURI: nil)))
+     @ViewBuilder
+     static var states: some View {
+         // No location yet (beacon not yet received)
+         LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                          timestamp: .mock,
+                                                          isOutgoing: false,
+                                                          isEditable: false,
+                                                          canBeRepliedTo: true,
+                                                          sender: .init(id: "@bob:matrix.org", displayName: "Bob"),
+                                                          content: .init(isLive: true,
+                                                                         timeoutDate: .mockToday420,
+                                                                         lastGeoURI: nil)))
         
-        // With a known location
-        LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                         timestamp: .mock,
-                                                         isOutgoing: true,
-                                                         isEditable: false,
-                                                         canBeRepliedTo: true,
-                                                         sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
-                                                         content: .init(isLive: true,
-                                                                        timeoutDate: .mockToday420,
-                                                                        lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366))))
-        // Expired live location
-        LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                         timestamp: .mock,
-                                                         isOutgoing: false,
-                                                         isEditable: false,
-                                                         canBeRepliedTo: true,
-                                                         sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
-                                                         content: .init(isLive: false,
-                                                                        timeoutDate: .mockToday420,
-                                                                        lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366))))
+         // With a known location
+         LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                          timestamp: .mock,
+                                                          isOutgoing: true,
+                                                          isEditable: false,
+                                                          canBeRepliedTo: true,
+                                                          sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
+                                                          content: .init(isLive: true,
+                                                                         timeoutDate: .mockToday420,
+                                                                         lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366))))
+         // Expired live location
+         LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                          timestamp: .mock,
+                                                          isOutgoing: false,
+                                                          isEditable: false,
+                                                          canBeRepliedTo: true,
+                                                          sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
+                                                          content: .init(isLive: false,
+                                                                         timeoutDate: .mockToday420,
+                                                                         lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366))))
         
-        // Replying to a live location
-        LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                         timestamp: .mock,
-                                                         isOutgoing: false,
-                                                         isEditable: false,
-                                                         canBeRepliedTo: true,
-                                                         sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
-                                                         content: .init(isLive: true,
-                                                                        timeoutDate: .mockToday420,
-                                                                        lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366)),
-                                                         properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
-                                                                                                 eventID: "123",
-                                                                                                 eventContent: .liveLocation))))
+         // Replying to a live location
+         LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                          timestamp: .mock,
+                                                          isOutgoing: false,
+                                                          isEditable: false,
+                                                          canBeRepliedTo: true,
+                                                          sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
+                                                          content: .init(isLive: true,
+                                                                         timeoutDate: .mockToday420,
+                                                                         lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366)),
+                                                          properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
+                                                                                                  eventID: "123",
+                                                                                                  eventContent: .liveLocation))))
         
-        // Replying to a live location when the content is not live
-        LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
-                                                         timestamp: .mock,
-                                                         isOutgoing: false,
-                                                         isEditable: false,
-                                                         canBeRepliedTo: true,
-                                                         sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
-                                                         content: .init(isLive: false,
-                                                                        timeoutDate: .mockToday420,
-                                                                        lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366)),
-                                                         properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
-                                                                                                 eventID: "123",
-                                                                                                 eventContent: .liveLocation))))
-    }
-}
-*/
+         // Replying to a live location when the content is not live
+         LiveLocationRoomTimelineView(timelineItem: .init(id: .randomEvent,
+                                                          timestamp: .mock,
+                                                          isOutgoing: false,
+                                                          isEditable: false,
+                                                          canBeRepliedTo: true,
+                                                          sender: .init(id: "@bob:matrix.org", displayName: "Bob", avatarURL: .mockMXCUserAvatar),
+                                                          content: .init(isLive: false,
+                                                                         timeoutDate: .mockToday420,
+                                                                         lastGeoURI: .init(latitude: 41.902782, longitude: 12.496366)),
+                                                          properties: .init(replyDetails: .loaded(sender: .init(id: "@alice:matrix.org", displayName: "Alice"),
+                                                                                                  eventID: "123",
+                                                                                                  eventContent: .liveLocation))))
+     }
+ }
+ */

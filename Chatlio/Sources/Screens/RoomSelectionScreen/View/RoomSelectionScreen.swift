@@ -93,15 +93,15 @@ private struct RoomSelectionListRow: View {
 // MARK: - Previews
 
 /*
-struct RoomSelectionScreen_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
-        let viewModel = RoomSelectionScreenViewModel(userSession: UserSessionMock(.init()),
-                                                     roomSummaryProvider: summaryProvider)
+ struct RoomSelectionScreen_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         let summaryProvider = RoomSummaryProviderMock(.init(state: .loaded(.mockRooms)))
+         let viewModel = RoomSelectionScreenViewModel(userSession: UserSessionMock(.init()),
+                                                      roomSummaryProvider: summaryProvider)
         
-        ElementNavigationStack {
-            RoomSelectionScreen(context: viewModel.context)
-        }
-    }
-}
-*/
+         ElementNavigationStack {
+             RoomSelectionScreen(context: viewModel.context)
+         }
+     }
+ }
+ */

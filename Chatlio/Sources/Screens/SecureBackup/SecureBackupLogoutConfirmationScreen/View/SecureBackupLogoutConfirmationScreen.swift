@@ -111,66 +111,66 @@ struct SecureBackupLogoutConfirmationScreen: View {
 // MARK: - Previews
 
 /*
-struct SecureBackupLogoutConfirmationScreen_Previews: PreviewProvider, TestablePreview {
-    static let viewModel = makeViewModel(mode: .saveRecoveryKey)
-    static let waitingViewModel = makeViewModel(mode: .waitingToStart(hasStalled: false))
-    static let ongoingViewModel = makeViewModel(mode: .backupOngoing(progress: 0.5))
-    static let offlineViewModel = makeViewModel(mode: .offline)
+ struct SecureBackupLogoutConfirmationScreen_Previews: PreviewProvider, TestablePreview {
+     static let viewModel = makeViewModel(mode: .saveRecoveryKey)
+     static let waitingViewModel = makeViewModel(mode: .waitingToStart(hasStalled: false))
+     static let ongoingViewModel = makeViewModel(mode: .backupOngoing(progress: 0.5))
+     static let offlineViewModel = makeViewModel(mode: .offline)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            SecureBackupLogoutConfirmationScreen(context: viewModel.context)
-        }
-        .previewDisplayName("Confirmation")
+     static var previews: some View {
+         ElementNavigationStack {
+             SecureBackupLogoutConfirmationScreen(context: viewModel.context)
+         }
+         .previewDisplayName("Confirmation")
         
-        ElementNavigationStack {
-            SecureBackupLogoutConfirmationScreen(context: waitingViewModel.context)
-        }
-        .previewDisplayName("Waiting")
-        .snapshotPreferences(expect: waitingViewModel.context.observe(\.viewState.mode).map { $0 == .waitingToStart(hasStalled: false) })
+         ElementNavigationStack {
+             SecureBackupLogoutConfirmationScreen(context: waitingViewModel.context)
+         }
+         .previewDisplayName("Waiting")
+         .snapshotPreferences(expect: waitingViewModel.context.observe(\.viewState.mode).map { $0 == .waitingToStart(hasStalled: false) })
         
-        ElementNavigationStack {
-            SecureBackupLogoutConfirmationScreen(context: ongoingViewModel.context)
-        }
-        .previewDisplayName("Ongoing")
-        .snapshotPreferences(expect: ongoingViewModel.context.observe(\.viewState.mode).map { $0 == .backupOngoing(progress: 0.5) })
+         ElementNavigationStack {
+             SecureBackupLogoutConfirmationScreen(context: ongoingViewModel.context)
+         }
+         .previewDisplayName("Ongoing")
+         .snapshotPreferences(expect: ongoingViewModel.context.observe(\.viewState.mode).map { $0 == .backupOngoing(progress: 0.5) })
         
-        // Uses the same view model as Waiting but with a different expectation.
-        ElementNavigationStack {
-            SecureBackupLogoutConfirmationScreen(context: waitingViewModel.context)
-        }
-        .previewDisplayName("Stalled")
-        .snapshotPreferences(expect: waitingViewModel.context.observe(\.viewState.mode).map { $0 == .waitingToStart(hasStalled: true) })
+         // Uses the same view model as Waiting but with a different expectation.
+         ElementNavigationStack {
+             SecureBackupLogoutConfirmationScreen(context: waitingViewModel.context)
+         }
+         .previewDisplayName("Stalled")
+         .snapshotPreferences(expect: waitingViewModel.context.observe(\.viewState.mode).map { $0 == .waitingToStart(hasStalled: true) })
         
-        ElementNavigationStack {
-            SecureBackupLogoutConfirmationScreen(context: offlineViewModel.context)
-        }
-        .previewDisplayName("Offline")
-        .snapshotPreferences(expect: offlineViewModel.context.observe(\.viewState.mode).map { $0 == .offline })
-    }
+         ElementNavigationStack {
+             SecureBackupLogoutConfirmationScreen(context: offlineViewModel.context)
+         }
+         .previewDisplayName("Offline")
+         .snapshotPreferences(expect: offlineViewModel.context.observe(\.viewState.mode).map { $0 == .offline })
+     }
     
-    static func makeViewModel(mode: SecureBackupLogoutConfirmationScreenViewMode) -> SecureBackupLogoutConfirmationScreenViewModel {
-        let secureBackupController = SecureBackupControllerMock()
-        secureBackupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(.enabled).asCurrentValuePublisher()
+     static func makeViewModel(mode: SecureBackupLogoutConfirmationScreenViewMode) -> SecureBackupLogoutConfirmationScreenViewModel {
+         let secureBackupController = SecureBackupControllerMock()
+         secureBackupController.underlyingKeyBackupState = CurrentValueSubject<SecureBackupKeyBackupState, Never>(.enabled).asCurrentValuePublisher()
         
-        secureBackupController.waitForKeyBackupUploadUploadStateSubjectClosure = { uploadStateSubject in
-            if case .backupOngoing = mode {
-                uploadStateSubject.send(.uploading(uploadedKeyCount: 50, totalKeyCount: 100))
-            }
+         secureBackupController.waitForKeyBackupUploadUploadStateSubjectClosure = { uploadStateSubject in
+             if case .backupOngoing = mode {
+                 uploadStateSubject.send(.uploading(uploadedKeyCount: 50, totalKeyCount: 100))
+             }
             
-            return .success(())
-        }
+             return .success(())
+         }
         
-        let reachability: NetworkMonitorReachability = mode == .offline ? .unreachable : .reachable
+         let reachability: NetworkMonitorReachability = mode == .offline ? .unreachable : .reachable
         
-        let viewModel = SecureBackupLogoutConfirmationScreenViewModel(secureBackupController: secureBackupController,
-                                                                      homeserverReachabilityPublisher: .init(reachability))
+         let viewModel = SecureBackupLogoutConfirmationScreenViewModel(secureBackupController: secureBackupController,
+                                                                       homeserverReachabilityPublisher: .init(reachability))
         
-        if mode != .saveRecoveryKey {
-            viewModel.context.send(viewAction: .logout)
-        }
+         if mode != .saveRecoveryKey {
+             viewModel.context.send(viewAction: .logout)
+         }
         
-        return viewModel
-    }
-}
-*/
+         return viewModel
+     }
+ }
+ */

@@ -177,62 +177,62 @@ struct MessageText: UIViewRepresentable {
 // MARK: - Previews
 
 /*
-struct MessageText_Previews: PreviewProvider, TestablePreview {
-    private static let defaultFontContainer: AttributeContainer = {
-        var container = AttributeContainer()
-        container.font = UIFont.preferredFont(forTextStyle: .body)
-        return container
-    }()
+ struct MessageText_Previews: PreviewProvider, TestablePreview {
+     private static let defaultFontContainer: AttributeContainer = {
+         var container = AttributeContainer()
+         container.font = UIFont.preferredFont(forTextStyle: .body)
+         return container
+     }()
     
-    private static let attributedString = AttributedString("Hello World! Hello world! Hello world! Hello world! Hello World! Hellooooooooooooooooooooooo Woooooooooooooooooooooorld", attributes: defaultFontContainer)
+     private static let attributedString = AttributedString("Hello World! Hello world! Hello world! Hello world! Hello World! Hellooooooooooooooooooooooo Woooooooooooooooooooooorld", attributes: defaultFontContainer)
     
-    private static let attributedStringWithAttachment: AttributedString = {
-        let testData = PillTextAttachmentData(type: .user(userID: "@alice:example.com"), font: .preferredFont(forTextStyle: .body))
-        guard let attachment = PillTextAttachment(attachmentData: testData) else {
-            return AttributedString()
-        }
+     private static let attributedStringWithAttachment: AttributedString = {
+         let testData = PillTextAttachmentData(type: .user(userID: "@alice:example.com"), font: .preferredFont(forTextStyle: .body))
+         guard let attachment = PillTextAttachment(attachmentData: testData) else {
+             return AttributedString()
+         }
         
-        var attributedString = "Hello test test test " + AttributedString(NSAttributedString(attachment: attachment)) + " World!"
-        attributedString
-            .mergeAttributes(defaultFontContainer)
-        return attributedString
-    }()
+         var attributedString = "Hello test test test " + AttributedString(NSAttributedString(attachment: attachment)) + " World!"
+         attributedString
+             .mergeAttributes(defaultFontContainer)
+         return attributedString
+     }()
 
-    private static let htmlStringWithQuote =
-        """
-        <blockquote>A blockquote that is long and goes onto multiple lines as the first item in the message</blockquote><p>Then another line of text here to reply to the blockquote, which is also a multiline component.</p>
-        """
+     private static let htmlStringWithQuote =
+         """
+         <blockquote>A blockquote that is long and goes onto multiple lines as the first item in the message</blockquote><p>Then another line of text here to reply to the blockquote, which is also a multiline component.</p>
+         """
     
-    private static let htmlStringWithList = "<p>This is a list</p>\n<ul><li>One</li>\n<li>Two</li>\n<li>And number 3</li>\n</ul>\n"
+     private static let htmlStringWithList = "<p>This is a list</p>\n<ul><li>One</li>\n<li>Two</li>\n<li>And number 3</li>\n</ul>\n"
 
-    private static let attributedStringBuilder = AttributedStringBuilder(mentionBuilder: MentionBuilder())
+     private static let attributedStringBuilder = AttributedStringBuilder(mentionBuilder: MentionBuilder())
     
-    static var attachmentPreview: some View {
-        MessageText(attributedString: attributedStringWithAttachment)
-            .border(Color.purple)
-            .environmentObject(TimelineViewModel.mock.context)
-    }
+     static var attachmentPreview: some View {
+         MessageText(attributedString: attributedStringWithAttachment)
+             .border(Color.purple)
+             .environmentObject(TimelineViewModel.mock.context)
+     }
 
-    static var previews: some View {
-        MessageText(attributedString: attributedString)
-            .border(Color.purple)
-            .previewDisplayName("Custom Text")
-        // For comparison
-        Text(attributedString)
-            .border(Color.purple)
-            .previewDisplayName("SwiftUI Default Text")
-        attachmentPreview
-            .previewDisplayName("Custom Attachment")
-        if let attributedString = attributedStringBuilder.fromHTML(htmlStringWithQuote) {
-            MessageText(attributedString: attributedString)
-                .border(Color.purple)
-                .previewDisplayName("With block quote")
-        }
-        if let attributedString = attributedStringBuilder.fromHTML(htmlStringWithList) {
-            MessageText(attributedString: attributedString)
-                .border(Color.purple)
-                .previewDisplayName("With list")
-        }
-    }
-}
-*/
+     static var previews: some View {
+         MessageText(attributedString: attributedString)
+             .border(Color.purple)
+             .previewDisplayName("Custom Text")
+         // For comparison
+         Text(attributedString)
+             .border(Color.purple)
+             .previewDisplayName("SwiftUI Default Text")
+         attachmentPreview
+             .previewDisplayName("Custom Attachment")
+         if let attributedString = attributedStringBuilder.fromHTML(htmlStringWithQuote) {
+             MessageText(attributedString: attributedString)
+                 .border(Color.purple)
+                 .previewDisplayName("With block quote")
+         }
+         if let attributedString = attributedStringBuilder.fromHTML(htmlStringWithList) {
+             MessageText(attributedString: attributedString)
+                 .border(Color.purple)
+                 .previewDisplayName("With list")
+         }
+     }
+ }
+ */

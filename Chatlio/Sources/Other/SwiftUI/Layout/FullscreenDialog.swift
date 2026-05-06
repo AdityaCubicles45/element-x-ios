@@ -174,66 +174,66 @@ enum FullscreenDialogBackground {
 }
 
 /*
-struct FullscreenDialog_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        FullscreenDialog(topPadding: UIConstants.iconTopPaddingToNavigationBar) {
-            content
-        } bottomContent: {
-            buttons
-        }
-        .background()
-        .backgroundStyle(.compound.bgCanvasDefault)
-        .previewDisplayName("Plain")
+ struct FullscreenDialog_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         FullscreenDialog(topPadding: UIConstants.iconTopPaddingToNavigationBar) {
+             content
+         } bottomContent: {
+             buttons
+         }
+         .background()
+         .backgroundStyle(.compound.bgCanvasDefault)
+         .previewDisplayName("Plain")
         
-        FullscreenDialog(topPadding: UIConstants.iconTopPaddingToNavigationBar, background: .gradient) {
-            content
-        } bottomContent: {
-            buttons
-        }
-        .background()
-        .backgroundStyle(.compound.bgCanvasDefault)
-        .previewDisplayName("Gradient")
-    }
+         FullscreenDialog(topPadding: UIConstants.iconTopPaddingToNavigationBar, background: .gradient) {
+             content
+         } bottomContent: {
+             buttons
+         }
+         .background()
+         .backgroundStyle(.compound.bgCanvasDefault)
+         .previewDisplayName("Gradient")
+     }
     
-    private static var content: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "globe")
-                .font(.system(size: 50))
-                .foregroundColor(.compound.textPrimary)
-                .padding()
-                .background(Color.compound.bgSubtlePrimary, in: Circle())
-                .padding(.bottom, 8)
-            Text("Hello, World")
-                .font(.compound.headingLG)
-                .foregroundColor(.compound.textPrimary)
-            Text("I am a subtitle")
-                .font(.compound.bodyLG)
-                .foregroundColor(.compound.textSecondary)
-                .padding(.bottom)
+     private static var content: some View {
+         VStack(spacing: 8) {
+             Image(systemName: "globe")
+                 .font(.system(size: 50))
+                 .foregroundColor(.compound.textPrimary)
+                 .padding()
+                 .background(Color.compound.bgSubtlePrimary, in: Circle())
+                 .padding(.bottom, 8)
+             Text("Hello, World")
+                 .font(.compound.headingLG)
+                 .foregroundColor(.compound.textPrimary)
+             Text("I am a subtitle")
+                 .font(.compound.bodyLG)
+                 .foregroundColor(.compound.textSecondary)
+                 .padding(.bottom)
             
-            VStack(alignment: .leading, spacing: 6) {
-                Label("We care about you", systemImage: "person")
-                Label("Environmentally focussed", systemImage: "leaf")
-                Label("All of the options", systemImage: "wrench")
-                Label("Fun to use", systemImage: "logo.xbox")
-            }
-        }
-    }
+             VStack(alignment: .leading, spacing: 6) {
+                 Label("We care about you", systemImage: "person")
+                 Label("Environmentally focussed", systemImage: "leaf")
+                 Label("All of the options", systemImage: "wrench")
+                 Label("Fun to use", systemImage: "logo.xbox")
+             }
+         }
+     }
     
-    private static var buttons: some View {
-        VStack(spacing: 16) {
-            Button { } label: {
-                Text("Continue")
-                    .font(.compound.bodyLGSemibold)
-            }
-            .buttonStyle(.compound(.primary))
+     private static var buttons: some View {
+         VStack(spacing: 16) {
+             Button { } label: {
+                 Text("Continue")
+                     .font(.compound.bodyLGSemibold)
+             }
+             .buttonStyle(.compound(.primary))
             
-            Button { } label: {
-                Text("More options")
-                    .font(.compound.bodyLGSemibold)
-                    .padding(14)
-            }
-        }
-    }
-}
-*/
+             Button { } label: {
+                 Text("More options")
+                     .font(.compound.bodyLGSemibold)
+                     .padding(14)
+             }
+         }
+     }
+ }
+ */

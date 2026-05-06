@@ -166,60 +166,60 @@ struct HomeScreen: View {
 // MARK: - Previews
 
 /*
-struct HomeScreen_Previews: PreviewProvider, TestablePreview {
-    static let loadingViewModel = viewModel(.skeletons)
-    static let emptyViewModel = viewModel(.empty)
-    static let loadedViewModel = viewModel(.rooms)
+ struct HomeScreen_Previews: PreviewProvider, TestablePreview {
+     static let loadingViewModel = viewModel(.skeletons)
+     static let emptyViewModel = viewModel(.empty)
+     static let loadedViewModel = viewModel(.rooms)
     
-    static var previews: some View {
-        ElementNavigationStack {
-            HomeScreen(context: loadingViewModel.context)
-        }
-        .snapshotPreferences(expect: loadedViewModel.context.$viewState.map { state in
-            state.roomListMode == .skeletons
-        })
-        .previewDisplayName("Loading")
+     static var previews: some View {
+         ElementNavigationStack {
+             HomeScreen(context: loadingViewModel.context)
+         }
+         .snapshotPreferences(expect: loadedViewModel.context.$viewState.map { state in
+             state.roomListMode == .skeletons
+         })
+         .previewDisplayName("Loading")
         
-        ElementNavigationStack {
-            HomeScreen(context: emptyViewModel.context)
-        }
-        .snapshotPreferences(expect: emptyViewModel.context.$viewState.map { state in
-            state.roomListMode == .empty
-        })
-        .previewDisplayName("Empty")
+         ElementNavigationStack {
+             HomeScreen(context: emptyViewModel.context)
+         }
+         .snapshotPreferences(expect: emptyViewModel.context.$viewState.map { state in
+             state.roomListMode == .empty
+         })
+         .previewDisplayName("Empty")
         
-        ElementNavigationStack {
-            HomeScreen(context: loadedViewModel.context)
-        }
-        .snapshotPreferences(expect: loadedViewModel.context.$viewState.map { state in
-            state.roomListMode == .rooms
-        })
-        .previewDisplayName("Loaded")
-    }
+         ElementNavigationStack {
+             HomeScreen(context: loadedViewModel.context)
+         }
+         .snapshotPreferences(expect: loadedViewModel.context.$viewState.map { state in
+             state.roomListMode == .rooms
+         })
+         .previewDisplayName("Loaded")
+     }
     
-    static func viewModel(_ mode: HomeScreenRoomListMode) -> HomeScreenViewModel {
-        let userID = "@alice:example.com"
+     static func viewModel(_ mode: HomeScreenRoomListMode) -> HomeScreenViewModel {
+         let userID = "@alice:example.com"
         
-        let roomSummaryProviderState: RoomSummaryProviderMockConfigurationState = switch mode {
-        case .skeletons:
-            .loading
-        case .empty:
-            .loaded([])
-        case .rooms:
-            .loaded(.mockRooms)
-        }
+         let roomSummaryProviderState: RoomSummaryProviderMockConfigurationState = switch mode {
+         case .skeletons:
+             .loading
+         case .empty:
+             .loaded([])
+         case .rooms:
+             .loaded(.mockRooms)
+         }
         
-        let clientProxy = ClientProxyMock(.init(userID: userID,
-                                                roomSummaryProvider: RoomSummaryProviderMock(.init(state: roomSummaryProviderState))))
+         let clientProxy = ClientProxyMock(.init(userID: userID,
+                                                 roomSummaryProvider: RoomSummaryProviderMock(.init(state: roomSummaryProviderState))))
         
-        let userSession = UserSessionMock(.init(clientProxy: clientProxy))
+         let userSession = UserSessionMock(.init(clientProxy: clientProxy))
         
-        return HomeScreenViewModel(userSession: userSession,
-                                   selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
-                                   appSettings: ServiceLocator.shared.settings,
-                                   analyticsService: ServiceLocator.shared.analytics,
-                                   notificationManager: NotificationManagerMock(),
-                                   userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
-}
-*/
+         return HomeScreenViewModel(userSession: userSession,
+                                    selectedRoomPublisher: CurrentValueSubject<String?, Never>(nil).asCurrentValuePublisher(),
+                                    appSettings: ServiceLocator.shared.settings,
+                                    analyticsService: ServiceLocator.shared.analytics,
+                                    notificationManager: NotificationManagerMock(),
+                                    userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
+ }
+ */

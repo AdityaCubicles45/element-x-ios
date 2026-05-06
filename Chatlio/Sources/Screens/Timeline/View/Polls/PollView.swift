@@ -191,35 +191,35 @@ private extension Poll {
 }
 
 /*
-struct PollView_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        PollView(poll: .disclosed(), state: .full(isEditable: false), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Disclosed")
+ struct PollView_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         PollView(poll: .disclosed(), state: .full(isEditable: false), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Disclosed")
 
-        PollView(poll: .undisclosed(), state: .full(isEditable: false), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Undisclosed")
+         PollView(poll: .undisclosed(), state: .full(isEditable: false), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Undisclosed")
 
-        PollView(poll: .endedDisclosed, state: .full(isEditable: false), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Ended, Disclosed")
+         PollView(poll: .endedDisclosed, state: .full(isEditable: false), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Ended, Disclosed")
 
-        PollView(poll: .endedUndisclosed, state: .full(isEditable: false), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Ended, Undisclosed")
+         PollView(poll: .endedUndisclosed, state: .full(isEditable: false), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Ended, Undisclosed")
 
-        PollView(poll: .disclosed(createdByAccountOwner: true), state: .full(isEditable: true), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Creator, disclosed")
+         PollView(poll: .disclosed(createdByAccountOwner: true), state: .full(isEditable: true), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Creator, disclosed")
         
-        PollView(poll: .emptyDisclosed, state: .full(isEditable: true), sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Creator, no votes")
+         PollView(poll: .emptyDisclosed, state: .full(isEditable: true), sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Creator, no votes")
         
-        PollView(poll: .emptyDisclosed, state: .preview, sender: .test) { _ in }
-            .padding()
-            .previewDisplayName("Preview")
-    }
-}
-*/
+         PollView(poll: .emptyDisclosed, state: .preview, sender: .test) { _ in }
+             .padding()
+             .previewDisplayName("Preview")
+     }
+ }
+ */

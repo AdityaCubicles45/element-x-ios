@@ -127,60 +127,61 @@ struct LeaveSpaceView: View {
 // MARK: - Previews
 
 import MatrixRustSDK
-//import MatrixRustSDKMocks
+
+// import MatrixRustSDKMocks
 
 /*
-/*
-struct LeaveSpaceView_Previews: PreviewProvider, TestablePreview {
-    static let manyViewModel = makeViewModel(mode: .manyRooms)
-    static let onlyAdminViewModel = makeViewModel(mode: .roomsNeedNewOwner)
-    static let noRoomsViewModel = makeViewModel(mode: .noRooms)
-    static let lastAdminViewModel = makeViewModel(mode: .spaceNeedsNewOwner(useTransferOwnershipFlow: false))
-    static let lastOwnerViewModel = makeViewModel(mode: .spaceNeedsNewOwner(useTransferOwnershipFlow: true))
+ /*
+ struct LeaveSpaceView_Previews: PreviewProvider, TestablePreview {
+     static let manyViewModel = makeViewModel(mode: .manyRooms)
+     static let onlyAdminViewModel = makeViewModel(mode: .roomsNeedNewOwner)
+     static let noRoomsViewModel = makeViewModel(mode: .noRooms)
+     static let lastAdminViewModel = makeViewModel(mode: .spaceNeedsNewOwner(useTransferOwnershipFlow: false))
+     static let lastOwnerViewModel = makeViewModel(mode: .spaceNeedsNewOwner(useTransferOwnershipFlow: true))
     
-    static var previews: some View {
-        LeaveSpaceView(context: manyViewModel.context)
-            .previewDisplayName("Many Rooms")
-        LeaveSpaceView(context: onlyAdminViewModel.context)
-            .previewDisplayName("Only Admin Rooms")
-        LeaveSpaceView(context: noRoomsViewModel.context)
-            .previewDisplayName("No Rooms")
-        LeaveSpaceView(context: lastAdminViewModel.context)
-            .previewDisplayName("Last Space Admin")
-        LeaveSpaceView(context: lastOwnerViewModel.context)
-            .previewDisplayName("Last Space Owner")
-    }
+     static var previews: some View {
+         LeaveSpaceView(context: manyViewModel.context)
+             .previewDisplayName("Many Rooms")
+         LeaveSpaceView(context: onlyAdminViewModel.context)
+             .previewDisplayName("Only Admin Rooms")
+         LeaveSpaceView(context: noRoomsViewModel.context)
+             .previewDisplayName("No Rooms")
+         LeaveSpaceView(context: lastAdminViewModel.context)
+             .previewDisplayName("Last Space Admin")
+         LeaveSpaceView(context: lastOwnerViewModel.context)
+             .previewDisplayName("Last Space Owner")
+     }
     
-    static let spaceServiceRoom = SpaceServiceRoom.mock(id: "!eng-space:matrix.org",
-                                                        name: "Engineering Team",
-                                                        isSpace: true,
-                                                        childrenCount: 30,
-                                                        joinedMembersCount: 76,
-                                                        heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
-                                                        topic: "Description of the space goes right here. Lorem ipsum dolor sit amet consectetur. Leo viverra morbi habitant in.",
-                                                        joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
+     static let spaceServiceRoom = SpaceServiceRoom.mock(id: "!eng-space:matrix.org",
+                                                         name: "Engineering Team",
+                                                         isSpace: true,
+                                                         childrenCount: 30,
+                                                         joinedMembersCount: 76,
+                                                         heroes: [.mockDan, .mockBob, .mockCharlie, .mockVerbose],
+                                                         topic: "Description of the space goes right here. Lorem ipsum dolor sit amet consectetur. Leo viverra morbi habitant in.",
+                                                         joinRule: .knockRestricted(rules: [.roomMembership(roomID: "")]))
     
-    static func makeViewModel(mode: LeaveSpaceHandleProxy.Mode) -> LeaveSpaceViewModel {
-        let rooms: [LeaveSpaceRoom] = switch mode {
-        case .manyRooms: .mockRooms
-        case .roomsNeedNewOwner: .mockNeedNewOwnerRooms
-        case .noRooms: .mockSingleSpace(spaceServiceRoom: spaceServiceRoom,
-                                        isLastOwner: false,
-                                        areCreatorsPrivileged: false)
-        case .spaceNeedsNewOwner(let useTransferOwnershipFlow): .mockRoomsWithSpace(spaceServiceRoom: spaceServiceRoom,
-                                                                                    isLastOwner: true,
-                                                                                    areCreatorsPrivileged: useTransferOwnershipFlow)
-        }
+     static func makeViewModel(mode: LeaveSpaceHandleProxy.Mode) -> LeaveSpaceViewModel {
+         let rooms: [LeaveSpaceRoom] = switch mode {
+         case .manyRooms: .mockRooms
+         case .roomsNeedNewOwner: .mockNeedNewOwnerRooms
+         case .noRooms: .mockSingleSpace(spaceServiceRoom: spaceServiceRoom,
+                                         isLastOwner: false,
+                                         areCreatorsPrivileged: false)
+         case .spaceNeedsNewOwner(let useTransferOwnershipFlow): .mockRoomsWithSpace(spaceServiceRoom: spaceServiceRoom,
+                                                                                     isLastOwner: true,
+                                                                                     areCreatorsPrivileged: useTransferOwnershipFlow)
+         }
         
-        let leaveHandle = LeaveSpaceHandleProxy(spaceID: spaceServiceRoom.id,
-                                                leaveHandle: LeaveSpaceHandleSDKMock(.init(rooms: rooms)))
+         let leaveHandle = LeaveSpaceHandleProxy(spaceID: spaceServiceRoom.id,
+                                                 leaveHandle: LeaveSpaceHandleSDKMock(.init(rooms: rooms)))
         
-        return LeaveSpaceViewModel(spaceName: spaceServiceRoom.name,
-                                   canEditRolesAndPermissions: true,
-                                   leaveHandle: leaveHandle,
-                                   userIndicatorController: UserIndicatorControllerMock(),
-                                   mediaProvider: MediaProviderMock(configuration: .init()))
-    }
-}
-*/
-*/
+         return LeaveSpaceViewModel(spaceName: spaceServiceRoom.name,
+                                    canEditRolesAndPermissions: true,
+                                    leaveHandle: leaveHandle,
+                                    userIndicatorController: UserIndicatorControllerMock(),
+                                    mediaProvider: MediaProviderMock(configuration: .init()))
+     }
+ }
+ */
+ */

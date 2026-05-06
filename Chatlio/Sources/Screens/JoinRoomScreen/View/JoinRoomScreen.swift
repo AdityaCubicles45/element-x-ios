@@ -343,179 +343,179 @@ private struct InviterView: View {
 // MARK: - Previews
 
 /*
-struct JoinRoomScreen_Previews: PreviewProvider, TestablePreview {
-    static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
-        .init(mode: .unknown),
-        .init(mode: .joinable),
-        .init(mode: .restricted, canJoinRoom: false),
-        .init(mode: .restricted, customPreviewName: "RestrictedJoinable"),
-        .init(mode: .inviteRequired),
-        .init(mode: .invited(isDM: false)),
-        .init(mode: .invited(isDM: true)),
-        .init(mode: .invited(isDM: false), hideInviteAvatars: true, customPreviewName: "InvitedWithHiddenAvatars"),
-        .init(mode: .knockable),
-        .init(mode: .knocked),
-        .init(mode: .banned(sender: "Bob", reason: "Spamming")),
-        .init(mode: .forbidden)
-    ]
+ struct JoinRoomScreen_Previews: PreviewProvider, TestablePreview {
+     static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
+         .init(mode: .unknown),
+         .init(mode: .joinable),
+         .init(mode: .restricted, canJoinRoom: false),
+         .init(mode: .restricted, customPreviewName: "RestrictedJoinable"),
+         .init(mode: .inviteRequired),
+         .init(mode: .invited(isDM: false)),
+         .init(mode: .invited(isDM: true)),
+         .init(mode: .invited(isDM: false), hideInviteAvatars: true, customPreviewName: "InvitedWithHiddenAvatars"),
+         .init(mode: .knockable),
+         .init(mode: .knocked),
+         .init(mode: .banned(sender: "Bob", reason: "Spamming")),
+         .init(mode: .forbidden)
+     ]
     
-    static var previews: some View {
-        ForEach(previewWrappers) { wrapper in
-            wrapper.preview
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ForEach(previewWrappers) { wrapper in
+             wrapper.preview
+         }
+     }
+ }
+ */
 
 /*
-struct JoinRoomScreenSpace_Previews: PreviewProvider, TestablePreview {
-    static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
-        .init(isSpace: true, mode: .joinable),
-        .init(isSpace: true, mode: .restricted, canJoinRoom: false),
-        .init(isSpace: true, mode: .restricted, customPreviewName: "RestrictedJoinable"),
-        .init(isSpace: true, mode: .inviteRequired),
-        .init(isSpace: true, mode: .invited(isDM: false)),
-        .init(isSpace: true, mode: .invited(isDM: false), hideInviteAvatars: true, customPreviewName: "InvitedWithHiddenAvatars"),
-        .init(isSpace: true, mode: .knockable),
-        .init(isSpace: true, mode: .knocked),
-        .init(isSpace: true, mode: .banned(sender: "Bob", reason: "Spamming")),
-        .init(isSpace: true, mode: .forbidden)
-    ]
+ struct JoinRoomScreenSpace_Previews: PreviewProvider, TestablePreview {
+     static let previewWrappers: [JoinRoomScreenPreviewWrapper] = [
+         .init(isSpace: true, mode: .joinable),
+         .init(isSpace: true, mode: .restricted, canJoinRoom: false),
+         .init(isSpace: true, mode: .restricted, customPreviewName: "RestrictedJoinable"),
+         .init(isSpace: true, mode: .inviteRequired),
+         .init(isSpace: true, mode: .invited(isDM: false)),
+         .init(isSpace: true, mode: .invited(isDM: false), hideInviteAvatars: true, customPreviewName: "InvitedWithHiddenAvatars"),
+         .init(isSpace: true, mode: .knockable),
+         .init(isSpace: true, mode: .knocked),
+         .init(isSpace: true, mode: .banned(sender: "Bob", reason: "Spamming")),
+         .init(isSpace: true, mode: .forbidden)
+     ]
     
-    static var previews: some View {
-        ForEach(previewWrappers) { wrapper in
-            wrapper.preview
-        }
-    }
-}
-*/
+     static var previews: some View {
+         ForEach(previewWrappers) { wrapper in
+             wrapper.preview
+         }
+     }
+ }
+ */
 
 /*
-@MainActor
-struct JoinRoomScreenPreviewWrapper: Identifiable {
-    let id = UUID()
-    let viewModel: JoinRoomScreenViewModel
-    let mode: JoinRoomScreenMode
-    let isSpace: Bool
-    let customPreviewName: String?
+ @MainActor
+ struct JoinRoomScreenPreviewWrapper: Identifiable {
+     let id = UUID()
+     let viewModel: JoinRoomScreenViewModel
+     let mode: JoinRoomScreenMode
+     let isSpace: Bool
+     let customPreviewName: String?
     
-    init(isSpace: Bool = false,
-         mode: JoinRoomScreenMode,
-         canJoinRoom: Bool = true,
-         hideInviteAvatars: Bool = false,
-         customPreviewName: String? = nil) {
-        self.mode = mode
-        self.isSpace = isSpace
-        self.customPreviewName = customPreviewName
+     init(isSpace: Bool = false,
+          mode: JoinRoomScreenMode,
+          canJoinRoom: Bool = true,
+          hideInviteAvatars: Bool = false,
+          customPreviewName: String? = nil) {
+         self.mode = mode
+         self.isSpace = isSpace
+         self.customPreviewName = customPreviewName
         
-        let appSettings = AppSettings()
-        appSettings.knockingEnabled = true
+         let appSettings = AppSettings()
+         appSettings.knockingEnabled = true
         
-        let clientProxy = ClientProxyMock(.init(hideInviteAvatars: hideInviteAvatars))
-        clientProxy.canJoinRoomWithReturnValue = canJoinRoom
+         let clientProxy = ClientProxyMock(.init(hideInviteAvatars: hideInviteAvatars))
+         clientProxy.canJoinRoomWithReturnValue = canJoinRoom
         
-        switch mode {
-        case .unknown:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .failure(.roomPreviewIsPrivate)
-            clientProxy.roomForIdentifierReturnValue = nil
-        case .joinable:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.joinable)
-            clientProxy.roomForIdentifierReturnValue = nil
-        case .restricted:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.restricted)
-            clientProxy.roomForIdentifierReturnValue = nil
-        case .inviteRequired:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.inviteRequired)
-            clientProxy.roomForIdentifierReturnValue = nil
-        case .invited(let isDM):
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(isDM ? RoomPreviewProxyMock.inviteDM() : .invited())
-            clientProxy.roomForIdentifierClosure = { _ in
-                .invited(InvitedRoomProxyMock(.init(avatarURL: .mockMXCAvatar, inviter: .mockDan)))
-            }
-        case .knockable:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.knockable)
-            clientProxy.roomForIdentifierReturnValue = nil
-        case .knocked:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.knocked)
-            clientProxy.roomForIdentifierClosure = { _ in
-                .knocked(KnockedRoomProxyMock(.init(avatarURL: .mockMXCAvatar)))
-            }
-        case .banned:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.banned)
-            clientProxy.roomForIdentifierClosure = { _ in
-                .banned(BannedRoomProxyMock(.init(avatarURL: .mockMXCAvatar)))
-            }
-        case .forbidden:
-            clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.restricted)
-            clientProxy.roomForIdentifierReturnValue = nil
-            clientProxy.joinRoomAliasClosure = { _ in
-                .failure(.forbiddenAccess)
-            }
-        default:
-            break
-        }
+         switch mode {
+         case .unknown:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .failure(.roomPreviewIsPrivate)
+             clientProxy.roomForIdentifierReturnValue = nil
+         case .joinable:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.joinable)
+             clientProxy.roomForIdentifierReturnValue = nil
+         case .restricted:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.restricted)
+             clientProxy.roomForIdentifierReturnValue = nil
+         case .inviteRequired:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.inviteRequired)
+             clientProxy.roomForIdentifierReturnValue = nil
+         case .invited(let isDM):
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(isDM ? RoomPreviewProxyMock.inviteDM() : .invited())
+             clientProxy.roomForIdentifierClosure = { _ in
+                 .invited(InvitedRoomProxyMock(.init(avatarURL: .mockMXCAvatar, inviter: .mockDan)))
+             }
+         case .knockable:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.knockable)
+             clientProxy.roomForIdentifierReturnValue = nil
+         case .knocked:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.knocked)
+             clientProxy.roomForIdentifierClosure = { _ in
+                 .knocked(KnockedRoomProxyMock(.init(avatarURL: .mockMXCAvatar)))
+             }
+         case .banned:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.banned)
+             clientProxy.roomForIdentifierClosure = { _ in
+                 .banned(BannedRoomProxyMock(.init(avatarURL: .mockMXCAvatar)))
+             }
+         case .forbidden:
+             clientProxy.roomPreviewForIdentifierViaReturnValue = .success(RoomPreviewProxyMock.restricted)
+             clientProxy.roomForIdentifierReturnValue = nil
+             clientProxy.joinRoomAliasClosure = { _ in
+                 .failure(.forbiddenAccess)
+             }
+         default:
+             break
+         }
         
-        let source: JoinRoomScreenSource = if isSpace {
-            .space(SpaceServiceRoom.mock(joinRoomScreenMode: mode))
-        } else {
-            .generic(roomID: "1", via: [])
-        }
+         let source: JoinRoomScreenSource = if isSpace {
+             .space(SpaceServiceRoom.mock(joinRoomScreenMode: mode))
+         } else {
+             .generic(roomID: "1", via: [])
+         }
         
-        viewModel = JoinRoomScreenViewModel(source: source,
-                                            appSettings: appSettings,
-                                            userSession: UserSessionMock(.init(clientProxy: clientProxy)),
-                                            userIndicatorController: ServiceLocator.shared.userIndicatorController)
-    }
+         viewModel = JoinRoomScreenViewModel(source: source,
+                                             appSettings: appSettings,
+                                             userSession: UserSessionMock(.init(clientProxy: clientProxy)),
+                                             userIndicatorController: ServiceLocator.shared.userIndicatorController)
+     }
     
-    var previewDisplayName: String {
-        switch mode {
-        case .unknown:
-            return "Unknown"
-        case .loading:
-            return "Loading"
-        case .joinable:
-            return "Joinable"
-        case .restricted:
-            return "Restricted"
-        case .inviteRequired:
-            return "InviteRequired"
-        case .invited(isDM: let isDM):
-            return isDM ? "InvitedDM" : "Invited"
-        case .knockable:
-            return "Knockable"
-        case .knocked:
-            return "Knocked"
-        case .banned:
-            return "Banned"
-        case .forbidden:
-            return "Forbidden"
-        }
-    }
+     var previewDisplayName: String {
+         switch mode {
+         case .unknown:
+             return "Unknown"
+         case .loading:
+             return "Loading"
+         case .joinable:
+             return "Joinable"
+         case .restricted:
+             return "Restricted"
+         case .inviteRequired:
+             return "InviteRequired"
+         case .invited(isDM: let isDM):
+             return isDM ? "InvitedDM" : "Invited"
+         case .knockable:
+             return "Knockable"
+         case .knocked:
+             return "Knocked"
+         case .banned:
+             return "Banned"
+         case .forbidden:
+             return "Forbidden"
+         }
+     }
     
-    @ViewBuilder
-    var preview: some View {
-        let previewDisplayName = customPreviewName ?? previewDisplayName
-        let previewDisplayNameSuffix = isSpace ? " Space" : ""
-        if mode == .forbidden {
-            ElementNavigationStack {
-                JoinRoomScreen(context: viewModel.context)
-            }
-            .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
-                state.mode == .forbidden
-            })
-            .onAppear {
-                viewModel.context.send(viewAction: .join)
-            }
-            .previewDisplayName(previewDisplayName + previewDisplayNameSuffix)
-        } else {
-            ElementNavigationStack {
-                JoinRoomScreen(context: viewModel.context)
-            }
-            .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
-                state.roomDetails != nil
-            })
-            .previewDisplayName(previewDisplayName + previewDisplayNameSuffix)
-        }
-    }
-}
-*/
+     @ViewBuilder
+     var preview: some View {
+         let previewDisplayName = customPreviewName ?? previewDisplayName
+         let previewDisplayNameSuffix = isSpace ? " Space" : ""
+         if mode == .forbidden {
+             ElementNavigationStack {
+                 JoinRoomScreen(context: viewModel.context)
+             }
+             .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
+                 state.mode == .forbidden
+             })
+             .onAppear {
+                 viewModel.context.send(viewAction: .join)
+             }
+             .previewDisplayName(previewDisplayName + previewDisplayNameSuffix)
+         } else {
+             ElementNavigationStack {
+                 JoinRoomScreen(context: viewModel.context)
+             }
+             .snapshotPreferences(expect: viewModel.context.$viewState.map { state in
+                 state.roomDetails != nil
+             })
+             .previewDisplayName(previewDisplayName + previewDisplayNameSuffix)
+         }
+     }
+ }
+ */

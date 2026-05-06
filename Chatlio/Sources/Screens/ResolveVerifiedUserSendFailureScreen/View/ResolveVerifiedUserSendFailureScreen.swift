@@ -68,44 +68,44 @@ struct ResolveVerifiedUserSendFailureScreen: View {
 // MARK: - Previews
 
 /*
-struct ResolveVerifiedUserSendFailureScreen_Previews: PreviewProvider, TestablePreview {
-    static let unsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: ["@alice:matrix.org": []]))
-    static let ownUnsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: [RoomMemberProxyMock.mockMe.userID: []]))
-    static let changedIdentityViewModel = makeViewModel(failure: .changedIdentity(users: ["@alice:matrix.org"]))
+ struct ResolveVerifiedUserSendFailureScreen_Previews: PreviewProvider, TestablePreview {
+     static let unsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: ["@alice:matrix.org": []]))
+     static let ownUnsignedDeviceViewModel = makeViewModel(failure: .hasUnsignedDevice(devices: [RoomMemberProxyMock.mockMe.userID: []]))
+     static let changedIdentityViewModel = makeViewModel(failure: .changedIdentity(users: ["@alice:matrix.org"]))
     
-    static var previews: some View {
-        ResolveVerifiedUserSendFailureScreen(context: unsignedDeviceViewModel.context)
-            .previewDisplayName("Unsigned Device")
+     static var previews: some View {
+         ResolveVerifiedUserSendFailureScreen(context: unsignedDeviceViewModel.context)
+             .previewDisplayName("Unsigned Device")
         
-        ResolveVerifiedUserSendFailureScreen(context: ownUnsignedDeviceViewModel.context)
-            .previewDisplayName("Own Unsigned Device")
+         ResolveVerifiedUserSendFailureScreen(context: ownUnsignedDeviceViewModel.context)
+             .previewDisplayName("Own Unsigned Device")
         
-        ResolveVerifiedUserSendFailureScreen(context: changedIdentityViewModel.context)
-            .previewDisplayName("Identity Changed")
-    }
+         ResolveVerifiedUserSendFailureScreen(context: changedIdentityViewModel.context)
+             .previewDisplayName("Identity Changed")
+     }
     
-    static func makeViewModel(failure: TimelineItemSendFailure.VerifiedUser) -> ResolveVerifiedUserSendFailureScreenViewModel {
-        ResolveVerifiedUserSendFailureScreenViewModel(failure: failure,
-                                                      sendHandle: .mock,
-                                                      roomProxy: JoinedRoomProxyMock(.init()),
-                                                      userIndicatorController: UserIndicatorControllerMock())
-    }
-}
-*/
+     static func makeViewModel(failure: TimelineItemSendFailure.VerifiedUser) -> ResolveVerifiedUserSendFailureScreenViewModel {
+         ResolveVerifiedUserSendFailureScreenViewModel(failure: failure,
+                                                       sendHandle: .mock,
+                                                       roomProxy: JoinedRoomProxyMock(.init()),
+                                                       userIndicatorController: UserIndicatorControllerMock())
+     }
+ }
+ */
 
 /*
-struct ResolveVerifiedUserSendFailureScreenSheet_Previews: PreviewProvider {
-    static let viewModel = ResolveVerifiedUserSendFailureScreenViewModel(failure: .changedIdentity(users: ["@alice:matrix.org"]),
-                                                                         sendHandle: .mock,
-                                                                         roomProxy: JoinedRoomProxyMock(.init()),
-                                                                         userIndicatorController: UserIndicatorControllerMock())
+ struct ResolveVerifiedUserSendFailureScreenSheet_Previews: PreviewProvider {
+     static let viewModel = ResolveVerifiedUserSendFailureScreenViewModel(failure: .changedIdentity(users: ["@alice:matrix.org"]),
+                                                                          sendHandle: .mock,
+                                                                          roomProxy: JoinedRoomProxyMock(.init()),
+                                                                          userIndicatorController: UserIndicatorControllerMock())
     
-    static var previews: some View {
-        Text("Hello")
-            .sheet(isPresented: .constant(true)) {
-                ResolveVerifiedUserSendFailureScreen(context: viewModel.context)
-            }
-            .previewDisplayName("Sheet")
-    }
-}
-*/
+     static var previews: some View {
+         Text("Hello")
+             .sheet(isPresented: .constant(true)) {
+                 ResolveVerifiedUserSendFailureScreen(context: viewModel.context)
+             }
+             .previewDisplayName("Sheet")
+     }
+ }
+ */

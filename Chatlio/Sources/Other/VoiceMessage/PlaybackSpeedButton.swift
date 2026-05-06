@@ -33,15 +33,15 @@ struct PlaybackSpeedButton: View {
 }
 
 /*
-struct PlaybackSpeedButton_Previews: PreviewProvider, TestablePreview {
-    static var previews: some View {
-        HStack(spacing: 8) {
-            ForEach(AudioPlaybackSpeed.allCases, id: \.self) { speed in
-                PlaybackSpeedButton(speed: speed) { }
-            }
-        }
-        .padding()
-        .background(Color.gray)
-    }
-}
-*/
+ struct PlaybackSpeedButton_Previews: PreviewProvider, TestablePreview {
+     static var previews: some View {
+         HStack(spacing: 8) {
+             ForEach(AudioPlaybackSpeed.allCases, id: \.self) { speed in
+                 PlaybackSpeedButton(speed: speed) { }
+             }
+         }
+         .padding()
+         .background(Color.gray)
+     }
+ }
+ */

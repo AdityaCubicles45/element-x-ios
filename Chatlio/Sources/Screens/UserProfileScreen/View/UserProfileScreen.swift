@@ -98,48 +98,48 @@ struct UserProfileScreen: View {
 // MARK: - Previews
 
 /*
-struct UserProfileScreen_Previews: PreviewProvider, TestablePreview {
-    static let verifiedUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockDan.userID)
-    static let otherUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockAlice.userID)
-    static let accountOwnerViewModel = makeViewModel(userID: RoomMemberProxyMock.mockMe.userID)
+ struct UserProfileScreen_Previews: PreviewProvider, TestablePreview {
+     static let verifiedUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockDan.userID)
+     static let otherUserViewModel = makeViewModel(userID: RoomMemberProxyMock.mockAlice.userID)
+     static let accountOwnerViewModel = makeViewModel(userID: RoomMemberProxyMock.mockMe.userID)
     
-    static var previews: some View {
-        UserProfileScreen(context: verifiedUserViewModel.context)
-            .snapshotPreferences(expect: verifiedUserViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
-            .previewDisplayName("Verified User")
+     static var previews: some View {
+         UserProfileScreen(context: verifiedUserViewModel.context)
+             .snapshotPreferences(expect: verifiedUserViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
+             .previewDisplayName("Verified User")
         
-        UserProfileScreen(context: otherUserViewModel.context)
-            .snapshotPreferences(expect: otherUserViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
-            .previewDisplayName("Other User")
+         UserProfileScreen(context: otherUserViewModel.context)
+             .snapshotPreferences(expect: otherUserViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
+             .previewDisplayName("Other User")
         
-        UserProfileScreen(context: accountOwnerViewModel.context)
-            .snapshotPreferences(expect: accountOwnerViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
-            .previewDisplayName("Account Owner")
-    }
+         UserProfileScreen(context: accountOwnerViewModel.context)
+             .snapshotPreferences(expect: accountOwnerViewModel.context.observe(\.viewState.isVerified).map { $0 != nil })
+             .previewDisplayName("Account Owner")
+     }
     
-    static func makeViewModel(userID: String) -> UserProfileScreenViewModel {
-        let clientProxyMock = ClientProxyMock(.init())
+     static func makeViewModel(userID: String) -> UserProfileScreenViewModel {
+         let clientProxyMock = ClientProxyMock(.init())
         
-        clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
-            let identity = switch userID {
-            case RoomMemberProxyMock.mockDan.userID:
-                UserIdentityProxyMock(configuration: .init(verificationState: .verified))
-            default:
-                UserIdentityProxyMock(configuration: .init())
-            }
+         clientProxyMock.userIdentityForFallBackToServerClosure = { userID, _ in
+             let identity = switch userID {
+             case RoomMemberProxyMock.mockDan.userID:
+                 UserIdentityProxyMock(configuration: .init(verificationState: .verified))
+             default:
+                 UserIdentityProxyMock(configuration: .init())
+             }
             
-            return .success(identity)
-        }
+             return .success(identity)
+         }
 
-        if userID != RoomMemberProxyMock.mockMe.userID {
-            clientProxyMock.directRoomForUserIDReturnValue = .success("roomID")
-        }
+         if userID != RoomMemberProxyMock.mockMe.userID {
+             clientProxyMock.directRoomForUserIDReturnValue = .success("roomID")
+         }
         
-        return UserProfileScreenViewModel(userID: userID,
-                                          isPresentedModally: false,
-                                          userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
-                                          userIndicatorController: ServiceLocator.shared.userIndicatorController,
-                                          analytics: ServiceLocator.shared.analytics)
-    }
-}
-*/
+         return UserProfileScreenViewModel(userID: userID,
+                                           isPresentedModally: false,
+                                           userSession: UserSessionMock(.init(clientProxy: clientProxyMock)),
+                                           userIndicatorController: ServiceLocator.shared.userIndicatorController,
+                                           analytics: ServiceLocator.shared.analytics)
+     }
+ }
+ */

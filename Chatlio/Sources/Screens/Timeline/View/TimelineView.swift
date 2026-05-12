@@ -171,7 +171,7 @@ private extension View {
     @ViewBuilder
     func translationPresentationIfAvailable(isPresented: Binding<Bool>, text: String) -> some View {
         if #available(iOS 17.4, macOS 15.0, *) {
-            self.translationPresentation(isPresented: isPresented, text: text)
+            translationPresentation(isPresented: isPresented, text: text)
         } else {
             self
         }

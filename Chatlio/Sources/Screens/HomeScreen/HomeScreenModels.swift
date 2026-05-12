@@ -7,17 +7,19 @@
 //
 
 import Combine
-import Foundation
-import UIKit
 import Compound
+import Foundation
 import SwiftUI
+import UIKit
 
 enum HomeTab: String, CaseIterable, Identifiable {
     case calls
     case chats
     case groups
     
-    var id: String { rawValue }
+    var id: String {
+        rawValue
+    }
     
     var title: String {
         switch self {

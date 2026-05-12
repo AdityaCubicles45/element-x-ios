@@ -15,7 +15,6 @@ struct LongPressWithFeedback: ViewModifier {
     @State private var isLongPressing = false
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
     
-    @ViewBuilder
     func body(content: Content) -> some View {
         if #available(iOS 18.0, *) {
             mainContent(content: content)

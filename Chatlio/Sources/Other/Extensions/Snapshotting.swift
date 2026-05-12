@@ -73,8 +73,8 @@ extension SwiftUI.View {
     ///   - precision: The percentage of pixels that must match.
     ///   - perceptualPrecision: The percentage a pixel must match the source pixel to be considered a match. 98-99% mimics the precision of the human eye.
     func snapshotPreferences<S: AsyncSequence>(expect fulfillmentSequence: S? = nil,
-                             precision: Float = 1.0,
-                             perceptualPrecision: Float = 0.98) -> some SwiftUI.View where S.Element == Bool {
+                                               precision: Float = 1.0,
+                                               perceptualPrecision: Float = 0.98) -> some SwiftUI.View where S.Element == Bool {
         preference(key: SnapshotPrecisionPreferenceKey.self, value: precision)
             .preference(key: SnapshotPerceptualPrecisionPreferenceKey.self, value: perceptualPrecision)
             .preference(key: SnapshotFulfillmentPreferenceKey.self, value: fulfillmentSequence.map { SnapshotFulfillmentPreferenceKey.Wrapper(source: .sequence($0)) })

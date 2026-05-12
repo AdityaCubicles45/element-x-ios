@@ -81,7 +81,7 @@ struct HomeScreenCallCell: View {
         .rowDivider(horizontalInsets: horizontalInsets)
     }
     
-    @ViewBuilder @MainActor
+    @MainActor
     private var avatar: some View {
         RoomAvatarImage(avatar: room.avatar,
                         avatarSize: .room(on: .chats),

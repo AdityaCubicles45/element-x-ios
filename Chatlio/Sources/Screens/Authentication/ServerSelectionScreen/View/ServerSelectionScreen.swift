@@ -52,30 +52,24 @@ struct ServerSelectionScreen: View {
     
     /// The selectable server list.
     var serverList: some View {
-        VStack(spacing: 16) {
-            Button {
-                context.homeserverAddress = "word.skin"
-                submit()
-            } label: {
-                HStack(spacing: 16) {
-                    // Document icon container
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color(red: 0.945, green: 0.949, blue: 0.965)) // #F1F2F6
-                            .frame(width: 56, height: 56)
-                        
-                        CompoundIcon(\.public, size: .small, relativeTo: .compound.bodyLG) // Using \.public as a document/file-like icon if document is missing
-                            .foregroundColor(.compound.iconPrimary)
-                    }
-                    
-                    Text("word.skin")
-                        .font(.compound.bodyLGSemibold)
-                        .foregroundColor(.compound.textPrimary)
-                    
-                    Spacer()
+        VStack(spacing: 24) {
+            TextField(L10n.commonServerUrl, text: $context.homeserverAddress)
+                .textFieldStyle(.compound)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .keyboardType(.URL)
+                .accessibilityIdentifier(A11yIdentifiers.changeServerScreen.server)
+                .onSubmit(submit)
+                .onChange(of: context.homeserverAddress) { _ in
+                    context.send(viewAction: .clearFooterError)
                 }
+            
+            Button(L10n.actionContinue) {
+                submit()
             }
-            .accessibilityIdentifier(A11yIdentifiers.changeServerScreen.server)
+            .buttonStyle(.compound(.primary, size: .large))
+            .disabled(context.viewState.hasValidationError)
+            .accessibilityIdentifier(A11yIdentifiers.changeServerScreen.continue)
         }
     }
     

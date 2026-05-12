@@ -254,7 +254,7 @@ internal enum L10n {
   internal static var actionLeave: String { return L10n.tr("Localizable", "action_leave") }
   /// Leave conversation
   internal static var actionLeaveConversation: String { return L10n.tr("Localizable", "action_leave_conversation") }
-  /// Leave room
+  /// Delete
   internal static var actionLeaveRoom: String { return L10n.tr("Localizable", "action_leave_room") }
   /// Leave space
   internal static var actionLeaveSpace: String { return L10n.tr("Localizable", "action_leave_space") }

@@ -94,10 +94,10 @@ private struct BlackButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.compound.bodyLGSemibold)
-            .foregroundColor(.compound.textOnSolidPrimary)
+            .foregroundColor(.compound.bgCanvasDefault)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
-            .background(Color.compound.bgActionPrimaryRest)
+            .background(Color.compound.textPrimary)
             .clipShape(Capsule())
             .opacity(configuration.isPressed ? 0.8 : 1.0)
     }

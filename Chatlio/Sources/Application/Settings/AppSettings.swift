@@ -192,7 +192,7 @@ final class AppSettings {
     ///
     /// Account provider is the friendly term for the server name. It should not contain an `https` prefix and should
     /// match the last part of the user ID. For example `example.com` and not `https://matrix.example.com`.
-    private(set) var accountProviders = ["word.skin"]
+    private(set) var accountProviders = ["matrix.org"]
     /// Whether or not the user is allowed to manually enter their own account provider or must select from one of `defaultAccountProviders`.
     private(set) var allowOtherAccountProviders = true
     /// Whether the components surrounding the app brand/logo should be hidden or not
@@ -202,15 +202,15 @@ final class AppSettings {
     let backgroundAppRefreshTaskIdentifier = "io.element.elementx.background.refresh"
 
     /// A URL where users can go read more about the app.
-    private(set) var websiteURL: URL = "https://word.skin"
+    private(set) var websiteURL: URL = "https://element.io"
     /// A URL that contains the app's logo that may be used when showing content in a web view.
-    private(set) var logoURL: URL = "https://word.skin/mobile-icon.png"
+    private(set) var logoURL: URL = "https://element.io/images/logo.png"
     /// A URL that contains that app's copyright notice.
-    private(set) var copyrightURL: URL = "https://word.skin/copyright"
+    private(set) var copyrightURL: URL = "https://element.io/copyright"
     /// A URL that contains the app's Terms of use.
-    private(set) var acceptableUseURL: URL = "https://word.skin/acceptable-use-policy-terms"
+    private(set) var acceptableUseURL: URL = "https://element.io/acceptable-use-policy-terms"
     /// A URL that contains the app's Privacy Policy.
-    private(set) var privacyURL: URL = "https://word.skin/privacy"
+    private(set) var privacyURL: URL = "https://element.io/privacy"
     /// A URL where users can go read more about encryption in general.
     private(set) var encryptionURL: URL = "https://word.skin/help#encryption"
     /// A URL where users can go read more about device verification..
@@ -223,9 +223,9 @@ final class AppSettings {
     private(set) var historySharingDetailsURL: URL = "https://word.skin/help#e2ee-history-sharing"
 
     /// Any domains that Element web may be hosted on - used for handling links.
-    private(set) var elementWebHosts = ["app.word.skin"]
+    private(set) var elementWebHosts = ["app.element.io"]
     /// The domain that account provisioning links will be hosted on - used for handling the links.
-    private(set) var accountProvisioningHost = "mobile.word.skin"
+    private(set) var accountProvisioningHost = "mobile.element.io"
     /// The App Store URL for Element Pro, shown to the user when a homeserver requires that app.
     /// **Note:** This property isn't overridable as it in unexpected for forks to come across the error (or to even have a "Pro" app).
     let elementProAppStoreURL: URL = "https://apps.apple.com/app/element-pro-for-work/id6502951615"
@@ -250,7 +250,7 @@ final class AppSettings {
     /// Any pre-defined static client registrations for OIDC issuers.
     let oidcStaticRegistrations: [URL: String] = ["https://id.thirdroom.io/realms/thirdroom": "elementx"]
     /// The redirect URL used for OIDC. This no longer uses universal links so we don't need the bundle ID to avoid conflicts between Element X, Nightly and PR builds.
-    private(set) var oidcRedirectURL: URL = "https://auth.word.skin/oidc/login"
+    private(set) var oidcRedirectURL: URL = "https://auth.element.io/oidc/login"
     
     private(set) lazy var oidcConfiguration = OIDCConfiguration(clientName: InfoPlistReader.main.bundleDisplayName,
                                                                 redirectURI: oidcRedirectURL,
@@ -275,7 +275,7 @@ final class AppSettings {
         #endif
     }
     
-    private(set) var pushGatewayBaseURL: URL = "https://matrix.word.skin"
+    private(set) var pushGatewayBaseURL: URL = "https://matrix.org"
     var pushGatewayNotifyEndpoint: URL {
         pushGatewayBaseURL.appending(path: "_matrix/push/v1/notify")
     }

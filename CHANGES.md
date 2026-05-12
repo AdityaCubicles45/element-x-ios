@@ -751,7 +751,7 @@ Others
 
 ✨ Features
 * Enable the next gen html parser and attributed string builder by default by @stefanceriu in https://github.com/element-hq/element-x-ios/pull/4537
-* Enable the Space Exploration tab to discover and join new rooms. by @pixlwave in https://github.com/element-hq/element-x-ios/pull/4563
+* Enable the Space Exploration tab to discover and join New groups. by @pixlwave in https://github.com/element-hq/element-x-ios/pull/4563
 * Use the new notification sound. by @pixlwave in https://github.com/element-hq/element-x-ios/pull/4572
 * Labs screen by @Velin92 in https://github.com/element-hq/element-x-ios/pull/4573
 * Implemented message forwarding for media previews and media timelines by @Velin92 in https://github.com/element-hq/element-x-ios/pull/4579
@@ -1845,7 +1845,7 @@ Others
 ✨ Features
 * Show DM recipient verification badges on the room details screen profile button by @stefanceriu in https://github.com/element-hq/element-x-ios/pull/3824
 * Show room encryption state in the composer by @stefanceriu in https://github.com/element-hq/element-x-ios/pull/3841
-* Join room by address by @Velin92 in https://github.com/element-hq/element-x-ios/pull/3840
+* Join group by address by @Velin92 in https://github.com/element-hq/element-x-ios/pull/3840
 * Only show a badge in the composer if the room is unencrypted. by @stefanceriu in https://github.com/element-hq/element-x-ios/pull/3866
 * Room mentioning in the composer by @Velin92 in https://github.com/element-hq/element-x-ios/pull/3868
 * Re-enable the error screens in group calls by @hughns in https://github.com/element-hq/element-x-ios/pull/3856
@@ -3455,7 +3455,7 @@ No significant changes.
 🙌 Improvements
 
 - Use Safari for OIDC account management. ([#1591](https://github.com/vector-im/element-x-ios/pull/1591))
-- New room button has been moved to the top. ([#1602](https://github.com/vector-im/element-x-ios/issues/1602))
+- New group button has been moved to the top. ([#1602](https://github.com/vector-im/element-x-ios/issues/1602))
 
 🐛 Bugfixes
 

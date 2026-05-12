@@ -24,7 +24,6 @@ enum HomeScreenCoordinatorAction {
     case presentRoomDetails(roomIdentifier: String)
     case presentReportRoom(roomIdentifier: String)
     case presentDeclineAndBlock(userID: String, roomID: String)
-    case presentSpace(SpaceRoomListProxyProtocol)
     case roomLeft(roomIdentifier: String)
     case transferOwnership(roomIdentifier: String)
     case presentSettingsScreen
@@ -35,6 +34,7 @@ enum HomeScreenCoordinatorAction {
     case presentStartChatScreen
     case presentGlobalSearch
     case logout
+    case showCallScreen(roomProxy: JoinedRoomProxyProtocol, audioOnly: Bool)
 }
 
 final class HomeScreenCoordinator: CoordinatorProtocol {
@@ -71,8 +71,6 @@ final class HomeScreenCoordinator: CoordinatorProtocol {
                     actionsSubject.send(.presentReportRoom(roomIdentifier: roomIdentifier))
                 case .presentDeclineAndBlock(let userID, let roomID):
                     actionsSubject.send(.presentDeclineAndBlock(userID: userID, roomID: roomID))
-                case .presentSpace(let spaceRoomListProxy):
-                    actionsSubject.send(.presentSpace(spaceRoomListProxy))
                 case .roomLeft(roomIdentifier: let roomIdentifier):
                     actionsSubject.send(.roomLeft(roomIdentifier: roomIdentifier))
                 case .presentFeedbackScreen:
@@ -93,6 +91,8 @@ final class HomeScreenCoordinator: CoordinatorProtocol {
                     actionsSubject.send(.logout)
                 case .transferOwnership(let roomIdentifier):
                     actionsSubject.send(.transferOwnership(roomIdentifier: roomIdentifier))
+                case .presentCall(let roomProxy, let audioOnly):
+                    actionsSubject.send(.showCallScreen(roomProxy: roomProxy, audioOnly: audioOnly))
                 }
             }
             .store(in: &cancellables)

@@ -26,11 +26,11 @@ private struct FilterToggleStyle: ToggleStyle {
     }
     
     private func backgroundColor(isOn: Bool) -> Color {
-        isOn ? .compound.bgActionPrimaryRest : .compound.bgCanvasDefault
+        isOn ? .compound.bgActionPrimaryRest : .compound.bgSubtlePrimary
     }
     
     private func foregroundColor(isOn: Bool) -> Color {
-        isOn ? .compound.textOnSolidPrimary : .compound.textPrimary
+        isOn ? .white : .compound.textPrimary
     }
     
     func makeBody(configuration: Configuration) -> some View {

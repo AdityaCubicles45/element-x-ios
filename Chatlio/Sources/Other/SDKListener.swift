@@ -13,12 +13,12 @@ import MatrixRustSDK
 ///
 /// To use this you'll need to add a conformance to the required listener
 /// protocol with a specialisation for the type it listens for.
-final class SDKListener<T> {
-    private let onUpdateClosure: (T) -> Void
+final class SDKListener<T>: Sendable {
+    private let onUpdateClosure: @Sendable (T) -> Void
     
     /// Creates a new listener.
     /// - Parameter onUpdateClosure: A closure that will be called whenever a new value is available.
-    init(_ onUpdateClosure: @escaping (T) -> Void) {
+    init(_ onUpdateClosure: @escaping @Sendable (T) -> Void) {
         self.onUpdateClosure = onUpdateClosure
     }
 }
@@ -133,38 +133,6 @@ extension SDKListener: RoomListLoadingStateListener where T == RoomListLoadingSt
     }
 }
 
-// MARK: Spaces
-
-extension SDKListener: SpaceServiceJoinedSpacesListener where T == [SpaceListUpdate] {
-    func onUpdate(rooms: [SpaceListUpdate]) {
-        onUpdateClosure(rooms)
-    }
-}
-
-extension SDKListener: SpaceRoomListEntriesListener where T == [SpaceListUpdate] {
-    func onUpdate(roomUpdates: [SpaceListUpdate]) {
-        onUpdateClosure(roomUpdates)
-    }
-}
-
-extension SDKListener: SpaceRoomListPaginationStateListener where T == SpaceRoomListPaginationState {
-    func onUpdate(paginationState: SpaceRoomListPaginationState) {
-        onUpdateClosure(paginationState)
-    }
-}
-
-extension SDKListener: SpaceRoomListSpaceListener where T == SpaceRoom? {
-    func onUpdate(space: SpaceRoom?) {
-        onUpdateClosure(space)
-    }
-}
-
-extension SDKListener: SpaceServiceSpaceFiltersListener where T == [SpaceFilterUpdate] {
-    func onUpdate(filterUpdates: [SpaceFilterUpdate]) {
-        onUpdateClosure(filterUpdates)
-    }
-}
-
 // MARK: Room
 
 extension SDKListener: RoomInfoListener where T == RoomInfo {
@@ -226,5 +194,37 @@ extension SDKListener: TimelineListener where T == [TimelineDiff] {
 extension SDKListener: RoomDirectorySearchEntriesListener where T == [RoomDirectorySearchEntryUpdate] {
     func onUpdate(roomEntriesUpdate: [RoomDirectorySearchEntryUpdate]) {
         onUpdateClosure(roomEntriesUpdate)
+    }
+}
+
+// MARK: SpaceProxy
+
+extension SDKListener: SpaceRoomListPaginationStateListener where T == SpaceRoomListPaginationState {
+    func onUpdate(paginationState: SpaceRoomListPaginationState) {
+        onUpdateClosure(paginationState)
+    }
+}
+
+extension SDKListener: SpaceRoomListEntriesListener where T == [SpaceListUpdate] {
+    func onUpdate(rooms: [SpaceListUpdate]) {
+        onUpdateClosure(rooms)
+    }
+}
+
+extension SDKListener: SpaceRoomListSpaceListener where T == SpaceRoom? {
+    func onUpdate(space: SpaceRoom?) {
+        onUpdateClosure(space)
+    }
+}
+
+extension SDKListener: SpaceServiceJoinedSpacesListener where T == [SpaceListUpdate] {
+    func onUpdate(roomUpdates: [SpaceListUpdate]) {
+        onUpdateClosure(roomUpdates)
+    }
+}
+
+extension SDKListener: SpaceServiceSpaceFiltersListener where T == [SpaceFilterUpdate] {
+    func onUpdate(filterUpdates: [SpaceFilterUpdate]) {
+        onUpdateClosure(filterUpdates)
     }
 }

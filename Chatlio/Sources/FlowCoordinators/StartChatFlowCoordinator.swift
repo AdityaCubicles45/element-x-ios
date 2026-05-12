@@ -48,9 +48,9 @@ class StartChatFlowCoordinator: FlowCoordinatorProtocol {
         
         /// Shown when the flow is started with options to create a room/DM, join by alias, use the room directory etc.
         case startChat
-        /// The user is creating a new room.
+        /// The user is creating a New group.
         case createRoom
-        /// The user is selecting an avatar for the new room.
+        /// The user is selecting an avatar for the New group.
         case roomAvatarPicker
         /// The user is inviting users to a newly created room.
         case inviteUsers

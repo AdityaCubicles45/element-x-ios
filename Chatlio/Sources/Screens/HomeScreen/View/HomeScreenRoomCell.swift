@@ -17,7 +17,7 @@ struct HomeScreenRoomCell: View {
     let room: HomeScreenRoom
     let isSelected: Bool
     let mediaProvider: MediaProviderProtocol!
-    let action: (HomeScreenViewAction) -> Void
+    let action: @MainActor (HomeScreenViewAction) -> Void
     
     private let verticalInsets = 12.0
     private let horizontalInsets = 16.0

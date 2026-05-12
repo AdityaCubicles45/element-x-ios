@@ -12,6 +12,18 @@ import Foundation
 internal enum UntranslatedL10n {
   /// Chatlio on your other device
   internal static var a11yQrCodeLoginElementXOnDevice: String { return UntranslatedL10n.tr("Untranslated", "a11y_qr_code_login_element_x_on_device") }
+  /// Start voice call
+  internal static var a11yStartVoiceCall: String { return UntranslatedL10n.tr("Untranslated", "a11y_start_voice_call") }
+  /// Video call
+  internal static var actionVideoCall: String { return UntranslatedL10n.tr("Untranslated", "action_video_call") }
+  /// Voice call
+  internal static var actionVoiceCall: String { return UntranslatedL10n.tr("Untranslated", "action_voice_call") }
+  /// Calls coming soon
+  internal static var commonCallsComingSoon: String { return UntranslatedL10n.tr("Untranslated", "common_calls_coming_soon") }
+  /// Video call
+  internal static var commonVideoCall: String { return UntranslatedL10n.tr("Untranslated", "common_video_call") }
+  /// Voice call
+  internal static var commonVoiceCall: String { return UntranslatedL10n.tr("Untranslated", "common_voice_call") }
   /// To take pictures or videos and send them as a message Chatlio needs access to the camera.
   internal static var nsCameraUsageDescription: String { return UntranslatedL10n.tr("Untranslated", "NSCameraUsageDescription") }
   /// Grant location access so that Chatlio can share your location.
@@ -22,6 +34,12 @@ internal enum UntranslatedL10n {
   internal static var screenChangeServerSubtitle: String { return UntranslatedL10n.tr("Untranslated", "screen_change_server_subtitle") }
   /// Change account provider
   internal static var screenChangeServerTitle: String { return UntranslatedL10n.tr("Untranslated", "screen_change_server_title") }
+  /// Calls
+  internal static var screenHomeTabCalls: String { return UntranslatedL10n.tr("Untranslated", "screen_home_tab_calls") }
+  /// Chats
+  internal static var screenHomeTabChats: String { return UntranslatedL10n.tr("Untranslated", "screen_home_tab_chats") }
+  /// Groups
+  internal static var screenHomeTabGroups: String { return UntranslatedL10n.tr("Untranslated", "screen_home_tab_groups") }
   /// Change provider >
   internal static var screenOnboardingChangeServerIos: String { return UntranslatedL10n.tr("Untranslated", "screen_onboarding_change_server_ios") }
   /// Create one

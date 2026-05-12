@@ -32,15 +32,25 @@ class OIDCAuthenticationPresenter: NSObject {
     /// Presents a web authentication session for the supplied data.
     func authenticate(using oidcData: OIDCAuthorizationDataProxy) async -> Result<UserSessionProtocol, AuthenticationServiceError> {
         let (url, error) = await withCheckedContinuation { continuation in
-            let session = ASWebAuthenticationSession(url: oidcData.url, callback: .oidcRedirectURL(oidcRedirectURL)) { url, error in
-                continuation.resume(returning: (url, error))
+            let session: ASWebAuthenticationSession
+            if #available(iOS 17.4, *) {
+                session = ASWebAuthenticationSession(url: oidcData.url, callback: .oidcRedirectURL(oidcRedirectURL)) { url, error in
+                    continuation.resume(returning: (url, error))
+                }
+            } else {
+                let callbackScheme = oidcRedirectURL.scheme
+                session = ASWebAuthenticationSession(url: oidcData.url, callbackURLScheme: callbackScheme) { url, error in
+                    continuation.resume(returning: (url, error))
+                }
             }
             
             session.prefersEphemeralWebBrowserSession = false
             session.presentationContextProvider = self
-            session.additionalHeaderFields = [
-                "X-Element-User-Agent": UserAgentBuilder.makeASCIIUserAgent()
-            ]
+            if #available(iOS 17.4, *) {
+                session.additionalHeaderFields = [
+                    "X-Element-User-Agent": UserAgentBuilder.makeASCIIUserAgent()
+                ]
+            }
             
             activeSession = session
             session.start()
@@ -121,6 +131,7 @@ extension OIDCAuthenticationPresenter: ASWebAuthenticationPresentationContextPro
     }
 }
 
+@available(iOS 17.4, *)
 extension ASWebAuthenticationSession.Callback {
     static func oidcRedirectURL(_ url: URL) -> Self {
         if url.scheme == "https", let host = url.host() {

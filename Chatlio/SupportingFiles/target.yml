@@ -134,6 +134,7 @@ targets:
 
     settings:
       base:
+        IPHONEOS_DEPLOYMENT_TARGET: '17.0'
         PRODUCT_NAME: $(APP_NAME)
         PRODUCT_BUNDLE_IDENTIFIER: $(BASE_BUNDLE_IDENTIFIER)
         MARKETING_VERSION: $(MARKETING_VERSION)
@@ -218,6 +219,17 @@ targets:
             swiftformat --lint --lenient "$PROJECT_DIR"
         else
             echo "warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat"
+        fi
+    - name: 📦 Copy Binary Framework dSYMs
+      runOnlyWhenInstalling: true
+      basedOnDependencyAnalysis: false
+      shell: /bin/sh
+      script: |
+        if [ "$ACTION" = "install" ]; then
+            echo "Copying dSYMs for binary SPM dependencies…"
+            # Find dSYMs in the SourcePackages checkouts directory and copy them to the dSYM folder
+            # This is a workaround for a bug in Xcode where dSYMs for binary targets are not copied to the archive
+            find "${BUILD_DIR%Build/*}SourcePackages/checkouts" -name "*.dSYM" -exec cp -r {} "${DWARF_DSYM_FOLDER_PATH}" \;
         fi
 
     dependencies:

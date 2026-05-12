@@ -53,7 +53,7 @@ struct TimelineItemMenu: View {
             }
         }
         .accessibilityIdentifier(A11yIdentifiers.roomScreen.timelineItemActionMenu)
-        .presentationSizing(.page)
+        .backportPresentationSizingPage()
         .presentationDetents([.medium, .large])
         .presentationBackground(Color.compound.bgCanvasDefault)
         .presentationDragIndicator(.visible)

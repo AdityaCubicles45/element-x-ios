@@ -1323,6 +1323,7 @@
 		ED3CB61B104637B8EE7CF6C6 /* AuthenticationStartScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F3FC5A6A4885F2ADF6721B /* AuthenticationStartScreenViewModelTests.swift */; };
 		ED6F808A50751B35F2A999CF /* EmojiPickerScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFAAC99D2ACDA2421CC142 /* EmojiPickerScreenCoordinator.swift */; };
 		ED78CBBDCD6981334D125D4D /* SpaceAddRoomsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C277646470151E9819E5B3 /* SpaceAddRoomsScreenViewModel.swift */; };
+		EDC32250CE13D89C8FEB71A7 /* HomeScreenCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A82ECCF20E1B2037F20F54 /* HomeScreenCallCell.swift */; };
 		EE101AF28ED10B797993B2D3 /* RoomPollsHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBD910BF1493957B36F3409 /* RoomPollsHistoryScreen.swift */; };
 		EE1A5D366A2526D4BBCB601F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DD5C39CFB272EE32D113C6 /* Dictionary.swift */; };
 		EE4A8F853FE13AEEE38A7520 /* AuthenticationStartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C043C24D68C770FAA60963E /* AuthenticationStartScreenViewModel.swift */; };
@@ -2424,6 +2425,7 @@
 		B1B804E106C234ECF394DB32 /* LogViewerScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewerScreenViewModelProtocol.swift; sourceTree = "<group>"; };
 		B1BA881FE5B9A2919FE89D28 /* NotificationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerProtocol.swift; sourceTree = "<group>"; };
 		B1EC321319B6556962D8436A /* SecureBackupRecoveryKeyScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureBackupRecoveryKeyScreenCoordinator.swift; sourceTree = "<group>"; };
+		B2A82ECCF20E1B2037F20F54 /* HomeScreenCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCallCell.swift; sourceTree = "<group>"; };
 		B2B27880DE58BC78CA45DA55 /* HomeScreenNewSoundBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenNewSoundBanner.swift; sourceTree = "<group>"; };
 		B2BEB18361B766323AE97549 /* ReportContentScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportContentScreenViewModelTests.swift; sourceTree = "<group>"; };
 		B2D78A5DC63778623DFF9596 /* TimelineMediaFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineMediaFrame.swift; sourceTree = "<group>"; };
@@ -3130,6 +3132,13 @@
 			path = Secrets;
 			sourceTree = "<group>";
 		};
+		0BAC80E2AB2A2B9AAA8FF118 /* GroupDirectorySearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupDirectorySearchScreen;
+			sourceTree = "<group>";
+		};
 		0BC1E912CC19F3B0630318C7 /* RoomDirectorySearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -3428,6 +3437,13 @@
 				04041DFF129E08444743B996 /* RoomModerationRole.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1D48CF39FA1ED0B11A415142 /* SpaceAddGroupsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpaceAddGroupsScreen;
 			sourceTree = "<group>";
 		};
 		1E3D9FA2925D773331AAEF28 /* IdentityConfirmationScreen */ = {
@@ -3751,16 +3767,31 @@
 				B8A6F17DDDF004D0C3F7D308 /* BugReportScreen */,
 				F9D9C79AF7A693BCEAC2ED5D /* CallScreen */,
 				FDD26229EB6C1F778D673CCD /* ChatsSpaceFiltersScreen */,
+				C8D9146AD391554128ACEBD1 /* CreateGroupScreen */,
 				BD0D9C79B03747A43A40089A /* CreatePollScreen */,
 				A4E2DBF202653E986A029E08 /* CreateRoomScreen */,
 				CB9F38162016184008A72FD8 /* DeclineAndBlockScreen */,
+				7F0AAD8A51C6D82111C54641 /* EditGroupAddressScreen */,
 				FBC0A1CA313BB74490C77910 /* EditRoomAddressScreen */,
 				ED91E21D1A9E837083A72815 /* EmojiPickerScreen */,
 				D49A6AF600BDAA98BA74BE61 /* EncryptionReset */,
 				FC6141F3018E8AB950BE1849 /* FilePreviewScreen */,
 				812359EFAB5424CBC0B69585 /* GlobalSearchScreen */,
+				65BCD399161481133BA876FD /* GroupChangePermissionsScreen */,
+				6D1E9EEBBD1EC7339EE5EB14 /* GroupChangeRolesScreen */,
+				3D5BD57113FE3E536E29E3FE /* GroupDetailsEditScreen */,
+				58D3E380F7E11F778874A305 /* GroupDetailsScreen */,
+				0BAC80E2AB2A2B9AAA8FF118 /* GroupDirectorySearchScreen */,
+				4A6EC9DF941B40482705ECEE /* GroupMemberDetailsScreen */,
+				73BD0895F8293FDEDE05B871 /* GroupMemberListScreen */,
+				C586FB07EAEF3A4DB68207AF /* GroupNotificationSettingsScreen */,
+				C38B8B61C7B47DA2C935E7E6 /* GroupPollsHistoryScreen */,
+				5C87EB7B525274D792378698 /* GroupRolesAndPermissionsScreen */,
+				D2933E8D15F9989990A5C7F8 /* GroupScreen */,
+				4B742F306C33DACF4EDA7CBA /* GroupSelectionScreen */,
 				871B6F6FC948065C23C8ABBC /* HomeScreen */,
 				EA1A3BE2BF5F82381120F959 /* InviteUsersScreen */,
+				8FF3CF748572C12A24AC3DFA /* JoinGroupScreen */,
 				5EABA757B621958F3D83DC3A /* JoinRoomScreen */,
 				AD2266C0A4CBE4F87AC62ECC /* KnockRequestsListScreen */,
 				012CD9CC083FEA766BD1CC3C /* LabsScreen */,
@@ -3768,6 +3799,7 @@
 				D4573A616BDA1E719DA12AF9 /* LocationSharing */,
 				7B28948CB27272161668DF76 /* LogViewerScreen */,
 				176A3F572A37D2745D8A465B /* ManageAuthorizedSpacesScreen */,
+				4EAE320EDEFFC81EFC8D23FE /* ManageGroupMemberSheet */,
 				3B85F066B28DA7BF3B2C84B2 /* ManageRoomMemberSheet */,
 				58DED768D5F458B28C3BD097 /* MediaEventsTimelineScreen */,
 				31D6EC60805C6052B9011EA2 /* MediaPickerScreen */,
@@ -3778,6 +3810,7 @@
 				58634083B7063D3380B0FF00 /* PinnedEventsTimelineScreen */,
 				4D2DC958E349C5741396D670 /* QRCodeLoginScreen */,
 				2B2CE98D2292D3B90F702104 /* ReportContentScreen */,
+				E59F6357416A7B0F17DDA610 /* ReportGroupScreen */,
 				E6A9A3549BD87F7005EE52DA /* ReportRoomScreen */,
 				8008F7710B465F271F70E1DB /* ResolveVerifiedUserSendFailureScreen */,
 				DD58573AE4648EAF2874298F /* RoomChangePermissionsScreen */,
@@ -3910,6 +3943,13 @@
 				0FB8777BB8EFC3D9C937DDEE /* View */,
 			);
 			path = LinkNewDeviceScreen;
+			sourceTree = "<group>";
+		};
+		3D5BD57113FE3E536E29E3FE /* GroupDetailsEditScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupDetailsEditScreen;
 			sourceTree = "<group>";
 		};
 		3D71159248A4F78AE32A115E /* View */ = {
@@ -4162,6 +4202,20 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		4A6EC9DF941B40482705ECEE /* GroupMemberDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupMemberDetailsScreen;
+			sourceTree = "<group>";
+		};
+		4B742F306C33DACF4EDA7CBA /* GroupSelectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupSelectionScreen;
+			sourceTree = "<group>";
+		};
 		4BC61B25810766F3461AB72E /* NotificationPermissionsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -4204,6 +4258,13 @@
 				C4CBCC735772135FCF8B7009 /* View */,
 			);
 			path = QRCodeLoginScreen;
+			sourceTree = "<group>";
+		};
+		4EAE320EDEFFC81EFC8D23FE /* ManageGroupMemberSheet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManageGroupMemberSheet;
 			sourceTree = "<group>";
 		};
 		4FC6DA447B9F7D23B9926F35 /* SecureBackupKeyBackupScreen */ = {
@@ -4420,6 +4481,13 @@
 			path = ClassicAppFixtures;
 			sourceTree = "<group>";
 		};
+		58D3E380F7E11F778874A305 /* GroupDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupDetailsScreen;
+			sourceTree = "<group>";
+		};
 		58DED768D5F458B28C3BD097 /* MediaEventsTimelineScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -4463,6 +4531,7 @@
 				5255F10E4072BCC3A7CC27C8 /* ComposerDraft */,
 				43A8694EE59830D34F14536C /* ElementCall */,
 				08854FBD2B4F1428C14CE03C /* Emojis */,
+				AC3A6DA4F06BF8CBCB6C1594 /* Group */,
 				54D1A1429E1C9E8FAA555714 /* Keychain */,
 				64540603B7F8B05827624D45 /* LinkMetadata */,
 				73B084E696339891ABB34688 /* Media */,
@@ -4495,6 +4564,13 @@
 				201EDD77E1B11D95DCE8120A /* Recorder */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		5C87EB7B525274D792378698 /* GroupRolesAndPermissionsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupRolesAndPermissionsScreen;
 			sourceTree = "<group>";
 		};
 		5CED099506C7C38B08C42581 /* View */ = {
@@ -4764,6 +4840,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6400EC92491847A1D3FDB151 /* AppIconSelectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppIconSelectionScreen;
+			sourceTree = "<group>";
+		};
 		64540603B7F8B05827624D45 /* LinkMetadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -4788,6 +4871,13 @@
 				2A6F8A776EADA12EC48C896E /* Manager */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		65BCD399161481133BA876FD /* GroupChangePermissionsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupChangePermissionsScreen;
 			sourceTree = "<group>";
 		};
 		675CEFC9493E12E3095A7D77 /* View */ = {
@@ -4894,6 +4984,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		6D1E9EEBBD1EC7339EE5EB14 /* GroupChangeRolesScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupChangeRolesScreen;
+			sourceTree = "<group>";
+		};
 		6F117073CA83F17843F4DD71 /* PinnedItemsBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -4938,6 +5035,13 @@
 			path = EffectsScene;
 			sourceTree = "<group>";
 		};
+		71FECCC8A1E5A625FB741FBE /* ComposerToolbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ComposerToolbar;
+			sourceTree = "<group>";
+		};
 		7355C5401FAC6EBBDF9CE41F /* AppLock */ = {
 			isa = PBXGroup;
 			children = (
@@ -4957,6 +5061,13 @@
 				0DAA6F783C02E2791D34C62C /* Provider */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		73BD0895F8293FDEDE05B871 /* GroupMemberListScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupMemberListScreen;
 			sourceTree = "<group>";
 		};
 		7401B38562144013DFE82112 /* SpaceScreen */ = {
@@ -5077,6 +5188,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		7DBFE1B7AAE8F72A1FEBEC15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7E56D721F22E6BC1E3204C59 /* ServerSelectionScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -5119,6 +5237,13 @@
 				633C1F388AB4E4433B79CEE3 /* PollFormScreen.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7F0AAD8A51C6D82111C54641 /* EditGroupAddressScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditGroupAddressScreen;
 			sourceTree = "<group>";
 		};
 		8008F7710B465F271F70E1DB /* ResolveVerifiedUserSendFailureScreen */ = {
@@ -5246,6 +5371,7 @@
 			children = (
 				4373C0FCE2502D45F6A39D1C /* Common */,
 				7C27325F532AE6C8ED3561BF /* LeaveSpace */,
+				1D48CF39FA1ED0B11A415142 /* SpaceAddGroupsScreen */,
 				A14E2C871BA3EF8D3A6CC9CB /* SpaceAddRoomsScreen */,
 				7401B38562144013DFE82112 /* SpaceScreen */,
 				151C3C5CAA868E5580B45707 /* SpaceSettingsScreen */,
@@ -5298,6 +5424,13 @@
 				427EB8D952DC7653862CBEDB /* View */,
 			);
 			path = RoomDirectorySearchScreen;
+			sourceTree = "<group>";
+		};
+		8FF3CF748572C12A24AC3DFA /* JoinGroupScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JoinGroupScreen;
 			sourceTree = "<group>";
 		};
 		90B4C5C953D9A9AB06F32DA0 /* HTMLParsing */ = {
@@ -5502,6 +5635,7 @@
 			children = (
 				95690EC1E3C72D192E2AEE0E /* BloomModifier.swift */,
 				A49B5004C3CBEC2017B165EA /* HomeScreen.swift */,
+				B2A82ECCF20E1B2037F20F54 /* HomeScreenCallCell.swift */,
 				F82C3ED4B2F3A59F38D8B644 /* HomeScreenContent.swift */,
 				9A87AC3AFF0075BB41F645F9 /* HomeScreenEmptyStateView.swift */,
 				FFEC12CDE4119BEC46DE6CAB /* HomeScreenInviteCell.swift */,
@@ -5750,6 +5884,13 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
+		AC3A6DA4F06BF8CBCB6C1594 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		AC9C087AE195551F54414F13 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -5980,6 +6121,13 @@
 			path = RoomRolesAndPermissionsScreen;
 			sourceTree = "<group>";
 		};
+		C38B8B61C7B47DA2C935E7E6 /* GroupPollsHistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupPollsHistoryScreen;
+			sourceTree = "<group>";
+		};
 		C3E93B897CB9B827CAD65034 /* RoomNotificationSettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -6002,6 +6150,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C586FB07EAEF3A4DB68207AF /* GroupNotificationSettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupNotificationSettingsScreen;
+			sourceTree = "<group>";
+		};
 		C6740EDB2CB32D4DA9851020 /* Session */ = {
 			isa = PBXGroup;
 			children = (
@@ -6017,6 +6172,13 @@
 				69C681DA3815024A1B3DFB44 /* ScreenTrackerViewModifier.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		C8D9146AD391554128ACEBD1 /* CreateGroupScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateGroupScreen;
 			sourceTree = "<group>";
 		};
 		C9EB7FB9B9202D98B4CDE15E /* Hooks */ = {
@@ -6131,6 +6293,15 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		D2933E8D15F9989990A5C7F8 /* GroupScreen */ = {
+			isa = PBXGroup;
+			children = (
+				71FECCC8A1E5A625FB741FBE /* ComposerToolbar */,
+				7DBFE1B7AAE8F72A1FEBEC15 /* View */,
+			);
+			path = GroupScreen;
+			sourceTree = "<group>";
+		};
 		D2F307CE0C9008B36C892762 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -6201,6 +6372,7 @@
 				27F2E9207596F8D0FF4CFCE4 /* AccountSettings */,
 				F6B5856B6378FDE9147970B2 /* AdvancedSettingsScreen */,
 				DBA3A2326CF951CA42900651 /* AnalyticsSettingsScreen */,
+				6400EC92491847A1D3FDB151 /* AppIconSelectionScreen */,
 				FFB619F3722DF3A10A9F7EA7 /* DeactivateAccountScreen */,
 				5F2B59E165F0E9882FD8CE16 /* DeveloperOptionsScreen */,
 				A1019FBD39FC0375760022DC /* LegalInformationScreen */,
@@ -6316,6 +6488,13 @@
 				B6B1584BE79091374CE6AE1B /* View */,
 			);
 			path = SecurityAndPrivacyScreen;
+			sourceTree = "<group>";
+		};
+		E59F6357416A7B0F17DDA610 /* ReportGroupScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReportGroupScreen;
 			sourceTree = "<group>";
 		};
 		E61A15829C6F3FB2CD05F2E0 /* StartScreen */ = {
@@ -6848,6 +7027,7 @@
 				D02713D8CF27E736707ADE5F /* Embed Frameworks */,
 				EF56561D6EF0B4E7989E7954 /* ⚠️ SwiftLint */,
 				3488E3589D2E2222C1ECAE11 /* 🧹 SwiftFormat */,
+				B12E0DD63ED1C4856D6789D7 /* 📦 Copy Binary Framework dSYMs */,
 			);
 			buildRules = (
 			);
@@ -7318,6 +7498,25 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n    swiftgen config run --config Tools/SwiftGen/swiftgen-config.yml\nelse\n    echo \"warning: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
 		};
+		B12E0DD63ED1C4856D6789D7 /* 📦 Copy Binary Framework dSYMs */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Binary Framework dSYMs";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$ACTION\" = \"install\" ]; then\n    echo \"Copying dSYMs for binary SPM dependencies…\"\n    # Find dSYMs in the SourcePackages checkouts directory and copy them to the dSYM folder\n    # This is a workaround for a bug in Xcode where dSYMs for binary targets are not copied to the archive\n    find \"${BUILD_DIR%Build/*}SourcePackages/checkouts\" -name \"*.dSYM\" -exec cp -r {} \"${DWARF_DSYM_FOLDER_PATH}\" \\;\nfi\n";
+		};
 		E6FCCA4375F6A467A3585034 /* 🧙 Sourcery - Generate mocks */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -7644,6 +7843,7 @@
 				F7581423D2DDEFC374287348 /* HTMLParserStyle.swift in Sources */,
 				82E57BC5A507743191ADF53D /* HighlightedTimelineItemModifier.swift in Sources */,
 				A2CBB5CC7244EA690CA101D6 /* HomeScreen.swift in Sources */,
+				EDC32250CE13D89C8FEB71A7 /* HomeScreenCallCell.swift in Sources */,
 				1A6D3A42E1E528DEFB3FD503 /* HomeScreenContent.swift in Sources */,
 				B7711FFBB616B226F97B0B30 /* HomeScreenCoordinator.swift in Sources */,
 				7F93427486BC6CCA2509256B /* HomeScreenEmptyStateView.swift in Sources */,
@@ -8941,11 +9141,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = NSE/SupportingFiles/NSE.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = NSE/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -8956,7 +9155,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_IDENTIFIER}.nse";
 				PRODUCT_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				PRODUCT_NAME = NSE;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GeneratedInterface-Swift.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -9060,11 +9258,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = NSE/SupportingFiles/NSE.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = NSE/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -9075,7 +9272,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_IDENTIFIER}.nse";
 				PRODUCT_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				PRODUCT_NAME = NSE;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GeneratedInterface-Swift.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -9086,11 +9282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/SupportingFiles/ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = ShareExtension/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -9100,7 +9295,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_IDENTIFIER}.shareextension";
 				PRODUCT_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				PRODUCT_NAME = ShareExtension;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -9155,6 +9349,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -9163,10 +9358,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				KEYCHAIN_ACCESS_GROUP_IDENTIFIER = "$(DEVELOPMENT_TEAM).$(BASE_BUNDLE_IDENTIFIER)";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 26.03.5;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCTION_APP_NAME = Chatlio;
@@ -9184,22 +9379,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Chatlio/SupportingFiles/Chatlio.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = DevelopmentAssets/Media;
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = Chatlio/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 26.03.5;
+				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				OTHER_SWIFT_FLAGS = "-DIS_MAIN_APP";
 				PILLS_UT_TYPE_IDENTIFIER = "$(BASE_BUNDLE_IDENTIFIER).pills";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BASE_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Chatlio/SupportingFiles/Chatlio-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GeneratedInterface-Swift.h";
@@ -9279,11 +9473,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/SupportingFiles/ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = ShareExtension/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -9293,7 +9486,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_IDENTIFIER}.shareextension";
 				PRODUCT_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				PRODUCT_NAME = ShareExtension;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -9382,11 +9574,12 @@
 				CLASSIC_APP_KEYCHAIN_SERVICE_IDENTIFIER = "im.vector.app.encryption-manager-service";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7J4U792NQT;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -9401,10 +9594,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				KEYCHAIN_ACCESS_GROUP_IDENTIFIER = "$(DEVELOPMENT_TEAM).$(BASE_BUNDLE_IDENTIFIER)";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 26.03.5;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -9423,22 +9616,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Chatlio/SupportingFiles/Chatlio.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = DevelopmentAssets/Media;
 				DEVELOPMENT_TEAM = GF9S7S9W5F;
 				INFOPLIST_FILE = Chatlio/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 26.03.5;
+				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				OTHER_SWIFT_FLAGS = "-DIS_MAIN_APP";
 				PILLS_UT_TYPE_IDENTIFIER = "$(BASE_BUNDLE_IDENTIFIER).pills";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BASE_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Chatlio/SupportingFiles/Chatlio-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GeneratedInterface-Swift.h";

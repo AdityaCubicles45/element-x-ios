@@ -56,7 +56,7 @@ struct TimelineView: View {
                 ReadReceiptsSummaryView(orderedReadReceipts: $0.orderedReceipts)
                     .environmentObject(timelineContext)
             }
-            .translationPresentation(isPresented: $timelineContext.showTranslation, text: timelineContext.textToBeTranslated ?? "")
+            .translationPresentationIfAvailable(isPresented: $timelineContext.showTranslation, text: timelineContext.textToBeTranslated ?? "")
             .onChange(of: timelineContext.showTranslation) { oldValue, newValue in
                 if oldValue, !newValue {
                     // clear texts after translation was dismissed
@@ -166,3 +166,14 @@ struct TimelineViewRepresentable: UIViewControllerRepresentable {
      }
  }
  */
+
+private extension View {
+    @ViewBuilder
+    func translationPresentationIfAvailable(isPresented: Binding<Bool>, text: String) -> some View {
+        if #available(iOS 17.4, macOS 15.0, *) {
+            self.translationPresentation(isPresented: isPresented, text: text)
+        } else {
+            self
+        }
+    }
+}

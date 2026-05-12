@@ -565,7 +565,7 @@
 "screen_create_poll_settings_section_title" = "Settings";
 "screen_create_room_error_creating_space" = "The space could not be created because of an unknown error. Try again later.";
 "screen_create_room_name_placeholder" = "Add name…";
-"screen_create_room_new_room_title" = "New room";
+"screen_create_room_new_room_title" = "New group";
 "screen_create_room_new_space_title" = "New space";
 "screen_create_room_public_option_short_description" = "Anyone can join.";
 "screen_create_room_room_access_section_knocking_option_description" = "Anyone can ask to join but an administrator or a moderator must accept the request.";
@@ -715,7 +715,7 @@
 "screen_room_member_list_empty_search_title" = "No results for “%1$@”";
 "screen_room_member_list_pending_status" = "Pending";
 "screen_room_roles_and_permissions_space_details" = "Space details";
-"screen_room_timeline_tombstoned_room_action" = "Jump to new room";
+"screen_room_timeline_tombstoned_room_action" = "Jump to New group";
 "screen_room_timeline_tombstoned_room_message" = "This room has been replaced and is no longer active";
 "screen_room_timeline_upgraded_room_action" = "See old messages";
 "screen_room_timeline_upgraded_room_message" = "This room is a continuation of another room";
@@ -777,7 +777,7 @@
 "screen_space_list_empty_state_title" = "Create spaces to organize rooms";
 "screen_space_list_parent_space" = "%1$@ space";
 "screen_space_list_title" = "Spaces";
-"screen_start_chat_join_room_by_address_action" = "Join room by address";
+"screen_start_chat_join_room_by_address_action" = "Join group by address";
 "screen_start_chat_join_room_by_address_invalid_address" = "Not a valid address";
 "screen_start_chat_join_room_by_address_placeholder" = "Enter...";
 "screen_start_chat_join_room_by_address_room_found" = "Matching room found";
@@ -898,7 +898,7 @@
 "screen_create_poll_question_desc" = "Question or topic";
 "screen_create_poll_question_hint" = "What is the poll about?";
 "screen_create_poll_title" = "Create Poll";
-"screen_create_room_action_create_room" = "New room";
+"screen_create_room_action_create_room" = "New group";
 "screen_create_room_error_creating_room" = "An error occurred when creating the room";
 "screen_create_room_private_option_description" = "Only people invited can join.";
 "screen_create_room_public_option_description" = "Anyone can find this room.\nYou can change this anytime in room settings.";
@@ -1233,8 +1233,8 @@
 "screen_roomlist_filter_mixed_empty_state_subtitle" = "You can deselect filters in order to see your other chats";
 "screen_roomlist_filter_mixed_empty_state_title" = "You don’t have chats for this selection";
 "screen_roomlist_filter_people_empty_state_title" = "You don’t have any DMs yet";
-"screen_roomlist_filter_rooms" = "Rooms";
-"screen_roomlist_filter_rooms_empty_state_title" = "You’re not in any room yet";
+"screen_roomlist_filter_rooms" = "Groups";
+"screen_roomlist_filter_rooms_empty_state_title" = "You’re not in any group yet";
 "screen_roomlist_filter_unreads" = "Unreads";
 "screen_roomlist_filter_unreads_empty_state_title" = "Congrats!\nYou don’t have any unread messages!";
 "screen_roomlist_main_space_title" = "Chats";

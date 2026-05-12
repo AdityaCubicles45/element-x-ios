@@ -28,7 +28,7 @@ final class RoomSummaryProviderTests {
 
     @Test
     func defaultRustFilters() async {
-        // Given a new room provider.
+        // Given a New group provider.
         setup()
         await Task.yield()
 
@@ -47,7 +47,7 @@ final class RoomSummaryProviderTests {
 
     @Test
     func lowPriorityRustFilters() async {
-        // Given a new room provider with the low priority filter enabled.
+        // Given a New group provider with the low priority filter enabled.
         setup(isLowPriorityFilterEnabled: true)
         await Task.yield()
 

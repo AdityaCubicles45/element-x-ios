@@ -13,7 +13,7 @@ struct ServerConfirmationScreen: View {
     @Bindable var context: ServerConfirmationScreenViewModel.Context
     
     private var backgroundColor: Color {
-        .white
+        .compound.bgCanvasDefault
     }
     
     var body: some View {
@@ -43,7 +43,7 @@ struct ServerConfirmationScreen: View {
                 Text(context.viewState.title)
                     .font(.compound.headingLGBold)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
+                    .foregroundColor(.compound.textPrimary)
                     .fixedSize(horizontal: false, vertical: true)
                 
                 if let message = context.viewState.message {
@@ -94,10 +94,10 @@ private struct BlackButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.compound.bodyLGSemibold)
-            .foregroundColor(.white)
+            .foregroundColor(.compound.textOnSolidPrimary)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
-            .background(Color.black)
+            .background(Color.compound.bgActionPrimaryRest)
             .clipShape(Capsule())
             .opacity(configuration.isPressed ? 0.8 : 1.0)
     }

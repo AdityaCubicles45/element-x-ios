@@ -17,8 +17,80 @@ struct HomeScreenContent: View {
     let scrollViewAdapter: ScrollViewAdapter
     
     var body: some View {
-        roomList
-            .sentryTrace("\(Self.self)")
+        ZStack(alignment: .bottom) {
+            if context.viewState.selectedTab == .calls {
+                if context.viewState.visibleCallRooms.isEmpty {
+                    VStack(spacing: 16) {
+                        CompoundIcon(\.videoCall, size: .custom(64), relativeTo: .compound.headingXL)
+                            .foregroundColor(.compound.iconSecondary)
+                        Text(UntranslatedL10n.screenHomeTabCalls)
+                            .font(.compound.headingMDBold)
+                            .foregroundColor(.compound.textPrimary)
+                        Text("No recent calls found.")
+                            .font(.compound.bodyMD)
+                            .foregroundColor(.compound.textSecondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 32)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.compound.bgCanvasDefault)
+                } else {
+                    ScrollView {
+                        LazyVStack(spacing: 0) {
+                            ForEach(context.viewState.visibleCallRooms) { room in
+                                HomeScreenCallCell(room: room, mediaProvider: context.mediaProvider, action: context.send)
+                            }
+                        }
+                        .padding(.bottom, 80) // Space for floating navbar
+                    }
+                    .background(Color.compound.bgCanvasDefault)
+                }
+            } else {
+                roomList
+            }
+            
+            floatingNavbar
+        }
+        .sentryTrace("\(Self.self)")
+    }
+    
+    private var floatingNavbar: some View {
+        HStack(spacing: 0) {
+            ForEach(HomeTab.allCases) { tab in
+                Button {
+                    context.send(viewAction: .selectTab(tab))
+                } label: {
+                    VStack(spacing: 4) {
+                        CompoundIcon(tab.icon)
+                            .foregroundColor(context.viewState.selectedTab == tab ? .white : .compound.textPrimary)
+                        Text(tab.title)
+                            .font(.compound.bodySMSemibold)
+                            .foregroundColor(context.viewState.selectedTab == tab ? .white : .compound.textPrimary)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background {
+                        if context.viewState.selectedTab == tab {
+                            Capsule()
+                                .fill(Color.compound.bgActionPrimaryRest)
+                        }
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(8)
+        .background {
+            Capsule()
+                .fill(Color.compound.bgSubtleSecondary)
+                .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 6)
+        }
+        .overlay {
+            Capsule()
+                .stroke(Color.compound.borderInteractiveSecondary, lineWidth: 0.5)
+        }
+        .padding(.horizontal, 16)
+        .padding(.bottom, 16)
     }
     
     private var roomList: some View {

@@ -210,8 +210,13 @@ extension View {
     }
     
     /// Automatically focusses the view's search field if a hardware keyboard is connected.
+    @ViewBuilder
     func focusSearchIfHardwareKeyboardAvailable() -> some View {
-        modifier(FocusSearchIfHardwareKeyboardAvailableModifier())
+        if #available(iOS 18.0, *) {
+            modifier(FocusSearchIfHardwareKeyboardAvailableModifier())
+        } else {
+            self
+        }
     }
 }
 
@@ -225,6 +230,7 @@ private struct IsSearchingModifier: ViewModifier {
     }
 }
 
+@available(iOS 18.0, *)
 private struct FocusSearchIfHardwareKeyboardAvailableModifier: ViewModifier {
     @FocusState private var isFocused
     

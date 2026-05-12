@@ -9,13 +9,38 @@
 import Combine
 import Foundation
 import UIKit
+import Compound
+import SwiftUI
+
+enum HomeTab: String, CaseIterable, Identifiable {
+    case calls
+    case chats
+    case groups
+    
+    var id: String { rawValue }
+    
+    var title: String {
+        switch self {
+        case .calls: return UntranslatedL10n.screenHomeTabCalls
+        case .chats: return L10n.screenRoomlistMainSpaceTitle
+        case .groups: return UntranslatedL10n.screenHomeTabGroups
+        }
+    }
+    
+    var icon: KeyPath<CompoundIcons, Image> {
+        switch self {
+        case .calls: return \.videoCall
+        case .chats: return \.chat
+        case .groups: return \.public
+        }
+    }
+}
 
 enum HomeScreenViewModelAction {
     case presentRoom(roomIdentifier: String)
     case presentRoomDetails(roomIdentifier: String)
     case presentReportRoom(roomIdentifier: String)
     case presentDeclineAndBlock(userID: String, roomID: String)
-    case presentSpace(SpaceRoomListProxyProtocol)
     case roomLeft(roomIdentifier: String)
     case transferOwnership(roomIdentifier: String)
     case presentSecureBackupSettings
@@ -26,6 +51,7 @@ enum HomeScreenViewModelAction {
     case presentStartChatScreen
     case presentGlobalSearch
     case logout
+    case presentCall(roomProxy: JoinedRoomProxyProtocol, audioOnly: Bool)
 }
 
 enum HomeScreenViewAction {
@@ -43,13 +69,15 @@ enum HomeScreenViewAction {
     case dismissNewSoundBanner
     case updateVisibleItemRange(Range<Int>)
     case globalSearch
-    case spaceFilters
     case markRoomAsUnread(roomIdentifier: String)
     case markRoomAsRead(roomIdentifier: String)
     case markRoomAsFavourite(roomIdentifier: String, isFavourite: Bool)
     
     case acceptInvite(roomIdentifier: String)
     case declineInvite(roomIdentifier: String)
+    
+    case startCall(roomIdentifier: String, audioOnly: Bool)
+    case selectTab(HomeTab)
 }
 
 enum HomeScreenRoomListMode: CustomStringConvertible {
@@ -100,6 +128,7 @@ struct HomeScreenViewState: BindableState {
     var requiresExtraAccountSetup = false
         
     var rooms: [HomeScreenRoom] = []
+    var visibleCallRooms: [HomeScreenRoom] = []
     var roomListMode: HomeScreenRoomListMode = .skeletons
     
     var hasPendingInvitations = false
@@ -109,9 +138,8 @@ struct HomeScreenViewState: BindableState {
     var hideInviteAvatars = false
     
     var reportRoomEnabled = false
-        
-    var shouldShowSpaceFilters = false
-    var selectedSpaceFilter: SpaceServiceFilter?
+    
+    var selectedTab: HomeTab = .chats
     
     var visibleRooms: [HomeScreenRoom] {
         if roomListMode == .skeletons {
@@ -136,7 +164,7 @@ struct HomeScreenViewState: BindableState {
     
     var shouldShowEmptyFilterState: Bool {
         !bindings.isSearchFieldFocused &&
-            (bindings.filtersState.isFiltering || selectedSpaceFilter != nil) &&
+            (bindings.filtersState.isFiltering) &&
             visibleRooms.isEmpty
     }
     
@@ -156,8 +184,6 @@ struct HomeScreenViewStateBindings {
     
     var alertInfo: AlertInfo<UUID>?
     var leaveRoomAlertItem: LeaveRoomAlertItem?
-    
-    var spaceFiltersViewModel: ChatsSpaceFiltersScreenViewModel?
 }
 
 struct HomeScreenRoom: Identifiable, Equatable {

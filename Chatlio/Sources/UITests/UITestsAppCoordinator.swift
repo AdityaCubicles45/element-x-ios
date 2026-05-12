@@ -286,7 +286,7 @@ class MockScreen: Identifiable {
             let timelineController = MockTimelineController()
             timelineController.timelineItems = RoomTimelineItemFixtures.smallChunk
             let parameters = RoomScreenCoordinatorParameters(userSession: UserSessionMock(.init()),
-                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New room", avatarURL: .mockMXCAvatar)),
+                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New group", avatarURL: .mockMXCAvatar)),
                                                              timelineController: timelineController,
                                                              mediaPlayerProvider: MediaPlayerProviderMock(),
                                                              emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
@@ -308,7 +308,7 @@ class MockScreen: Identifiable {
             let timelineController = MockTimelineController()
             timelineController.timelineItems = RoomTimelineItemFixtures.default
             let parameters = RoomScreenCoordinatorParameters(userSession: UserSessionMock(.init()),
-                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New room", avatarURL: .mockMXCAvatar)),
+                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New group", avatarURL: .mockMXCAvatar)),
                                                              timelineController: timelineController,
                                                              mediaPlayerProvider: MediaPlayerProviderMock(),
                                                              emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),
@@ -329,7 +329,7 @@ class MockScreen: Identifiable {
             let timelineController = MockTimelineController()
             timelineController.timelineItems = RoomTimelineItemFixtures.smallChunkWithReadReceipts
             let parameters = RoomScreenCoordinatorParameters(userSession: UserSessionMock(.init()),
-                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New room", avatarURL: .mockMXCAvatar)),
+                                                             roomProxy: JoinedRoomProxyMock(.init(name: "New group", avatarURL: .mockMXCAvatar)),
                                                              timelineController: timelineController,
                                                              mediaPlayerProvider: MediaPlayerProviderMock(),
                                                              emojiProvider: EmojiProvider(appSettings: ServiceLocator.shared.settings),

@@ -163,25 +163,47 @@ struct RoomScreen: View {
         }
         
         if !ProcessInfo.processInfo.isiOSAppOnMac {
-            ToolbarItem(placement: .primaryAction) {
-                if context.viewState.shouldShowCallButton {
-                    callButton
-                        .disabled(!context.viewState.canJoinCall)
+            if context.viewState.shouldShowCallButton {
+                ToolbarItem(placement: .primaryAction) {
+                    HStack(spacing: 12) {
+                        voiceCallButton
+                        videoCallButton
+                    }
+                    .disabled(!context.viewState.canJoinCall)
                 }
             }
         }
     }
     
     @ViewBuilder
-    private var callButton: some View {
+    private var voiceCallButton: some View {
         if context.viewState.hasOngoingCall {
             JoinCallButton {
-                context.send(viewAction: .displayCall)
+                context.send(viewAction: .displayCall(audioOnly: true))
             }
+            .accessibilityLabel(L10n.a11yStartVoiceCall)
             .accessibilityIdentifier(A11yIdentifiers.roomScreen.joinCall)
         } else {
             Button {
-                context.send(viewAction: .displayCall)
+                context.send(viewAction: .displayCall(audioOnly: true))
+            } label: {
+                CompoundIcon(\.voiceCall)
+            }
+            .accessibilityLabel(L10n.a11yStartVoiceCall)
+        }
+    }
+    
+    @ViewBuilder
+    private var videoCallButton: some View {
+        if context.viewState.hasOngoingCall {
+            JoinCallButton {
+                context.send(viewAction: .displayCall(audioOnly: false))
+            }
+            .accessibilityLabel(L10n.a11yStartCall)
+            .accessibilityIdentifier(A11yIdentifiers.roomScreen.joinCall)
+        } else {
+            Button {
+                context.send(viewAction: .displayCall(audioOnly: false))
             } label: {
                 CompoundIcon(\.videoCallSolid)
             }

@@ -24,7 +24,7 @@ struct ServerSelectionScreen: View {
             .readableFrame()
             .padding(.horizontal, 16)
         }
-        .background(Color.white.ignoresSafeArea())
+        .background(Color.compound.bgCanvasDefault.ignoresSafeArea())
         .toolbar { toolbar }
         .alert(item: $context.alertInfo)
         .interactiveDismissDisabled()
@@ -39,7 +39,7 @@ struct ServerSelectionScreen: View {
                 Text(UntranslatedL10n.screenChangeServerTitle)
                     .font(.compound.headingLGBold)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
+                    .foregroundColor(.compound.textPrimary)
                 
                 Text(UntranslatedL10n.screenChangeServerSubtitle)
                     .font(.compound.bodyLG)
@@ -70,7 +70,7 @@ struct ServerSelectionScreen: View {
                     
                     Text("word.skin")
                         .font(.compound.bodyLGSemibold)
-                        .foregroundColor(.black)
+                        .foregroundColor(.compound.textPrimary)
                     
                     Spacer()
                 }
@@ -83,7 +83,7 @@ struct ServerSelectionScreen: View {
         ToolbarItem(placement: .navigationBarLeading) {
             Button { context.send(viewAction: .dismiss) } label: {
                 Image(systemName: "arrow.left")
-                    .foregroundColor(.black)
+                    .foregroundColor(.compound.textPrimary)
                     .font(.body.bold())
             }
             .accessibilityIdentifier(A11yIdentifiers.changeServerScreen.dismiss)

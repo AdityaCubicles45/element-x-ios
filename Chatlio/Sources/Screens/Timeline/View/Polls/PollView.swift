@@ -94,8 +94,12 @@ struct PollView: View {
 
     private var optionsView: some View {
         ForEach(poll.options, id: \.id) { option in
-            pollOption(option: option)
-                .accessibilityHint(L10n.a11yPollsWillRemoveSelection, isEnabled: isRemovePreviousSelectionHintEnabled(option: option))
+            if isRemovePreviousSelectionHintEnabled(option: option) {
+                pollOption(option: option)
+                    .accessibilityHint(L10n.a11yPollsWillRemoveSelection)
+            } else {
+                pollOption(option: option)
+            }
         }
     }
     

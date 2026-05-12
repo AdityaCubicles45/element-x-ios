@@ -67,6 +67,7 @@ targets:
 
     settings:
       base:
+        IPHONEOS_DEPLOYMENT_TARGET: '17.0'
         PRODUCT_NAME: NSE
         PRODUCT_DISPLAY_NAME: $(APP_DISPLAY_NAME)
         PRODUCT_BUNDLE_IDENTIFIER: ${BASE_BUNDLE_IDENTIFIER}.nse

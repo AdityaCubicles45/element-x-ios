@@ -16,7 +16,7 @@ enum ChatsTabFlowCoordinatorAction {
     case showSettings
     case showChatBackupSettings
     case sessionVerification(SessionVerificationScreenFlow)
-    case showCallScreen(roomProxy: JoinedRoomProxyProtocol)
+    case showCallScreen(roomProxy: JoinedRoomProxyProtocol, audioOnly: Bool)
     case hideCallScreenOverlay
     case logout
 }
@@ -397,8 +397,6 @@ class ChatsTabFlowCoordinator: FlowCoordinatorProtocol {
                     handleAppRoute(.roomDetails(roomID: roomID), animated: true)
                 case .presentReportRoom(let roomID):
                     stateMachine.processEvent(.presentReportRoomScreen(roomID: roomID))
-                case .presentSpace(let spaceRoomListProxy):
-                    stateMachine.processEvent(.startSpaceFlow, userInfo: .init(animated: true, spaceRoomListProxy: spaceRoomListProxy))
                 case .roomLeft(let roomID):
                     if case .roomList(detailState: .room(let detailStateRoomID)) = stateMachine.state,
                        detailStateRoomID == roomID {
@@ -424,6 +422,8 @@ class ChatsTabFlowCoordinator: FlowCoordinatorProtocol {
                     stateMachine.processEvent(.presentDeclineAndBlockScreen(userID: userID, roomID: roomID))
                 case .transferOwnership(let roomIdentifier):
                     handleAppRoute(.transferOwnership(roomID: roomIdentifier), animated: true)
+                case .showCallScreen(let roomProxy, let audioOnly):
+                    actionsSubject.send(.showCallScreen(roomProxy: roomProxy, audioOnly: audioOnly))
                 }
             }
             .store(in: &cancellables)
@@ -527,8 +527,8 @@ class ChatsTabFlowCoordinator: FlowCoordinatorProtocol {
             guard let self else { return }
             
             switch action {
-            case .presentCallScreen(let roomProxy):
-                actionsSubject.send(.showCallScreen(roomProxy: roomProxy))
+            case .presentCallScreen(let roomProxy, let audioOnly):
+                actionsSubject.send(.showCallScreen(roomProxy: roomProxy, audioOnly: audioOnly))
             case .verifyUser(let userID):
                 actionsSubject.send(.sessionVerification(.userInitiator(userID: userID)))
             case .continueWithSpaceFlow(let spaceRoomListProxy):
@@ -584,8 +584,8 @@ class ChatsTabFlowCoordinator: FlowCoordinatorProtocol {
             .sink { [weak self] action in
                 guard let self else { return }
                 switch action {
-                case .presentCallScreen(let roomProxy):
-                    actionsSubject.send(.showCallScreen(roomProxy: roomProxy))
+                case .presentCallScreen(let roomProxy, let audioOnly):
+                    actionsSubject.send(.showCallScreen(roomProxy: roomProxy, audioOnly: audioOnly))
                 case .verifyUser(let userID):
                     actionsSubject.send(.sessionVerification(.userInitiator(userID: userID)))
                 case .finished:
@@ -787,8 +787,8 @@ class ChatsTabFlowCoordinator: FlowCoordinatorProtocol {
             case .openDirectChat(let roomID):
                 navigationSplitCoordinator.setSheetCoordinator(nil)
                 stateMachine.processEvent(.selectRoom(roomID: roomID, via: [], entryPoint: .room))
-            case .startCall(let roomProxy):
-                actionsSubject.send(.showCallScreen(roomProxy: roomProxy))
+            case .startCall(let roomProxy, let audioOnly):
+                actionsSubject.send(.showCallScreen(roomProxy: roomProxy, audioOnly: audioOnly))
             case .dismiss:
                 navigationSplitCoordinator.setSheetCoordinator(nil)
             }

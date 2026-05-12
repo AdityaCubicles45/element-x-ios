@@ -88,7 +88,10 @@ class AppLockService: AppLockServiceProtocol {
     
     func enableBiometricUnlock() -> Result<Void, AppLockServiceError> {
         guard isEnabled else { return .failure(.pinNotSet) }
-        guard let state = context.evaluatedPolicyDomainState else { return .failure(.biometricUnlockNotSupported) }
+        
+        let state = context.evaluatedPolicyDomainState
+        
+        guard let state else { return .failure(.biometricUnlockNotSupported) }
         
         do {
             try keychainController.setPINCodeBiometricState(state)

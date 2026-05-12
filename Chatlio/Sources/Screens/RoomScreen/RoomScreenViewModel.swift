@@ -98,8 +98,8 @@ class RoomScreenViewModel: RoomScreenViewModelType, RoomScreenViewModelProtocol 
             actionsSubject.send(.displayPinnedEventsTimeline)
         case .displayRoomDetails:
             actionsSubject.send(.displayRoomDetails)
-        case .displayCall:
-            actionsSubject.send(.displayCall)
+        case .displayCall(let audioOnly):
+            actionsSubject.send(.displayCall(audioOnly: audioOnly))
             actionsSubject.send(.removeComposerFocus)
             analyticsService.trackInteraction(name: .MobileRoomCallButton)
         case .footerViewAction(let action):

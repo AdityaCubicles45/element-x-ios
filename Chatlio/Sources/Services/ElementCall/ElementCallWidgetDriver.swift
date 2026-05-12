@@ -48,7 +48,7 @@ struct ElementCallWidgetMessage: Codable {
     }
 }
 
-final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidgetDriverProtocol {
+final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidgetDriverProtocol, @unchecked Sendable {
     private let room: RoomProtocol
     private let deviceID: String
     
@@ -70,6 +70,7 @@ final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidg
     func start(baseURL: URL,
                clientID: String,
                colorScheme: ColorScheme,
+               audioOnly: Bool,
                rageshakeURL: String?,
                analyticsConfiguration: ElementCallAnalyticsConfiguration?) async -> Result<URL, ElementCallWidgetDriverError> {
         guard let room = room as? Room else {
@@ -102,7 +103,7 @@ final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidg
         let languageTag = "\(Locale.current.language.languageCode ?? "en")-\(Locale.current.language.region ?? "US")"
         let theme = colorScheme == .light ? "light" : "dark"
         
-        let urlString: String
+        var urlString: String
         do {
             urlString = try await generateWebviewUrl(widgetSettings: widgetSettings, room: room,
                                                      props: .init(clientId: clientID,
@@ -111,6 +112,14 @@ final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidg
         } catch {
             MXLog.error("Failed to generate web view URL: \(error)")
             return .failure(.failedBuildingCallURL)
+        }
+        
+        if audioOnly {
+            if urlString.contains("#") {
+                urlString += "&video=false&audio=true"
+            } else {
+                urlString += "#video=false&audio=true"
+            }
         }
         
         guard let url = URL(string: urlString) else {

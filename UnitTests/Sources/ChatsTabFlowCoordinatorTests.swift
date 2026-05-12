@@ -231,7 +231,7 @@ struct ChatsTabFlowCoordinatorTests {
         #expect(timelineControllerFactory.buildTimelineControllerRoomProxyInitialFocussedEventIDTimelineItemFactoryMediaProviderCallsCount == 1)
         #expect(timelineControllerFactory.buildTimelineControllerRoomProxyInitialFocussedEventIDTimelineItemFactoryMediaProviderReceivedArguments?.initialFocussedEventID == "1")
         
-        // A child event route should push a new room screen onto the stack and focus on the event.
+        // A child event route should push a New group screen onto the stack and focus on the event.
         chatsTabFlowCoordinator.handleAppRoute(.childEvent(eventID: "2", roomID: "2", via: []), animated: true)
         try await Task.sleep(for: .milliseconds(100))
         #expect(detailNavigationStack?.rootCoordinator is RoomScreenCoordinator)
@@ -241,7 +241,7 @@ struct ChatsTabFlowCoordinatorTests {
         #expect(timelineControllerFactory.buildTimelineControllerRoomProxyInitialFocussedEventIDTimelineItemFactoryMediaProviderCallsCount == 2)
         #expect(timelineControllerFactory.buildTimelineControllerRoomProxyInitialFocussedEventIDTimelineItemFactoryMediaProviderReceivedArguments?.initialFocussedEventID == "2")
         
-        // A subsequent regular event route should clear the stack and set the new room as the root of the stack.
+        // A subsequent regular event route should clear the stack and set the New group as the root of the stack.
         try await process(route: .event(eventID: "3", roomID: "3", via: []), expectedState: .roomList(detailState: .room(roomID: "3")))
         #expect(detailNavigationStack?.rootCoordinator is RoomScreenCoordinator)
         #expect(detailNavigationStack?.stackCoordinators.count == 0)

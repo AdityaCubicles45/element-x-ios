@@ -5902,15 +5902,15 @@ class ElementCallWidgetDriverMock: ElementCallWidgetDriverProtocol, @unchecked S
 
     //MARK: - start
 
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = 0
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationCallsCount: Int {
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = 0
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationCallsCount: Int {
         get {
             if Thread.isMainThread {
-                return startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingCallsCount
+                return startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingCallsCount
             } else {
                 var returnValue: Int? = nil
                 DispatchQueue.main.sync {
-                    returnValue = startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingCallsCount
+                    returnValue = startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingCallsCount
                 }
 
                 return returnValue!
@@ -5918,29 +5918,29 @@ class ElementCallWidgetDriverMock: ElementCallWidgetDriverProtocol, @unchecked S
         }
         set {
             if Thread.isMainThread {
-                startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = newValue
+                startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = newValue
             } else {
                 DispatchQueue.main.sync {
-                    startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = newValue
+                    startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingCallsCount = newValue
                 }
             }
         }
     }
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationCalled: Bool {
-        return startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationCallsCount > 0
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationCalled: Bool {
+        return startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationCallsCount > 0
     }
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReceivedArguments: (baseURL: URL, clientID: String, colorScheme: ColorScheme, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?)?
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReceivedInvocations: [(baseURL: URL, clientID: String, colorScheme: ColorScheme, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?)] = []
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReceivedArguments: (baseURL: URL, clientID: String, colorScheme: ColorScheme, audioOnly: Bool, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?)?
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReceivedInvocations: [(baseURL: URL, clientID: String, colorScheme: ColorScheme, audioOnly: Bool, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?)] = []
 
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingReturnValue: Result<URL, ElementCallWidgetDriverError>!
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReturnValue: Result<URL, ElementCallWidgetDriverError>! {
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingReturnValue: Result<URL, ElementCallWidgetDriverError>!
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReturnValue: Result<URL, ElementCallWidgetDriverError>! {
         get {
             if Thread.isMainThread {
-                return startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingReturnValue
+                return startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingReturnValue
             } else {
                 var returnValue: Result<URL, ElementCallWidgetDriverError>? = nil
                 DispatchQueue.main.sync {
-                    returnValue = startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingReturnValue
+                    returnValue = startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingReturnValue
                 }
 
                 return returnValue!
@@ -5948,26 +5948,26 @@ class ElementCallWidgetDriverMock: ElementCallWidgetDriverProtocol, @unchecked S
         }
         set {
             if Thread.isMainThread {
-                startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingReturnValue = newValue
+                startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingReturnValue = newValue
             } else {
                 DispatchQueue.main.sync {
-                    startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationUnderlyingReturnValue = newValue
+                    startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationUnderlyingReturnValue = newValue
                 }
             }
         }
     }
-    var startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationClosure: ((URL, String, ColorScheme, String?, ElementCallAnalyticsConfiguration?) async -> Result<URL, ElementCallWidgetDriverError>)?
+    var startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationClosure: ((URL, String, ColorScheme, Bool, String?, ElementCallAnalyticsConfiguration?) async -> Result<URL, ElementCallWidgetDriverError>)?
 
-    func start(baseURL: URL, clientID: String, colorScheme: ColorScheme, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?) async -> Result<URL, ElementCallWidgetDriverError> {
-        startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationCallsCount += 1
-        startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReceivedArguments = (baseURL: baseURL, clientID: clientID, colorScheme: colorScheme, rageshakeURL: rageshakeURL, analyticsConfiguration: analyticsConfiguration)
+    func start(baseURL: URL, clientID: String, colorScheme: ColorScheme, audioOnly: Bool, rageshakeURL: String?, analyticsConfiguration: ElementCallAnalyticsConfiguration?) async -> Result<URL, ElementCallWidgetDriverError> {
+        startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationCallsCount += 1
+        startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReceivedArguments = (baseURL: baseURL, clientID: clientID, colorScheme: colorScheme, audioOnly: audioOnly, rageshakeURL: rageshakeURL, analyticsConfiguration: analyticsConfiguration)
         DispatchQueue.main.async {
-            self.startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReceivedInvocations.append((baseURL: baseURL, clientID: clientID, colorScheme: colorScheme, rageshakeURL: rageshakeURL, analyticsConfiguration: analyticsConfiguration))
+            self.startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReceivedInvocations.append((baseURL: baseURL, clientID: clientID, colorScheme: colorScheme, audioOnly: audioOnly, rageshakeURL: rageshakeURL, analyticsConfiguration: analyticsConfiguration))
         }
-        if let startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationClosure = startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationClosure {
-            return await startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationClosure(baseURL, clientID, colorScheme, rageshakeURL, analyticsConfiguration)
+        if let startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationClosure = startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationClosure {
+            return await startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationClosure(baseURL, clientID, colorScheme, audioOnly, rageshakeURL, analyticsConfiguration)
         } else {
-            return startBaseURLClientIDColorSchemeRageshakeURLAnalyticsConfigurationReturnValue
+            return startBaseURLClientIDColorSchemeAudioOnlyRageshakeURLAnalyticsConfigurationReturnValue
         }
     }
     //MARK: - handleMessage

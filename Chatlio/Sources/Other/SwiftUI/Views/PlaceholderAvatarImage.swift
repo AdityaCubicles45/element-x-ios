@@ -23,7 +23,7 @@ struct PlaceholderAvatarImage: View {
                 // This text's frame doesn't look right when redacted
                 if redactionReasons != .placeholder {
                     Text(textForImage)
-                        .foregroundColor(avatarColor?.text ?? .white)
+                        .foregroundColor(avatarColor?.text ?? .compound.textOnSolidPrimary)
                         .font(.system(size: geometry.size.width * 0.5625, weight: .semibold))
                         .minimumScaleFactor(0.001)
                         .frame(alignment: .center)

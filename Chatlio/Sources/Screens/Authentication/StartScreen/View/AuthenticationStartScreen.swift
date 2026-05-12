@@ -74,7 +74,7 @@ struct AuthenticationStartScreen: View {
                 VStack(spacing: 8) {
                     Text(InfoPlistReader.main.productionAppName)
                         .font(.compound.headingLGBold)
-                        .foregroundColor(.black)
+                        .foregroundColor(.compound.textPrimary)
                         .multilineTextAlignment(.center)
                     Text(UntranslatedL10n.screenOnboardingWelcomeMessageChatlio)
                         .font(.compound.bodyLG)
@@ -148,10 +148,10 @@ private struct BlackButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.compound.bodyLGSemibold)
-            .foregroundColor(.white)
+            .foregroundColor(.compound.textOnSolidPrimary)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
-            .background(Color.black)
+            .background(Color.compound.bgActionPrimaryRest)
             .clipShape(Capsule())
             .opacity(configuration.isPressed ? 0.7 : 1.0)
     }

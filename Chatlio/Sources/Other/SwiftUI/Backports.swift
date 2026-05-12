@@ -61,6 +61,14 @@ extension View {
             buttonStyle(.borderedProminent)
         }
     }
+    
+    @ViewBuilder func backportPresentationSizingPage() -> some View {
+        if #available(iOS 18.0, *) {
+            presentationSizing(.page)
+        } else {
+            self
+        }
+    }
 }
 
 extension ToolbarContent {

@@ -33,7 +33,7 @@ class OIDCAccountSettingsPresenter: NSObject {
     
     /// Presents a web authentication session for the supplied data.
     func start() {
-        let session = ASWebAuthenticationSession(url: accountURL, callback: .oidcRedirectURL(oidcRedirectURL)) { [continuation] _, error in
+        let handler: ASWebAuthenticationSession.CompletionHandler = { [continuation] _, error in
             guard let continuation else { return }
             
             if error?.isOIDCUserCancellation == true {
@@ -47,11 +47,20 @@ class OIDCAccountSettingsPresenter: NSObject {
             continuation.finish()
         }
         
+        let session: ASWebAuthenticationSession
+        if #available(iOS 17.4, *) {
+            session = ASWebAuthenticationSession(url: accountURL, callback: .oidcRedirectURL(oidcRedirectURL), completionHandler: handler)
+        } else {
+            session = ASWebAuthenticationSession(url: accountURL, callbackURLScheme: oidcRedirectURL.scheme, completionHandler: handler)
+        }
+        
         session.prefersEphemeralWebBrowserSession = false
         session.presentationContextProvider = self
-        session.additionalHeaderFields = [
-            "X-Element-User-Agent": UserAgentBuilder.makeASCIIUserAgent()
-        ]
+        if #available(iOS 17.4, *) {
+            session.additionalHeaderFields = [
+                "X-Element-User-Agent": UserAgentBuilder.makeASCIIUserAgent()
+            ]
+        }
         
         session.start()
     }

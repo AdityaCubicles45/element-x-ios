@@ -306,7 +306,7 @@ private struct NavigationTabCoordinatorView<Tag: Hashable>: View {
                     }
                     .tag(module.details.tag)
                     .badge(module.details.badgeCount)
-                    .toolbar(module.details.barVisibility(in: horizontalSizeClass), for: .tabBar)
+                    .toolbar(navigationTabCoordinator.tabModules.count <= 1 ? .hidden : module.details.barVisibility(in: horizontalSizeClass), for: .tabBar)
             }
         }
         .backportTabBarMinimizeBehaviorOnScrollDown()

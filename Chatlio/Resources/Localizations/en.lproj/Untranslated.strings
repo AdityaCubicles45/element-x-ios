@@ -32,3 +32,16 @@
 "screen_change_server_title" = "Change account provider";
 "screen_change_server_subtitle" = "Use a different account provider, such as your own private server or a work account.";
 "screen_onboarding_change_server_ios" = "Change provider >";
+
+"action_voice_call" = "Voice call";
+"action_video_call" = "Video call";
+"a11y_start_voice_call" = "Start voice call";
+
+"common_calls_coming_soon" = "Calls coming soon";
+"common_voice_call" = "Voice call";
+"common_video_call" = "Video call";
+"screen_home_tab_calls" = "Calls";
+"screen_home_tab_chats" = "Chats";
+"screen_home_tab_groups" = "Groups";
+
+

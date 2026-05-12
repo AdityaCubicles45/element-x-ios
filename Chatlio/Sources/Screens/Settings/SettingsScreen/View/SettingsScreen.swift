@@ -33,9 +33,11 @@ struct SettingsScreen: View {
             
             signOutSection
             
-            if context.viewState.showDeveloperOptions {
-                developerOptionsSection
-            }
+            /*
+             if context.viewState.showDeveloperOptions {
+                 developerOptionsSection
+             }
+             */
         }
         .compoundList()
         .navigationTitle(L10n.commonSettings)
@@ -145,11 +147,13 @@ struct SettingsScreen: View {
                     })
                     .accessibilityIdentifier(A11yIdentifiers.settingsScreen.advancedSettings)
             
-            ListRow(label: .default(title: L10n.screenAdvancedSettingsLabs,
-                                    icon: \.labs),
-                    kind: .navigationLink {
-                        context.send(viewAction: .labs)
-                    })
+            /*
+             ListRow(label: .default(title: L10n.screenAdvancedSettingsLabs,
+                                     icon: \.labs),
+                     kind: .navigationLink {
+                         context.send(viewAction: .labs)
+                     })
+             */
             
             ListRow(label: .default(title: L10n.commonAbout,
                                     icon: \.info),

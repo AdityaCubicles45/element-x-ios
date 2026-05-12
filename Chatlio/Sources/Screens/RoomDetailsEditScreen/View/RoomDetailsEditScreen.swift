@@ -118,11 +118,11 @@ struct RoomDetailsEditScreen: View {
     
     private var avatarOverlayIcon: some View {
         CompoundIcon(\.editSolid, size: .xSmall, relativeTo: .compound.bodyLG)
-            .foregroundColor(.white)
+            .foregroundColor(.compound.textOnSolidPrimary)
             .padding(4)
             .background {
                 Circle()
-                    .foregroundColor(.black)
+                    .foregroundColor(.compound.bgActionPrimaryRest)
             }
             .accessibilityHidden(true)
     }

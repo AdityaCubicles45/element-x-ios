@@ -15,20 +15,30 @@ struct LongPressWithFeedback: ViewModifier {
     @State private var isLongPressing = false
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
     
+    @ViewBuilder
     func body(content: Content) -> some View {
-        mainContent(content: content)
-            .gesture(LongPressGestureRepresentable { gesture in
-                switch gesture.state {
-                case .began:
-                    handleLongPress(isPressing: true)
-                case .ended, .cancelled, .failed:
+        if #available(iOS 18.0, *) {
+            mainContent(content: content)
+                .gesture(LongPressGestureRepresentable { gesture in
+                    switch gesture.state {
+                    case .began:
+                        handleLongPress(isPressing: true)
+                    case .ended, .cancelled, .failed:
+                        handleLongPress(isPressing: false)
+                    case .possible, .changed:
+                        break
+                    @unknown default:
+                        break
+                    }
+                })
+        } else {
+            mainContent(content: content)
+                .onLongPressGesture(minimumDuration: 0.25, perform: {
                     handleLongPress(isPressing: false)
-                case .possible, .changed:
-                    break
-                @unknown default:
-                    break
-                }
-            })
+                }, onPressingChanged: { isPressing in
+                    handleLongPress(isPressing: isPressing)
+                })
+        }
     }
     
     /// The gesture's minimum duration doesn't actually invoke the perform block when elapsed (thus
@@ -128,6 +138,7 @@ extension View {
 
 /// Fixes the issue on iOS 18 where LongPress conflicts with the scroll view
 /// https://github.com/feedback-assistant/reports/issues/542#issuecomment-2581322968
+@available(iOS 18.0, *)
 private struct LongPressGestureRepresentable: UIGestureRecognizerRepresentable {
     var handle: (UILongPressGestureRecognizer) -> Void
     

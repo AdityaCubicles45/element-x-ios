@@ -76,7 +76,7 @@ struct AuthenticationStartScreen: View {
                         .font(.compound.headingLGBold)
                         .foregroundColor(.compound.textPrimary)
                         .multilineTextAlignment(.center)
-                    Text(L10n.screenOnboardingWelcomeMessage(InfoPlistReader.main.bundleDisplayName))
+                    Text(UntranslatedL10n.screenOnboardingWelcomeMessageChatlio)
                         .font(.compound.bodyLG)
                         .foregroundColor(.compound.textSecondary)
                         .multilineTextAlignment(.center)

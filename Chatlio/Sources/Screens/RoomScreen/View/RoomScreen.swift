@@ -164,12 +164,21 @@ struct RoomScreen: View {
         
         if !ProcessInfo.processInfo.isiOSAppOnMac {
             if context.viewState.shouldShowCallButton {
+                // Each button must live in its OWN ToolbarItem. Putting both in a single
+                // ToolbarItem's HStack makes SwiftUI merge their hit areas, so tapping one
+                // triggers both (the bug where voice + video fire together).
                 ToolbarItem(placement: .primaryAction) {
-                    HStack(spacing: 12) {
-                        voiceCallButton
-                        videoCallButton
-                    }
-                    .disabled(!context.viewState.canJoinCall)
+                    voiceCallButton
+                        .disabled(!context.viewState.canJoinCall)
+                }
+                // On iOS 26 adjacent toolbar items share one glass background and look
+                // like a single button — a spacer splits them into two distinct buttons.
+                if #available(iOS 26.0, *) {
+                    ToolbarSpacer(.fixed, placement: .primaryAction)
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    videoCallButton
+                        .disabled(!context.viewState.canJoinCall)
                 }
             }
         }

@@ -115,10 +115,12 @@ final class ElementCallWidgetDriver: WidgetCapabilitiesProvider, ElementCallWidg
         }
         
         if audioOnly {
-            if urlString.contains("#") {
-                urlString += "&video=false&audio=true"
-            } else {
-                urlString += "#video=false&audio=true"
+            // Element Call decides the initial camera state from the `intent` param — it
+            // ignores video=/audio= params. The "_voice" intents (start_call_dm_voice /
+            // join_existing_dm_voice) join with the camera off, so rewrite the intent.
+            if let regex = try? NSRegularExpression(pattern: "intent=(start_call|join_existing)(_dm)?(?!_voice)") {
+                let range = NSRange(urlString.startIndex..., in: urlString)
+                urlString = regex.stringByReplacingMatches(in: urlString, options: [], range: range, withTemplate: "intent=$1_dm_voice")
             }
         }
         

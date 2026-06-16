@@ -12,7 +12,9 @@ import SwiftUI
 
 struct SettingsScreen: View {
     let context: SettingsScreenViewModel.Context
-    
+
+    @State private var presentingAppIconPicker = false
+
     private var shouldHideManageAccountSection: Bool {
         context.viewState.accountProfileURL == nil &&
             !context.viewState.showBlockedUsers &&
@@ -43,6 +45,9 @@ struct SettingsScreen: View {
         .navigationTitle(L10n.commonSettings)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { toolbar }
+        .sheet(isPresented: $presentingAppIconPicker) {
+            AppIconPickerScreen()
+        }
     }
     
     private var userSection: some View {
@@ -94,7 +99,13 @@ struct SettingsScreen: View {
                         context.send(viewAction: .appLock)
                     })
                     .accessibilityIdentifier(A11yIdentifiers.settingsScreen.screenLock)
-            
+
+            ListRow(label: .default(title: "App icon",
+                                    icon: \.image),
+                    kind: .button {
+                        presentingAppIconPicker = true
+                    })
+
             switch context.viewState.securitySectionMode {
             case .secureBackup:
                 ListRow(label: .default(title: L10n.commonEncryption,

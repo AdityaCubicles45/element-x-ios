@@ -438,6 +438,7 @@
 		516646FD008DE2778FB39C5B /* TargetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BB15A423EE50725C38499 /* TargetConfiguration.swift */; };
 		518066C1B23BA5E6C4482933 /* target.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7BCFC271A71BB31FD6212BE3 /* target.yml */; };
 		51B42598D797CF033D8F3579 /* HomeScreenRoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85FBFD4F2197F5300D4DF1 /* HomeScreenRoomList.swift */; };
+		51BCA55555E9E4C2B4EA4F35 /* AppIconPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1EEF494982FBFEA73D64A /* AppIconPickerScreen.swift */; };
 		51C75303FE983436E7C00F99 /* test_animated_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = FD902DE03B94CFF78598366C /* test_animated_image.gif */; };
 		51E96278D81B5C93E53D990C /* SwiftOGG in Frameworks */ = {isa = PBXBuildFile; productRef = C3883F96AD1EA6230D84EC6D /* SwiftOGG */; };
 		520570EEFD6A06C10A4BBCF2 /* SpaceAddRoomsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECC44A027336721E05C666 /* SpaceAddRoomsScreenCoordinator.swift */; };
@@ -2234,6 +2235,7 @@
 		88A1558F2861C13A5507FBAA /* RoomTimelineItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTimelineItemFactory.swift; sourceTree = "<group>"; };
 		88A64F6AA67B4776123FD826 /* TimelineSenderAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSenderAvatarView.swift; sourceTree = "<group>"; };
 		88AAF60C2BB46C4563F21F2D /* SpaceScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceScreenViewModel.swift; sourceTree = "<group>"; };
+		88C1EEF494982FBFEA73D64A /* AppIconPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconPickerScreen.swift; sourceTree = "<group>"; };
 		88E4BE5D4B12C7201FEBC44B /* PollRoomTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollRoomTimelineItem.swift; sourceTree = "<group>"; };
 		88F33B4D52DA7D6445822067 /* StartChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatScreen.swift; sourceTree = "<group>"; };
 		88FC0156182F395ED2EC8282 /* AudioSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionProtocol.swift; sourceTree = "<group>"; };
@@ -3943,6 +3945,14 @@
 				0FB8777BB8EFC3D9C937DDEE /* View */,
 			);
 			path = LinkNewDeviceScreen;
+			sourceTree = "<group>";
+		};
+		3C5B28B2DF029D128537BFE0 /* AppIconPickerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				88C1EEF494982FBFEA73D64A /* AppIconPickerScreen.swift */,
+			);
+			path = AppIconPickerScreen;
 			sourceTree = "<group>";
 		};
 		3D5BD57113FE3E536E29E3FE /* GroupDetailsEditScreen */ = {
@@ -6372,6 +6382,7 @@
 				27F2E9207596F8D0FF4CFCE4 /* AccountSettings */,
 				F6B5856B6378FDE9147970B2 /* AdvancedSettingsScreen */,
 				DBA3A2326CF951CA42900651 /* AnalyticsSettingsScreen */,
+				3C5B28B2DF029D128537BFE0 /* AppIconPickerScreen */,
 				6400EC92491847A1D3FDB151 /* AppIconSelectionScreen */,
 				FFB619F3722DF3A10A9F7EA7 /* DeactivateAccountScreen */,
 				5F2B59E165F0E9882FD8CE16 /* DeveloperOptionsScreen */,
@@ -7595,6 +7606,7 @@
 				EB5B2D77E4C8857C7BF17FB1 /* AppCoordinatorStateMachine.swift in Sources */,
 				6E032ABB3089202A994EEA13 /* AppDelegate.swift in Sources */,
 				F530FE0E45FDEDDCED99F889 /* AppHooks.swift in Sources */,
+				51BCA55555E9E4C2B4EA4F35 /* AppIconPickerScreen.swift in Sources */,
 				BD66025388CAC74B92BDBD56 /* AppLockFlowCoordinator.swift in Sources */,
 				3A5A6D0D1D232D00C5BA6765 /* AppLockScreen.swift in Sources */,
 				93997C896C15A80632783E4A /* AppLockScreenCoordinator.swift in Sources */,
@@ -9378,6 +9390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Chatlio/SupportingFiles/Chatlio.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -9615,6 +9628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Chatlio/SupportingFiles/Chatlio.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";

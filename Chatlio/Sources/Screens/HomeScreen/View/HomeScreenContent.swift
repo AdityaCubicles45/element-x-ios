@@ -62,17 +62,21 @@ struct HomeScreenContent: View {
                 } label: {
                     VStack(spacing: 4) {
                         CompoundIcon(tab.icon)
-                            .foregroundColor(context.viewState.selectedTab == tab ? .white : .compound.textPrimary)
+                            .foregroundColor(context.viewState.selectedTab == tab ? .compound.bgCanvasDefault : .compound.textSecondary)
                         Text(tab.title)
                             .font(.compound.bodySMSemibold)
-                            .foregroundColor(context.viewState.selectedTab == tab ? .white : .compound.textPrimary)
+                            .foregroundColor(context.viewState.selectedTab == tab ? .compound.bgCanvasDefault : .compound.textSecondary)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 8)
                     .background {
                         if context.viewState.selectedTab == tab {
+                            // Use textPrimary (dark in light mode, light in dark mode) so the
+                            // selected pill always contrasts with the navbar. The brand
+                            // bgActionPrimaryRest is a fixed dark colour and is invisible
+                            // against the dark navbar in dark mode.
                             Capsule()
-                                .fill(Color.compound.bgActionPrimaryRest)
+                                .fill(Color.compound.textPrimary)
                         }
                     }
                 }
@@ -110,11 +114,18 @@ struct HomeScreenContent: View {
                         Text(L10n.commonLoading)
                     }
                 case .empty:
-                    HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
+                    // When a filter is active the filter empty state is shown as an
+                    // overlay below; don't also render the base empty state or the two
+                    // overlap ("No chats yet" behind "You don't have any DMs yet").
+                    if !context.viewState.shouldShowEmptyFilterState {
+                        HomeScreenEmptyStateLayout(minHeight: geometry.size.height) {
+                            topSection
+
+                            HomeScreenEmptyStateView(context: context)
+                                .layoutPriority(1)
+                        }
+                    } else {
                         topSection
-                        
-                        HomeScreenEmptyStateView(context: context)
-                            .layoutPriority(1)
                     }
                 case .rooms:
                     LazyVStack(spacing: 0) {

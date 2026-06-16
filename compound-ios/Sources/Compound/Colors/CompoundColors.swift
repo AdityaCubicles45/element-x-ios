@@ -66,6 +66,11 @@ public class CompoundColors {
         override(\.bgActionPrimaryHovered, with: Color(red: 0x2A / 255.0, green: 0x2D / 255.0, blue: 0x36 / 255.0))
         // bgActionPrimaryPressed
         override(\.bgActionPrimaryPressed, with: Color(red: 0x0E / 255.0, green: 0x0F / 255.0, blue: 0x12 / 255.0))
+        // Because the primary action background is pinned to a dark color in BOTH light and
+        // dark mode (above), the on-solid text must also be pinned to white — otherwise in
+        // dark mode the stock token flips to a dark color and the button label (e.g. the
+        // analytics prompt "OK") becomes invisible (dark text on a dark button).
+        override(\.textOnSolidPrimary, with: .white)
     }
     
     // MARK: - Decorative Colors

@@ -1,12 +1,16 @@
+# Structured (base:) so these merge with project.yml's base/configs settings.
+# A flat settings block here would be dropped once project.yml uses base/configs,
+# leaving BASE_BUNDLE_IDENTIFIER / APP_GROUP_IDENTIFIER / DEVELOPMENT_TEAM empty.
 settings:
-  APP_DISPLAY_NAME: Chatlio
-  PRODUCTION_APP_NAME: Chatlio
-  APP_GROUP_IDENTIFIER: group.word.skin
-  BASE_BUNDLE_IDENTIFIER: im.word.skin.chatlio
-  ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: "colors/accent-color"
-  DEVELOPMENT_TEAM: GF9S7S9W5F
+  base:
+    APP_DISPLAY_NAME: Chatlio
+    PRODUCTION_APP_NAME: Chatlio
+    APP_GROUP_IDENTIFIER: group.word.skin
+    BASE_BUNDLE_IDENTIFIER: im.word.skin.chatlio
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: "colors/accent-color"
+    DEVELOPMENT_TEAM: GF9S7S9W5F
 
-  # Optional configuration to load accounts from Element Classic.
-  CLASSIC_APP_GROUP_IDENTIFIER: group.im.vector
-  CLASSIC_APP_KEYCHAIN_SERVICE_IDENTIFIER: im.vector.app.encryption-manager-service
-  CLASSIC_APP_KEYCHAIN_ACCESS_GROUP_IDENTIFIER: "$(DEVELOPMENT_TEAM).im.vector.app.keychain.shared"
+    # Optional configuration to load accounts from Element Classic.
+    CLASSIC_APP_GROUP_IDENTIFIER: group.im.vector
+    CLASSIC_APP_KEYCHAIN_SERVICE_IDENTIFIER: im.vector.app.encryption-manager-service
+    CLASSIC_APP_KEYCHAIN_ACCESS_GROUP_IDENTIFIER: "$(DEVELOPMENT_TEAM).im.vector.app.keychain.shared"

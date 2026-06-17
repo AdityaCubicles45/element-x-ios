@@ -3,9 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>aps-environment</key>
-	<string>development</string>
+	<string>$(APS_ENVIRONMENT)</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
+		<string>applinks:privy7.online</string>
+		<string>applinks:app.privy7.online</string>
+		<string>applinks:mobile.privy7.online</string>
+		<string>applinks:auth.privy7.online</string>
+		<string>webcredentials:auth.privy7.online</string>
+		<string>webcredentials:*.privy7.online</string>
 		<string>applinks:word.skin</string>
 		<string>applinks:app.word.skin</string>
 		<string>applinks:mobile.word.skin</string>
@@ -27,7 +33,6 @@
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(KEYCHAIN_ACCESS_GROUP_IDENTIFIER)</string>
-		<string>$(CLASSIC_APP_KEYCHAIN_ACCESS_GROUP_IDENTIFIER)</string>
 	</array>
 </dict>
 </plist>

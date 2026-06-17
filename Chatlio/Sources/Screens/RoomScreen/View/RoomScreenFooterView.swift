@@ -158,12 +158,12 @@ struct RoomScreenFooterView: View {
 /*
  struct RoomScreenFooterView_Previews: PreviewProvider, TestablePreview {
      static let bobDetails: RoomScreenFooterViewDetails = .pinViolation(member: RoomMemberProxyMock.mockBob,
-                                                                        learnMoreURL: "https://word.skin/")
+                                                                        learnMoreURL: "https://privy7.online/")
      static let noNameDetails: RoomScreenFooterViewDetails = .pinViolation(member: RoomMemberProxyMock.mockNoName,
-                                                                           learnMoreURL: "https://word.skin/")
+                                                                           learnMoreURL: "https://privy7.online/")
     
      static let verificationViolationDetails: RoomScreenFooterViewDetails = .verificationViolation(member: RoomMemberProxyMock.mockBob,
-                                                                                                   learnMoreURL: "https://word.skin/")
+                                                                                                   learnMoreURL: "https://privy7.online/")
     
      static var previews: some View {
          RoomScreenFooterView(details: bobDetails, mediaProvider: MediaProviderMock(configuration: .init())) { _ in }

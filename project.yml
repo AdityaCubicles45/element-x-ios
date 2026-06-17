@@ -49,17 +49,24 @@ options:
   postGenCommand: cd Tools/XcodeGen && sh postGenCommand.sh
 
 settings:
-  IPHONEOS_DEPLOYMENT_TARGET: '17.0'
-  ENABLE_USER_SCRIPT_SANDBOXING: NO
-  CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: true
-  ENABLE_BITCODE: false
-  DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
-  COPY_PHASE_STRIP: false
-  APP_NAME: Chatlio
-  KEYCHAIN_ACCESS_GROUP_IDENTIFIER: "$(DEVELOPMENT_TEAM).$(BASE_BUNDLE_IDENTIFIER)"
-  MARKETING_VERSION: 1.0.0
-  CURRENT_PROJECT_VERSION: 1
-  SUPPORTS_MACCATALYST: false
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: '17.0'
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: true
+    ENABLE_BITCODE: false
+    DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+    COPY_PHASE_STRIP: false
+    APP_NAME: Chatlio
+    KEYCHAIN_ACCESS_GROUP_IDENTIFIER: "$(DEVELOPMENT_TEAM).$(BASE_BUNDLE_IDENTIFIER)"
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 2
+    SUPPORTS_MACCATALYST: false
+    # The app entitlements reference $(APS_ENVIRONMENT) so dev builds use the
+    # development APNs sandbox and Release/TestFlight uses production.
+    APS_ENVIRONMENT: development
+  configs:
+    Release:
+      APS_ENVIRONMENT: production
 
 include:
 - path: app.yml

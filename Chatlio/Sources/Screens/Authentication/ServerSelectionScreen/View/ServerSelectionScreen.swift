@@ -54,7 +54,7 @@ struct ServerSelectionScreen: View {
     var serverList: some View {
         VStack(spacing: 16) {
             Button {
-                context.homeserverAddress = "word.skin"
+                context.homeserverAddress = "privy7.online"
                 submit()
             } label: {
                 HStack(spacing: 16) {
@@ -68,7 +68,7 @@ struct ServerSelectionScreen: View {
                             .foregroundColor(.compound.iconPrimary)
                     }
                     
-                    Text("word.skin")
+                    Text("privy7.online")
                         .font(.compound.bodyLGSemibold)
                         .foregroundColor(.compound.textPrimary)
                     

@@ -44,8 +44,8 @@ struct LoginHomeserver: Equatable {
 // MARK: - Mocks
 
 extension LoginHomeserver {
-    /// A mock homeserver that is configured just like word.skin.
-    static let wordSkin = LoginHomeserver(address: "word.skin", loginMode: .oidc(supportsCreatePrompt: true))
+    /// A mock homeserver that is configured just like privy7.online.
+    static let wordSkin = LoginHomeserver(address: "privy7.online", loginMode: .oidc(supportsCreatePrompt: true))
     
     /// A mock homeserver that supports login and registration via a password but has no SSO providers.
     static var mockBasicServer: LoginHomeserver {

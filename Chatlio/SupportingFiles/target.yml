@@ -113,8 +113,15 @@ targets:
     entitlements:
       path: Chatlio.entitlements
       properties:
-        aps-environment: development
+        aps-environment: $(APS_ENVIRONMENT)
         com.apple.developer.associated-domains:
+        - applinks:privy7.online
+        - applinks:app.privy7.online
+        - applinks:mobile.privy7.online
+        - applinks:auth.privy7.online
+        - webcredentials:auth.privy7.online
+        - webcredentials:*.privy7.online
+        # word.skin kept as backup so existing universal links still resolve.
         - applinks:word.skin
         - applinks:app.word.skin
         - applinks:mobile.word.skin
@@ -126,11 +133,12 @@ targets:
         com.apple.security.app-sandbox: true
         com.apple.security.application-groups:
         - $(APP_GROUP_IDENTIFIER)
-        - $(CLASSIC_APP_GROUP_IDENTIFIER)
+        # CLASSIC_APP_GROUP_IDENTIFIER (group.im.vector) is Element Classic's group,
+        # not owned by our team — removed so signing succeeds. Element Classic
+        # migration ("Sign in with Element Classic") is not used by Chatlio.
         com.apple.security.network.client: true
         keychain-access-groups:
         - $(KEYCHAIN_ACCESS_GROUP_IDENTIFIER)
-        - $(CLASSIC_APP_KEYCHAIN_ACCESS_GROUP_IDENTIFIER)
 
     settings:
       base:

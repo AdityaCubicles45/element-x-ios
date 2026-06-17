@@ -59,7 +59,9 @@ targets:
     entitlements:
       path: NSE.entitlements
       properties:
-        com.apple.developer.usernotifications.filtering: true
+        # com.apple.developer.usernotifications.filtering requires special Apple
+        # approval not available on an individual team. Removed so the NSE builds
+        # for device; push still works (only optional notification filtering is lost).
         com.apple.security.application-groups:
         - $(APP_GROUP_IDENTIFIER)
         keychain-access-groups:

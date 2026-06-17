@@ -192,7 +192,7 @@ final class AppSettings {
     ///
     /// Account provider is the friendly term for the server name. It should not contain an `https` prefix and should
     /// match the last part of the user ID. For example `example.com` and not `https://matrix.example.com`.
-    private(set) var accountProviders = ["word.skin"]
+    private(set) var accountProviders = ["privy7.online"]
     /// Whether or not the user is allowed to manually enter their own account provider or must select from one of `defaultAccountProviders`.
     private(set) var allowOtherAccountProviders = true
     /// Whether the components surrounding the app brand/logo should be hidden or not
@@ -202,30 +202,30 @@ final class AppSettings {
     let backgroundAppRefreshTaskIdentifier = "io.element.elementx.background.refresh"
 
     /// A URL where users can go read more about the app.
-    private(set) var websiteURL: URL = "https://word.skin"
+    private(set) var websiteURL: URL = "https://privy7.online"
     /// A URL that contains the app's logo that may be used when showing content in a web view.
-    private(set) var logoURL: URL = "https://word.skin/mobile-icon.png"
+    private(set) var logoURL: URL = "https://privy7.online/mobile-icon.png"
     /// A URL that contains that app's copyright notice.
-    private(set) var copyrightURL: URL = "https://word.skin/copyright"
+    private(set) var copyrightURL: URL = "https://privy7.online/copyright"
     /// A URL that contains the app's Terms of use.
-    private(set) var acceptableUseURL: URL = "https://word.skin/acceptable-use-policy-terms"
+    private(set) var acceptableUseURL: URL = "https://privy7.online/acceptable-use-policy-terms"
     /// A URL that contains the app's Privacy Policy.
-    private(set) var privacyURL: URL = "https://word.skin/privacy"
+    private(set) var privacyURL: URL = "https://privy7.online/privacy"
     /// A URL where users can go read more about encryption in general.
-    private(set) var encryptionURL: URL = "https://word.skin/help#encryption"
+    private(set) var encryptionURL: URL = "https://privy7.online/help#encryption"
     /// A URL where users can go read more about device verification..
-    private(set) var deviceVerificationURL: URL = "https://word.skin/help#encryption-device-verification"
+    private(set) var deviceVerificationURL: URL = "https://privy7.online/help#encryption-device-verification"
     /// A URL where users can go read more about the chat backup.
-    private(set) var chatBackupDetailsURL: URL = "https://word.skin/help#encryption5"
+    private(set) var chatBackupDetailsURL: URL = "https://privy7.online/help#encryption5"
     /// A URL where users can go read more about identity pinning violations
-    private(set) var identityPinningViolationDetailsURL: URL = "https://word.skin/help#encryption18"
+    private(set) var identityPinningViolationDetailsURL: URL = "https://privy7.online/help#encryption18"
     /// A URL describing how history sharing works
-    private(set) var historySharingDetailsURL: URL = "https://word.skin/help#e2ee-history-sharing"
+    private(set) var historySharingDetailsURL: URL = "https://privy7.online/help#e2ee-history-sharing"
 
     /// Any domains that Element web may be hosted on - used for handling links.
-    private(set) var elementWebHosts = ["app.word.skin"]
+    private(set) var elementWebHosts = ["app.privy7.online"]
     /// The domain that account provisioning links will be hosted on - used for handling the links.
-    private(set) var accountProvisioningHost = "mobile.word.skin"
+    private(set) var accountProvisioningHost = "mobile.privy7.online"
     /// The App Store URL for Element Pro, shown to the user when a homeserver requires that app.
     /// **Note:** This property isn't overridable as it in unexpected for forks to come across the error (or to even have a "Pro" app).
     let elementProAppStoreURL: URL = "https://apps.apple.com/app/element-pro-for-work/id6502951615"
@@ -250,7 +250,7 @@ final class AppSettings {
     /// Any pre-defined static client registrations for OIDC issuers.
     let oidcStaticRegistrations: [URL: String] = ["https://id.thirdroom.io/realms/thirdroom": "elementx"]
     /// The redirect URL used for OIDC. This no longer uses universal links so we don't need the bundle ID to avoid conflicts between Element X, Nightly and PR builds.
-    private(set) var oidcRedirectURL: URL = "https://auth.word.skin/oidc/login"
+    private(set) var oidcRedirectURL: URL = "https://auth.privy7.online/oidc/login"
     
     private(set) lazy var oidcConfiguration = OIDCConfiguration(clientName: InfoPlistReader.main.bundleDisplayName,
                                                                 redirectURI: oidcRedirectURL,
@@ -275,7 +275,7 @@ final class AppSettings {
         #endif
     }
     
-    private(set) var pushGatewayBaseURL: URL = "https://matrix.word.skin"
+    private(set) var pushGatewayBaseURL: URL = "https://matrix.privy7.online"
     var pushGatewayNotifyEndpoint: URL {
         pushGatewayBaseURL.appending(path: "_matrix/push/v1/notify")
     }
@@ -321,7 +321,7 @@ final class AppSettings {
     /// The configuration to use for analytics. Set to `nil` to disable analytics.
     let analyticsConfiguration: AnalyticsConfiguration? = AppSettings.makeAnalyticsConfiguration()
     /// The URL to open with more information about analytics terms. When this is `nil` the "Learn more" link will be hidden.
-    private(set) var analyticsTermsURL: URL? = "https://word.skin/cookie-policy"
+    private(set) var analyticsTermsURL: URL? = "https://privy7.online/cookie-policy"
     /// Whether or not there the app is able ask for user consent to enable analytics or sentry reporting.
     var canPromptForAnalytics: Bool {
         analyticsConfiguration != nil || bugReportSentryURL != nil
@@ -373,9 +373,9 @@ final class AppSettings {
     #endif
     
     // These are publicly availble on https://call.element.io so we don't neeed to treat them as secrets
-    let elementCallPosthogAPIHost = "https://posthog.word.skin"
+    let elementCallPosthogAPIHost = "https://posthog.privy7.online"
     let elementCallPosthogAPIKey = "phc_rXGHx9vDmyEvyRxPziYtdVIv0ahEv8A9uLWFcCi1WcU"
-    let elementCallPosthogSentryDSN = "https://3bd2f95ba5554d4497da7153b552ffb5@sentry.word.skin/41"
+    let elementCallPosthogSentryDSN = "https://3bd2f95ba5554d4497da7153b552ffb5@sentry.privy7.online/41"
     
     @UserPreference(key: UserDefaultsKeys.elementCallBaseURLOverride, defaultValue: nil, storageType: .userDefaults(store))
     var elementCallBaseURLOverride: URL?

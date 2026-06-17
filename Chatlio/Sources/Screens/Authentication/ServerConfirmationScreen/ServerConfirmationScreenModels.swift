@@ -55,8 +55,8 @@ struct ServerConfirmationScreenViewState: BindableState {
 
         return switch authenticationFlow {
         case .login:
-            if homeserverAddress == "word.skin" {
-                "Welcome to Chatlio on word.skin" // I'll use a literal for now or reuse a common string
+            if homeserverAddress == "privy7.online" {
+                "Welcome to Chatlio on privy7.online" // I'll use a literal for now or reuse a common string
             } else {
                 ""
             }

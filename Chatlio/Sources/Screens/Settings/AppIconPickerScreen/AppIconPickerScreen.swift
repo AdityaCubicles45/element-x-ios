@@ -25,9 +25,10 @@ struct AppIconPickerScreen: View {
 
     private let options: [Option] = [
         Option(id: "default", alternateName: nil, title: "Chatlio"),
-        Option(id: "MidnightIcon", alternateName: "MidnightIcon", title: "Midnight"),
-        Option(id: "SunsetIcon", alternateName: "SunsetIcon", title: "Sunset"),
-        Option(id: "ForestIcon", alternateName: "ForestIcon", title: "Forest")
+        Option(id: "WeatherIcon", alternateName: "WeatherIcon", title: "Weather"),
+        Option(id: "MagnifierIcon", alternateName: "MagnifierIcon", title: "Magnifier"),
+        Option(id: "PreviewIcon", alternateName: "PreviewIcon", title: "Preview"),
+        Option(id: "CameraIcon", alternateName: "CameraIcon", title: "Camera")
     ]
 
     @State private var currentIconName: String? = UIApplication.shared.alternateIconName

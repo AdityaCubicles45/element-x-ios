@@ -12,6 +12,7 @@ struct RoomListFiltersView: View {
     let leadingID = "leading"
     @Binding var state: RoomListFiltersState
     @Namespace private var namespace
+    @Environment(\.colorScheme) private var colorScheme
     
     /// When you connect a mouse on macOS the scrollbars aren't hidden. This is some extra padding
     /// applied to the scroll view content to make sure the bars don't overlap the filters.
@@ -65,7 +66,9 @@ struct RoomListFiltersView: View {
         }, label: {
             Image(systemName: "xmark.circle.fill")
                 .font(.system(size: 24))
-                .foregroundColor(.compound.bgActionPrimaryRest)
+                // Dark mode: the accent fill blends into black, so use the primary
+                // (white) colour for a clearly visible X. Light mode is unchanged.
+                .foregroundColor(colorScheme == .dark ? .compound.textPrimary : .compound.bgActionPrimaryRest)
         })
         .accessibilityLabel(L10n.screenRoomlistClearFilters)
     }

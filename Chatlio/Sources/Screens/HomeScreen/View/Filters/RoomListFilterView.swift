@@ -11,24 +11,34 @@ import SwiftUI
 struct RoomListFilterView: View {
     let filter: RoomListFilter
     @Binding var isActive: Bool
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         Toggle(isOn: $isActive) {
             Text(filter.localizedName)
         }
-        .toggleStyle(FilterToggleStyle())
+        .toggleStyle(FilterToggleStyle(colorScheme: colorScheme))
     }
 }
 
 private struct FilterToggleStyle: ToggleStyle {
+    // Dark mode only: unselected chips need a lighter fill and a stronger border
+    // so they are clearly visible on a black background. Light mode is unchanged.
+    let colorScheme: ColorScheme
+    private var isDark: Bool {
+        colorScheme == .dark
+    }
+
     private func strokeColor(isOn: Bool) -> Color {
-        isOn ? .compound.bgActionPrimaryRest : .compound.borderInteractiveSecondary
+        if isOn { return .compound.bgActionPrimaryRest }
+        return isDark ? .compound.borderInteractivePrimary : .compound.borderInteractiveSecondary
     }
-    
+
     private func backgroundColor(isOn: Bool) -> Color {
-        isOn ? .compound.bgActionPrimaryRest : .compound.bgSubtlePrimary
+        if isOn { return .compound.bgActionPrimaryRest }
+        return isDark ? .compound.bgSubtleSecondary : .compound.bgSubtlePrimary
     }
-    
+
     private func foregroundColor(isOn: Bool) -> Color {
         isOn ? .white : .compound.textPrimary
     }

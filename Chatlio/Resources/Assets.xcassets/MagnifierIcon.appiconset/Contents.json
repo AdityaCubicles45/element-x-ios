@@ -1,0 +1,104 @@
+{
+  "images": [
+    {
+      "filename": "MagnifierIcon-40.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "20x20"
+    },
+    {
+      "filename": "MagnifierIcon-60.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "20x20"
+    },
+    {
+      "filename": "MagnifierIcon-58.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "29x29"
+    },
+    {
+      "filename": "MagnifierIcon-87.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "29x29"
+    },
+    {
+      "filename": "MagnifierIcon-80.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "40x40"
+    },
+    {
+      "filename": "MagnifierIcon-120.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "40x40"
+    },
+    {
+      "filename": "MagnifierIcon-120.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "60x60"
+    },
+    {
+      "filename": "MagnifierIcon-180.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "60x60"
+    },
+    {
+      "filename": "MagnifierIcon-20.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "20x20"
+    },
+    {
+      "filename": "MagnifierIcon-40.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "20x20"
+    },
+    {
+      "filename": "MagnifierIcon-29.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "29x29"
+    },
+    {
+      "filename": "MagnifierIcon-58.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "29x29"
+    },
+    {
+      "filename": "MagnifierIcon-40.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "40x40"
+    },
+    {
+      "filename": "MagnifierIcon-80.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "40x40"
+    },
+    {
+      "filename": "MagnifierIcon-152.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "76x76"
+    },
+    {
+      "filename": "MagnifierIcon-167.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "83.5x83.5"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

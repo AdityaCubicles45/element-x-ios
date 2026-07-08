@@ -1,0 +1,104 @@
+{
+  "images": [
+    {
+      "filename": "WeatherIcon-40.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "20x20"
+    },
+    {
+      "filename": "WeatherIcon-60.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "20x20"
+    },
+    {
+      "filename": "WeatherIcon-58.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "29x29"
+    },
+    {
+      "filename": "WeatherIcon-87.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "29x29"
+    },
+    {
+      "filename": "WeatherIcon-80.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "40x40"
+    },
+    {
+      "filename": "WeatherIcon-120.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "40x40"
+    },
+    {
+      "filename": "WeatherIcon-120.png",
+      "idiom": "iphone",
+      "scale": "2x",
+      "size": "60x60"
+    },
+    {
+      "filename": "WeatherIcon-180.png",
+      "idiom": "iphone",
+      "scale": "3x",
+      "size": "60x60"
+    },
+    {
+      "filename": "WeatherIcon-20.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "20x20"
+    },
+    {
+      "filename": "WeatherIcon-40.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "20x20"
+    },
+    {
+      "filename": "WeatherIcon-29.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "29x29"
+    },
+    {
+      "filename": "WeatherIcon-58.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "29x29"
+    },
+    {
+      "filename": "WeatherIcon-40.png",
+      "idiom": "ipad",
+      "scale": "1x",
+      "size": "40x40"
+    },
+    {
+      "filename": "WeatherIcon-80.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "40x40"
+    },
+    {
+      "filename": "WeatherIcon-152.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "76x76"
+    },
+    {
+      "filename": "WeatherIcon-167.png",
+      "idiom": "ipad",
+      "scale": "2x",
+      "size": "83.5x83.5"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

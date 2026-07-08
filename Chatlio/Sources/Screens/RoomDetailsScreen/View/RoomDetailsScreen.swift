@@ -44,6 +44,18 @@ struct RoomDetailsScreen: View {
         .alert(item: $context.ignoreUserRoomAlertItem,
                actions: blockUserAlertActions,
                message: blockUserAlertMessage)
+        .confirmationDialog("Disappearing messages",
+                            isPresented: $context.disappearingMessagesSheetPresented,
+                            titleVisibility: .visible) {
+            ForEach(DisappearingMessagesOption.allCases, id: \.self) { option in
+                Button(option.title) {
+                    context.send(viewAction: .setDisappearingMessages(milliseconds: option.milliseconds))
+                }
+            }
+            Button(L10n.actionCancel, role: .cancel) { }
+        } message: {
+            Text("New messages in this chat will be automatically deleted after the selected time.")
+        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if context.viewState.canEditBaseInfo {
@@ -167,7 +179,13 @@ struct RoomDetailsScreen: View {
                     })
                     .disabled(context.viewState.notificationSettingsState.isLoading)
                     .accessibilityIdentifier(A11yIdentifiers.roomDetailsScreen.notifications)
-            
+
+            ListRow(label: .default(title: "Disappearing messages", icon: \.time),
+                    details: .title(context.viewState.disappearingMessagesLabel),
+                    kind: .navigationLink {
+                        context.send(viewAction: .processTapDisappearingMessages)
+                    })
+
             ListRow(label: .default(title: L10n.commonFavourite, icon: \.favourite),
                     kind: .toggle($context.isFavourite))
                 .accessibilityIdentifier(A11yIdentifiers.roomDetailsScreen.favourite)

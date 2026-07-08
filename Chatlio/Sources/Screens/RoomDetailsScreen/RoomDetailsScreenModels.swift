@@ -90,6 +90,12 @@ struct RoomDetailsScreenViewState: BindableState {
 
     var dmRecipientInfo: DMRecipientInfo?
     var accountOwner: RoomMemberDetails?
+
+    /// Disappearing messages: the current per-room retention duration in ms, nil if off.
+    var disappearingMessagesMs: Int64?
+    var disappearingMessagesLabel: String {
+        DisappearingMessagesOption.from(milliseconds: disappearingMessagesMs).title
+    }
     
     var shortcuts: [RoomDetailsScreenViewShortcut] {
         var shortcuts: [RoomDetailsScreenViewShortcut] = [.mute]
@@ -122,6 +128,33 @@ struct RoomDetailsScreenViewState: BindableState {
     
     var notificationShortcutButtonIcon: KeyPath<CompoundIcons, Image> {
         areNotificationsMuted ? \.notificationsOff : \.notifications
+    }
+}
+
+/// Disappearing messages durations offered in the room details picker.
+enum DisappearingMessagesOption: CaseIterable {
+    case off, oneDay, sevenDays, ninetyDays
+
+    var milliseconds: Int64? {
+        switch self {
+        case .off: nil
+        case .oneDay: 86_400_000
+        case .sevenDays: 604_800_000
+        case .ninetyDays: 7_776_000_000
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .off: "Off"
+        case .oneDay: "24 hours"
+        case .sevenDays: "7 days"
+        case .ninetyDays: "90 days"
+        }
+    }
+
+    static func from(milliseconds: Int64?) -> DisappearingMessagesOption {
+        allCases.first { $0.milliseconds == milliseconds } ?? .off
     }
 }
 
@@ -165,6 +198,9 @@ struct RoomDetailsScreenViewStateBindings {
     }
     
     var isFavourite = false
+
+    /// Presents the disappearing-messages duration picker.
+    var disappearingMessagesSheetPresented = false
 
     /// Information describing the currently displayed alert.
     var alertInfo: AlertInfo<RoomDetailsScreenErrorType>?
@@ -216,6 +252,8 @@ enum RoomDetailsScreenViewAction {
     case ignoreConfirmed
     case unignoreConfirmed
     case processTapNotifications
+    case processTapDisappearingMessages
+    case setDisappearingMessages(milliseconds: Int64?)
     case processTapRecipientProfile
     case processToggleMuteNotifications
     case displayAvatar(URL)

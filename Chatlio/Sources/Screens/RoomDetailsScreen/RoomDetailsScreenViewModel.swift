@@ -106,10 +106,29 @@ class RoomDetailsScreenViewModel: RoomDetailsScreenViewModelType, RoomDetailsScr
         
         setupNotificationSettingsSubscription()
         fetchNotificationSettings()
+
+        Task { await loadDisappearingMessages() }
     }
-    
+
+    // MARK: - Disappearing messages
+
+    private func loadDisappearingMessages() async {
+        if case let .success(milliseconds) = await userSession.clientProxy.roomRetention(roomID: roomProxy.id) {
+            state.disappearingMessagesMs = milliseconds
+        }
+    }
+
+    private func setDisappearingMessages(_ milliseconds: Int64?) async {
+        switch await userSession.clientProxy.setRoomRetention(roomID: roomProxy.id, maxLifetimeMs: milliseconds) {
+        case .success:
+            state.disappearingMessagesMs = milliseconds
+        case .failure:
+            state.bindings.alertInfo = .init(id: .unknown, title: L10n.commonError)
+        }
+    }
+
     // MARK: - Public
-    
+
     func stop() {
         // Work around QLPreviewController dismissal issues, see the InteractiveQuickLookModifier.
         state.bindings.mediaPreviewItem = nil
@@ -141,6 +160,10 @@ class RoomDetailsScreenViewModel: RoomDetailsScreenViewModelType, RoomDetailsScr
             } else {
                 actionsSubject.send(.requestNotificationSettingsPresentation)
             }
+        case .processTapDisappearingMessages:
+            state.bindings.disappearingMessagesSheetPresented = true
+        case .setDisappearingMessages(let milliseconds):
+            Task { await setDisappearingMessages(milliseconds) }
         case .processToggleMuteNotifications:
             Task { await toggleMuteNotifications() }
         case .displayAvatar(let url):

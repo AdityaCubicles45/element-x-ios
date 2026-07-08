@@ -505,6 +505,64 @@ class ClientProxy: ClientProxyProtocol {
             return .failure(.sdkError(error))
         }
     }
+
+    // MARK: - Disappearing messages (per-room retention)
+
+    // The Rust SDK cannot send the custom `m.room.retention` state event, so we
+    // call the Matrix client-server API directly using the current session token.
+    // The server (Synapse retention) purges messages older than `max_lifetime`.
+
+    private func retentionStateURL(roomID: String) throws -> (URL, String) {
+        let session = try client.session()
+        let allowed = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "-._~"))
+        let encodedRoom = roomID.addingPercentEncoding(withAllowedCharacters: allowed) ?? roomID
+        let base = session.homeserverUrl.hasSuffix("/") ? String(session.homeserverUrl.dropLast()) : session.homeserverUrl
+        guard let url = URL(string: "\(base)/_matrix/client/v3/rooms/\(encodedRoom)/state/m.room.retention/") else {
+            throw ClientProxyError.invalidMedia
+        }
+        return (url, session.accessToken)
+    }
+
+    /// The current disappearing-messages duration for a room, in milliseconds, or `nil` if off.
+    func roomRetention(roomID: String) async -> Result<Int64?, ClientProxyError> {
+        do {
+            let (url, token) = try retentionStateURL(roomID: roomID)
+            var request = URLRequest(url: url)
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let http = response as? HTTPURLResponse else { return .failure(.invalidMedia) }
+            if http.statusCode == 404 { return .success(nil) } // never set
+            guard (200...299).contains(http.statusCode) else { return .failure(.forbiddenAccess) }
+            let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+            if let ms = json?["max_lifetime"] as? Int64 { return .success(ms) }
+            if let ms = json?["max_lifetime"] as? Int { return .success(Int64(ms)) }
+            return .success(nil)
+        } catch {
+            MXLog.error("Failed reading room retention: \(error)")
+            return .failure(.sdkError(error))
+        }
+    }
+
+    /// Set (or clear, with `nil`) the disappearing-messages duration for a room.
+    func setRoomRetention(roomID: String, maxLifetimeMs: Int64?) async -> Result<Void, ClientProxyError> {
+        do {
+            let (url, token) = try retentionStateURL(roomID: roomID)
+            var request = URLRequest(url: url)
+            request.httpMethod = "PUT"
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            let content: [String: Any] = maxLifetimeMs.map { ["max_lifetime": $0] } ?? [:]
+            request.httpBody = try JSONSerialization.data(withJSONObject: content)
+            let (_, response) = try await URLSession.shared.data(for: request)
+            guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
+                return .failure(.forbiddenAccess) // e.g. insufficient power level to set room state
+            }
+            return .success(())
+        } catch {
+            MXLog.error("Failed setting room retention: \(error)")
+            return .failure(.sdkError(error))
+        }
+    }
     
     func createDirectRoom(with userID: String, expectedRoomName: String?) async -> Result<String, ClientProxyError> {
         do {

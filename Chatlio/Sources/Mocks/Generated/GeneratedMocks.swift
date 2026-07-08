@@ -2270,6 +2270,146 @@ class ClientProxyMock: ClientProxyProtocol, @unchecked Sendable {
             return directRoomForUserIDReturnValue
         }
     }
+    //MARK: - roomRetention
+
+    var roomRetentionRoomIDUnderlyingCallsCount = 0
+    var roomRetentionRoomIDCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return roomRetentionRoomIDUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = roomRetentionRoomIDUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                roomRetentionRoomIDUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    roomRetentionRoomIDUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var roomRetentionRoomIDCalled: Bool {
+        return roomRetentionRoomIDCallsCount > 0
+    }
+    var roomRetentionRoomIDReceivedRoomID: String?
+    var roomRetentionRoomIDReceivedInvocations: [String] = []
+
+    var roomRetentionRoomIDUnderlyingReturnValue: Result<Int64?, ClientProxyError>!
+    var roomRetentionRoomIDReturnValue: Result<Int64?, ClientProxyError>! {
+        get {
+            if Thread.isMainThread {
+                return roomRetentionRoomIDUnderlyingReturnValue
+            } else {
+                var returnValue: Result<Int64?, ClientProxyError>? = nil
+                DispatchQueue.main.sync {
+                    returnValue = roomRetentionRoomIDUnderlyingReturnValue
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                roomRetentionRoomIDUnderlyingReturnValue = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    roomRetentionRoomIDUnderlyingReturnValue = newValue
+                }
+            }
+        }
+    }
+    var roomRetentionRoomIDClosure: ((String) async -> Result<Int64?, ClientProxyError>)?
+
+    func roomRetention(roomID: String) async -> Result<Int64?, ClientProxyError> {
+        roomRetentionRoomIDCallsCount += 1
+        roomRetentionRoomIDReceivedRoomID = roomID
+        DispatchQueue.main.async {
+            self.roomRetentionRoomIDReceivedInvocations.append(roomID)
+        }
+        if let roomRetentionRoomIDClosure = roomRetentionRoomIDClosure {
+            return await roomRetentionRoomIDClosure(roomID)
+        } else {
+            return roomRetentionRoomIDReturnValue
+        }
+    }
+    //MARK: - setRoomRetention
+
+    var setRoomRetentionRoomIDMaxLifetimeMsUnderlyingCallsCount = 0
+    var setRoomRetentionRoomIDMaxLifetimeMsCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return setRoomRetentionRoomIDMaxLifetimeMsUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = setRoomRetentionRoomIDMaxLifetimeMsUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                setRoomRetentionRoomIDMaxLifetimeMsUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    setRoomRetentionRoomIDMaxLifetimeMsUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var setRoomRetentionRoomIDMaxLifetimeMsCalled: Bool {
+        return setRoomRetentionRoomIDMaxLifetimeMsCallsCount > 0
+    }
+    var setRoomRetentionRoomIDMaxLifetimeMsReceivedArguments: (roomID: String, maxLifetimeMs: Int64?)?
+    var setRoomRetentionRoomIDMaxLifetimeMsReceivedInvocations: [(roomID: String, maxLifetimeMs: Int64?)] = []
+
+    var setRoomRetentionRoomIDMaxLifetimeMsUnderlyingReturnValue: Result<Void, ClientProxyError>!
+    var setRoomRetentionRoomIDMaxLifetimeMsReturnValue: Result<Void, ClientProxyError>! {
+        get {
+            if Thread.isMainThread {
+                return setRoomRetentionRoomIDMaxLifetimeMsUnderlyingReturnValue
+            } else {
+                var returnValue: Result<Void, ClientProxyError>? = nil
+                DispatchQueue.main.sync {
+                    returnValue = setRoomRetentionRoomIDMaxLifetimeMsUnderlyingReturnValue
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                setRoomRetentionRoomIDMaxLifetimeMsUnderlyingReturnValue = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    setRoomRetentionRoomIDMaxLifetimeMsUnderlyingReturnValue = newValue
+                }
+            }
+        }
+    }
+    var setRoomRetentionRoomIDMaxLifetimeMsClosure: ((String, Int64?) async -> Result<Void, ClientProxyError>)?
+
+    func setRoomRetention(roomID: String, maxLifetimeMs: Int64?) async -> Result<Void, ClientProxyError> {
+        setRoomRetentionRoomIDMaxLifetimeMsCallsCount += 1
+        setRoomRetentionRoomIDMaxLifetimeMsReceivedArguments = (roomID: roomID, maxLifetimeMs: maxLifetimeMs)
+        DispatchQueue.main.async {
+            self.setRoomRetentionRoomIDMaxLifetimeMsReceivedInvocations.append((roomID: roomID, maxLifetimeMs: maxLifetimeMs))
+        }
+        if let setRoomRetentionRoomIDMaxLifetimeMsClosure = setRoomRetentionRoomIDMaxLifetimeMsClosure {
+            return await setRoomRetentionRoomIDMaxLifetimeMsClosure(roomID, maxLifetimeMs)
+        } else {
+            return setRoomRetentionRoomIDMaxLifetimeMsReturnValue
+        }
+    }
     //MARK: - createDirectRoom
 
     var createDirectRoomWithExpectedRoomNameUnderlyingCallsCount = 0

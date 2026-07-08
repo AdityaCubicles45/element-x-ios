@@ -270,7 +270,10 @@ class RoomScreenViewModel: RoomScreenViewModelType, RoomScreenViewModelProtocol 
         }
         
         guard let userIdentity else {
-            MXLog.failure("User identity should be known at this point")
+            // A successful lookup can still return no identity (e.g. the DM
+            // recipient has not set up cross-signing). This is a normal case,
+            // not a failure, so log a warning instead of crashing in debug.
+            MXLog.warning("No user identity available for DM recipient; treating as not verified")
             state.dmRecipientVerificationState = .notVerified
             return
         }

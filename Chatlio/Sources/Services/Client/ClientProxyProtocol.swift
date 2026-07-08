@@ -168,7 +168,12 @@ protocol ClientProxyProtocol: AnyObject {
     func accountURL(action: AccountManagementAction) async -> URL?
     
     func directRoomForUserID(_ userID: String) -> Result<String?, ClientProxyError>
-    
+
+    /// Disappearing messages: the per-room retention duration in ms, or nil if off.
+    func roomRetention(roomID: String) async -> Result<Int64?, ClientProxyError>
+    /// Disappearing messages: set (or clear, with nil) the per-room retention duration.
+    func setRoomRetention(roomID: String, maxLifetimeMs: Int64?) async -> Result<Void, ClientProxyError>
+
     func createDirectRoom(with userID: String, expectedRoomName: String?) async -> Result<String, ClientProxyError>
     
     func createRoom(name: String,

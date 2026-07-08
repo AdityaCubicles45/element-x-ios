@@ -8,6 +8,7 @@
 
 import Combine
 import SwiftUI
+import UserNotifications
 
 typealias RoomDetailsScreenViewModelType = StateStoreViewModelV2<RoomDetailsScreenViewState, RoomDetailsScreenViewAction>
 
@@ -122,9 +123,47 @@ class RoomDetailsScreenViewModel: RoomDetailsScreenViewModelType, RoomDetailsScr
         switch await userSession.clientProxy.setRoomRetention(roomID: roomProxy.id, maxLifetimeMs: milliseconds) {
         case .success:
             state.disappearingMessagesMs = milliseconds
+            let option = DisappearingMessagesOption.from(milliseconds: milliseconds)
+            // Post an in-chat notice (via the SDK so it is encrypted) so everyone
+            // sees that the timer changed, like WhatsApp's disappearing-messages banner.
+            _ = await roomProxy.timeline.sendMessage(disappearingMessagesNotice(for: option),
+                                                     html: nil,
+                                                     inReplyToEventID: nil,
+                                                     intentionalMentions: .empty)
+            scheduleDisappearingMessagesReminder(for: option)
         case .failure:
             state.bindings.alertInfo = .init(id: .unknown, title: L10n.commonError)
         }
+    }
+
+    private func disappearingMessagesNotice(for option: DisappearingMessagesOption) -> String {
+        switch option {
+        case .off:
+            "Disappearing messages have been turned off."
+        default:
+            "Disappearing messages set to \(option.title). New messages in this chat will disappear \(option.title.lowercased()) after they're sent."
+        }
+    }
+
+    /// Schedules a single local reminder that fires before messages start disappearing:
+    /// 3 hours before for the 24 hour timer, 1 day before for the 7 day and 90 day timers.
+    private func scheduleDisappearingMessagesReminder(for option: DisappearingMessagesOption) {
+        let center = UNUserNotificationCenter.current()
+        let identifier = "disappearing-reminder-\(roomProxy.id)"
+        center.removePendingNotificationRequests(withIdentifiers: [identifier])
+
+        guard let milliseconds = option.milliseconds else { return } // Off: no reminder.
+        let offset: TimeInterval = option == .oneDay ? 3 * 3600 : 24 * 3600
+        let fireIn = TimeInterval(milliseconds) / 1000 - offset
+        guard fireIn > 0 else { return }
+
+        center.requestAuthorization(options: [.alert, .sound]) { _, _ in }
+        let content = UNMutableNotificationContent()
+        content.title = "Disappearing messages"
+        content.body = "Some messages in this chat are about to disappear."
+        content.sound = .default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireIn, repeats: false)
+        center.add(UNNotificationRequest(identifier: identifier, content: content, trigger: trigger))
     }
 
     // MARK: - Public

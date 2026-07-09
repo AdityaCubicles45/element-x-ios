@@ -123,25 +123,11 @@ class RoomDetailsScreenViewModel: RoomDetailsScreenViewModelType, RoomDetailsScr
         switch await userSession.clientProxy.setRoomRetention(roomID: roomProxy.id, maxLifetimeMs: milliseconds) {
         case .success:
             state.disappearingMessagesMs = milliseconds
-            let option = DisappearingMessagesOption.from(milliseconds: milliseconds)
-            // Post an in-chat notice (via the SDK so it is encrypted) so everyone
-            // sees that the timer changed, like WhatsApp's disappearing-messages banner.
-            _ = await roomProxy.timeline.sendMessage(disappearingMessagesNotice(for: option),
-                                                     html: nil,
-                                                     inReplyToEventID: nil,
-                                                     intentionalMentions: .empty)
-            scheduleDisappearingMessagesReminder(for: option)
+            // The m.room.retention state event (sent by setRoomRetention) renders as a
+            // centered system banner in the timeline, like WhatsApp. No message is sent.
+            scheduleDisappearingMessagesReminder(for: DisappearingMessagesOption.from(milliseconds: milliseconds))
         case .failure:
             state.bindings.alertInfo = .init(id: .unknown, title: L10n.commonError)
-        }
-    }
-
-    private func disappearingMessagesNotice(for option: DisappearingMessagesOption) -> String {
-        switch option {
-        case .off:
-            "Disappearing messages have been turned off."
-        default:
-            "Disappearing messages set to \(option.title). New messages in this chat will disappear \(option.title.lowercased()) after they're sent."
         }
     }
 

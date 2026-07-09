@@ -218,7 +218,10 @@ struct RoomStateEventStringBuilder {
             break
         case .spaceChild, .spaceParent: // Users shouldn't see the timeline of a Space.
             break
-        case .custom: // Won't provide actionable information to the user.
+        case .custom(let eventType) where eventType == "m.room.retention":
+            // Render the disappearing-messages change as a centered system banner.
+            return isOutgoing ? "You changed the disappearing messages timer" : "\(displayName) changed the disappearing messages timer"
+        case .custom: // Other custom events won't provide actionable information to the user.
             break
         }
         

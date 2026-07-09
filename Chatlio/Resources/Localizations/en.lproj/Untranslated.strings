@@ -3,14 +3,14 @@
 
 /* Used for testing */
 "untranslated" = "Untranslated";
-"a11y_qr_code_login_element_x_on_device" = "Chatlio on your other device";
-"screen_room_timeline_legacy_call" = "Unsupported call. Ask if the caller can use the new Chatlio app.";
-"screen_server_confirmation_message_login_element_dot_io" = "A private server for Chatlio employees.";
+"a11y_qr_code_login_element_x_on_device" = "Chipsera on your other device";
+"screen_room_timeline_legacy_call" = "Unsupported call. Ask if the caller can use the new Chipsera app.";
+"screen_server_confirmation_message_login_element_dot_io" = "A private server for Chipsera employees.";
 
 // InfoPlist.strings overrides
-"NSCameraUsageDescription" = "To take pictures or videos and send them as a message Chatlio needs access to the camera.";
-"NSLocationWhenInUseUsageDescription" = "Grant location access so that Chatlio can share your location.";
-"NSMicrophoneUsageDescription" = "To record and send messages with audio, Chatlio needs to access the microphone.";
+"NSCameraUsageDescription" = "To take pictures or videos and send them as a message Chipsera needs access to the camera.";
+"NSLocationWhenInUseUsageDescription" = "Grant location access so that Chipsera can share your location.";
+"NSMicrophoneUsageDescription" = "To record and send messages with audio, Chipsera needs to access the microphone.";
 
 // MARK: - Soft logout
 

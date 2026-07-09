@@ -24,7 +24,7 @@ struct AppIconPickerScreen: View {
     }
 
     private let options: [Option] = [
-        Option(id: "default", alternateName: nil, title: "Chatlio"),
+        Option(id: "default", alternateName: nil, title: "Chipsera"),
         Option(id: "WeatherIcon", alternateName: "WeatherIcon", title: "Weather"),
         Option(id: "MagnifierIcon", alternateName: "MagnifierIcon", title: "Magnifier"),
         Option(id: "PreviewIcon", alternateName: "PreviewIcon", title: "Preview"),

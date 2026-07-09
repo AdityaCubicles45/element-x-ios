@@ -56,7 +56,7 @@ struct ServerConfirmationScreenViewState: BindableState {
         return switch authenticationFlow {
         case .login:
             if homeserverAddress == "privy7.online" {
-                "Welcome to Chatlio on privy7.online" // I'll use a literal for now or reuse a common string
+                "Welcome to Chipsera on privy7.online" // I'll use a literal for now or reuse a common string
             } else {
                 ""
             }

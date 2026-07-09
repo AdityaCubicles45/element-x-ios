@@ -10,7 +10,7 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum UntranslatedL10n {
-  /// Chatlio on your other device
+  /// Chipsera on your other device
   internal static var a11yQrCodeLoginElementXOnDevice: String { return UntranslatedL10n.tr("Untranslated", "a11y_qr_code_login_element_x_on_device") }
   /// Start voice call
   internal static var a11yStartVoiceCall: String { return UntranslatedL10n.tr("Untranslated", "a11y_start_voice_call") }
@@ -24,11 +24,11 @@ internal enum UntranslatedL10n {
   internal static var commonVideoCall: String { return UntranslatedL10n.tr("Untranslated", "common_video_call") }
   /// Voice call
   internal static var commonVoiceCall: String { return UntranslatedL10n.tr("Untranslated", "common_voice_call") }
-  /// To take pictures or videos and send them as a message Chatlio needs access to the camera.
+  /// To take pictures or videos and send them as a message Chipsera needs access to the camera.
   internal static var nsCameraUsageDescription: String { return UntranslatedL10n.tr("Untranslated", "NSCameraUsageDescription") }
-  /// Grant location access so that Chatlio can share your location.
+  /// Grant location access so that Chipsera can share your location.
   internal static var nsLocationWhenInUseUsageDescription: String { return UntranslatedL10n.tr("Untranslated", "NSLocationWhenInUseUsageDescription") }
-  /// To record and send messages with audio, Chatlio needs to access the microphone.
+  /// To record and send messages with audio, Chipsera needs to access the microphone.
   internal static var nsMicrophoneUsageDescription: String { return UntranslatedL10n.tr("Untranslated", "NSMicrophoneUsageDescription") }
   /// Use a different account provider, such as your own private server or a work account.
   internal static var screenChangeServerSubtitle: String { return UntranslatedL10n.tr("Untranslated", "screen_change_server_subtitle") }
@@ -48,9 +48,9 @@ internal enum UntranslatedL10n {
   internal static var screenOnboardingSignupQuestion: String { return UntranslatedL10n.tr("Untranslated", "screen_onboarding_signup_question") }
   /// Secure communication in its most essential form.
   internal static var screenOnboardingWelcomeMessageChatlio: String { return UntranslatedL10n.tr("Untranslated", "screen_onboarding_welcome_message_chatlio") }
-  /// Unsupported call. Ask if the caller can use the new Chatlio app.
+  /// Unsupported call. Ask if the caller can use the new Chipsera app.
   internal static var screenRoomTimelineLegacyCall: String { return UntranslatedL10n.tr("Untranslated", "screen_room_timeline_legacy_call") }
-  /// A private server for Chatlio employees.
+  /// A private server for Chipsera employees.
   internal static var screenServerConfirmationMessageLoginElementDotIo: String { return UntranslatedL10n.tr("Untranslated", "screen_server_confirmation_message_login_element_dot_io") }
   /// Clear all data currently stored on this device?
   /// Sign in again to access your account data and messages.

@@ -9336,11 +9336,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_DISPLAY_NAME = Chipsera;
-				APP_GROUP_IDENTIFIER = group.word.skin;
+				APP_GROUP_IDENTIFIER = group.online.privy7.chipsera;
 				APP_NAME = Chatlio;
 				APS_ENVIRONMENT = production;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "colors/accent-color";
-				BASE_BUNDLE_IDENTIFIER = im.word.skin.chatlio;
+				BASE_BUNDLE_IDENTIFIER = online.privy7.chipsera;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -9572,11 +9572,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_DISPLAY_NAME = Chipsera;
-				APP_GROUP_IDENTIFIER = group.word.skin;
+				APP_GROUP_IDENTIFIER = group.online.privy7.chipsera;
 				APP_NAME = Chatlio;
 				APS_ENVIRONMENT = development;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "colors/accent-color";
-				BASE_BUNDLE_IDENTIFIER = im.word.skin.chatlio;
+				BASE_BUNDLE_IDENTIFIER = online.privy7.chipsera;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

@@ -97,7 +97,7 @@ targets:
           voip
         ]
         BGTaskSchedulerPermittedIdentifiers: [
-          im.word.skin.chatlio.background.refresh
+          online.privy7.chipsera.background.refresh
         ]
         UTExportedTypeDeclarations:
         - UTTypeConformsTo: [public.text]

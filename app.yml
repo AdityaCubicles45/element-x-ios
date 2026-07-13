@@ -5,9 +5,14 @@ settings:
   base:
     APP_DISPLAY_NAME: Chipsera
     PRODUCTION_APP_NAME: Chipsera
-    APP_GROUP_IDENTIFIER: group.word.skin
-    BASE_BUNDLE_IDENTIFIER: im.word.skin.chatlio
+    # Chipsera identifiers for the new (individual) Apple Developer account.
+    # Bundle IDs and app groups are globally unique across Apple, so these must be
+    # fresh names not already claimed by the old team.
+    APP_GROUP_IDENTIFIER: group.online.privy7.chipsera
+    BASE_BUNDLE_IDENTIFIER: online.privy7.chipsera
     ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: "colors/accent-color"
+    # TODO: replace with the new account's Team ID once enrolled (Xcode > Settings >
+    # Accounts, or App Store Connect > Membership). Device signing fails until this is set.
     DEVELOPMENT_TEAM: GF9S7S9W5F
 
     # Optional configuration to load accounts from Element Classic.

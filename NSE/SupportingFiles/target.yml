@@ -59,9 +59,17 @@ targets:
     entitlements:
       path: NSE.entitlements
       properties:
-        # com.apple.developer.usernotifications.filtering requires special Apple
-        # approval not available on an individual team. Removed so the NSE builds
-        # for device; push still works (only optional notification filtering is lost).
+        # REQUIRED for incoming-call RINGING on iOS. CXProvider.reportNewIncomingVoIPPushPayload
+        # (the NSE -> CallKit hand-off) fails with CallKit error
+        # "notification-serviceextension Code=2" without it, so calls only show a notification
+        # and never ring. Android is unaffected (it rings via a different mechanism).
+        #
+        # This is a RESTRICTED entitlement: Apple must grant "Notification (NSE) Filtering" for
+        # team GF9S7S9W5F + bundle im.word.skin.chatlio.nse before a provisioning profile can
+        # include it (request at https://developer.apple.com/contact/request/notification-filtering).
+        # Until then, device builds fail if it is enabled, so it is left disabled below.
+        # AFTER APPROVAL: uncomment the next line and rebuild to enable ringing.
+        # com.apple.developer.usernotifications.filtering: true
         com.apple.security.application-groups:
         - $(APP_GROUP_IDENTIFIER)
         keychain-access-groups:

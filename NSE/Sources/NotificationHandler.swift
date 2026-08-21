@@ -61,7 +61,6 @@ class NotificationHandler {
             await notificationContentBuilder.process(notificationContent: &notificationContent,
                                                      notificationItem: notificationItemProxy,
                                                      mediaProvider: userSession.mediaProvider)
-            
             deliverNotification()
         }
     }
@@ -179,39 +178,34 @@ class NotificationHandler {
             return .shouldDisplay
         }
         
-        // Check to see if a call is still ongoing
-        if let room = userSession.roomForIdentifier(roomID) { // Try to get call details from the room info
-            if !room.hasActiveRoomCall() { // If I don't have an active call wait a bit and make sure
-                let expiringTask = ExpiringTaskRunner {
-                    await withCheckedContinuation { [weak self] continuation in
-                        self?.roomInfoObservationToken = room.subscribeToRoomInfoUpdates(listener: SDKListener { info in
-                            if info.hasRoomCall {
-                                MXLog.info("Received room info update and the room has an active call now.")
-                                continuation.resume()
-                            } else {
-                                MXLog.info("Received a room info update but the room still doesn't have an ongoing call.")
-                            }
-                        })
-                    }
-                }
-                
-                try? await expiringTask.run(timeout: .seconds(5)) // Wait 5 seconds or just use whatever is available
-                
-                guard room.hasActiveRoomCall() else {
-                    MXLog.info("The room no longer has an ongoing call, handling as push notification")
-                    return .shouldDisplay
+        // Try to confirm the call from room info when we can, but do NOT hard-gate ringing on it.
+        // On self-hosted / federated servers the NSE's cold-launched sync frequently can't confirm
+        // room.hasActiveRoomCall() within the window even for a perfectly valid ring, which
+        // previously blocked ringing entirely (only a notification was shown, while Android rang).
+        // We fall back to the ring notification's own expiration timestamp as the source of truth.
+        if let room = userSession.roomForIdentifier(roomID), !room.hasActiveRoomCall() {
+            let expiringTask = ExpiringTaskRunner {
+                await withCheckedContinuation { [weak self] continuation in
+                    self?.roomInfoObservationToken = room.subscribeToRoomInfoUpdates(listener: SDKListener { info in
+                        if info.hasRoomCall {
+                            MXLog.info("Received room info update and the room has an active call now.")
+                            continuation.resume()
+                        }
+                    })
                 }
             }
-        } else { // Otherwise fallback to the old timeout mechanism
-            let timestamp = Date(timeIntervalSince1970: TimeInterval(timestamp / 1000))
-            
-            guard abs(timestamp.timeIntervalSinceNow) < ElementCallServiceNotificationDiscardDelta else {
-                MXLog.info("Call notification is too old, handling as push notification")
-                return .shouldDisplay
-            }
+
+            try? await expiringTask.run(timeout: .seconds(3)) // Best-effort confirmation only; non-blocking.
         }
-        
+
         let expirationDate = Date(timeIntervalSince1970: TimeInterval(expirationTimestamp / 1000))
+
+        // Authoritative freshness check: ring while the notification hasn't expired, regardless of
+        // whether the cold NSE sync managed to observe the active call in time.
+        guard expirationDate.timeIntervalSinceNow > 0 else {
+            MXLog.info("Call notification has expired, handling as push notification")
+            return .shouldDisplay
+        }
         let payload = [ElementCallServiceNotificationKey.roomID.rawValue: roomID,
                        ElementCallServiceNotificationKey.roomDisplayName.rawValue: roomDisplayName,
                        ElementCallServiceNotificationKey.expirationDate.rawValue: expirationDate,

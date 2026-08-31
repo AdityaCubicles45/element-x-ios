@@ -61,21 +61,8 @@ struct LinkNewDeviceScreen: View {
             .disabled(true)
         case .readyToLink(let isGeneratingCode):
             VStack(spacing: 16) {
-                Button { context.send(viewAction: .linkMobileDevice) } label: {
-                    Label {
-                        Text(isGeneratingCode ? L10n.screenLinkNewDeviceRootLoadingQrCode : L10n.screenLinkNewDeviceRootMobileDevice)
-                    } icon: {
-                        if isGeneratingCode {
-                            ProgressView()
-                                .tint(.compound.iconOnSolidPrimary)
-                        } else {
-                            CompoundIcon(\.mobile)
-                        }
-                    }
-                }
-                .buttonStyle(.compound(.primary))
-                .accessibilityIdentifier(A11yIdentifiers.linkNewDeviceScreen.mobileDevice)
-                
+                // Chipsera: only "Desktop computer" is offered (used to sign in Chipsera Web);
+                // the "Mobile device" option is intentionally removed.
                 if context.viewState.showLinkDesktopComputerButton {
                     Button { context.send(viewAction: .linkDesktopComputer) } label: {
                         Label(L10n.screenLinkNewDeviceRootDesktopComputer, icon: \.computer)

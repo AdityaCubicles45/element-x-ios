@@ -29,6 +29,8 @@ struct SecureBackupRecoveryKeyScreenViewState: BindableState {
     var recoveryKey: String?
     var isGeneratingKey = false
     var doneButtonEnabled = false
+    /// True when a recovery key for this user is saved on-device and can be applied behind Face/Touch ID.
+    var canUseSavedRecoveryKey = false
     
     var bindings: SecureBackupRecoveryKeyScreenViewBindings
     
@@ -84,4 +86,6 @@ enum SecureBackupRecoveryKeyScreenViewAction {
     case confirmKey
     case done
     case cancel
+    /// Retrieve the on-device saved recovery key (behind Face/Touch ID) and confirm with it.
+    case useSavedRecoveryKey
 }

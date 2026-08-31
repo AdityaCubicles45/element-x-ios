@@ -13,6 +13,8 @@ struct SecureBackupRecoveryKeyScreenCoordinatorParameters {
     let secureBackupController: SecureBackupControllerProtocol
     let userIndicatorController: UserIndicatorControllerProtocol
     let isModallyPresented: Bool
+    /// The current user's ID, used to key the optional on-device saved recovery key.
+    let userID: String
 }
 
 enum SecureBackupRecoveryKeyScreenCoordinatorAction {
@@ -32,9 +34,16 @@ final class SecureBackupRecoveryKeyScreenCoordinator: CoordinatorProtocol {
     
     init(parameters: SecureBackupRecoveryKeyScreenCoordinatorParameters) {
         self.parameters = parameters
+        // Reuses the same keychain service/access group as the app's session store, so the saved
+        // recovery key is shared across instances and survives sign-out for auto-retrieval.
+        let keychainController = KeychainController(service: .sessions,
+                                                    accessGroup: InfoPlistReader.main.keychainAccessGroupIdentifier)
         viewModel = SecureBackupRecoveryKeyScreenViewModel(secureBackupController: parameters.secureBackupController,
                                                            userIndicatorController: parameters.userIndicatorController,
-                                                           isModallyPresented: parameters.isModallyPresented)
+                                                           isModallyPresented: parameters.isModallyPresented,
+                                                           userID: parameters.userID,
+                                                           keychainController: keychainController,
+                                                           appSettings: ServiceLocator.shared.settings)
     }
     
     func start() {

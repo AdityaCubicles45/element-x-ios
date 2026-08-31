@@ -34,9 +34,14 @@ final class SecureBackupScreenCoordinator: CoordinatorProtocol {
     init(parameters: SecureBackupScreenCoordinatorParameters) {
         self.parameters = parameters
         
+        let keychainController = KeychainController(service: .sessions,
+                                                    accessGroup: InfoPlistReader.main.keychainAccessGroupIdentifier)
         viewModel = SecureBackupScreenViewModel(secureBackupController: parameters.clientProxy.secureBackupController,
                                                 userIndicatorController: parameters.userIndicatorController,
-                                                chatBackupDetailsURL: parameters.appSettings.chatBackupDetailsURL)
+                                                chatBackupDetailsURL: parameters.appSettings.chatBackupDetailsURL,
+                                                userID: parameters.clientProxy.userID,
+                                                keychainController: keychainController,
+                                                appSettings: parameters.appSettings)
     }
     
     func start() {

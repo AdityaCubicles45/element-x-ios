@@ -41,6 +41,7 @@ final class AppSettings {
         case seenInvites
         case hasSeenSpacesAnnouncement
         case hasSeenNewSoundBanner
+        case saveRecoveryKeyOnDevice
         case appLockNumberOfPINAttempts
         case appLockNumberOfBiometricAttempts
         case timelineStyle
@@ -187,6 +188,11 @@ final class AppSettings {
     /// Defaults to `true` for new users, and we use a migration to set it to `false` for existing users.
     @UserPreference(key: UserDefaultsKeys.hasSeenNewSoundBanner, defaultValue: true, storageType: .userDefaults(store))
     var hasSeenNewSoundBanner
+
+    /// Opt-in: when enabled, the user's recovery key is saved in the device keychain behind Face/Touch ID
+    /// and auto-applied on the next sign-in. Off by default — this trades some E2E security for convenience.
+    @UserPreference(key: UserDefaultsKeys.saveRecoveryKeyOnDevice, defaultValue: false, storageType: .userDefaults(store))
+    var saveRecoveryKeyOnDevice
     
     /// The initial set of account providers shown to the user in the authentication flow.
     ///

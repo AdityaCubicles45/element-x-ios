@@ -10191,6 +10191,236 @@ class KeychainControllerMock: KeychainControllerProtocol, @unchecked Sendable {
         removePINCodeBiometricStateCallsCount += 1
         removePINCodeBiometricStateClosure?()
     }
+    //MARK: - containsRecoveryKey
+
+    var containsRecoveryKeyForUsernameUnderlyingCallsCount = 0
+    var containsRecoveryKeyForUsernameCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return containsRecoveryKeyForUsernameUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = containsRecoveryKeyForUsernameUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                containsRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    containsRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var containsRecoveryKeyForUsernameCalled: Bool {
+        return containsRecoveryKeyForUsernameCallsCount > 0
+    }
+    var containsRecoveryKeyForUsernameReceivedUsername: String?
+    var containsRecoveryKeyForUsernameReceivedInvocations: [String] = []
+
+    var containsRecoveryKeyForUsernameUnderlyingReturnValue: Bool!
+    var containsRecoveryKeyForUsernameReturnValue: Bool! {
+        get {
+            if Thread.isMainThread {
+                return containsRecoveryKeyForUsernameUnderlyingReturnValue
+            } else {
+                var returnValue: Bool? = nil
+                DispatchQueue.main.sync {
+                    returnValue = containsRecoveryKeyForUsernameUnderlyingReturnValue
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                containsRecoveryKeyForUsernameUnderlyingReturnValue = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    containsRecoveryKeyForUsernameUnderlyingReturnValue = newValue
+                }
+            }
+        }
+    }
+    var containsRecoveryKeyForUsernameClosure: ((String) -> Bool)?
+
+    func containsRecoveryKey(forUsername username: String) -> Bool {
+        containsRecoveryKeyForUsernameCallsCount += 1
+        containsRecoveryKeyForUsernameReceivedUsername = username
+        DispatchQueue.main.async {
+            self.containsRecoveryKeyForUsernameReceivedInvocations.append(username)
+        }
+        if let containsRecoveryKeyForUsernameClosure = containsRecoveryKeyForUsernameClosure {
+            return containsRecoveryKeyForUsernameClosure(username)
+        } else {
+            return containsRecoveryKeyForUsernameReturnValue
+        }
+    }
+    //MARK: - setRecoveryKey
+
+    var setRecoveryKeyForUsernameThrowableError: Error?
+    var setRecoveryKeyForUsernameUnderlyingCallsCount = 0
+    var setRecoveryKeyForUsernameCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return setRecoveryKeyForUsernameUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = setRecoveryKeyForUsernameUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                setRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    setRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var setRecoveryKeyForUsernameCalled: Bool {
+        return setRecoveryKeyForUsernameCallsCount > 0
+    }
+    var setRecoveryKeyForUsernameReceivedArguments: (recoveryKey: String, username: String)?
+    var setRecoveryKeyForUsernameReceivedInvocations: [(recoveryKey: String, username: String)] = []
+    var setRecoveryKeyForUsernameClosure: ((String, String) throws -> Void)?
+
+    func setRecoveryKey(_ recoveryKey: String, forUsername username: String) throws {
+        if let error = setRecoveryKeyForUsernameThrowableError {
+            throw error
+        }
+        setRecoveryKeyForUsernameCallsCount += 1
+        setRecoveryKeyForUsernameReceivedArguments = (recoveryKey: recoveryKey, username: username)
+        DispatchQueue.main.async {
+            self.setRecoveryKeyForUsernameReceivedInvocations.append((recoveryKey: recoveryKey, username: username))
+        }
+        try setRecoveryKeyForUsernameClosure?(recoveryKey, username)
+    }
+    //MARK: - recoveryKey
+
+    var recoveryKeyForUsernameReasonThrowableError: Error?
+    var recoveryKeyForUsernameReasonUnderlyingCallsCount = 0
+    var recoveryKeyForUsernameReasonCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return recoveryKeyForUsernameReasonUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = recoveryKeyForUsernameReasonUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                recoveryKeyForUsernameReasonUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    recoveryKeyForUsernameReasonUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var recoveryKeyForUsernameReasonCalled: Bool {
+        return recoveryKeyForUsernameReasonCallsCount > 0
+    }
+    var recoveryKeyForUsernameReasonReceivedArguments: (username: String, reason: String)?
+    var recoveryKeyForUsernameReasonReceivedInvocations: [(username: String, reason: String)] = []
+
+    var recoveryKeyForUsernameReasonUnderlyingReturnValue: String?
+    var recoveryKeyForUsernameReasonReturnValue: String? {
+        get {
+            if Thread.isMainThread {
+                return recoveryKeyForUsernameReasonUnderlyingReturnValue
+            } else {
+                var returnValue: String?? = nil
+                DispatchQueue.main.sync {
+                    returnValue = recoveryKeyForUsernameReasonUnderlyingReturnValue
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                recoveryKeyForUsernameReasonUnderlyingReturnValue = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    recoveryKeyForUsernameReasonUnderlyingReturnValue = newValue
+                }
+            }
+        }
+    }
+    var recoveryKeyForUsernameReasonClosure: ((String, String) throws -> String?)?
+
+    func recoveryKey(forUsername username: String, reason: String) throws -> String? {
+        if let error = recoveryKeyForUsernameReasonThrowableError {
+            throw error
+        }
+        recoveryKeyForUsernameReasonCallsCount += 1
+        recoveryKeyForUsernameReasonReceivedArguments = (username: username, reason: reason)
+        DispatchQueue.main.async {
+            self.recoveryKeyForUsernameReasonReceivedInvocations.append((username: username, reason: reason))
+        }
+        if let recoveryKeyForUsernameReasonClosure = recoveryKeyForUsernameReasonClosure {
+            return try recoveryKeyForUsernameReasonClosure(username, reason)
+        } else {
+            return recoveryKeyForUsernameReasonReturnValue
+        }
+    }
+    //MARK: - removeRecoveryKey
+
+    var removeRecoveryKeyForUsernameUnderlyingCallsCount = 0
+    var removeRecoveryKeyForUsernameCallsCount: Int {
+        get {
+            if Thread.isMainThread {
+                return removeRecoveryKeyForUsernameUnderlyingCallsCount
+            } else {
+                var returnValue: Int? = nil
+                DispatchQueue.main.sync {
+                    returnValue = removeRecoveryKeyForUsernameUnderlyingCallsCount
+                }
+
+                return returnValue!
+            }
+        }
+        set {
+            if Thread.isMainThread {
+                removeRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+            } else {
+                DispatchQueue.main.sync {
+                    removeRecoveryKeyForUsernameUnderlyingCallsCount = newValue
+                }
+            }
+        }
+    }
+    var removeRecoveryKeyForUsernameCalled: Bool {
+        return removeRecoveryKeyForUsernameCallsCount > 0
+    }
+    var removeRecoveryKeyForUsernameReceivedUsername: String?
+    var removeRecoveryKeyForUsernameReceivedInvocations: [String] = []
+    var removeRecoveryKeyForUsernameClosure: ((String) -> Void)?
+
+    func removeRecoveryKey(forUsername username: String) {
+        removeRecoveryKeyForUsernameCallsCount += 1
+        removeRecoveryKeyForUsernameReceivedUsername = username
+        DispatchQueue.main.async {
+            self.removeRecoveryKeyForUsernameReceivedInvocations.append(username)
+        }
+        removeRecoveryKeyForUsernameClosure?(username)
+    }
 }
 class KnockRequestProxyMock: KnockRequestProxyProtocol, @unchecked Sendable {
     var eventID: String {

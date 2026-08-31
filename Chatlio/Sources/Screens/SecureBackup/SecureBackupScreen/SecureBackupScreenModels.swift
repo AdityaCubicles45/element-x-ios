@@ -26,10 +26,13 @@ struct SecureBackupScreenViewState: BindableState {
 
 struct SecureBackupScreenViewStateBindings {
     var keyStorageEnabled: Bool
+    /// Opt-in: save the recovery key in the device keychain (behind Face/Touch ID) for auto-retrieval on sign-in.
+    var saveRecoveryKeyOnDevice: Bool
     var alertInfo: AlertInfo<UUID>?
 }
 
 enum SecureBackupScreenViewAction {
     case recoveryKey
     case keyStorageToggled(Bool)
+    case saveRecoveryKeyOnDeviceToggled(Bool)
 }

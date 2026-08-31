@@ -27,6 +27,8 @@ struct SecureBackupScreen: View {
                     recoveryKeySection
                 }
             }
+
+            saveRecoveryKeyOnDeviceSection
         }
         .compoundList()
         .navigationTitle(L10n.commonEncryption)
@@ -73,6 +75,18 @@ struct SecureBackupScreen: View {
         return description
     }
     
+    private var saveRecoveryKeyOnDeviceSection: some View {
+        Section {
+            ListRow(label: .default(title: "Save recovery key on this device",
+                                    description: "Store your recovery key behind Face ID / Touch ID so it's applied automatically the next time you sign in on this device. Convenient, but anyone who can unlock this device gains full access to your encrypted history.",
+                                    icon: \.lock),
+                    kind: .toggle($context.saveRecoveryKeyOnDevice))
+                .onChange(of: context.saveRecoveryKeyOnDevice) { _, newValue in
+                    context.send(viewAction: .saveRecoveryKeyOnDeviceToggled(newValue))
+                }
+        }
+    }
+
     private var recoveryKeySection: some View {
         Section {
             switch context.viewState.recoveryState {

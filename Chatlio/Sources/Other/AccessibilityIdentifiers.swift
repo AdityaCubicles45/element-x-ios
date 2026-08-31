@@ -223,6 +223,7 @@ enum A11yIdentifiers {
         let done = "secure_backup_recovery_key-done"
         let recoveryKeyField = "secure_backup_recovery_key-recovery_key_field"
         let confirm = "secure_backup_recovery_key-confirm"
+        let saveRecoveryKey = "secure_backup_recovery_key-use_saved_recovery_key"
     }
     
     struct ServerConfirmationScreen {

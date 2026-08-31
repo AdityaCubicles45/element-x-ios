@@ -202,6 +202,15 @@ struct SecureBackupRecoveryKeyScreen: View {
                     .foregroundColor(.compound.textSecondary)
                     .font(.compound.bodySM)
             }
+
+            if context.viewState.canUseSavedRecoveryKey {
+                Button("Use saved recovery key") {
+                    context.send(viewAction: .useSavedRecoveryKey)
+                }
+                .buttonStyle(.compound(.tertiary))
+                .padding(.top, 8)
+                .accessibilityIdentifier(A11yIdentifiers.secureBackupRecoveryKeyScreen.saveRecoveryKey)
+            }
         }
     }
 }

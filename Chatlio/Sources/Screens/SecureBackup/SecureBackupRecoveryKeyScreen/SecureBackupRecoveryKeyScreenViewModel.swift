@@ -14,7 +14,10 @@ typealias SecureBackupRecoveryKeyScreenViewModelType = StateStoreViewModelV2<Sec
 class SecureBackupRecoveryKeyScreenViewModel: SecureBackupRecoveryKeyScreenViewModelType, SecureBackupRecoveryKeyScreenViewModelProtocol {
     private let secureBackupController: SecureBackupControllerProtocol
     private let userIndicatorController: UserIndicatorControllerProtocol
-    
+    private let userID: String
+    private let keychainController: KeychainControllerProtocol
+    private let appSettings: AppSettings
+
     private var actionsSubject: PassthroughSubject<SecureBackupRecoveryKeyScreenViewModelAction, Never> = .init()
     var actions: AnyPublisher<SecureBackupRecoveryKeyScreenViewModelAction, Never> {
         actionsSubject.eraseToAnyPublisher()
@@ -22,13 +25,25 @@ class SecureBackupRecoveryKeyScreenViewModel: SecureBackupRecoveryKeyScreenViewM
 
     init(secureBackupController: SecureBackupControllerProtocol,
          userIndicatorController: UserIndicatorControllerProtocol,
-         isModallyPresented: Bool) {
+         isModallyPresented: Bool,
+         userID: String,
+         keychainController: KeychainControllerProtocol,
+         appSettings: AppSettings) {
         self.secureBackupController = secureBackupController
         self.userIndicatorController = userIndicatorController
-        
+        self.userID = userID
+        self.keychainController = keychainController
+        self.appSettings = appSettings
+
+        let mode = secureBackupController.recoveryState.value.viewMode
         super.init(initialViewState: .init(isModallyPresented: isModallyPresented,
-                                           mode: secureBackupController.recoveryState.value.viewMode,
+                                           mode: mode,
                                            bindings: .init()))
+
+        // Offer to auto-apply the on-device saved recovery key when the user is being asked to confirm it.
+        if mode == .fixRecovery, keychainController.containsRecoveryKey(forUsername: userID) {
+            state.canUseSavedRecoveryKey = true
+        }
     }
     
     // MARK: - Public
@@ -58,20 +73,22 @@ class SecureBackupRecoveryKeyScreenViewModel: SecureBackupRecoveryKeyScreenViewM
         case .keySaved:
             state.doneButtonEnabled = true
         case .confirmKey:
+            Task { await confirmRecoveryKey(state.bindings.confirmationRecoveryKey) }
+        case .useSavedRecoveryKey:
             Task {
                 showLoadingIndicator()
-                
-                switch await secureBackupController.confirmRecoveryKey(state.bindings.confirmationRecoveryKey) {
-                case .success:
-                    actionsSubject.send(.done(mode: state.mode))
-                case .failure(let error):
-                    MXLog.error("Failed confirming recovery key with error: \(error)")
-                    state.bindings.alertInfo = .init(id: .init(),
-                                                     title: L10n.screenRecoveryKeyConfirmErrorTitle,
-                                                     message: L10n.screenRecoveryKeyConfirmErrorContent)
+                defer { hideLoadingIndicator() }
+                // Reading a biometric-protected keychain item triggers the Face/Touch ID prompt and blocks,
+                // so it must run off the main actor.
+                let savedKey = await Task.detached { [keychainController, userID] in
+                    try? keychainController.recoveryKey(forUsername: userID, reason: L10n.commonRecoveryKey)
+                }.value
+                guard let savedKey, !savedKey.isEmpty else {
+                    MXLog.warning("No saved recovery key available (removed or biometric auth cancelled).")
+                    return
                 }
-                
-                hideLoadingIndicator()
+                state.bindings.confirmationRecoveryKey = savedKey
+                await confirmRecoveryKey(savedKey)
             }
         case .cancel:
             actionsSubject.send(.cancel)
@@ -81,9 +98,39 @@ class SecureBackupRecoveryKeyScreenViewModel: SecureBackupRecoveryKeyScreenViewM
                                              message: L10n.screenRecoveryKeySetupConfirmationDescription,
                                              primaryButton: .init(title: L10n.actionContinue) { [weak self] in
                                                  guard let self else { return }
+                                                 // A freshly generated key: save it on-device if the user opted in.
+                                                 saveRecoveryKeyIfEnabled(state.recoveryKey)
                                                  actionsSubject.send(.done(mode: state.mode))
                                              },
                                              secondaryButton: .init(title: L10n.actionCancel, role: .cancel, action: nil))
+        }
+    }
+
+    private func confirmRecoveryKey(_ key: String) async {
+        showLoadingIndicator()
+        defer { hideLoadingIndicator() }
+
+        switch await secureBackupController.confirmRecoveryKey(key) {
+        case .success:
+            // The key verified against the server: persist it on-device if the user opted in.
+            saveRecoveryKeyIfEnabled(key)
+            actionsSubject.send(.done(mode: state.mode))
+        case .failure(let error):
+            MXLog.error("Failed confirming recovery key with error: \(error)")
+            state.bindings.alertInfo = .init(id: .init(),
+                                             title: L10n.screenRecoveryKeyConfirmErrorTitle,
+                                             message: L10n.screenRecoveryKeyConfirmErrorContent)
+        }
+    }
+
+    /// Saves the recovery key to the device keychain (behind biometrics) when the opt-in setting is enabled.
+    private func saveRecoveryKeyIfEnabled(_ key: String?) {
+        guard appSettings.saveRecoveryKeyOnDevice, let key, !key.isEmpty else { return }
+        do {
+            try keychainController.setRecoveryKey(key, forUsername: userID)
+            MXLog.info("Saved recovery key on device for auto-retrieval.")
+        } catch {
+            MXLog.error("Failed saving recovery key on device: \(error)")
         }
     }
     

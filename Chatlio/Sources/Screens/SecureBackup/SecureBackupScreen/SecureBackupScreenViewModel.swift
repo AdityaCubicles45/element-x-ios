@@ -14,7 +14,10 @@ typealias SecureBackupScreenViewModelType = StateStoreViewModelV2<SecureBackupSc
 class SecureBackupScreenViewModel: SecureBackupScreenViewModelType, SecureBackupScreenViewModelProtocol {
     private let secureBackupController: SecureBackupControllerProtocol
     private let userIndicatorController: UserIndicatorControllerProtocol
-    
+    private let userID: String
+    private let keychainController: KeychainControllerProtocol
+    private let appSettings: AppSettings
+
     private var actionsSubject: PassthroughSubject<SecureBackupScreenViewModelAction, Never> = .init()
     var actions: AnyPublisher<SecureBackupScreenViewModelAction, Never> {
         actionsSubject.eraseToAnyPublisher()
@@ -22,12 +25,19 @@ class SecureBackupScreenViewModel: SecureBackupScreenViewModelType, SecureBackup
 
     init(secureBackupController: SecureBackupControllerProtocol,
          userIndicatorController: UserIndicatorControllerProtocol,
-         chatBackupDetailsURL: URL) {
+         chatBackupDetailsURL: URL,
+         userID: String,
+         keychainController: KeychainControllerProtocol,
+         appSettings: AppSettings) {
         self.secureBackupController = secureBackupController
         self.userIndicatorController = userIndicatorController
-        
+        self.userID = userID
+        self.keychainController = keychainController
+        self.appSettings = appSettings
+
         super.init(initialViewState: .init(chatBackupDetailsURL: chatBackupDetailsURL,
-                                           bindings: SecureBackupScreenViewStateBindings(keyStorageEnabled: secureBackupController.keyBackupState.value.keyStorageToggleState)))
+                                           bindings: SecureBackupScreenViewStateBindings(keyStorageEnabled: secureBackupController.keyBackupState.value.keyStorageToggleState,
+                                                                                         saveRecoveryKeyOnDevice: appSettings.saveRecoveryKeyOnDevice)))
         
         secureBackupController.recoveryState
             .receive(on: DispatchQueue.main)
@@ -61,6 +71,13 @@ class SecureBackupScreenViewModel: SecureBackupScreenViewModelType, SecureBackup
                 actionsSubject.send(.disableKeyBackup)
             default:
                 break
+            }
+        case .saveRecoveryKeyOnDeviceToggled(let enable):
+            appSettings.saveRecoveryKeyOnDevice = enable
+            state.bindings.saveRecoveryKeyOnDevice = enable
+            if !enable {
+                // Turning the option off removes any key already saved on this device.
+                keychainController.removeRecoveryKey(forUsername: userID)
             }
         }
     }

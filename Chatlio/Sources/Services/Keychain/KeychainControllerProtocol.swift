@@ -41,4 +41,17 @@ protocol KeychainControllerProtocol: ClientSessionDelegate {
     func pinCodeBiometricState() -> Data?
     /// Removes the App Lock PIN code biometric state.
     func removePINCodeBiometricState()
+
+    // MARK: Recovery Key (opt-in, biometric-gated)
+
+    /// Whether a recovery key has been saved on this device for the given user. Does not trigger biometrics.
+    func containsRecoveryKey(forUsername username: String) -> Bool
+    /// Saves the recovery key for the given user, protected behind device biometrics (Face/Touch ID),
+    /// stored only on this device and never synced to iCloud Keychain or device backups.
+    func setRecoveryKey(_ recoveryKey: String, forUsername username: String) throws
+    /// Retrieves the saved recovery key for the given user. Triggers a biometric prompt showing `reason`.
+    /// Returns nil if none is stored. MUST be called off the main thread (the prompt blocks).
+    func recoveryKey(forUsername username: String, reason: String) throws -> String?
+    /// Removes the saved recovery key for the given user.
+    func removeRecoveryKey(forUsername username: String)
 }

@@ -28,7 +28,9 @@ final class KeychainController: KeychainControllerProtocol {
     private let restorationTokenKeychain: Keychain
     /// The keychain responsible for storing all other secrets in the app (keyed by `Key`s).
     private let mainKeychain: Keychain
-    
+    /// The keychain responsible for storing per-user recovery keys, protected behind biometrics (keyed by userID).
+    private let recoveryKeyKeychain: Keychain
+
     private enum Key: String {
         case appLockPINCode
         case appLockBiometricState
@@ -37,6 +39,7 @@ final class KeychainController: KeychainControllerProtocol {
     init(service: KeychainControllerService, accessGroup: String) {
         restorationTokenKeychain = Keychain(service: service.restorationTokenID, accessGroup: accessGroup)
         mainKeychain = Keychain(service: service.mainID, accessGroup: accessGroup)
+        recoveryKeyKeychain = Keychain(service: service.restorationTokenID + ".recoveryKeys", accessGroup: accessGroup)
     }
     
     // MARK: - Restoration Tokens
@@ -185,6 +188,40 @@ final class KeychainController: KeychainControllerProtocol {
             try mainKeychain.remove(Key.appLockBiometricState.rawValue)
         } catch {
             MXLog.error("Failed removing the PIN code biometric state.")
+        }
+    }
+
+    // MARK: - Recovery Key (opt-in, biometric-gated)
+
+    func containsRecoveryKey(forUsername username: String) -> Bool {
+        do {
+            // `withoutAuthenticationUI` checks for existence without triggering the biometric prompt.
+            return try recoveryKeyKeychain.contains(username, withoutAuthenticationUI: true)
+        } catch {
+            MXLog.error("Failed checking for a saved recovery key: \(error)")
+            return false
+        }
+    }
+
+    func setRecoveryKey(_ recoveryKey: String, forUsername username: String) throws {
+        // whenPasscodeSetThisDeviceOnly: never synced to iCloud/backups, gone if the passcode is removed.
+        // biometryCurrentSet: requires Face/Touch ID and is invalidated if the enrolled biometrics change.
+        try recoveryKeyKeychain
+            .accessibility(.whenPasscodeSetThisDeviceOnly, authenticationPolicy: .biometryCurrentSet)
+            .set(recoveryKey, key: username)
+    }
+
+    func recoveryKey(forUsername username: String, reason: String) throws -> String? {
+        try recoveryKeyKeychain
+            .authenticationPrompt(reason)
+            .getString(username)
+    }
+
+    func removeRecoveryKey(forUsername username: String) {
+        do {
+            try recoveryKeyKeychain.remove(username)
+        } catch {
+            MXLog.error("Failed removing a saved recovery key: \(error)")
         }
     }
 }
